@@ -43,7 +43,7 @@ python3 experiments/energy/skill/scripts/audit_energy.py \
 
 ## 4. 在新目录重新运行 AI
 
-原实践环境为 macOS Apple Silicon、Python 3.14.7、Poppler 26.08.0、Codex CLI 0.163.0-alpha.11.1。准确服务端快照和账单没有从导出取得。采集脚本依赖原来的 macOS Codex 路径；其他宿主先按自身环境适配，记录差异。不要把已有绝对路径当通用安装位置。
+原实践环境为 macOS Apple Silicon、Python 3.14.7、Poppler 26.08.0、Codex CLI 0.163.0-alpha.11.1。准确服务端快照和账单没有从导出取得。采集脚本通过 PATH 调用 codex，并重设了含原 macOS 路径的 PATH；这不等于只能在 macOS 运行，但若 CLI 安装在其他目录，需要适配 PATH。请先核对 CLI 版本、命令参数、PDF 工具及认证，记录环境差异。当前未验证跨平台重新运行。
 
 读者有可用 Codex 账号、PDF 工具并核对路径后，可在对应实验目录运行：
 

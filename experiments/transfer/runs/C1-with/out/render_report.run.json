@@ -1,0 +1,15 @@
+{
+  "command": [
+    "python3",
+    "skill/scripts/render_report.py",
+    "--claims",
+    "out/claims.json",
+    "--verification",
+    "out/verification.json",
+    "--index",
+    "out/index",
+    "--out",
+    "out/report.md"
+  ],
+  "exit_code": 1
+}

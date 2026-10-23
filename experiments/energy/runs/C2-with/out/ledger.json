@@ -1,0 +1,66 @@
+{
+  "records": [
+    {
+      "id": "recorded_draw_missing_unit",
+      "source": "INPUT/paper.pdf，PDF第1页：4 hours；180, but its unit was lost。单位与功率覆盖范围均未知，未作补值。",
+      "power": {
+        "value": "180",
+        "unit": null
+      },
+      "power_scope": null,
+      "duration": {
+        "value": "4",
+        "unit": "h"
+      },
+      "measurement_scope": null
+    },
+    {
+      "id": "recorded_meter_unknown_boundary",
+      "source": "INPUT/paper.pdf，PDF第1页：A separate meter recorded 0.72 kWh；IT/设施边界未知。",
+      "energy": {
+        "value": "0.72",
+        "unit": "kWh"
+      },
+      "measurement_scope": null
+    },
+    {
+      "id": "conditional_meter_facility",
+      "source": "条件分支，非原文已证实边界：假设第1页0.72 kWh为本次训练对应的完整设施能耗；碳强度仍缺失。",
+      "energy": {
+        "value": "0.72",
+        "unit": "kWh"
+      },
+      "measurement_scope": "facility"
+    },
+    {
+      "id": "conditional_meter_it",
+      "source": "条件分支，非原文已证实边界：假设第1页0.72 kWh为本次训练IT能耗；PUE仍缺失。",
+      "energy": {
+        "value": "0.72",
+        "unit": "kWh"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": null
+      }
+    },
+    {
+      "id": "conditional_180W_facility",
+      "source": "纯条件算术：假设第1页180单位是W、为同一4小时完整设施总平均功率，且与0.72 kWh电表同对象同时段；这些假设未由材料证实。",
+      "power": {
+        "value": "180",
+        "unit": "W"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "4",
+        "unit": "h"
+      },
+      "measurement_scope": "facility",
+      "reported_energy": {
+        "value": "0.72",
+        "unit": "kWh"
+      }
+    }
+  ]
+}

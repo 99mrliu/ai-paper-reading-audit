@@ -1,0 +1,54 @@
+[
+  {
+    "check": "input_unchanged:INPUT/task.md",
+    "pass": true
+  },
+  {
+    "check": "input_unchanged:INPUT/paper.pdf",
+    "pass": true
+  },
+  {
+    "check": "input_unchanged:skill/SKILL.md",
+    "pass": true
+  },
+  {
+    "check": "input_unchanged:skill/references/ledger.md",
+    "pass": true
+  },
+  {
+    "check": "input_unchanged:skill/scripts/audit_energy.py",
+    "pass": true
+  },
+  {
+    "check": "ledger_hash",
+    "pass": true
+  },
+  {
+    "check": "report_link:source_manifest.json",
+    "pass": true
+  },
+  {
+    "check": "report_link:page-1.png",
+    "pass": true
+  },
+  {
+    "check": "report_link:ledger.json",
+    "pass": true
+  },
+  {
+    "check": "report_link:calculations.json",
+    "pass": true
+  },
+  {
+    "check": "report_link:verification.json",
+    "pass": true
+  },
+  {
+    "check": "report_link:claims.json",
+    "pass": true
+  },
+  {
+    "check": "statuses",
+    "pass": true
+  }
+]

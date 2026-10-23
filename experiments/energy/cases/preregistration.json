@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0",
+  "frozen_at": "2026-10-23T01:38:24.825164+00:00",
+  "skill_file_sha256": {
+    "SKILL.md": "6389010ac68736c80a18b07896a4f77ff7b04440281283c371f3366e2761e1c9",
+    "references/ledger.md": "7a504f55d30908d655c9ce3bb65f5b580133c112b3a2c4bf9d683afd00aa306d",
+    "scripts/audit_energy.py": "83900c5eae4c3ef80a5196d130070768c358943be08a3665ad33be16764402f7"
+  },
+  "input_and_case_sha256": {
+    "cases/A/acceptance.md": "764cfbdd2fb3b7d4e83500ce11b33dfbdf964f457c0d64d435ec62162a074c45",
+    "cases/A/task.md": "78c7d5fdc23c53a14eb7c5a2c024cfd9d7279bc24ac3d2254ba2cd44ff12c2ce",
+    "cases/B/acceptance.md": "d239e03eb5fb33f092e56402ccabe443a540a535b0f422cc1023a96fd08104db",
+    "cases/B/task.md": "5391c024776ca8834de4916a7d7cb8d7f52b481ddc09a506e3420de4729ab6c7",
+    "cases/C/acceptance.md": "0211db9d05d9faecae70bbf704b10c6e703250b5109fe8ccd8809a7dec57d108",
+    "cases/C/task.md": "8faac6cb3de02850a6056f37cbe14df230d745ebd6cdfb943ee53aa7f26b2754",
+    "materials/acl-energy-source.html": "9165257a33c45d2b2b362c8cdcc713a15ba3463fa96645edfb828eb146e71ac4",
+    "materials/acl-energy.pdf": "184c42b148a3db99f4a59ed8336c403dc2229bf3100bbc934212116acd8c61d9",
+    "materials/acl-energy.txt": "c7a188bb9f351071b55f60dcaeb437d24abd34827c3827988e7d69a8ea9af2b1",
+    "materials/incomplete.pdf": "906f65b8d94f2b44b6b9d22f39170a927d717b8bc6e73dead8ad0a2e9ad7050f",
+    "materials/incomplete.txt": "18201fcb2b55c72a467dec39b043f385055c7232f74b3ced5ba91bab64f40984",
+    "materials/jmlr-energy-source.html": "ee0d60f5ee6b5d50286812f4882f91c79f3e61d2af70f4bd3bdbc6c28953fb8d",
+    "materials/jmlr-energy.pdf": "798ac1ea89ea43b4db1e44d5e4306b80b4cab1db54421236402630f31de08411",
+    "materials/jmlr-energy.txt": "f69ee28089023a6d4ac657fec4fba9ce21bd664d023d3677017ed504861bc681"
+  },
+  "formal_runs": [
+    "A1-with",
+    "A1-without",
+    "A2-with",
+    "A2-without",
+    "B-with",
+    "C1-with",
+    "C2-with"
+  ],
+  "evaluation": "Author-side AI reads actual reports against preregistered acceptance. No human or third-party scientific review. No answer key supplied to independent runs. No fabricated score.",
+  "controls": "Same task, original PDF, CLI defaults, base tools and budget; fresh ephemeral session/directories; no cross-session artifacts. With alone gets frozen skill. No network or other models in reading task. Full raw records retained. Exact service model snapshot unavailable.",
+  "stopping_rule": "Run first independent A pair, inspect actual quality/overhead before remaining runs. Proceed only for observable benefit or an explicitly disclosed bounded followup. Do not select best runs or change frozen skill and call it same-version replication.",
+  "proposed_gate": "Useful substantive omission/error reduction, or lower time/output effort at equal reading quality. A25% time saving is a local decision target, not a contest rule; repeated pairs needed before stable-gain claims."
+}

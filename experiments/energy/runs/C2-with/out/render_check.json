@@ -1,0 +1,8 @@
+{
+  "tool": "PyMuPDF",
+  "pages_rendered": [
+    1
+  ],
+  "output": "out/page-1.png",
+  "status": "ok"
+}

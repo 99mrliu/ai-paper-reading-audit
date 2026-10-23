@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "skill/scripts/build_index.py",
+    "INPUT/paper.pdf",
+    "--out",
+    "out/index"
+  ],
+  "exit_code": 2
+}

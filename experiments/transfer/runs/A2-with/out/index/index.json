@@ -1,0 +1,13 @@
+{
+  "schema_version": "2.0",
+  "source": "paper.pdf",
+  "scope": "provided_document",
+  "status": "ok",
+  "scope_warning": "Only supplied pages are indexed; supplements and completeness are not assumed.",
+  "sha256": "01e88a175a36afa399e05dc97dce9c5de980130445269cc0e5100d0471887029",
+  "engine": "pdftotext",
+  "pages": 25,
+  "chars": 72450,
+  "pages_with_little_text": [],
+  "pages_sha256": "52a947e6eb70fdedaffe5e92b9d1b9f44dc9ec88e99d99bea18b46a82fe479bf"
+}

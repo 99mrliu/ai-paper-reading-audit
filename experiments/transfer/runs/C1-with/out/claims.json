@@ -1,0 +1,100 @@
+{
+  "paper": {
+    "title": "未能识别：输入不是有效 PDF",
+    "doi": "",
+    "question": "论文方法能否用于有限预算下的超参数搜索？",
+    "limitations_of_this_audit": [
+      "唯一论文文件 INPUT/paper.pdf 未通过 PDF 文件头检查；未取得任何可读论文页。",
+      "未提供可替代的正文、补充材料或 OCR 文本。",
+      "以下检索词仅为恢复材料后的核查计划；本次未执行正文关键词检索。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "U1",
+      "class": "UNKNOWN",
+      "statement": "论文方法及其输入输出、假设与算法步骤尚不能确定。",
+      "value": null,
+      "absence_probe": [
+        "method",
+        "algorithm"
+      ],
+      "search_scope": "仅所供 INPUT/paper.pdf；索引失败，没有可检索的论文页",
+      "reasoning": "输入无有效 PDF 文件头，build_index.py 返回 invalid_input，退出码 2。无法读取上下文；不能据此推断作者未讨论该问题。"
+    },
+    {
+      "id": "U2",
+      "class": "UNKNOWN",
+      "statement": "有限预算下的超参数搜索效果、评估成本和比较基线尚不能确定。",
+      "value": null,
+      "absence_probe": [
+        "hyperparameter",
+        "budget",
+        "baseline"
+      ],
+      "search_scope": "仅所供 INPUT/paper.pdf；索引失败，没有可检索的论文页",
+      "reasoning": "输入无有效 PDF 文件头，build_index.py 返回 invalid_input，退出码 2。无法读取上下文；不能据此推断作者未讨论该问题。"
+    },
+    {
+      "id": "U3",
+      "class": "UNKNOWN",
+      "statement": "该方法能否迁移到用户的超参数搜索场景尚不能确定。",
+      "value": null,
+      "absence_probe": [
+        "search space",
+        "limitations"
+      ],
+      "search_scope": "仅所供 INPUT/paper.pdf；索引失败，没有可检索的论文页",
+      "reasoning": "输入无有效 PDF 文件头，build_index.py 返回 invalid_input，退出码 2。无法读取上下文；不能据此推断作者未讨论该问题。"
+    }
+  ],
+  "parameters": [],
+  "derivations": [],
+  "coverage": [
+    {
+      "item": "方法识别",
+      "status": "not_found",
+      "claim_ids": [
+        "U1"
+      ]
+    },
+    {
+      "item": "预算与效果",
+      "status": "not_found",
+      "claim_ids": [
+        "U2"
+      ]
+    },
+    {
+      "item": "迁移条件",
+      "status": "not_found",
+      "claim_ids": [
+        "U3"
+      ]
+    }
+  ],
+  "transfer": [
+    {
+      "step": "有限预算下的超参数搜索",
+      "verdict": "信息不足",
+      "because": [
+        "U1",
+        "U2",
+        "U3"
+      ],
+      "needs": "恢复可读论文，核实算法、预算定义、搜索空间、评估成本及实验比较条件；再结合用户的实际预算和目标模型判断。"
+    }
+  ],
+  "verdict_overall": "信息不足",
+  "gaps": [
+    {
+      "gap": "论文原文不可读",
+      "impact": "无法识别方法，也无法形成科学适配结论",
+      "close": "从原始来源重新导出或取得完整 PDF，确认能打开且文本可提取，再重建索引；不要只修改扩展名。"
+    }
+  ],
+  "boundaries": [
+    "这是失败输入的异常记录，不是成功的科学阅读或核验。",
+    "UNKNOWN 条目未完成检索；不得将其解释为关键词零命中或论文未讨论。"
+  ]
+}

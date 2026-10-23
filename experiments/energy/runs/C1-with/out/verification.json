@@ -1,0 +1,62 @@
+{
+  "pdf_text_extraction": "passed; complete one-page text extracted",
+  "pdf_visual_review": "passed; page-1.png inspected against extracted text",
+  "tool_execution_failures": [],
+  "unresolved_checks": [
+    {
+      "check": "180 unit and scope",
+      "status": "unknown"
+    },
+    {
+      "check": "meter boundary and exclusive synchronized run coverage",
+      "status": "unknown"
+    },
+    {
+      "check": "IT to facility conversion",
+      "status": "unknown; PUE unavailable"
+    },
+    {
+      "check": "numerical carbon estimate",
+      "status": "unknown; intensity unavailable"
+    }
+  ],
+  "audit_exit_code": 0,
+  "claims_review": "Quotes manually checked against PDF page 1; conditional assumptions labelled; no semantic validity inferred from literal matches",
+  "source_integrity": [
+    {
+      "path": "INPUT/task.md",
+      "unchanged": true
+    },
+    {
+      "path": "INPUT/paper.pdf",
+      "unchanged": true
+    },
+    {
+      "path": "skill/SKILL.md",
+      "unchanged": true
+    },
+    {
+      "path": "skill/references/ledger.md",
+      "unchanged": true
+    },
+    {
+      "path": "skill/scripts/audit_energy.py",
+      "unchanged": true
+    },
+    {
+      "path": "out/ledger.json",
+      "hash_matches_calculations": true
+    }
+  ],
+  "no_quantum": "No display rounding precision assumed",
+  "first_run_preserved": true,
+  "artifact_checks": {
+    "report_exists": true,
+    "claims_json_valid": true,
+    "first_unknown_rows_retained": [
+      "observed_power_missing_unit",
+      "observed_meter_unknown_boundary",
+      "conditional_meter_it"
+    ]
+  }
+}

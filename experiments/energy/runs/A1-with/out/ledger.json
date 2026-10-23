@@ -1,0 +1,662 @@
+{
+  "records": [
+    {
+      "id": "T2Tbase",
+      "source": "PDF p4 (3648), Table 3 T2Tbase: 1415.78 W, 12 h, 27 kWh·PUE, 26 lb; aggregate IT interpretation under Eq.1",
+      "power": {
+        "value": "1415.78",
+        "unit": "W"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "12",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "27",
+        "unit": "kWh"
+      },
+      "reported_carbon": {
+        "value": "26",
+        "unit": "lb"
+      }
+    },
+    {
+      "id": "T2Tbase_rounding",
+      "source": "PDF p4 (3648), Table 3 T2Tbase: 1415.78 W, 12 h, 27 kWh·PUE, 26 lb; aggregate IT interpretation under Eq.1; conditional nearest rounding: power .01W, hours 1h, outputs 1kWh/1lb; PUE and intensity fixed",
+      "power": {
+        "value": "1415.78",
+        "unit": "W",
+        "quantum": ".01"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "12",
+        "unit": "h",
+        "quantum": "1"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "27",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "reported_carbon": {
+        "value": "26",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "T2Tbase_printed_energy_to_carbon",
+      "source": "PDF p4 Table 3: test printed facility energy 27 kWh times Eq.2 .954 lb/kWh against 26 lb; conditional nearest integer displays",
+      "energy": {
+        "value": "27",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "measurement_scope": "facility",
+      "intensity": {
+        "value": ".954",
+        "unit": "lb/kWh"
+      },
+      "reported_carbon": {
+        "value": "26",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "T2Tbig",
+      "source": "PDF p4 (3648), Table 3 T2Tbig: 1515.43 W, 84 h, 201 kWh·PUE, 192 lb; aggregate IT interpretation under Eq.1",
+      "power": {
+        "value": "1515.43",
+        "unit": "W"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "84",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "201",
+        "unit": "kWh"
+      },
+      "reported_carbon": {
+        "value": "192",
+        "unit": "lb"
+      }
+    },
+    {
+      "id": "T2Tbig_rounding",
+      "source": "PDF p4 (3648), Table 3 T2Tbig: 1515.43 W, 84 h, 201 kWh·PUE, 192 lb; aggregate IT interpretation under Eq.1; conditional nearest rounding: power .01W, hours 1h, outputs 1kWh/1lb; PUE and intensity fixed",
+      "power": {
+        "value": "1515.43",
+        "unit": "W",
+        "quantum": ".01"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "84",
+        "unit": "h",
+        "quantum": "1"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "201",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "reported_carbon": {
+        "value": "192",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "T2Tbig_printed_energy_to_carbon",
+      "source": "PDF p4 Table 3: test printed facility energy 201 kWh times Eq.2 .954 lb/kWh against 192 lb; conditional nearest integer displays",
+      "energy": {
+        "value": "201",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "measurement_scope": "facility",
+      "intensity": {
+        "value": ".954",
+        "unit": "lb/kWh"
+      },
+      "reported_carbon": {
+        "value": "192",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "ELMo",
+      "source": "PDF p4 (3648), Table 3 ELMo: 517.66 W, 336 h, 275 kWh·PUE, 262 lb; aggregate IT interpretation under Eq.1",
+      "power": {
+        "value": "517.66",
+        "unit": "W"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "336",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "275",
+        "unit": "kWh"
+      },
+      "reported_carbon": {
+        "value": "262",
+        "unit": "lb"
+      }
+    },
+    {
+      "id": "ELMo_rounding",
+      "source": "PDF p4 (3648), Table 3 ELMo: 517.66 W, 336 h, 275 kWh·PUE, 262 lb; aggregate IT interpretation under Eq.1; conditional nearest rounding: power .01W, hours 1h, outputs 1kWh/1lb; PUE and intensity fixed",
+      "power": {
+        "value": "517.66",
+        "unit": "W",
+        "quantum": ".01"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "336",
+        "unit": "h",
+        "quantum": "1"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "275",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "reported_carbon": {
+        "value": "262",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "ELMo_printed_energy_to_carbon",
+      "source": "PDF p4 Table 3: test printed facility energy 275 kWh times Eq.2 .954 lb/kWh against 262 lb; conditional nearest integer displays",
+      "energy": {
+        "value": "275",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "measurement_scope": "facility",
+      "intensity": {
+        "value": ".954",
+        "unit": "lb/kWh"
+      },
+      "reported_carbon": {
+        "value": "262",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "BERTbase_GPU",
+      "source": "PDF p4 (3648), Table 3 BERTbase_GPU: 12041.51 W, 79 h, 1507 kWh·PUE, 1438 lb; aggregate IT interpretation under Eq.1",
+      "power": {
+        "value": "12041.51",
+        "unit": "W"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "79",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "1507",
+        "unit": "kWh"
+      },
+      "reported_carbon": {
+        "value": "1438",
+        "unit": "lb"
+      }
+    },
+    {
+      "id": "BERTbase_GPU_rounding",
+      "source": "PDF p4 (3648), Table 3 BERTbase_GPU: 12041.51 W, 79 h, 1507 kWh·PUE, 1438 lb; aggregate IT interpretation under Eq.1; conditional nearest rounding: power .01W, hours 1h, outputs 1kWh/1lb; PUE and intensity fixed",
+      "power": {
+        "value": "12041.51",
+        "unit": "W",
+        "quantum": ".01"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "79",
+        "unit": "h",
+        "quantum": "1"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "1507",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "reported_carbon": {
+        "value": "1438",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "BERTbase_GPU_printed_energy_to_carbon",
+      "source": "PDF p4 Table 3: test printed facility energy 1507 kWh times Eq.2 .954 lb/kWh against 1438 lb; conditional nearest integer displays",
+      "energy": {
+        "value": "1507",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "measurement_scope": "facility",
+      "intensity": {
+        "value": ".954",
+        "unit": "lb/kWh"
+      },
+      "reported_carbon": {
+        "value": "1438",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "NAS_GPU",
+      "source": "PDF p4 (3648), Table 3 NAS_GPU: 1515.43 W, 274120 h, 656347 kWh·PUE, 626155 lb; aggregate IT interpretation under Eq.1",
+      "power": {
+        "value": "1515.43",
+        "unit": "W"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "274120",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "656347",
+        "unit": "kWh"
+      },
+      "reported_carbon": {
+        "value": "626155",
+        "unit": "lb"
+      }
+    },
+    {
+      "id": "NAS_GPU_rounding",
+      "source": "PDF p4 (3648), Table 3 NAS_GPU: 1515.43 W, 274120 h, 656347 kWh·PUE, 626155 lb; aggregate IT interpretation under Eq.1; conditional nearest rounding: power .01W, hours 1h, outputs 1kWh/1lb; PUE and intensity fixed",
+      "power": {
+        "value": "1515.43",
+        "unit": "W",
+        "quantum": ".01"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "274120",
+        "unit": "h",
+        "quantum": "1"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "656347",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "reported_carbon": {
+        "value": "626155",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "NAS_GPU_printed_energy_to_carbon",
+      "source": "PDF p4 Table 3: test printed facility energy 656347 kWh times Eq.2 .954 lb/kWh against 626155 lb; conditional nearest integer displays",
+      "energy": {
+        "value": "656347",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "measurement_scope": "facility",
+      "intensity": {
+        "value": ".954",
+        "unit": "lb/kWh"
+      },
+      "reported_carbon": {
+        "value": "626155",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "BERT_79_2_sensitivity",
+      "source": "PDF p3 (3647) §2.1 reports 79.2h; use Table3 power and compare its outputs",
+      "power": {
+        "value": "12041.51",
+        "unit": "W"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "79.2",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": ".954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "1507",
+        "unit": "kWh"
+      },
+      "reported_carbon": {
+        "value": "1438",
+        "unit": "lb"
+      }
+    },
+    {
+      "id": "local_IT_model",
+      "source": "User data: aggregate average IT 1.51543kW for 84h; conditional paper PUE and US historical factor",
+      "power": {
+        "value": "1.51543",
+        "unit": "kW"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "84",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": ".954",
+        "unit": "lb/kWh"
+      }
+    },
+    {
+      "id": "local_facility_model",
+      "source": "User data: facility meter 201kWh; conditional paper historical US intensity",
+      "energy": {
+        "value": "201",
+        "unit": "kWh"
+      },
+      "measurement_scope": "facility",
+      "intensity": {
+        "value": ".954",
+        "unit": "lb/kWh"
+      }
+    },
+    {
+      "id": "local_facility_actual_carbon_unknown",
+      "source": "User facility meter 201kWh; applicable site/time intensity not supplied",
+      "energy": {
+        "value": "201",
+        "unit": "kWh"
+      },
+      "measurement_scope": "facility"
+    },
+    {
+      "id": "TPU_unknown",
+      "source": "PDF p4 Table3 TPU power and energy omitted; no zero substitution",
+      "power": {
+        "value": null,
+        "unit": "W"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "96",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": ".954",
+        "unit": "lb/kWh"
+      }
+    },
+    {
+      "id": "T2Tbase_fixed_hours_rounding",
+      "source": "PDF p4 (3648), Table 3 T2Tbase: 1415.78 W, 12 h, 27 kWh·PUE, 26 lb; aggregate IT interpretation under Eq.1; conditional nearest rounding: power .01W, hours 1h, outputs 1kWh/1lb; PUE and intensity fixed; variant: duration fixed at printed value",
+      "power": {
+        "value": "1415.78",
+        "unit": "W",
+        "quantum": ".01"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "12",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "27",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "reported_carbon": {
+        "value": "26",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "T2Tbig_fixed_hours_rounding",
+      "source": "PDF p4 (3648), Table 3 T2Tbig: 1515.43 W, 84 h, 201 kWh·PUE, 192 lb; aggregate IT interpretation under Eq.1; conditional nearest rounding: power .01W, hours 1h, outputs 1kWh/1lb; PUE and intensity fixed; variant: duration fixed at printed value",
+      "power": {
+        "value": "1515.43",
+        "unit": "W",
+        "quantum": ".01"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "84",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "201",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "reported_carbon": {
+        "value": "192",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "ELMo_fixed_hours_rounding",
+      "source": "PDF p4 (3648), Table 3 ELMo: 517.66 W, 336 h, 275 kWh·PUE, 262 lb; aggregate IT interpretation under Eq.1; conditional nearest rounding: power .01W, hours 1h, outputs 1kWh/1lb; PUE and intensity fixed; variant: duration fixed at printed value",
+      "power": {
+        "value": "517.66",
+        "unit": "W",
+        "quantum": ".01"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "336",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "275",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "reported_carbon": {
+        "value": "262",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "BERTbase_GPU_fixed_hours_rounding",
+      "source": "PDF p4 (3648), Table 3 BERTbase_GPU: 12041.51 W, 79 h, 1507 kWh·PUE, 1438 lb; aggregate IT interpretation under Eq.1; conditional nearest rounding: power .01W, hours 1h, outputs 1kWh/1lb; PUE and intensity fixed; variant: duration fixed at printed value",
+      "power": {
+        "value": "12041.51",
+        "unit": "W",
+        "quantum": ".01"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "79",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "1507",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "reported_carbon": {
+        "value": "1438",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    },
+    {
+      "id": "NAS_GPU_fixed_hours_rounding",
+      "source": "PDF p4 (3648), Table 3 NAS_GPU: 1515.43 W, 274120 h, 656347 kWh·PUE, 626155 lb; aggregate IT interpretation under Eq.1; conditional nearest rounding: power .01W, hours 1h, outputs 1kWh/1lb; PUE and intensity fixed; variant: duration fixed at printed value",
+      "power": {
+        "value": "1515.43",
+        "unit": "W",
+        "quantum": ".01"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "274120",
+        "unit": "h"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.58"
+      },
+      "intensity": {
+        "value": "0.954",
+        "unit": "lb/kWh"
+      },
+      "reported_energy": {
+        "value": "656347",
+        "unit": "kWh",
+        "quantum": "1"
+      },
+      "reported_carbon": {
+        "value": "626155",
+        "unit": "lb",
+        "quantum": "1"
+      }
+    }
+  ]
+}

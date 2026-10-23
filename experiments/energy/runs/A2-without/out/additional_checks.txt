@@ -1,0 +1,17 @@
+BERT at 79.2h kWh: 1506.82639536
+BERT at 79.2h lb: 1437.51238117344
+NAS 979M/300k*10 TPU core hours: 32633.333333333336
+NAS 979M/300k*84 8-GPU elapsed-equivalent hours: 274120.0
+626155 lb in kg: 284019.13043735
+local GPU energy kWh: 127.29612
+local PUE-scaled kWh: 201.12786960000003
+local estimated lb: 191.8759875984
+local estimated kg: 87.03348396084887
+201 facility kWh estimated lb: 191.754
+201 facility kWh estimated kg: 86.97815131698
+201 / GPU kWh ratio: 1.578995494913749
+Table4 mean hours: 50.10273543537273
+9998 GPU days in hours: 239952
+Table4 implied kWh from electricity dollars: 82250.0
+Table4 implied average facility kW: 0.34279117453384567
+Table4 implied lb from electricity dollars: 78466.5

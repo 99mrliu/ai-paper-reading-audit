@@ -1,0 +1,22 @@
+{
+  "pdf_extraction": "success; raw logs and extraction_checks.json retained",
+  "visual_review": "PDF page 1 rendered and inspected; agrees with extracted text",
+  "render_warning": "warning: The `fitz` API is deprecated and will be removed in future. Use `import pymupdf` instead.",
+  "audit_command": "python3 skill/scripts/audit_energy.py out/ledger.json --out out/calculations.json",
+  "audit_exit_code": 0,
+  "first_run_retained": true,
+  "unknown_records": 3,
+  "partial_records": 2,
+  "invalid_records": 0,
+  "failed_execution_checks": [],
+  "unresolved": [
+    "power unit",
+    "power scope",
+    "meter boundary",
+    "meter/run time and attribution alignment",
+    "PUE if IT",
+    "carbon intensity and accounting metadata"
+  ],
+  "rounding_quantum_used": false,
+  "semantic_validation": "Human review of supplied page only; literal evidence matching does not prove scientific meaning"
+}

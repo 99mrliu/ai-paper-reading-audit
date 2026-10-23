@@ -1,0 +1,64 @@
+{
+  "records": [
+    {
+      "id": "observed_power_missing_unit",
+      "source": "INPUT/paper.pdf v1.7, p1: average draw 180, unit lost; duration 4 hours. Actual record, boundary also unknown.",
+      "power": {
+        "value": "180",
+        "unit": null
+      },
+      "power_scope": null,
+      "duration": {
+        "value": "4",
+        "unit": "h"
+      },
+      "measurement_scope": null
+    },
+    {
+      "id": "observed_meter_unknown_boundary",
+      "source": "INPUT/paper.pdf p1: separate meter 0.72 kWh; IT/facility coverage unknown. Actual record.",
+      "energy": {
+        "value": "0.72",
+        "unit": "kWh"
+      },
+      "measurement_scope": null
+    },
+    {
+      "id": "conditional_meter_facility",
+      "source": "INPUT/paper.pdf p1: 0.72 kWh. Conditional only: assume meter is facility boundary and exclusively covers the full run. No measured intensity.",
+      "energy": {
+        "value": "0.72",
+        "unit": "kWh"
+      },
+      "measurement_scope": "facility"
+    },
+    {
+      "id": "conditional_meter_it",
+      "source": "INPUT/paper.pdf p1: 0.72 kWh. Conditional only: assume meter is IT boundary and exclusively covers the full run. PUE absent.",
+      "energy": {
+        "value": "0.72",
+        "unit": "kWh"
+      },
+      "measurement_scope": "it",
+      "pue": null
+    },
+    {
+      "id": "conditional_180_W",
+      "source": "INPUT/paper.pdf p1: 180 unit lost; 4 hours; separate meter 0.72 kWh. Hypothesis only: 180 W aggregate average, same interval and facility boundary as meter; no rounding quantum assumed.",
+      "power": {
+        "value": "180",
+        "unit": "W"
+      },
+      "power_scope": "aggregate",
+      "duration": {
+        "value": "4",
+        "unit": "h"
+      },
+      "measurement_scope": "facility",
+      "reported_energy": {
+        "value": "0.72",
+        "unit": "kWh"
+      }
+    }
+  ]
+}

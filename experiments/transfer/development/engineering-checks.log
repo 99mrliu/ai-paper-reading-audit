@@ -1,0 +1,23 @@
+Captured at 2026-10-22T15:22:35.950584+00:00
+test_bounded_arithmetic (__main__.EvidenceInvariants.test_bounded_arithmetic) ... ok
+test_duplicate_ids_fail (__main__.EvidenceInvariants.test_duplicate_ids_fail) ... ok
+test_empty_claims_fails (__main__.EvidenceInvariants.test_empty_claims_fails) ... ok
+test_equivalent_decimal_spelling (__main__.EvidenceInvariants.test_equivalent_decimal_spelling) ... ok
+test_integer_does_not_match_year (__main__.EvidenceInvariants.test_integer_does_not_match_year) ... ok
+test_invalid_class_fails (__main__.EvidenceInvariants.test_invalid_class_fails) ... ok
+test_missing_pdf_has_structured_failure (__main__.EvidenceInvariants.test_missing_pdf_has_structured_failure) ... ok
+test_nearby_other_experiment_number_not_support (__main__.EvidenceInvariants.test_nearby_other_experiment_number_not_support) ... ok
+test_overall_contradiction_fails (__main__.EvidenceInvariants.test_overall_contradiction_fails) ... ok
+test_percentage_not_unitless (__main__.EvidenceInvariants.test_percentage_not_unitless) ... ok
+test_render_rejects_modified_claims (__main__.EvidenceInvariants.test_render_rejects_modified_claims) ... ok
+test_unanchored_arithmetic_fails (__main__.EvidenceInvariants.test_unanchored_arithmetic_fails) ... ok
+test_unknown_really_executes_search (__main__.EvidenceInvariants.test_unknown_really_executes_search) ... ok
+test_unknown_without_search_fails (__main__.EvidenceInvariants.test_unknown_without_search_fails) ... ok
+test_unsupported_transfer_reference_fails (__main__.EvidenceInvariants.test_unsupported_transfer_reference_fails) ... ok
+test_valid_evidence (__main__.EvidenceInvariants.test_valid_evidence) ... ok
+test_wrong_page_is_failure (__main__.EvidenceInvariants.test_wrong_page_is_failure) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.124s
+
+OK

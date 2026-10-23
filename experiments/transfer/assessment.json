@@ -1,0 +1,711 @@
+{
+  "reviewer": "AI author-side semantic review; not human review, independent third-party validation or an official score",
+  "created_at": "2026-10-22T15:30:36.380000+00:00",
+  "method": "Read original reports against preregistered checks and supplied PDF pages/figures; locate verbatim anchors below. covered means that criterion was addressed with no material issue found in this review; it is not a measured scientific accuracy percentage.",
+  "run_results": {
+    "A1-with": "核心阅读与有条件适配判断完成；未发现相对于强baseline的稳定质量增益。 C9复合引文覆盖有局部限制。",
+    "A2-with": "核心阅读与有条件适配判断完成；未发现相对于强baseline的稳定质量增益。",
+    "A1-without": "核心阅读与有条件适配判断完成；未发现相对于强baseline的稳定质量增益。",
+    "A2-without": "核心阅读与有条件适配判断完成；未发现相对于强baseline的稳定质量增益。",
+    "B-with": "同版本完成历史软件论文的新任务：接口/表1反例/历史及规模边界清楚；有一次错误路径读取，自动恢复。",
+    "C1-with": "符合预期的合理停止：真实invalid_input，未产生科学结论；核验/渲染拒绝，失败和恢复步骤已保留。",
+    "C2-with": "符合预期的合理停止：真实invalid_input，未产生科学结论；核验/渲染拒绝，失败和恢复步骤已保留。"
+  },
+  "criteria": {
+    "A1-with": {
+      "output_sha256": "4902e74fe4d89a5e30b16aa27384465ebf9afc1850eef48b8547ed145cc47b05",
+      "checks": [
+        {
+          "criterion": 1,
+          "text": "解释独立抽样和预先定义搜索空间；抽样分布是方法条件，不能把任意线性均匀分布当通用最优。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 94,
+          "anchor": "### C2",
+          "note": ""
+        },
+        {
+          "criterion": 2,
+          "text": "解释低有效维数和图1：9次网格只覆盖重要参数3个不同点，9次随机覆盖9个不同点；不能等同实际任务保证3倍准确率。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 101,
+          "anchor": "### C3",
+          "note": ""
+        },
+        {
+          "criterion": 3,
+          "text": "区分规则网格、手工辅助网格与随机搜索的比较，不混淆纯网格与自适应的人工经验。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 178,
+          "anchor": "### C14",
+          "note": ""
+        },
+        {
+          "criterion": 4,
+          "text": "正确说明DBN比较预算：128个随机试验与平均约41个手工辅助试验并非完全同预算比较。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 171,
+          "anchor": "### C13",
+          "note": ""
+        },
+        {
+          "criterion": 5,
+          "text": "保留DBN的优势和不利证据，说明随机搜索并非每个数据集胜出，摘要四个相当/一个更优与具体图9统计语境不强行合并。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 164,
+          "anchor": "### C12",
+          "note": ""
+        },
+        {
+          "criterion": 6,
+          "text": "说明重要超参数随数据集变化，不能把一个任务的参数重要性无条件迁移到全部任务。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 108,
+          "anchor": "### C4",
+          "note": ""
+        },
+        {
+          "criterion": 7,
+          "text": "保留低维情况下网格可以有效的限制，不声称随机搜索普遍支配网格。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 220,
+          "anchor": "### C20",
+          "note": ""
+        },
+        {
+          "criterion": 8,
+          "text": "把随机搜索定位为评估自适应方法的基线，不能声称论文证明它优于全部现代自适应方法。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 213,
+          "anchor": "### C19",
+          "note": ""
+        },
+        {
+          "criterion": 9,
+          "text": "针对6参数/36次/表格任务给有条件的可用判断，并关联空间设计、采样、评价划分与公平预算；不声称已经验证。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 267,
+          "anchor": "## 方法适配判断",
+          "note": ""
+        },
+        {
+          "criterion": 10,
+          "text": "标出未取得代码、补充材料、当前数据等实际范围，列出具体后续确认项。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 279,
+          "anchor": "## 后续阅读与核验",
+          "note": ""
+        },
+        {
+          "criterion": 11,
+          "text": "关键论断有可定位页码与真实短引文，数值指标、比较条件及语义吻合；图表估读限制透明。",
+          "status": "partial",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 143,
+          "anchor": "### C9",
+          "note": "C9短引文直接支持平均500次估算，陈述中64次结果须回到同一PDF p.13邻文；复合主张不完全原子化，机械PASS不能代表全部陈述获引文支持。未据此声称科学数值错误。"
+        },
+        {
+          "criterion": 12,
+          "text": "结果可用于研究决策，事实/推断/未知可辨，结论不超越证据。",
+          "status": "covered",
+          "output_file": "runs/A1-with/out/report.md",
+          "line": 234,
+          "anchor": "### I1",
+          "note": ""
+        }
+      ]
+    },
+    "A2-with": {
+      "output_sha256": "696596a939aff4fa3aa99a583ab042a80c5cf5c88129f832a34c73b0d5d6ff9f",
+      "checks": [
+        {
+          "criterion": 1,
+          "text": "解释独立抽样和预先定义搜索空间；抽样分布是方法条件，不能把任意线性均匀分布当通用最优。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 74,
+          "anchor": "### C2",
+          "note": ""
+        },
+        {
+          "criterion": 2,
+          "text": "解释低有效维数和图1：9次网格只覆盖重要参数3个不同点，9次随机覆盖9个不同点；不能等同实际任务保证3倍准确率。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 81,
+          "anchor": "### C3",
+          "note": ""
+        },
+        {
+          "criterion": 3,
+          "text": "区分规则网格、手工辅助网格与随机搜索的比较，不混淆纯网格与自适应的人工经验。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 172,
+          "anchor": "### C16",
+          "note": ""
+        },
+        {
+          "criterion": 4,
+          "text": "正确说明DBN比较预算：128个随机试验与平均约41个手工辅助试验并非完全同预算比较。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 172,
+          "anchor": "### C16",
+          "note": ""
+        },
+        {
+          "criterion": 5,
+          "text": "保留DBN的优势和不利证据，说明随机搜索并非每个数据集胜出，摘要四个相当/一个更优与具体图9统计语境不强行合并。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 158,
+          "anchor": "### C14",
+          "note": ""
+        },
+        {
+          "criterion": 6,
+          "text": "说明重要超参数随数据集变化，不能把一个任务的参数重要性无条件迁移到全部任务。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 88,
+          "anchor": "### C4",
+          "note": ""
+        },
+        {
+          "criterion": 7,
+          "text": "保留低维情况下网格可以有效的限制，不声称随机搜索普遍支配网格。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 207,
+          "anchor": "### C21",
+          "note": ""
+        },
+        {
+          "criterion": 8,
+          "text": "把随机搜索定位为评估自适应方法的基线，不能声称论文证明它优于全部现代自适应方法。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 200,
+          "anchor": "### C20",
+          "note": ""
+        },
+        {
+          "criterion": 9,
+          "text": "针对6参数/36次/表格任务给有条件的可用判断，并关联空间设计、采样、评价划分与公平预算；不声称已经验证。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 250,
+          "anchor": "## 方法适配判断",
+          "note": ""
+        },
+        {
+          "criterion": 10,
+          "text": "标出未取得代码、补充材料、当前数据等实际范围，列出具体后续确认项。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 262,
+          "anchor": "## 后续阅读与核验",
+          "note": ""
+        },
+        {
+          "criterion": 11,
+          "text": "关键论断有可定位页码与真实短引文，数值指标、比较条件及语义吻合；图表估读限制透明。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 165,
+          "anchor": "### C15",
+          "note": ""
+        },
+        {
+          "criterion": 12,
+          "text": "结果可用于研究决策，事实/推断/未知可辨，结论不超越证据。",
+          "status": "covered",
+          "output_file": "runs/A2-with/out/report.md",
+          "line": 214,
+          "anchor": "### I1",
+          "note": ""
+        }
+      ]
+    },
+    "A1-without": {
+      "output_sha256": "eca147db8df1e4f1b8c906a2e14af8324da670bd2c505b079a2a257bf8f0a024",
+      "checks": [
+        {
+          "criterion": 1,
+          "text": "解释独立抽样和预先定义搜索空间；抽样分布是方法条件，不能把任意线性均匀分布当通用最优。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 11,
+          "anchor": "## 方法、预算与低有效维数",
+          "note": ""
+        },
+        {
+          "criterion": 2,
+          "text": "解释低有效维数和图1：9次网格只覆盖重要参数3个不同点，9次随机覆盖9个不同点；不能等同实际任务保证3倍准确率。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 17,
+          "anchor": "**图1已查看",
+          "note": ""
+        },
+        {
+          "criterion": 3,
+          "text": "区分规则网格、手工辅助网格与随机搜索的比较，不混淆纯网格与自适应的人工经验。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 37,
+          "anchor": "## DBN图注",
+          "note": ""
+        },
+        {
+          "criterion": 4,
+          "text": "正确说明DBN比较预算：128个随机试验与平均约41个手工辅助试验并非完全同预算比较。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 23,
+          "anchor": "## 有利与不利实验",
+          "note": ""
+        },
+        {
+          "criterion": 5,
+          "text": "保留DBN的优势和不利证据，说明随机搜索并非每个数据集胜出，摘要四个相当/一个更优与具体图9统计语境不强行合并。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 37,
+          "anchor": "## DBN图注",
+          "note": ""
+        },
+        {
+          "criterion": 6,
+          "text": "说明重要超参数随数据集变化，不能把一个任务的参数重要性无条件迁移到全部任务。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 21,
+          "anchor": "GP/ARD",
+          "note": ""
+        },
+        {
+          "criterion": 7,
+          "text": "保留低维情况下网格可以有效的限制，不声称随机搜索普遍支配网格。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 67,
+          "anchor": "部分网格在低维",
+          "note": ""
+        },
+        {
+          "criterion": 8,
+          "text": "把随机搜索定位为评估自适应方法的基线，不能声称论文证明它优于全部现代自适应方法。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 63,
+          "anchor": "## 随机搜索与自适应搜索",
+          "note": ""
+        },
+        {
+          "criterion": 9,
+          "text": "针对6参数/36次/表格任务给有条件的可用判断，并关联空间设计、采样、评价划分与公平预算；不声称已经验证。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 69,
+          "anchor": "## 第一版落地判断",
+          "note": ""
+        },
+        {
+          "criterion": 10,
+          "text": "标出未取得代码、补充材料、当前数据等实际范围，列出具体后续确认项。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 83,
+          "anchor": "## 核查记录",
+          "note": ""
+        },
+        {
+          "criterion": 11,
+          "text": "关键论断有可定位页码与真实短引文，数值指标、比较条件及语义吻合；图表估读限制透明。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 31,
+          "anchor": "图5关键短证据",
+          "note": ""
+        },
+        {
+          "criterion": 12,
+          "text": "结果可用于研究决策，事实/推断/未知可辨，结论不超越证据。",
+          "status": "covered",
+          "output_file": "runs/A1-without/out/report.md",
+          "line": 69,
+          "anchor": "## 第一版落地判断",
+          "note": ""
+        }
+      ]
+    },
+    "A2-without": {
+      "output_sha256": "36f024d4d343b978847297e1d8fde84b1c3349fc8c35b84b575f7a7cb3b1a12b",
+      "checks": [
+        {
+          "criterion": 1,
+          "text": "解释独立抽样和预先定义搜索空间；抽样分布是方法条件，不能把任意线性均匀分布当通用最优。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 7,
+          "anchor": "## 1. 方法",
+          "note": ""
+        },
+        {
+          "criterion": 2,
+          "text": "解释低有效维数和图1：9次网格只覆盖重要参数3个不同点，9次随机覆盖9个不同点；不能等同实际任务保证3倍准确率。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 15,
+          "anchor": "## 2. 图 1",
+          "note": ""
+        },
+        {
+          "criterion": 3,
+          "text": "区分规则网格、手工辅助网格与随机搜索的比较，不混淆纯网格与自适应的人工经验。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 40,
+          "anchor": "## 4. DBN",
+          "note": ""
+        },
+        {
+          "criterion": 4,
+          "text": "正确说明DBN比较预算：128个随机试验与平均约41个手工辅助试验并非完全同预算比较。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 31,
+          "anchor": "平均 41 次",
+          "note": ""
+        },
+        {
+          "criterion": 5,
+          "text": "保留DBN的优势和不利证据，说明随机搜索并非每个数据集胜出，摘要四个相当/一个更优与具体图9统计语境不强行合并。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 40,
+          "anchor": "## 4. DBN",
+          "note": ""
+        },
+        {
+          "criterion": 6,
+          "text": "说明重要超参数随数据集变化，不能把一个任务的参数重要性无条件迁移到全部任务。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 21,
+          "anchor": "有效维数约为",
+          "note": ""
+        },
+        {
+          "criterion": 7,
+          "text": "保留低维情况下网格可以有效的限制，不声称随机搜索普遍支配网格。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 32,
+          "anchor": "一些网格对立方体目标最好",
+          "note": ""
+        },
+        {
+          "criterion": 8,
+          "text": "把随机搜索定位为评估自适应方法的基线，不能声称论文证明它优于全部现代自适应方法。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 64,
+          "anchor": "## 6. 随机与自适应",
+          "note": ""
+        },
+        {
+          "criterion": 9,
+          "text": "针对6参数/36次/表格任务给有条件的可用判断，并关联空间设计、采样、评价划分与公平预算；不声称已经验证。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 70,
+          "anchor": "## 7. 面向",
+          "note": ""
+        },
+        {
+          "criterion": 10,
+          "text": "标出未取得代码、补充材料、当前数据等实际范围，列出具体后续确认项。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 82,
+          "anchor": "## 8. 核查记录",
+          "note": ""
+        },
+        {
+          "criterion": 11,
+          "text": "关键论断有可定位页码与真实短引文，数值指标、比较条件及语义吻合；图表估读限制透明。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 44,
+          "anchor": "图注明确写",
+          "note": ""
+        },
+        {
+          "criterion": 12,
+          "text": "结果可用于研究决策，事实/推断/未知可辨，结论不超越证据。",
+          "status": "covered",
+          "output_file": "runs/A2-without/out/report.md",
+          "line": 70,
+          "anchor": "## 7. 面向",
+          "note": ""
+        }
+      ]
+    },
+    "B-with": {
+      "output_sha256": "ef10622cb257e88d315c56fa1480f8ff691dbd76ec8a1e622765443b23fa4019",
+      "checks": [
+        {
+          "criterion": 1,
+          "text": "说明fit/predict/transform接口及不强制继承，不把工具论文当作新模型算法论文。",
+          "status": "covered",
+          "output_file": "runs/B-with/out/report.md",
+          "line": 7,
+          "anchor": "## 接口与教学流程",
+          "note": ""
+        },
+        {
+          "criterion": 2,
+          "text": "正确解释CV、GridSearchCV与Pipeline的组合用途，区分论文实现描述与自行提出的防泄漏评价建议。",
+          "status": "covered",
+          "output_file": "runs/B-with/out/report.md",
+          "line": 7,
+          "anchor": "## 接口与教学流程",
+          "note": ""
+        },
+        {
+          "criterion": 3,
+          "text": "表1解释单位秒、Madelon数据4400样本500属性，保留特定历史测试条件。",
+          "status": "covered",
+          "output_file": "runs/B-with/out/report.md",
+          "line": 15,
+          "anchor": "## 表1与相邻段落",
+          "note": ""
+        },
+        {
+          "criterion": 4,
+          "text": "至少一项性能有利比较可查，算法、数值、对象不串行串列。",
+          "status": "covered",
+          "output_file": "runs/B-with/out/report.md",
+          "line": 21,
+          "anchor": "| Support Vector Classification",
+          "note": ""
+        },
+        {
+          "criterion": 5,
+          "text": "至少一项不占优势的比较可查，如kNN0.57对pymvpa0.56，或k-means1.34对mlpy0.79/shogun0.68；不能说全算法最快。",
+          "status": "covered",
+          "output_file": "runs/B-with/out/report.md",
+          "line": 22,
+          "anchor": "| k-Means",
+          "note": ""
+        },
+        {
+          "criterion": 6,
+          "text": "保留Elastic Net很大问题上的限制与k-means纯Python/numpy多次遍历的限制。",
+          "status": "covered",
+          "output_file": "runs/B-with/out/report.md",
+          "line": 27,
+          "anchor": "Elastic Net 在中等规模",
+          "note": ""
+        },
+        {
+          "criterion": 7,
+          "text": "online learning作为未来工作，不能读成本文已证明超大规模在线能力。",
+          "status": "covered",
+          "output_file": "runs/B-with/out/report.md",
+          "line": 29,
+          "anchor": "Future work includes online learning",
+          "note": ""
+        },
+        {
+          "criterion": 8,
+          "text": "分清2011版本事实与当前版本未知，课程平台适配结论与中等规模内存条件一致。",
+          "status": "covered",
+          "output_file": "runs/B-with/out/report.md",
+          "line": 31,
+          "anchor": "## 时间边界与采用前补查",
+          "note": ""
+        },
+        {
+          "criterion": 9,
+          "text": "引文与PDF页号真实，给出需要补查的版本、依赖、API及本机基准，不声称已运行。",
+          "status": "covered",
+          "output_file": "runs/B-with/out/report.md",
+          "line": 31,
+          "anchor": "## 时间边界与采用前补查",
+          "note": ""
+        }
+      ]
+    },
+    "C1-with": {
+      "output_sha256": "00a2f2c5a16f4dc2378debde147bb785da633360802ff4d9470bfd4d4307e92f",
+      "checks": [
+        {
+          "criterion": 1,
+          "text": "实际尝试读取并记录可核验的格式错误；保留错误或索引状态原件。",
+          "status": "covered",
+          "output_file": "runs/C1-with/out/report.md",
+          "line": 5,
+          "anchor": "## 材料与实际检查",
+          "note": ""
+        },
+        {
+          "criterion": 2,
+          "text": "报告清楚材料不可读，无法对方法/性能作科学判断，不捏造论文标题、引文、参数或成功结果。",
+          "status": "covered",
+          "output_file": "runs/C1-with/out/report.md",
+          "line": 21,
+          "anchor": "## 目前能与不能回答",
+          "note": ""
+        },
+        {
+          "criterion": 3,
+          "text": "给出重新上传有效PDF或可核验正文的恢复步骤，未联网替换输入。",
+          "status": "covered",
+          "output_file": "runs/C1-with/out/report.md",
+          "line": 56,
+          "anchor": "## 恢复材料",
+          "note": ""
+        },
+        {
+          "criterion": 4,
+          "text": "两次相同异常输入独立运行均表现一致，若失败如实保留。",
+          "status": "covered",
+          "output_file": "runs/C1-with/out/report.md",
+          "line": 3,
+          "anchor": "**结论：信息不足",
+          "note": ""
+        }
+      ]
+    },
+    "C2-with": {
+      "output_sha256": "e8245de44cd568addab65ffe77be00db1c5b3de94ef059db1f46ef573ba5ff68",
+      "checks": [
+        {
+          "criterion": 1,
+          "text": "实际尝试读取并记录可核验的格式错误；保留错误或索引状态原件。",
+          "status": "covered",
+          "output_file": "runs/C2-with/out/report.md",
+          "line": 5,
+          "anchor": "## 输入检查与实际错误",
+          "note": ""
+        },
+        {
+          "criterion": 2,
+          "text": "报告清楚材料不可读，无法对方法/性能作科学判断，不捏造论文标题、引文、参数或成功结果。",
+          "status": "covered",
+          "output_file": "runs/C2-with/out/report.md",
+          "line": 39,
+          "anchor": "## 目前能与不能回答",
+          "note": ""
+        },
+        {
+          "criterion": 3,
+          "text": "给出重新上传有效PDF或可核验正文的恢复步骤，未联网替换输入。",
+          "status": "covered",
+          "output_file": "runs/C2-with/out/report.md",
+          "line": 52,
+          "anchor": "## 恢复材料",
+          "note": ""
+        },
+        {
+          "criterion": 4,
+          "text": "两次相同异常输入独立运行均表现一致，若失败如实保留。",
+          "status": "covered",
+          "output_file": "runs/C2-with/out/report.md",
+          "line": 3,
+          "anchor": "**结论：信息不足",
+          "note": ""
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Only one A task and one B task; no domain-wide efficacy claim",
+    "Model snapshot not exposed; same CLI defaults may not ensure identical service snapshot",
+    "CLI JSONL omits some tool modalities; tool count is visible exported calls only",
+    "Mechanical checks inspect explicit value, quote and arithmetic, not every number in statement; A value fields mostly null",
+    "Author-side AI assessment has not been verified by a human or third party",
+    "Parallel/staggered session timings include service and machine contention; descriptive, not isolated latency benchmarks"
+  ],
+  "paired_comparison": {
+    "conclusion": "No demonstrated substantive reading-quality improvement; extra structured evidence and passing checks alone are not efficacy evidence. Baselines also found DBN negative results, budget mismatch and the abstract/body dataset-count conflict.",
+    "with_total_seconds": 587.5160000000001,
+    "without_total_seconds": 412.21000000000004,
+    "with_mean_seconds": 293.75800000000004,
+    "without_mean_seconds": 206.10500000000002,
+    "time_increase_percent": 42.52832294218967,
+    "with_output_tokens": 17778,
+    "without_output_tokens": 10208,
+    "minor_operational_difference": "Both baseline sessions first used absent python alias, then recovered with python3. Skill sessions used python3; this local difference does not establish a meaningful net benefit.",
+    "deviation": "A2-without initially wrote /tmp/nonexistent-paper-text, then moved it into its directory and disclosed this. Same no-external-writing constraint applied to every session; no external reading or shared answers observed. This is not treated as a reading-quality advantage for Skill."
+  },
+  "failures_and_corrections": {
+    "A1-with": {
+      "failed_exported_commands": [],
+      "expected_input_failure": false,
+      "note": "For C also see out/*run.json or failed_checks.json and *.log: subprocess exit codes may be captured by a parent command that itself returned 0."
+    },
+    "A2-with": {
+      "failed_exported_commands": [],
+      "expected_input_failure": false,
+      "note": "For C also see out/*run.json or failed_checks.json and *.log: subprocess exit codes may be captured by a parent command that itself returned 0."
+    },
+    "A1-without": {
+      "failed_exported_commands": [
+        {
+          "exit_code": 127,
+          "command_prefix": "/bin/zsh -lc \"sed -n '918,947p' paper.txt; sed -n '950,1060p' paper.txt; sed -n '1120,1267p' paper.txt; pdfinfo INPUT/paper.pdf | head -18; python - <<'PY'\nfrom pathlib import Path",
+          "error_tail": "(k) 5.98 Copyright 2009 Radical Eye Software\nProducer:        GPL Ghostscript 8.71\nCreationDate:    Fri Feb 17 06:46:50 2012 CST\nModDate:         Fri Feb 17 06:46:50 2012 CST\nCustom Metadata: no\nMetadata Stream: yes\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           25\nEncrypted:       no\nPage size:       612 x 792 pts (letter)\nPage rot:        0\nFile size:       728274 bytes\nOptimized:       no\nzsh:1: command not found: python\n"
+        }
+      ],
+      "expected_input_failure": false,
+      "note": "For C also see out/*run.json or failed_checks.json and *.log: subprocess exit codes may be captured by a parent command that itself returned 0."
+    },
+    "A2-without": {
+      "failed_exported_commands": [
+        {
+          "exit_code": 127,
+          "command_prefix": "/bin/zsh -lc \"python - <<'PY'\nimport fitz\np=fitz.open('INPUT/paper.pdf')\nfor n in [4,20]:\n p[n-1].get_pixmap(matrix=fitz.Matrix(1.7,1.7)).save(f'out/page-{n}.png')\nfor x in [.01,.0",
+          "error_tail": "zsh:1: command not found: python\n"
+        }
+      ],
+      "expected_input_failure": false,
+      "note": "For C also see out/*run.json or failed_checks.json and *.log: subprocess exit codes may be captured by a parent command that itself returned 0."
+    },
+    "B-with": {
+      "failed_exported_commands": [
+        {
+          "exit_code": 1,
+          "command_prefix": "/bin/zsh -lc 'cat skill/scripts/render_report.py && cat out/index/pages.json'",
+          "error_tail": "f\"- {g.get('gap')}；影响：{g.get('impact')}；下一步：{g.get('close')}。\")\n        L+=['- '+str(x) for x in doc.get('boundaries',[])]\n        Path(a.out).write_text('\\n'.join(L)+'\\n');print(json.dumps({'status':'rendered','output':Path(a.out).name,'verification_bound':True}))\n        return 0\n    except (ValueError,OSError,KeyError,TypeError) as exc:\n        print('REFUSED: '+str(exc),file=sys.stderr);return 1\n\n\nif __name__=='__main__': sys.exit(main())\ncat: out/index/pages.json: No such file or directory\n"
+        }
+      ],
+      "expected_input_failure": false,
+      "note": "For C also see out/*run.json or failed_checks.json and *.log: subprocess exit codes may be captured by a parent command that itself returned 0."
+    },
+    "C1-with": {
+      "failed_exported_commands": [],
+      "expected_input_failure": true,
+      "note": "For C also see out/*run.json or failed_checks.json and *.log: subprocess exit codes may be captured by a parent command that itself returned 0."
+    },
+    "C2-with": {
+      "failed_exported_commands": [],
+      "expected_input_failure": true,
+      "note": "For C also see out/*run.json or failed_checks.json and *.log: subprocess exit codes may be captured by a parent command that itself returned 0."
+    }
+  }
+}

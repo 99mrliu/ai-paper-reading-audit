@@ -1,0 +1,704 @@
+{
+  "schema_version": 1,
+  "scope": "Arithmetic for user-entered ledger; not source or scientific validation",
+  "interval_meaning": "Conditional display-rounding bounds, not measured uncertainty or confidence intervals",
+  "records": [
+    {
+      "id": "t2t_base_nominal",
+      "source": "PDF p4 Table 3 t2t_base: 1415.78 W, 12 h, 27 kWh·PUE, 26 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "26.8431888",
+        "conditional_interval": [
+          "26.8431888",
+          "26.8431888"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "11.615775807346581024",
+        "conditional_interval": [
+          "11.615775807346581024",
+          "11.615775807346581024"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "27",
+          "conditional_interval": [
+            "27",
+            "27"
+          ]
+        },
+        "nominal_residual": "-0.1568112",
+        "conditional_rounding_overlap": false
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "11.79340162",
+          "conditional_interval": [
+            "11.79340162",
+            "11.79340162"
+          ]
+        },
+        "nominal_residual": "-0.177625812653418976",
+        "conditional_rounding_overlap": false
+      }
+    },
+    {
+      "id": "t2t_base_round_display",
+      "source": "PDF p4 Table 3 t2t_base: 1415.78 W, 12 h, 27 kWh·PUE, 26 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "26.8431888",
+        "conditional_interval": [
+          "25.724631750",
+          "27.961753750"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "11.615775807346581024",
+        "conditional_interval": [
+          "11.13174583544819911500",
+          "12.09980919778921867500"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "27",
+          "conditional_interval": [
+            "26.5",
+            "27.5"
+          ]
+        },
+        "nominal_residual": "-0.1568112",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "11.79340162",
+          "conditional_interval": [
+            "11.566605435",
+            "12.020197805"
+          ]
+        },
+        "nominal_residual": "-0.177625812653418976",
+        "conditional_rounding_overlap": true
+      }
+    },
+    {
+      "id": "t2t_base_round_all",
+      "source": "PDF p4 Table 3 t2t_base: 1415.78 W, 12 h, 27 kWh·PUE, 26 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "26.8431888",
+        "conditional_interval": [
+          "25.6432246875",
+          "28.0502403125"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "11.615775807346581024",
+        "conditional_interval": [
+          "11.0907030061349123765625",
+          "12.1444614207164687140625"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "27",
+          "conditional_interval": [
+            "26.5",
+            "27.5"
+          ]
+        },
+        "nominal_residual": "-0.1568112",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "11.79340162",
+          "conditional_interval": [
+            "11.566605435",
+            "12.020197805"
+          ]
+        },
+        "nominal_residual": "-0.177625812653418976",
+        "conditional_rounding_overlap": true
+      }
+    },
+    {
+      "id": "t2t_big_nominal",
+      "source": "PDF p4 Table 3 t2t_big: 1515.43 W, 84 h, 201 kWh·PUE, 192 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "201.1278696",
+        "conditional_interval": [
+          "201.1278696",
+          "201.1278696"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "87.033483960848864208",
+        "conditional_interval": [
+          "87.033483960848864208",
+          "87.033483960848864208"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "201",
+          "conditional_interval": [
+            "201",
+            "201"
+          ]
+        },
+        "nominal_residual": "0.1278696",
+        "conditional_rounding_overlap": false
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "87.08973504",
+          "conditional_interval": [
+            "87.08973504",
+            "87.08973504"
+          ]
+        },
+        "nominal_residual": "-0.056251079151135792",
+        "conditional_rounding_overlap": false
+      }
+    },
+    {
+      "id": "t2t_big_round_display",
+      "source": "PDF p4 Table 3 t2t_big: 1515.43 W, 84 h, 201 kWh·PUE, 192 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "201.1278696",
+        "conditional_interval": [
+          "199.930020250",
+          "202.325726850"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "87.033483960848864208",
+        "conditional_interval": [
+          "86.51514206025559984500",
+          "87.55182927998638431300"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "201",
+          "conditional_interval": [
+            "200.5",
+            "201.5"
+          ]
+        },
+        "nominal_residual": "0.1278696",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "87.08973504",
+          "conditional_interval": [
+            "86.862938855",
+            "87.316531225"
+          ]
+        },
+        "nominal_residual": "-0.056251079151135792",
+        "conditional_rounding_overlap": true
+      }
+    },
+    {
+      "id": "t2t_big_round_all",
+      "source": "PDF p4 Table 3 t2t_big: 1515.43 W, 84 h, 201 kWh·PUE, 192 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "201.1278696",
+        "conditional_interval": [
+          "199.2973303125",
+          "202.9659981375"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "87.033483960848864208",
+        "conditional_interval": [
+          "86.1961600909326488484375",
+          "87.8749239449347192801875"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "201",
+          "conditional_interval": [
+            "200.5",
+            "201.5"
+          ]
+        },
+        "nominal_residual": "0.1278696",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "87.08973504",
+          "conditional_interval": [
+            "86.862938855",
+            "87.316531225"
+          ]
+        },
+        "nominal_residual": "-0.056251079151135792",
+        "conditional_rounding_overlap": true
+      }
+    },
+    {
+      "id": "elmo_nominal",
+      "source": "PDF p4 Table 3 elmo: 517.66 W, 336 h, 275 kWh·PUE, 262 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "274.8153408",
+        "conditional_interval": [
+          "274.8153408",
+          "274.8153408"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "118.920051225521529984",
+        "conditional_interval": [
+          "118.920051225521529984",
+          "118.920051225521529984"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "275",
+          "conditional_interval": [
+            "275",
+            "275"
+          ]
+        },
+        "nominal_residual": "-0.1846592",
+        "conditional_rounding_overlap": false
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "118.84120094",
+          "conditional_interval": [
+            "118.84120094",
+            "118.84120094"
+          ]
+        },
+        "nominal_residual": "0.078850285521529984",
+        "conditional_rounding_overlap": false
+      }
+    },
+    {
+      "id": "elmo_round_display",
+      "source": "PDF p4 Table 3 elmo: 517.66 W, 336 h, 275 kWh·PUE, 262 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "274.8153408",
+        "conditional_interval": [
+          "274.403738950",
+          "275.226950550"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "118.920051225521529984",
+        "conditional_interval": [
+          "118.74193994198098817100",
+          "119.09816592760632753900"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "275",
+          "conditional_interval": [
+            "274.5",
+            "275.5"
+          ]
+        },
+        "nominal_residual": "-0.1846592",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "118.84120094",
+          "conditional_interval": [
+            "118.614404755",
+            "119.067997125"
+          ]
+        },
+        "nominal_residual": "0.078850285521529984",
+        "conditional_rounding_overlap": true
+      }
+    },
+    {
+      "id": "elmo_round_all",
+      "source": "PDF p4 Table 3 elmo: 517.66 W, 336 h, 275 kWh·PUE, 262 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "274.8153408",
+        "conditional_interval": [
+          "273.5353726875",
+          "276.0979219125"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "118.920051225521529984",
+        "conditional_interval": [
+          "118.3041375302651220365625",
+          "119.5376768131331633780625"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "275",
+          "conditional_interval": [
+            "274.5",
+            "275.5"
+          ]
+        },
+        "nominal_residual": "-0.1846592",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "118.84120094",
+          "conditional_interval": [
+            "118.614404755",
+            "119.067997125"
+          ]
+        },
+        "nominal_residual": "0.078850285521529984",
+        "conditional_rounding_overlap": true
+      }
+    },
+    {
+      "id": "bert_gpu_nominal",
+      "source": "PDF p4 Table 3 bert_gpu: 12041.51 W, 79 h, 1507 kWh·PUE, 1438 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "1503.0212782",
+        "conditional_interval": [
+          "1503.0212782",
+          "1503.0212782"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "650.398070487165636636",
+        "conditional_interval": [
+          "650.398070487165636636",
+          "650.398070487165636636"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "1507",
+          "conditional_interval": [
+            "1507",
+            "1507"
+          ]
+        },
+        "nominal_residual": "-3.9787218",
+        "conditional_rounding_overlap": false
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "652.26582806",
+          "conditional_interval": [
+            "652.26582806",
+            "652.26582806"
+          ]
+        },
+        "nominal_residual": "-1.867757572834363364",
+        "conditional_rounding_overlap": false
+      }
+    },
+    {
+      "id": "bert_gpu_round_display",
+      "source": "PDF p4 Table 3 bert_gpu: 12041.51 W, 79 h, 1507 kWh·PUE, 1438 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "1503.0212782",
+        "conditional_interval": [
+          "1493.507865150",
+          "1512.534699150"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "650.398070487165636636",
+        "conditional_interval": [
+          "646.28135864734557584700",
+          "654.51478574552995316700"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "1507",
+          "conditional_interval": [
+            "1506.5",
+            "1507.5"
+          ]
+        },
+        "nominal_residual": "-3.9787218",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "652.26582806",
+          "conditional_interval": [
+            "652.039031875",
+            "652.492624245"
+          ]
+        },
+        "nominal_residual": "-1.867757572834363364",
+        "conditional_rounding_overlap": true
+      }
+    },
+    {
+      "id": "bert_gpu_round_all",
+      "source": "PDF p4 Table 3 bert_gpu: 12041.51 W, 79 h, 1507 kWh·PUE, 1438 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "1503.0212782",
+        "conditional_interval": [
+          "1488.7815744375",
+          "1517.3212013625"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "650.398070487165636636",
+        "conditional_interval": [
+          "643.8985144930302194278125",
+          "656.9301577273981101373125"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "1507",
+          "conditional_interval": [
+            "1506.5",
+            "1507.5"
+          ]
+        },
+        "nominal_residual": "-3.9787218",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "652.26582806",
+          "conditional_interval": [
+            "652.039031875",
+            "652.492624245"
+          ]
+        },
+        "nominal_residual": "-1.867757572834363364",
+        "conditional_rounding_overlap": true
+      }
+    },
+    {
+      "id": "nas_gpu_nominal",
+      "source": "PDF p4 Table 3 nas_gpu: 1515.43 W, 274120 h, 656347 kWh·PUE, 626155 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "656347.2811280",
+        "conditional_interval": [
+          "656347.2811280",
+          "656347.2811280"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "284019.269325570126865440",
+        "conditional_interval": [
+          "284019.269325570126865440",
+          "284019.269325570126865440"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "656347",
+          "conditional_interval": [
+            "656347",
+            "656347"
+          ]
+        },
+        "nominal_residual": "0.2811280",
+        "conditional_rounding_overlap": false
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "284019.13043735",
+          "conditional_interval": [
+            "284019.13043735",
+            "284019.13043735"
+          ]
+        },
+        "nominal_residual": "0.138888220126865440",
+        "conditional_rounding_overlap": false
+      }
+    },
+    {
+      "id": "nas_gpu_round_display",
+      "source": "PDF p4 Table 3 nas_gpu: 1515.43 W, 274120 h, 656347 kWh·PUE, 626155 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "656347.2811280",
+        "conditional_interval": [
+          "656343.918394250",
+          "656350.643869650"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "284019.269325570126865440",
+        "conditional_interval": [
+          "284017.81417947586708636500",
+          "284020.72447508293090025700"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "656347",
+          "conditional_interval": [
+            "656346.5",
+            "656347.5"
+          ]
+        },
+        "nominal_residual": "0.2811280",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "284019.13043735",
+          "conditional_interval": [
+            "284018.903641165",
+            "284019.357233535"
+          ]
+        },
+        "nominal_residual": "0.138888220126865440",
+        "conditional_rounding_overlap": true
+      }
+    },
+    {
+      "id": "nas_gpu_round_all",
+      "source": "PDF p4 Table 3 nas_gpu: 1515.43 W, 274120 h, 656347 kWh·PUE, 626155 lb; aggregate IT interpretation from Eq(1)",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "656347.2811280",
+        "conditional_interval": [
+          "654266.8806778125",
+          "658427.7028692375"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "284019.269325570126865440",
+        "conditional_interval": [
+          "282970.6383957654160001109375",
+          "285068.8531271890854017116875"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "656347",
+          "conditional_interval": [
+            "656346.5",
+            "656347.5"
+          ]
+        },
+        "nominal_residual": "0.2811280",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "284019.13043735",
+          "conditional_interval": [
+            "284018.903641165",
+            "284019.357233535"
+          ]
+        },
+        "nominal_residual": "0.138888220126865440",
+        "conditional_rounding_overlap": true
+      }
+    },
+    {
+      "id": "bert_79_2",
+      "source": "PDF p3 §2.1 reports 79.2 h; Table 3 p4 power 12041.51 W",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "1506.82639536",
+        "conditional_interval": [
+          "1506.82639536",
+          "1506.82639536"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "652.0446478808040306528",
+        "conditional_interval": [
+          "652.0446478808040306528",
+          "652.0446478808040306528"
+        ]
+      }
+    },
+    {
+      "id": "local_it",
+      "source": "INPUT/task.md: 8 GPUs aggregate IT mean 1.51543 kW, 84 h; conditional use of paper PUE/intensity",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "201.1278696",
+        "conditional_interval": [
+          "201.1278696",
+          "201.1278696"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "87.033483960848864208",
+        "conditional_interval": [
+          "87.033483960848864208",
+          "87.033483960848864208"
+        ]
+      }
+    },
+    {
+      "id": "local_facility",
+      "source": "INPUT/task.md: facility meter 201 kWh; local intensity not supplied",
+      "status": "partial",
+      "energy_kWh": {
+        "nominal": "201",
+        "conditional_interval": [
+          "201",
+          "201"
+        ]
+      },
+      "carbon_kg": null,
+      "carbon_status": "unknown",
+      "reason": "Missing intensity"
+    },
+    {
+      "id": "local_facility_paper_factor",
+      "source": "INPUT/task.md: facility meter 201 kWh; conditional historical paper factor",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "201",
+        "conditional_interval": [
+          "201",
+          "201"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "86.97815131698",
+        "conditional_interval": [
+          "86.97815131698",
+          "86.97815131698"
+        ]
+      }
+    },
+    {
+      "id": "tpu_unknown",
+      "source": "PDF p4 Table 3 TPU rows omit power, energy, carbon",
+      "status": "unknown",
+      "energy_kWh": null,
+      "carbon_kg": null,
+      "reason": "Missing power"
+    }
+  ],
+  "groups": {},
+  "ledger_sha256": "eb831c3d704e964e6ff69f8557cf3567b271f4982d2aaa6193d9dccacabeebec"
+}

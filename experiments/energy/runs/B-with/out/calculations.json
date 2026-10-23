@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "scope": "Arithmetic for user-entered ledger; not source or scientific validation",
+  "interval_meaning": "Conditional display-rounding bounds, not measured uncertainty or confidence intervals",
+  "records": [
+    {
+      "id": "allocated_1",
+      "source": "INPUT/task.md 用户构造演示，第1段；非论文实测；按给定份额归因",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "0.1140000",
+        "conditional_interval": [
+          "0.1140000",
+          "0.1140000"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "0.0114000000",
+        "conditional_interval": [
+          "0.0114000000",
+          "0.0114000000"
+        ]
+      },
+      "group": "allocated"
+    },
+    {
+      "id": "whole_machine_1",
+      "source": "INPUT/task.md 用户构造演示，第1段；非论文实测；审查错误方案：整机全额认领",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "0.31200",
+        "conditional_interval": [
+          "0.31200",
+          "0.31200"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "0.03120000",
+        "conditional_interval": [
+          "0.03120000",
+          "0.03120000"
+        ]
+      },
+      "group": "whole_machine"
+    },
+    {
+      "id": "allocated_2",
+      "source": "INPUT/task.md 用户构造演示，第2段；非论文实测；按给定份额归因",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "0.132000",
+        "conditional_interval": [
+          "0.132000",
+          "0.132000"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "0.066000000",
+        "conditional_interval": [
+          "0.066000000",
+          "0.066000000"
+        ]
+      },
+      "group": "allocated"
+    },
+    {
+      "id": "whole_machine_2",
+      "source": "INPUT/task.md 用户构造演示，第2段；非论文实测；审查错误方案：整机全额认领",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "0.3600",
+        "conditional_interval": [
+          "0.3600",
+          "0.3600"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "0.1800000",
+        "conditional_interval": [
+          "0.1800000",
+          "0.1800000"
+        ]
+      },
+      "group": "whole_machine"
+    }
+  ],
+  "groups": {
+    "allocated": {
+      "members": [
+        "allocated_1",
+        "allocated_2"
+      ],
+      "energy_kWh": {
+        "nominal": "0.2460000",
+        "conditional_interval": [
+          "0.2460000",
+          "0.2460000"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "0.0774000000",
+        "conditional_interval": [
+          "0.0774000000",
+          "0.0774000000"
+        ]
+      }
+    },
+    "whole_machine": {
+      "members": [
+        "whole_machine_1",
+        "whole_machine_2"
+      ],
+      "energy_kWh": {
+        "nominal": "0.67200",
+        "conditional_interval": [
+          "0.67200",
+          "0.67200"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "0.21120000",
+        "conditional_interval": [
+          "0.21120000",
+          "0.21120000"
+        ]
+      }
+    }
+  },
+  "ledger_sha256": "0c934a69bb373db5bc0b6f1aab0021732254edf8ed7479871e82cb0915b60d68"
+}

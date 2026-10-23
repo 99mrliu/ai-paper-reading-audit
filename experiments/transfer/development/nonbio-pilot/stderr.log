@@ -1,0 +1,22 @@
+2026-10-22T15:18:23.187633Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.196610Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.205054Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.212676Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.223909Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.240223Z ERROR codex_core::session::session: failed to load skill /Users/liuhengshen/.codex/skills/ima-skill/knowledge-base/SKILL.md: missing YAML frontmatter delimited by ---
+2026-10-22T15:18:23.240287Z ERROR codex_core::session::session: failed to load skill /Users/liuhengshen/.codex/skills/ima-skill/notes/SKILL.md: missing YAML frontmatter delimited by ---
+2026-10-22T15:18:23.240793Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.253966Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.258368Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.261976Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.265909Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.269754Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.274326Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.279466Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.286958Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.291361Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.294874Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.298227Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.301608Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:18:23.305020Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-22T15:21:44.189588Z  WARN codex_core::shell_snapshot: Failed to delete shell snapshot at AbsolutePathBuf("/Users/liuhengshen/.codex/shell_snapshots/01a16431-1ebe-7ac2-81e1-c1a9ea800234.1792682303168920000.sh"): Os { code: 2, kind: NotFound, message: "No such file or directory" }

@@ -1,0 +1,151 @@
+{
+  "scope": "Arithmetic, transcription and artifact checks only; no scientific meaning established by matching",
+  "audit_script_exit_code_observed": 0,
+  "checks": [
+    {
+      "check": "allocated power segment 1 W",
+      "actual": "190.00",
+      "expected": "190",
+      "passed": true
+    },
+    {
+      "check": "allocated power segment 2 W",
+      "actual": "110.00",
+      "expected": "110",
+      "passed": true
+    },
+    {
+      "check": "facility total kWh",
+      "actual": "0.2460000",
+      "expected": "0.2460",
+      "passed": true
+    },
+    {
+      "check": "carbon total kg",
+      "actual": "0.0774000000",
+      "expected": "0.0774",
+      "passed": true
+    },
+    {
+      "check": "arithmetic mean intensity method g",
+      "actual": "73.8000",
+      "expected": "73.8",
+      "passed": true
+    },
+    {
+      "check": "arithmetic mean underestimate g",
+      "actual": "3.6000",
+      "expected": "3.6",
+      "passed": true
+    },
+    {
+      "check": "whole machine total kWh",
+      "actual": "0.67200",
+      "expected": "0.672",
+      "passed": true
+    },
+    {
+      "check": "whole machine total carbon kg",
+      "actual": "0.21120000",
+      "expected": "0.2112",
+      "passed": true
+    },
+    {
+      "check": "ledger SHA256 binding",
+      "actual": "0c934a69bb373db5bc0b6f1aab0021732254edf8ed7479871e82cb0915b60d68",
+      "expected": "0c934a69bb373db5bc0b6f1aab0021732254edf8ed7479871e82cb0915b60d68",
+      "passed": true
+    },
+    {
+      "check": "all ledger rows arithmetically ok",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "E1 literal quote match only",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "E2 literal quote match only",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "E3 literal quote match only",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "E4 literal quote match only",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "E5 literal quote match only",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "E6 literal quote match only",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "E7 literal quote match only",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "E8 literal quote match only",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "E9 literal quote match only",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "E10 literal quote match only",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "report.md nonempty",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "claims.md nonempty",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    },
+    {
+      "check": "method_pages.txt nonempty",
+      "actual": "True",
+      "expected": "True",
+      "passed": true
+    }
+  ],
+  "failed_checks": [],
+  "unresolved": [
+    "PDF states default PUE follows Strubell et al. but does not directly supply its numerical value; external source/code not supplied or accessed.",
+    "No real measurement logs or sensor calibration; true workload constancy, allocation validity and metering-domain independence unverified.",
+    "Exact cloud PUE and supply composition unknown; missing-sample recovery behavior not verified from source code."
+  ],
+  "quantum_policy": "No quantum assumed; point calculations are not uncertainty bounds."
+}

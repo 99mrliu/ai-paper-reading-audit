@@ -1,0 +1,32 @@
+2026-10-23T01:42:55.848398Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:42:55.850559Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:43:00.854854Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:43:00.901550Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.913087Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.920557Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.927517Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.935485Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.943772Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.951276Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.955521Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.959175Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.961980Z ERROR codex_core::session::session: failed to load skill /Users/liuhengshen/.codex/skills/ima-skill/knowledge-base/SKILL.md: missing YAML frontmatter delimited by ---
+2026-10-23T01:43:00.961988Z ERROR codex_core::session::session: failed to load skill /Users/liuhengshen/.codex/skills/ima-skill/notes/SKILL.md: missing YAML frontmatter delimited by ---
+2026-10-23T01:43:00.965063Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.974879Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.982363Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.987603Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:00.994281Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:01.002327Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:01.009402Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:01.014985Z  WARN codex_rollout::list: state db discrepancy during find_thread_path_by_id_str_in_subdir: falling_back
+2026-10-23T01:43:05.974278Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:43:12.227919Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:43:18.016078Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:43:20.909469Z  WARN codex_core_plugins::manager: failed to refresh cached remote plugin catalog error=failed to send remote plugin catalog request to https://chatgpt.com/backend-api/ps/plugins/list?scope=GLOBAL&limit=200: error decoding response body scope=Global
+2026-10-23T01:43:23.543928Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:43:29.081932Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:43:39.073597Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:43:46.492908Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:44:02.345553Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out
+2026-10-23T01:45:37.329394Z ERROR codex_models_manager::manager: failed to refresh available models: request timed out

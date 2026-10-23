@@ -1,0 +1,188 @@
+{
+  "records": [
+    {
+      "id": "allocated_1",
+      "source": "INPUT/task.md 用户构造演示，第1段；非论文实测；按给定份额归因",
+      "group": "allocated",
+      "components": [
+        {
+          "resource": "CPU",
+          "power": {
+            "value": "200",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": ".25"
+        },
+        {
+          "resource": "DRAM",
+          "power": {
+            "value": "80",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": ".25"
+        },
+        {
+          "resource": "GPU",
+          "power": {
+            "value": "240",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": ".50"
+        }
+      ],
+      "duration": {
+        "value": "30",
+        "unit": "min"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.2"
+      },
+      "intensity": {
+        "value": "100",
+        "unit": "g/kWh"
+      }
+    },
+    {
+      "id": "whole_machine_1",
+      "source": "INPUT/task.md 用户构造演示，第1段；非论文实测；审查错误方案：整机全额认领",
+      "group": "whole_machine",
+      "components": [
+        {
+          "resource": "CPU",
+          "power": {
+            "value": "200",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": "1"
+        },
+        {
+          "resource": "DRAM",
+          "power": {
+            "value": "80",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": "1"
+        },
+        {
+          "resource": "GPU",
+          "power": {
+            "value": "240",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": "1"
+        }
+      ],
+      "duration": {
+        "value": "30",
+        "unit": "min"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.2"
+      },
+      "intensity": {
+        "value": "100",
+        "unit": "g/kWh"
+      }
+    },
+    {
+      "id": "allocated_2",
+      "source": "INPUT/task.md 用户构造演示，第2段；非论文实测；按给定份额归因",
+      "group": "allocated",
+      "components": [
+        {
+          "resource": "CPU",
+          "power": {
+            "value": "100",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": ".50"
+        },
+        {
+          "resource": "DRAM",
+          "power": {
+            "value": "40",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": ".50"
+        },
+        {
+          "resource": "GPU",
+          "power": {
+            "value": "160",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": ".25"
+        }
+      ],
+      "duration": {
+        "value": "60",
+        "unit": "min"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.2"
+      },
+      "intensity": {
+        "value": "500",
+        "unit": "g/kWh"
+      }
+    },
+    {
+      "id": "whole_machine_2",
+      "source": "INPUT/task.md 用户构造演示，第2段；非论文实测；审查错误方案：整机全额认领",
+      "group": "whole_machine",
+      "components": [
+        {
+          "resource": "CPU",
+          "power": {
+            "value": "100",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": "1"
+        },
+        {
+          "resource": "DRAM",
+          "power": {
+            "value": "40",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": "1"
+        },
+        {
+          "resource": "GPU",
+          "power": {
+            "value": "160",
+            "unit": "W"
+          },
+          "power_scope": "aggregate",
+          "allocation": "1"
+        }
+      ],
+      "duration": {
+        "value": "60",
+        "unit": "min"
+      },
+      "measurement_scope": "it",
+      "pue": {
+        "value": "1.2"
+      },
+      "intensity": {
+        "value": "500",
+        "unit": "g/kWh"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "skill/scripts/verify_claims.py",
+    "--claims",
+    "out/claims.json",
+    "--index",
+    "out/index",
+    "--out",
+    "out/verification.json"
+  ],
+  "exit_code": 1
+}

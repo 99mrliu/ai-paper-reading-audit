@@ -1,0 +1,13 @@
+SYNTHETIC INCOMPLETE MEASUREMENT EXCERPT
+
+This is an artificial boundary-test fixture, not a published paper.
+
+A training run lasted 4 hours.
+Average draw was recorded as 180, but its unit was lost.
+A separate meter recorded 0.72 kWh.
+It is unknown whether the meter covers IT equipment or the whole facility.
+The PUE and electricity carbon intensity are not available.
+No supplementary material is supplied.
+
+Do not interpret missing metadata as a measured zero.
+

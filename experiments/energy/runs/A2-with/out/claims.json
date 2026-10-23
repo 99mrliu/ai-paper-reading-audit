@@ -1,0 +1,15 @@
+{
+  "scope": "来源支持与算术检查分开记录；literal matching does not establish scientific meaning",
+  "claims": [
+    {"id":"C1","type":"source_fact","claim":"626155 的单位为 lb，预算为 NAS；单次 T2T big 为192 lb","source":"PDF p1 Table 1; p4 Table 3 caption and NAS row","evidence":"CO2e (lbs); w/ neural arch. search; NAS P100x8","status":"supported"},
+    {"id":"C2","type":"source_fact","claim":"作者短窗功率采样，完整训练时长来自原论文","source":"PDF p2 §2","evidence":"maximum of 1 day; using training times and hardware reported in the original papers","status":"supported"},
+    {"id":"C3","type":"interpretation","claim":"Table 3 功率按整组 IT 功率复算，不再乘 GPU 数","source":"PDF p2 Eq(1), p4 Table 3; out/calculations.json","status":"arithmetic_consistent_not_independently_measured"},
+    {"id":"C4","type":"calculation","claim":"BERT 表内79h不能仅靠最终整数舍入重现1507kWh和1438lb","source":"PDF p4 Table 3; bert_gpu_nominal","status":"failed_nominal_reproduction_preserved"},
+    {"id":"C5","type":"conditional_inference","claim":"正文79.2h可同时重现BERT两项整数结果，但未知作者工作表","source":"PDF p3 §2.1; bert_79_2","status":"supported_candidate_not_proven_history"},
+    {"id":"C6","type":"conditional_calculation","claim":"两套明确舍入假设下，五行能量和碳排分别区间重叠","source":"out/ledger.json round_display/round_all; out/calculations.json","status":"compatible_not_measurement_validation"},
+    {"id":"C7","type":"source_fact","claim":"TPU功率、能耗和排放缺失，不能当零","source":"PDF p4 Table 3 caption","status":"unknown_quantities_explicit"},
+    {"id":"C8","type":"calculation","claim":"239942/4789约50.10，与正文平均52h存在未解差异","source":"PDF p4 §4.2 and Table 4; out/derived-checks.json","status":"unresolved"},
+    {"id":"C9","type":"conditional_calculation","claim":"本地IT127.29612kWh，按论文系数得设施201.1278696kWh及87.03348kg","source":"INPUT/task.md; local_it ledger record","status":"conditional_on_scope_and_historical_factors"},
+    {"id":"C10","type":"missing_information","claim":"201kWh电表不能重复乘PUE；实际本地碳排尚缺适用因子及计量边界","source":"INPUT/task.md; local_facility record","status":"energy_available_carbon_unknown"}
+  ]
+}

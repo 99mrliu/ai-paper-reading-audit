@@ -1,0 +1,198 @@
+{
+  "transfer": {
+    "runs": {
+      "A1-with": {
+        "seconds": 275.744,
+        "tool_calls": 13,
+        "usage": {
+          "input_tokens": 594718,
+          "cached_input_tokens": 540288,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 9241,
+          "reasoning_output_tokens": 139
+        },
+        "exit_code": 0,
+        "session_sha256": "fc433b5eb3bc616a4f4577effcb7329808ad19f790f4a69fbcdaed1e8529fa0b"
+      },
+      "A1-without": {
+        "seconds": 202.482,
+        "tool_calls": 8,
+        "usage": {
+          "input_tokens": 365373,
+          "cached_input_tokens": 327936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5076,
+          "reasoning_output_tokens": 99
+        },
+        "exit_code": 0,
+        "session_sha256": "49a8620dabd4796b6a1d94c502df5c6565a2942585100f1e8410e201456701dc"
+      },
+      "A2-with": {
+        "seconds": 311.772,
+        "tool_calls": 10,
+        "usage": {
+          "input_tokens": 477404,
+          "cached_input_tokens": 422400,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8537,
+          "reasoning_output_tokens": 284
+        },
+        "exit_code": 0,
+        "session_sha256": "56d7b10a7cbc167c2bb9297426d687fd964059118d8cef12c9cfda34cfa50ad6"
+      },
+      "A2-without": {
+        "seconds": 209.728,
+        "tool_calls": 10,
+        "usage": {
+          "input_tokens": 401710,
+          "cached_input_tokens": 359936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5132,
+          "reasoning_output_tokens": 104
+        },
+        "exit_code": 0,
+        "session_sha256": "46a2038151ce7246b92687c606e06b113a8302bf29d7448aa29792091e68a9a7"
+      },
+      "B-with": {
+        "seconds": 205.738,
+        "tool_calls": 9,
+        "usage": {
+          "input_tokens": 332033,
+          "cached_input_tokens": 295296,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6190,
+          "reasoning_output_tokens": 133
+        },
+        "exit_code": 0,
+        "session_sha256": "3520bfe066a87f8036058ae69d7f978b292e60dc23a0cd49dad09b3adb9e49fd"
+      },
+      "C1-with": {
+        "seconds": 114.524,
+        "tool_calls": 6,
+        "usage": {
+          "input_tokens": 196943,
+          "cached_input_tokens": 177536,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2799,
+          "reasoning_output_tokens": 17
+        },
+        "exit_code": 0,
+        "session_sha256": "635fc7728a0495f672ffd41efe9a33b038a0e10c102f5d87ceff9ff5b0b23a92"
+      },
+      "C2-with": {
+        "seconds": 80.022,
+        "tool_calls": 7,
+        "usage": {
+          "input_tokens": 234017,
+          "cached_input_tokens": 210304,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2734,
+          "reasoning_output_tokens": 23
+        },
+        "exit_code": 0,
+        "session_sha256": "f568cc9258e31b4e50d6ead7a5f77e63e68d5e9dcc65094ea48324ef1975c83d"
+      }
+    },
+    "mean_with_seconds": 293.75800000000004,
+    "mean_without_seconds": 206.10500000000002,
+    "relative_increase_percent": 42.52832294218967
+  },
+  "energy": {
+    "runs": {
+      "A1-with": {
+        "seconds": 178.236,
+        "tool_calls": 8,
+        "usage": {
+          "input_tokens": 298713,
+          "cached_input_tokens": 263936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 7896,
+          "reasoning_output_tokens": 115
+        },
+        "exit_code": 0,
+        "session_sha256": "9dc1eaf4d39f0af98928c1c31efdf129c81d85973c5e713d5674928aec47a75c"
+      },
+      "A1-without": {
+        "seconds": 221.178,
+        "tool_calls": 8,
+        "usage": {
+          "input_tokens": 278480,
+          "cached_input_tokens": 258048,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6012,
+          "reasoning_output_tokens": 102
+        },
+        "exit_code": 0,
+        "session_sha256": "d909886859b8b43e29d8306419d10eb39bec07d40215e26a735480e74d47005a"
+      },
+      "A2-with": {
+        "seconds": 258.498,
+        "tool_calls": 8,
+        "usage": {
+          "input_tokens": 302660,
+          "cached_input_tokens": 265344,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8188,
+          "reasoning_output_tokens": 180
+        },
+        "exit_code": 0,
+        "session_sha256": "a320d479eb508a3208b482e3992242beb78e31c140223519f67ea743b1adca01"
+      },
+      "A2-without": {
+        "seconds": 168.44,
+        "tool_calls": 7,
+        "usage": {
+          "input_tokens": 217439,
+          "cached_input_tokens": 197760,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6798,
+          "reasoning_output_tokens": 124
+        },
+        "exit_code": 0,
+        "session_sha256": "d307a56de257d5a7391bddb6d42a6c9b3307d1fbe3fc61572fefe2444751f16d"
+      },
+      "B-with": {
+        "seconds": 212.485,
+        "tool_calls": 11,
+        "usage": {
+          "input_tokens": 418963,
+          "cached_input_tokens": 387968,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5727,
+          "reasoning_output_tokens": 116
+        },
+        "exit_code": 0,
+        "session_sha256": "781ae569219044e396d70262a37806eb9636f34cde9a16ba31c3e49b57d4d7d5"
+      },
+      "C1-with": {
+        "seconds": 143.332,
+        "tool_calls": 8,
+        "usage": {
+          "input_tokens": 258481,
+          "cached_input_tokens": 229632,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4149,
+          "reasoning_output_tokens": 102
+        },
+        "exit_code": 0,
+        "session_sha256": "eec921551a6d0ec97c2d062376e3561c4bb07aba3d2f0d6fbb398b83ac556261"
+      },
+      "C2-with": {
+        "seconds": 166.271,
+        "tool_calls": 9,
+        "usage": {
+          "input_tokens": 286324,
+          "cached_input_tokens": 269568,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4344,
+          "reasoning_output_tokens": 87
+        },
+        "exit_code": 0,
+        "session_sha256": "152e2e9b7c419659e55d07c72072991ab3b5c9059acd7034ebd0d8ae99ca69b0"
+      }
+    },
+    "mean_with_seconds": 218.367,
+    "mean_without_seconds": 194.809,
+    "relative_increase_percent": 12.092870452597149
+  }
+}

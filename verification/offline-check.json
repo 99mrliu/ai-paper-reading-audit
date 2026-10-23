@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "original_sessions_verified": 14,
+  "paired_comparisons": {
+    "transfer": {
+      "with_mean_seconds": 293.75800000000004,
+      "without_mean_seconds": 206.10500000000002,
+      "relative_increase_percent": 42.52832294218967
+    },
+    "energy": {
+      "with_mean_seconds": 218.367,
+      "without_mean_seconds": 194.809,
+      "relative_increase_percent": 12.092870452597149
+    }
+  },
+  "energy_ledger_records_recomputed": 25,
+  "bert_79h_kWh": "1503.0212782",
+  "bert_79_2h_kWh": "1506.82639536",
+  "bert_79h_lb": "1433.8822994028",
+  "bert_79_2h_lb": "1437.51238117344",
+  "scope": "Offline consistency of preserved records and arithmetic, not new AI runs, source semantics or physical measurements."
+}

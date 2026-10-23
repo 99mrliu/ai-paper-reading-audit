@@ -1,0 +1,4 @@
+You are executing one independent paper-reading task. You have no prior results from other sessions.
+Read INPUT/task.md and the supplied INPUT materials. Only use files within this working directory, plus ordinary installed executables/libraries. Do not inspect parent directories, other sessions, credentials, global skills, or project history. No networking, publishing, submitting, or delegating. Do not alter INPUT files or the supplied skill. You may write temporary artifacts and your results within this directory.
+Budget: at most 30 tool calls and 15 minutes. Work independently; do not ask the user questions. If material is insufficient, explain the limitation and stop or provide a bounded result. Save the requested Chinese report as out/report.md. Preserve failed checks and report any unresolved problems. Do not claim that literal evidence matching proves scientific meaning.
+Use your ordinary paper-reading approach with the available base tools.

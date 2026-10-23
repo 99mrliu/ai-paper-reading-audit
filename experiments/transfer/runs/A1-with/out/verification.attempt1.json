@@ -1,0 +1,318 @@
+{
+  "schema_version": "2.0",
+  "scope": "provided_document",
+  "errors": [],
+  "claims": [
+    {
+      "id": "C1",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 2,
+      "quote": "to evaluate Ψ(λ) for each one, and return the λ(i) that worked the best as λ̂.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C2",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 3,
+      "quote": "independent draws from a uniform density from the same configuration space as would be spanned by a regular grid",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C3",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "With grid search, nine trials only test g(x) in three distinct places. With random search, all nine trials explore distinct values of g.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C4",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 14,
+      "quote": "For each data set, a small number of hyperparameters dominate performance, but the relative importance of each hyper-parameter varies from each data set to the next.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C5",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 15,
+      "quote": "Even in this simple 7-d problem, Ψ has a much lower effective dimension of between 1 and 4, depending on the data set.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C6",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 12,
+      "quote": "Random searches of 8 trials match or outperform grid searches of (on average) 100 trials.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C7",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 11,
+      "quote": "We formed experiments for each data set by drawing S = 256 trials from this distribution.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C8",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 11,
+      "quote": "In the larger space, 32 trials were necessary to consistently outperform grid search rather than 8, indicating that there are many harmful ways to preprocess the data.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C9",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 13,
+      "quote": "Exploring just four PCA variance levels by grid search would have required 5 times as many (average 500) trials per data set.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C10",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 10,
+      "quote": "drawing uniformly in the log domain between log(A) and log(B), exponentiating to get a number between A and B, and then rounding to the nearest integer.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C11",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 18,
+      "quote": "We chose 1, 2, or 3 layers with equal probability.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C12",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 20,
+      "quote": "Random experiments of 128 random trials found an inferior best model for three data sets, a competitive model in four, and superior model in one (convex).",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C13",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 20,
+      "quote": "of trials across data sets for the DBN-3 model was 41.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C14",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 20,
+      "quote": "later experiments benefited from the experience the authors had drawn from earlier ones.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C15",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 21,
+      "quote": "an inferior model in three (mnist background images, mnist background random, mnist rotated background images).",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C16",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 21,
+      "quote": "the scores in the original experiments were not computed using the same score-averaging technique that we described in Section 2.1",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C17",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 21,
+      "quote": "even experiments with larger numbers of trials (64 and larger) feature significant variability.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C18",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 1,
+      "quote": "statistically equal performance on four of seven data sets, and superior performance on one of seven.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C19",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 23,
+      "quote": "We hope that future work in that direction will consider random search of the form studied here as a baseline for performance, rather than grid search.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C20",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 16,
+      "quote": "There were some grids that were best at finding cubes and hyper-cubes in 3-d and 5-d, but most grids were the worst performers.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C21",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 8,
+      "quote": "We shuffled the original splits randomly, and used 10 000 training examples, 2000 validation examples, and 50 000 testing examples.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "I1",
+      "class": "INFERRED",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "Random search has the same efficiency in the relevant subspace as if it had been used to search only the relevant dimensions.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "I2",
+      "class": "INFERRED",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 16,
+      "quote": "The expected probability of finding the target is 1.0 minus the probability of missing the target with every single one of T trials in the experiment.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "U1",
+      "class": "UNKNOWN",
+      "status": "WARN",
+      "notes": [
+        "Search describes supplied pages only; keywords cannot establish semantic absence."
+      ],
+      "search_results": [
+        {
+          "term": "36",
+          "hits": []
+        },
+        {
+          "term": "classification",
+          "hits": [
+            {
+              "page": 8,
+              "context": "t al. (2007) and Vincent et al. (2008), we use a variety of classification data sets that include many factors of variation.2 The mnist basic data set is a subset of the well-known MNIST handwritten digit data set (LeCun et al., 1998a"
+            },
+            {
+              "page": 9,
+              "context": "es: tall or wide. This task was easier than the MNIST digit classification, so we only used 1000 training examples, and 200 validation examples, but we still used 50 000 testing examples. The rectangles images data set (Figure 4, midd"
+            },
+            {
+              "page": 11,
+              "context": "ions Ψ corresponding to several neural network families and classification tasks. In this section we show that indeed Ψ has a low effective dimension, which explains why randomly sampled trials found better values. One simple way to c"
+            },
+            {
+              "page": 18,
+              "context": " parameterized similarly to a multilayer neural network for classification, and it has been argued that pretraining a multilayer neural network by unsupervised learning as a DBN acts both to regularize the neural network toward better"
+            }
+          ]
+        },
+        {
+          "term": "effective dimension",
+          "hits": [
+            {
+              "page": 3,
+              "context": "mensional spaces because functions Ψ of interest have a low effective dimensionality; essentially, Ψ of interest are more sensitive to changes in some dimensions than others (Caflisch et al., 1997). In particular, if a function f of two va"
+            },
+            {
+              "page": 4,
+              "context": "ptimizing a function f (x, y) = g(x) + h(y) ≈ g(x) with low effective dimensionality. Above each square g(x) is shown in green, and left of each square h(y) is shown in yellow. With grid search, nine trials only test g(x) in three distinct"
+            },
+            {
+              "page": 11,
+              "context": " peaked, with small regions of good performance. 3. The Low Effective Dimension of Ψ Section 2 showed that random sampling is more efficient than grid sampling for optimizing functions Ψ corresponding to several neural network families and"
+            },
+            {
+              "page": 15,
+              "context": "a sets. Even in this simple 7-d problem, Ψ has a much lower effective dimension of between 1 and 4, depending on the data set. It would be impossible to cover just these few dimensions with a reliable grid however, because different data s"
+            },
+            {
+              "page": 16,
+              "context": "and (4), the indicator function [of the target] had a lower effective dimension than the dimensionality of the overall space because the dimensions in which the target is elongated can be almost ignored. The simulation experiment began wit"
+            },
+            {
+              "page": 21,
+              "context": " already proposed an optimization algorithm that identifies effective dimensions, for more efficient search. They present an algorithm that distinguishes between important and unimportant dimensions: a low-discrepancy point set is used to "
+            },
+            {
+              "page": 23,
+              "context": " of an expensive function must be optimized jointly and the effective dimensionality is high. We hope that future work in that direction will consider random search of the form studied here as a baseline for performance, rather than grid s"
+            }
+          ]
+        },
+        {
+          "term": "adaptive",
+          "hits": [
+            {
+              "page": 1,
+              "context": "eline against which to judge progress in the development of adaptive (sequential) hyper-parameter optimization algorithms. Keywords: global optimization, model selection, neural networks, deep learning, response surface modeling"
+            },
+            {
+              "page": 20,
+              "context": "mization process into something with more resemblance to an adaptive sequential algorithm. Random search versions of the DBN experiments from Larochelle et al. (2007) are shown in Figure 9. In this more challenging optimization "
+            },
+            {
+              "page": 21,
+              "context": "at pseudo-random or quasi-random trials are optimal for non-adaptive hyper-parameter search. There is still work to be done for each model family, to establish how it should be parametrized for i.i.d. random search to be as reli"
+            },
+            {
+              "page": 23,
+              "context": "r-parameter optimization strategies considered here are non-adaptive: they do not vary the course of the experiment by considering any results that are already available. Random search was not generally as good as the sequential"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "derivations": [],
+  "summary": {
+    "claims_and_parameters": 24,
+    "failures": 0,
+    "warnings": 1,
+    "located_positive_claims": 23,
+    "positive_claims": 23
+  },
+  "interpretation": "Mechanical checks do not certify scientific meaning or completeness.",
+  "binding": {
+    "claims_sha256": "e023f51e2da4f8a1c98ce6b4e0854fc9a17861608d9a9bca3fc918bb03ede0ef",
+    "pages_sha256": "52a947e6eb70fdedaffe5e92b9d1b9f44dc9ec88e99d99bea18b46a82fe479bf",
+    "index_sha256": "1240246ef5e81ab9d34139aba087ac04401da1dd8d0e42395c8f02b73c2eeaef",
+    "source_sha256": "01e88a175a36afa399e05dc97dce9c5de980130445269cc0e5100d0471887029"
+  }
+}

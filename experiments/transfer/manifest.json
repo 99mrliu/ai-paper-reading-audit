@@ -1,0 +1,358 @@
+{
+  "rules_version": "product-skill-rules-v2.5-read-minor-20261016-r2",
+  "archive_format": "zip",
+  "report_file": "report.md",
+  "skill_directory": "skill/",
+  "track": "read",
+  "skill_version": "2.0.0",
+  "materials": [
+    {
+      "path": "materials/random_search.pdf",
+      "case_ids": [
+        "A"
+      ],
+      "role": "input",
+      "source": "https://jmlr.org/papers/v13/bergstra12a.html",
+      "version": "JMLR 2012, 25 PDF pages",
+      "retrieved_at": "2026-10-22",
+      "data_type": "真实公开论文；文字为PDF抽取",
+      "sharing_basis": "JMLR official author-info Publication states CC-by public license; attribution retained; see materials/source-and-rights.md",
+      "text_companion": "materials/random_search.txt"
+    },
+    {
+      "path": "materials/random_search.txt",
+      "case_ids": [
+        "A"
+      ],
+      "role": "reference",
+      "source": "https://jmlr.org/papers/v13/bergstra12a.html",
+      "version": "JMLR 2012, 25 PDF pages",
+      "retrieved_at": "2026-10-22",
+      "data_type": "真实公开论文；文字为PDF抽取",
+      "sharing_basis": "JMLR official author-info Publication states CC-by public license; attribution retained; see materials/source-and-rights.md"
+    },
+    {
+      "path": "materials/scikit_learn.pdf",
+      "case_ids": [
+        "B"
+      ],
+      "role": "input",
+      "source": "https://jmlr.org/papers/v12/pedregosa11a.html",
+      "version": "JMLR 2011, 6 PDF pages",
+      "retrieved_at": "2026-10-22",
+      "data_type": "真实公开论文；文字为PDF抽取",
+      "sharing_basis": "JMLR official author-info Publication states CC-by public license; attribution retained; see materials/source-and-rights.md",
+      "text_companion": "materials/scikit_learn.txt"
+    },
+    {
+      "path": "materials/scikit_learn.txt",
+      "case_ids": [
+        "B"
+      ],
+      "role": "reference",
+      "source": "https://jmlr.org/papers/v12/pedregosa11a.html",
+      "version": "JMLR 2011, 6 PDF pages",
+      "retrieved_at": "2026-10-22",
+      "data_type": "真实公开论文；文字为PDF抽取",
+      "sharing_basis": "JMLR official author-info Publication states CC-by public license; attribution retained; see materials/source-and-rights.md"
+    },
+    {
+      "path": "materials/invalid_input.pdf",
+      "case_ids": [
+        "C"
+      ],
+      "role": "input",
+      "source": "Locally generated invalid-format fixture",
+      "version": "Invalid-format fixture v1",
+      "retrieved_at": "2026-10-22",
+      "data_type": "合成",
+      "sharing_basis": "Project-authored synthetic input",
+      "text_companion": "materials/invalid_input.txt"
+    }
+  ],
+  "environment": {
+    "host": "macOS-15.7.4-arm64-arm-64bit-Mach-O; Apple Silicon",
+    "model": "Codex CLI default model selection (all sessions identical)",
+    "model_version": "Exact service model/snapshot unavailable in JSONL; not claimed locked",
+    "tools": [
+      "codex-cli 0.163.0-alpha.11.1",
+      "Python 3.14.7",
+      "Poppler pdftotext/pdftoppm 26.08.0",
+      "local shell and PDF image viewer"
+    ],
+    "dependencies": [
+      "Python standard library",
+      "pdftotext or pypdf; pdftoppm for rendering",
+      "authenticated Codex CLI; model access is external service"
+    ],
+    "budget": "Each session: 30 tool calls and 900 seconds; identical base tools and defaults. No network for reading tasks. Fresh task directories; no shared intermediate answers.",
+    "human_steps": "User supplied goal and authorized preparation/submission. AI prepared skill/tasks, launched independent CLI sessions and assessed outputs. No human scientific corrections or third-party validation. See assessment.json and preserved run logs."
+  },
+  "cases": [
+    {
+      "id": "A",
+      "purpose": "core",
+      "task_file": "cases/A/task.md",
+      "input_files": [
+        "materials/random_search.pdf"
+      ],
+      "reference_files": [
+        "materials/random_search.txt"
+      ],
+      "acceptance_criteria_file": "cases/A/acceptance.md"
+    },
+    {
+      "id": "B",
+      "purpose": "variation",
+      "task_file": "cases/B/task.md",
+      "input_files": [
+        "materials/scikit_learn.pdf"
+      ],
+      "reference_files": [
+        "materials/scikit_learn.txt"
+      ],
+      "acceptance_criteria_file": "cases/B/acceptance.md"
+    },
+    {
+      "id": "C",
+      "purpose": "boundary",
+      "task_file": "cases/C/task.md",
+      "input_files": [
+        "materials/invalid_input.pdf"
+      ],
+      "reference_files": [],
+      "acceptance_criteria_file": "cases/C/acceptance.md"
+    }
+  ],
+  "runs": [
+    {
+      "id": "A1-with",
+      "case_id": "A",
+      "condition": "with_skill",
+      "skill_version": "2.0.0",
+      "output_files": [
+        "runs/A1-with/out/assistant_final.md",
+        "runs/A1-with/out/claims.json",
+        "runs/A1-with/out/evidence_report.md",
+        "runs/A1-with/out/execution_log.md",
+        "runs/A1-with/out/figure1.png",
+        "runs/A1-with/out/figure9.png",
+        "runs/A1-with/out/index/flat.txt",
+        "runs/A1-with/out/index/index.json",
+        "runs/A1-with/out/index/pages.jsonl",
+        "runs/A1-with/out/make_claims.py",
+        "runs/A1-with/out/reading_judgment.md",
+        "runs/A1-with/out/report.md",
+        "runs/A1-with/out/semantic_review.md",
+        "runs/A1-with/out/verification.attempt1.json",
+        "runs/A1-with/out/verification.json",
+        "runs/A1-with/prompt.txt",
+        "runs/A1-with/session.json"
+      ],
+      "trace_files": [
+        "runs/A1-with/events.jsonl",
+        "runs/A1-with/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/A1-with/out/report.md"
+      ],
+      "started_at": "2026-10-22T15:21:14.574580+00:00",
+      "duration_seconds": 275.744,
+      "cost": null,
+      "human_steps": [],
+      "result": "核心阅读与有条件适配判断完成；未发现相对于强baseline的稳定质量增益。 C9复合引文覆盖有局部限制。"
+    },
+    {
+      "id": "A1-without",
+      "case_id": "A",
+      "condition": "without_skill",
+      "skill_version": "none",
+      "output_files": [
+        "runs/A1-without/out/assistant_final.md",
+        "runs/A1-without/out/report.md",
+        "runs/A1-without/paper.txt",
+        "runs/A1-without/prompt.txt",
+        "runs/A1-without/session.json",
+        "runs/A1-without/tmp/fig1.png",
+        "runs/A1-without/tmp/fig9.png"
+      ],
+      "trace_files": [
+        "runs/A1-without/events.jsonl",
+        "runs/A1-without/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/A1-without/out/report.md"
+      ],
+      "started_at": "2026-10-22T15:21:14.571562+00:00",
+      "duration_seconds": 202.482,
+      "cost": null,
+      "human_steps": [],
+      "result": "核心阅读与有条件适配判断完成；未发现相对于强baseline的稳定质量增益。"
+    },
+    {
+      "id": "A2-with",
+      "case_id": "A",
+      "condition": "with_skill",
+      "skill_version": "2.0.0",
+      "output_files": [
+        "runs/A2-with/out/assistant_final.md",
+        "runs/A2-with/out/audit-log.md",
+        "runs/A2-with/out/claims.json",
+        "runs/A2-with/out/evidence-rendered.md",
+        "runs/A2-with/out/figures/pdf-p04.png",
+        "runs/A2-with/out/figures/pdf-p20.png",
+        "runs/A2-with/out/index/flat.txt",
+        "runs/A2-with/out/index/index.json",
+        "runs/A2-with/out/index/pages.jsonl",
+        "runs/A2-with/out/reading_judgment.md",
+        "runs/A2-with/out/report.md",
+        "runs/A2-with/out/verification-final.json",
+        "runs/A2-with/out/verification.json",
+        "runs/A2-with/out/write_claims.py",
+        "runs/A2-with/prompt.txt",
+        "runs/A2-with/session.json"
+      ],
+      "trace_files": [
+        "runs/A2-with/events.jsonl",
+        "runs/A2-with/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/A2-with/out/report.md"
+      ],
+      "started_at": "2026-10-22T15:21:14.573368+00:00",
+      "duration_seconds": 311.772,
+      "cost": null,
+      "human_steps": [],
+      "result": "核心阅读与有条件适配判断完成；未发现相对于强baseline的稳定质量增益。"
+    },
+    {
+      "id": "A2-without",
+      "case_id": "A",
+      "condition": "without_skill",
+      "skill_version": "none",
+      "output_files": [
+        "runs/A2-without/out/assistant_final.md",
+        "runs/A2-without/out/page-20.png",
+        "runs/A2-without/out/page-4.png",
+        "runs/A2-without/out/paper-layout.txt",
+        "runs/A2-without/out/report.md",
+        "runs/A2-without/prompt.txt",
+        "runs/A2-without/session.json"
+      ],
+      "trace_files": [
+        "runs/A2-without/events.jsonl",
+        "runs/A2-without/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/A2-without/out/report.md"
+      ],
+      "started_at": "2026-10-22T15:24:37.096459+00:00",
+      "duration_seconds": 209.728,
+      "cost": null,
+      "human_steps": [],
+      "result": "核心阅读与有条件适配判断完成；未发现相对于强baseline的稳定质量增益。"
+    },
+    {
+      "id": "B-with",
+      "case_id": "B",
+      "condition": "with_skill",
+      "skill_version": "2.0.0",
+      "output_files": [
+        "runs/B-with/out/assistant_final.md",
+        "runs/B-with/out/audit-notes.md",
+        "runs/B-with/out/claims.json",
+        "runs/B-with/out/finish_report.py",
+        "runs/B-with/out/index/flat.txt",
+        "runs/B-with/out/index/index.json",
+        "runs/B-with/out/index/pages.jsonl",
+        "runs/B-with/out/page4-layout.txt",
+        "runs/B-with/out/page4.png",
+        "runs/B-with/out/report.md",
+        "runs/B-with/out/verification.json",
+        "runs/B-with/out/write_claims.py",
+        "runs/B-with/prompt.txt",
+        "runs/B-with/session.json"
+      ],
+      "trace_files": [
+        "runs/B-with/events.jsonl",
+        "runs/B-with/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/B-with/out/report.md"
+      ],
+      "started_at": "2026-10-22T15:25:50.367997+00:00",
+      "duration_seconds": 205.738,
+      "cost": null,
+      "human_steps": [],
+      "result": "同版本完成历史软件论文的新任务：接口/表1反例/历史及规模边界清楚；有一次错误路径读取，自动恢复。"
+    },
+    {
+      "id": "C1-with",
+      "case_id": "C",
+      "condition": "with_skill",
+      "skill_version": "2.0.0",
+      "output_files": [
+        "runs/C1-with/out/assistant_final.md",
+        "runs/C1-with/out/build_index.run.json",
+        "runs/C1-with/out/build_index.stdout.log",
+        "runs/C1-with/out/claims.json",
+        "runs/C1-with/out/index/index.json",
+        "runs/C1-with/out/input-check.json",
+        "runs/C1-with/out/render_report.run.json",
+        "runs/C1-with/out/render_report.stderr.log",
+        "runs/C1-with/out/report.md",
+        "runs/C1-with/out/verification.json",
+        "runs/C1-with/out/verify_claims.run.json",
+        "runs/C1-with/out/verify_claims.stdout.log",
+        "runs/C1-with/prompt.txt",
+        "runs/C1-with/session.json"
+      ],
+      "trace_files": [
+        "runs/C1-with/events.jsonl",
+        "runs/C1-with/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/C1-with/out/report.md"
+      ],
+      "started_at": "2026-10-22T15:26:26.400592+00:00",
+      "duration_seconds": 114.524,
+      "cost": null,
+      "human_steps": [],
+      "result": "符合预期的合理停止：真实invalid_input，未产生科学结论；核验/渲染拒绝，失败和恢复步骤已保留。"
+    },
+    {
+      "id": "C2-with",
+      "case_id": "C",
+      "condition": "with_skill",
+      "skill_version": "2.0.0",
+      "output_files": [
+        "runs/C2-with/out/assistant_final.md",
+        "runs/C2-with/out/build_index.stdout.log",
+        "runs/C2-with/out/claims.json",
+        "runs/C2-with/out/failed_checks.json",
+        "runs/C2-with/out/index/index.json",
+        "runs/C2-with/out/input_check.json",
+        "runs/C2-with/out/render_report.stderr.log",
+        "runs/C2-with/out/report.md",
+        "runs/C2-with/out/verification.json",
+        "runs/C2-with/out/verify_claims.stdout.log",
+        "runs/C2-with/prompt.txt",
+        "runs/C2-with/session.json"
+      ],
+      "trace_files": [
+        "runs/C2-with/events.jsonl",
+        "runs/C2-with/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/C2-with/out/report.md"
+      ],
+      "started_at": "2026-10-22T15:28:06.882796+00:00",
+      "duration_seconds": 80.022,
+      "cost": null,
+      "human_steps": [],
+      "result": "符合预期的合理停止：真实invalid_input，未产生科学结论；核验/渲染拒绝，失败和恢复步骤已保留。"
+    }
+  ],
+  "schema_version": 2,
+  "readme_file": "README.md"
+}

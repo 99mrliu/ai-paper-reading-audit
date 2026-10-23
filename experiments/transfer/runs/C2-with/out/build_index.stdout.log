@@ -1,0 +1,1 @@
+{"schema_version": "2.0", "source": "paper.pdf", "scope": "provided_document", "status": "invalid_input", "scope_warning": "Only supplied pages are indexed; supplements and completeness are not assumed.", "reason": "Missing input or invalid PDF header"}

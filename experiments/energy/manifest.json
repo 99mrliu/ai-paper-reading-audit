@@ -1,0 +1,374 @@
+{
+  "rules_version": "product-skill-rules-v2.5-read-minor-20261016-r2",
+  "archive_format": "zip",
+  "report_file": "report.md",
+  "skill_directory": "skill/",
+  "track": "read",
+  "skill_version": "1.0.0",
+  "materials": [
+    {
+      "path": "materials/acl-energy.pdf",
+      "case_ids": [
+        "A"
+      ],
+      "role": "input",
+      "source": "https://aclanthology.org/P19-1355/",
+      "version": "ACL2019 six PDF pages",
+      "retrieved_at": "2026-10-23",
+      "data_type": "真实公开论文/原件文字抽取",
+      "sharing_basis": "CC BY; attribution and source snapshots in materials/source-and-rights.md",
+      "text_companion": "materials/acl-energy.txt"
+    },
+    {
+      "path": "materials/acl-energy.txt",
+      "case_ids": [
+        "A"
+      ],
+      "role": "reference",
+      "source": "https://aclanthology.org/P19-1355/",
+      "version": "ACL2019 six PDF pages",
+      "retrieved_at": "2026-10-23",
+      "data_type": "真实公开论文/原件文字抽取",
+      "sharing_basis": "CC BY; attribution and source snapshots in materials/source-and-rights.md"
+    },
+    {
+      "path": "materials/jmlr-energy.pdf",
+      "case_ids": [
+        "B"
+      ],
+      "role": "input",
+      "source": "https://jmlr.org/papers/v21/20-312.html",
+      "version": "JMLR2020 forty-three PDF pages",
+      "retrieved_at": "2026-10-23",
+      "data_type": "真实公开论文/原件文字抽取",
+      "sharing_basis": "CC BY; attribution and source snapshots in materials/source-and-rights.md",
+      "text_companion": "materials/jmlr-energy.txt"
+    },
+    {
+      "path": "materials/jmlr-energy.txt",
+      "case_ids": [
+        "B"
+      ],
+      "role": "reference",
+      "source": "https://jmlr.org/papers/v21/20-312.html",
+      "version": "JMLR2020 forty-three PDF pages",
+      "retrieved_at": "2026-10-23",
+      "data_type": "真实公开论文/原件文字抽取",
+      "sharing_basis": "CC BY; attribution and source snapshots in materials/source-and-rights.md"
+    },
+    {
+      "path": "materials/incomplete.pdf",
+      "case_ids": [
+        "C"
+      ],
+      "role": "input",
+      "source": "Project-authored synthetic incomplete measurement fixture",
+      "version": "Synthetic v1 one page",
+      "retrieved_at": "2026-10-23",
+      "data_type": "合成",
+      "sharing_basis": "Project-authored",
+      "text_companion": "materials/incomplete.txt"
+    },
+    {
+      "path": "materials/incomplete.txt",
+      "case_ids": [
+        "C"
+      ],
+      "role": "reference",
+      "source": "Project-authored synthetic incomplete measurement fixture",
+      "version": "Synthetic v1 one page",
+      "retrieved_at": "2026-10-23",
+      "data_type": "合成",
+      "sharing_basis": "Project-authored"
+    }
+  ],
+  "environment": {
+    "host": "macOS-15.7.4-arm64-arm-64bit-Mach-O; Apple Silicon",
+    "model": "Codex CLI default selection; all sessions same configured default",
+    "model_version": "Exact server snapshot unavailable in event export; not claimed locked",
+    "tools": [
+      "Codex CLI0.163.0-alpha.11.1",
+      "Python3.14.7",
+      "Poppler26.08.0",
+      "local PDF image viewer"
+    ],
+    "dependencies": [
+      "Python standard library for calculation",
+      "PDF reader such as Poppler",
+      "authenticated Codex CLI for AI session reproduction"
+    ],
+    "budget": "30 visible tool calls,900 seconds per session; identical base tools and task. Each pair parallel2; fresh ephemeral workspaces; no cross-session artifacts.",
+    "human_steps": "Author-side AI prepares, runs and assesses; no human scientific correction or third-party verification. User requires explicit confirmation before upload. Costs unavailable; no upload executed by packaging."
+  },
+  "cases": [
+    {
+      "id": "A",
+      "purpose": "core",
+      "task_file": "cases/A/task.md",
+      "input_files": [
+        "materials/acl-energy.pdf"
+      ],
+      "reference_files": [
+        "materials/acl-energy.txt"
+      ],
+      "acceptance_criteria_file": "cases/A/acceptance.md"
+    },
+    {
+      "id": "B",
+      "purpose": "variation",
+      "task_file": "cases/B/task.md",
+      "input_files": [
+        "materials/jmlr-energy.pdf"
+      ],
+      "reference_files": [
+        "materials/jmlr-energy.txt"
+      ],
+      "acceptance_criteria_file": "cases/B/acceptance.md"
+    },
+    {
+      "id": "C",
+      "purpose": "boundary",
+      "task_file": "cases/C/task.md",
+      "input_files": [
+        "materials/incomplete.pdf"
+      ],
+      "reference_files": [
+        "materials/incomplete.txt"
+      ],
+      "acceptance_criteria_file": "cases/C/acceptance.md"
+    }
+  ],
+  "runs": [
+    {
+      "id": "A1-with",
+      "case_id": "A",
+      "condition": "with_skill",
+      "skill_version": "1.0.0",
+      "output_files": [
+        "runs/A1-with/out/assistant_final.md",
+        "runs/A1-with/out/build_ledger.py",
+        "runs/A1-with/out/calculations.json",
+        "runs/A1-with/out/claims.json",
+        "runs/A1-with/out/ledger.json",
+        "runs/A1-with/out/page4.png",
+        "runs/A1-with/out/paper.txt",
+        "runs/A1-with/out/report.md",
+        "runs/A1-with/out/source_manifest.json",
+        "runs/A1-with/out/verification.md",
+        "runs/A1-with/prompt.txt",
+        "runs/A1-with/session.json"
+      ],
+      "trace_files": [
+        "runs/A1-with/events.jsonl",
+        "runs/A1-with/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/A1-with/out/report.md"
+      ],
+      "started_at": "2026-10-23T01:38:24.893539+00:00",
+      "duration_seconds": 178.236,
+      "cost": null,
+      "human_steps": [],
+      "result": "核心阅读完成；无已证实质量增益，时间优势未复测保持。"
+    },
+    {
+      "id": "A1-without",
+      "case_id": "A",
+      "condition": "without_skill",
+      "skill_version": "none",
+      "output_files": [
+        "runs/A1-without/out/additional-calculations.json",
+        "runs/A1-without/out/assistant_final.md",
+        "runs/A1-without/out/method-page2.txt",
+        "runs/A1-without/out/page4.png",
+        "runs/A1-without/out/recalculate.py",
+        "runs/A1-without/out/report.md",
+        "runs/A1-without/out/table1-page1.txt",
+        "runs/A1-without/out/table3-recalculation.csv",
+        "runs/A1-without/paper.txt",
+        "runs/A1-without/prompt.txt",
+        "runs/A1-without/session.json"
+      ],
+      "trace_files": [
+        "runs/A1-without/events.jsonl",
+        "runs/A1-without/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/A1-without/out/report.md"
+      ],
+      "started_at": "2026-10-23T01:38:24.893539+00:00",
+      "duration_seconds": 221.178,
+      "cost": null,
+      "human_steps": [],
+      "result": "核心阅读完成；无已证实质量增益，时间优势未复测保持。"
+    },
+    {
+      "id": "A2-with",
+      "case_id": "A",
+      "condition": "with_skill",
+      "skill_version": "1.0.0",
+      "output_files": [
+        "runs/A2-with/out/assistant_final.md",
+        "runs/A2-with/out/audit-run.log",
+        "runs/A2-with/out/build_ledger.py",
+        "runs/A2-with/out/calculations.json",
+        "runs/A2-with/out/claims.json",
+        "runs/A2-with/out/derived-checks.json",
+        "runs/A2-with/out/ledger.json",
+        "runs/A2-with/out/page2.png",
+        "runs/A2-with/out/page4.png",
+        "runs/A2-with/out/paper.txt",
+        "runs/A2-with/out/report.md",
+        "runs/A2-with/out/source-sha256.txt",
+        "runs/A2-with/out/verification.md",
+        "runs/A2-with/prompt.txt",
+        "runs/A2-with/session.json"
+      ],
+      "trace_files": [
+        "runs/A2-with/events.jsonl",
+        "runs/A2-with/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/A2-with/out/report.md"
+      ],
+      "started_at": "2026-10-23T01:42:50.648151+00:00",
+      "duration_seconds": 258.498,
+      "cost": null,
+      "human_steps": [],
+      "result": "核心阅读完成；无已证实质量增益，时间优势未复测保持。 独立因子换算出现小数值偏差，原文保留。"
+    },
+    {
+      "id": "A2-without",
+      "case_id": "A",
+      "condition": "without_skill",
+      "skill_version": "none",
+      "output_files": [
+        "runs/A2-without/out/additional_checks.txt",
+        "runs/A2-without/out/assistant_final.md",
+        "runs/A2-without/out/page4.png",
+        "runs/A2-without/out/recalculate.py",
+        "runs/A2-without/out/report.md",
+        "runs/A2-without/out/table3_recalculation.csv",
+        "runs/A2-without/paper.txt",
+        "runs/A2-without/prompt.txt",
+        "runs/A2-without/session.json"
+      ],
+      "trace_files": [
+        "runs/A2-without/events.jsonl",
+        "runs/A2-without/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/A2-without/out/report.md"
+      ],
+      "started_at": "2026-10-23T01:42:50.647856+00:00",
+      "duration_seconds": 168.44,
+      "cost": null,
+      "human_steps": [],
+      "result": "核心阅读完成；无已证实质量增益，时间优势未复测保持。"
+    },
+    {
+      "id": "B-with",
+      "case_id": "B",
+      "condition": "with_skill",
+      "skill_version": "1.0.0",
+      "output_files": [
+        "runs/B-with/out/assistant_final.md",
+        "runs/B-with/out/calculations.json",
+        "runs/B-with/out/claims.md",
+        "runs/B-with/out/evidence.json",
+        "runs/B-with/out/ledger.json",
+        "runs/B-with/out/method_pages.txt",
+        "runs/B-with/out/paper.txt",
+        "runs/B-with/out/report.md",
+        "runs/B-with/out/verification.json",
+        "runs/B-with/out/verify.py",
+        "runs/B-with/prompt.txt",
+        "runs/B-with/session.json"
+      ],
+      "trace_files": [
+        "runs/B-with/events.jsonl",
+        "runs/B-with/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/B-with/out/report.md"
+      ],
+      "started_at": "2026-10-23T01:47:24.709404+00:00",
+      "duration_seconds": 212.485,
+      "cost": null,
+      "human_steps": [],
+      "result": "同版完成分资源归因与分时核算；0.246kWh与77.4g正确，明确合成数据/默认PUE未知。"
+    },
+    {
+      "id": "C1-with",
+      "case_id": "C",
+      "condition": "with_skill",
+      "skill_version": "1.0.0",
+      "output_files": [
+        "runs/C1-with/out/assistant_final.md",
+        "runs/C1-with/out/audit.exit_code.txt",
+        "runs/C1-with/out/audit.stdout.txt",
+        "runs/C1-with/out/calculations.json",
+        "runs/C1-with/out/claims.json",
+        "runs/C1-with/out/ledger.json",
+        "runs/C1-with/out/page-1.png",
+        "runs/C1-with/out/paper.txt",
+        "runs/C1-with/out/pdfinfo.txt",
+        "runs/C1-with/out/report.md",
+        "runs/C1-with/out/source_manifest.json",
+        "runs/C1-with/out/verification.json",
+        "runs/C1-with/prompt.txt",
+        "runs/C1-with/session.json"
+      ],
+      "trace_files": [
+        "runs/C1-with/events.jsonl",
+        "runs/C1-with/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/C1-with/out/report.md"
+      ],
+      "started_at": "2026-10-23T01:47:24.709404+00:00",
+      "duration_seconds": 143.332,
+      "cost": null,
+      "human_steps": [],
+      "result": "符合预期的材料不足降级：原单位/边界/PUE/强度未知，无真实碳排数值；保留条件公式与unknown。"
+    },
+    {
+      "id": "C2-with",
+      "case_id": "C",
+      "condition": "with_skill",
+      "skill_version": "1.0.0",
+      "output_files": [
+        "runs/C2-with/out/assistant_final.md",
+        "runs/C2-with/out/audit.stdout.txt",
+        "runs/C2-with/out/calculations.json",
+        "runs/C2-with/out/claims.json",
+        "runs/C2-with/out/extraction_checks.json",
+        "runs/C2-with/out/final_checks.json",
+        "runs/C2-with/out/ledger.json",
+        "runs/C2-with/out/page-1.png",
+        "runs/C2-with/out/paper.txt",
+        "runs/C2-with/out/pdfinfo.stdout.txt",
+        "runs/C2-with/out/render_check.json",
+        "runs/C2-with/out/report.md",
+        "runs/C2-with/out/source_manifest.json",
+        "runs/C2-with/out/verification.json",
+        "runs/C2-with/prompt.txt",
+        "runs/C2-with/session.json"
+      ],
+      "trace_files": [
+        "runs/C2-with/events.jsonl",
+        "runs/C2-with/stderr.log"
+      ],
+      "primary_output_files": [
+        "runs/C2-with/out/report.md"
+      ],
+      "started_at": "2026-10-23T01:49:48.092549+00:00",
+      "duration_seconds": 166.271,
+      "cost": null,
+      "human_steps": [],
+      "result": "符合预期的材料不足降级：原单位/边界/PUE/强度未知，无真实碳排数值；保留条件公式与unknown。"
+    }
+  ],
+  "schema_version": 2,
+  "readme_file": "README.md"
+}

@@ -1,0 +1,32 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "type": "source_statement",
+      "source": "INPUT/paper.pdf, PDF p.1",
+      "claim": "合成节选，非发表论文；时长4 h，数值180单位丢失，电表0.72 kWh，边界/PUE/碳强度缺失",
+      "verification": "全文提取及页面图像均已查看；仅核对记录内容，未验证真实测量"
+    },
+    {
+      "id": "C2",
+      "type": "conditional_derivation",
+      "source": "PDF p.1 + out/calculations.json, conditional_180W_facility",
+      "claim": "若180 W为完整4 h设施总平均功率，则能量为0.720 kWh",
+      "limitations": "单位、时段对应、对象及范围均未证实；相等不证明相同物理意义"
+    },
+    {
+      "id": "C3",
+      "type": "unknown",
+      "source": "PDF p.1; out/calculations.json",
+      "claim": "完整训练设施能耗与碳排不能确定",
+      "limitations": "保留0.72 kWh为报告读数，不把未知当零"
+    },
+    {
+      "id": "C4",
+      "type": "conditional_derivation",
+      "source": "能量与功率定义；PDF p.1提供数值",
+      "claim": "若电表覆盖同一完整4小时，则其范围内平均功率180 W",
+      "limitations": "不能反证丢失单位或独立验证功率记录"
+    }
+  ]
+}

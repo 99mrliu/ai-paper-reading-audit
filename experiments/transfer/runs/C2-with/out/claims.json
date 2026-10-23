@@ -1,0 +1,73 @@
+{
+  "paper": {
+    "title": "无法识别：所供文件不是有效PDF",
+    "doi": "",
+    "source": "INPUT/paper.pdf",
+    "question": "论文方法能否用于有限预算下的超参数搜索？",
+    "limitations_of_this_audit": [
+      "输入无有效PDF文件头，索引失败，未取得任何论文页面或科学内容。",
+      "未提供补充材料；未联网取得替代文献。"
+    ]
+  },
+  "claims": [
+    {
+      "id": "U1",
+      "class": "UNKNOWN",
+      "statement": "无法确定所指论文的方法及其对有限预算超参数搜索的适用性。",
+      "value": null,
+      "absence_probe": [
+        "hyperparameter",
+        "budget",
+        "optimization"
+      ],
+      "search_scope": "拟检查INPUT/paper.pdf；输入格式检查即失败，无可检索的论文页面。",
+      "reasoning": "检索未执行。原件为88字节非PDF文本，不能从中识别论文、方法、实验或预算条件；这不是对论文内容不存在相关讨论的判断。"
+    }
+  ],
+  "parameters": [],
+  "derivations": [],
+  "coverage": [
+    {
+      "item": "方法、输入输出与假设",
+      "status": "not_found",
+      "claim_ids": [
+        "U1"
+      ]
+    },
+    {
+      "item": "预算定义、搜索成本与比较实验",
+      "status": "not_found",
+      "claim_ids": [
+        "U1"
+      ]
+    },
+    {
+      "item": "适配条件与限制",
+      "status": "not_found",
+      "claim_ids": [
+        "U1"
+      ]
+    }
+  ],
+  "transfer": [
+    {
+      "step": "有限预算下的超参数搜索",
+      "verdict": "信息不足",
+      "because": [
+        "U1"
+      ],
+      "needs": "恢复可读完整论文，核查方法假设、预算口径、总成本及同预算比较。"
+    }
+  ],
+  "verdict_overall": "信息不足",
+  "gaps": [
+    {
+      "gap": "未取得有效论文",
+      "impact": "全部科学适配问题暂不能判断",
+      "close": "重新提供从原始来源下载或导出的完整可读PDF；若为扫描版，提供可核对原页的OCR文本。"
+    }
+  ],
+  "boundaries": [
+    "异常处理记录，不是成功科学审计；UNKNOWN关键词仅为材料恢复后拟用检索词，本次未执行。"
+  ]
+}

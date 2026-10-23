@@ -1,0 +1,61 @@
+{
+  "table3": [
+    {
+      "id": "t2t_base_nominal",
+      "energy_kWh": "26.8431888",
+      "carbon_lb": "25.6084021152",
+      "energy_residual_kWh": "-0.1568112",
+      "carbon_residual_lb": "-0.3915978848"
+    },
+    {
+      "id": "t2t_big_nominal",
+      "energy_kWh": "201.1278696",
+      "carbon_lb": "191.8759875984",
+      "energy_residual_kWh": "0.1278696",
+      "carbon_residual_lb": "-0.1240124016"
+    },
+    {
+      "id": "elmo_nominal",
+      "energy_kWh": "274.8153408",
+      "carbon_lb": "262.1738351232",
+      "energy_residual_kWh": "-0.1846592",
+      "carbon_residual_lb": "0.1738351232"
+    },
+    {
+      "id": "bert_gpu_nominal",
+      "energy_kWh": "1503.0212782",
+      "carbon_lb": "1433.8822994028",
+      "energy_residual_kWh": "-3.9787218",
+      "carbon_residual_lb": "-4.1177005972"
+    },
+    {
+      "id": "nas_gpu_nominal",
+      "energy_kWh": "656347.2811280",
+      "carbon_lb": "626155.3061961120",
+      "energy_residual_kWh": "0.2811280",
+      "carbon_residual_lb": "0.3061961120"
+    },
+    {
+      "id": "bert_79_2",
+      "energy_kWh": "1506.82639536",
+      "carbon_lb": "1437.51238117344",
+      "energy_residual_kWh": null,
+      "carbon_residual_lb": null
+    }
+  ],
+  "local_it_kWh": "127.29612",
+  "local_meter_implied_pue": "1.578995494913749138622606879",
+  "table4": {
+    "gpu_days_times24": 239952,
+    "table_hours": 239942,
+    "mean_hours": "50.10273543537272917101691376",
+    "reported_mean_times_jobs": 249028,
+    "final_model_times_jobs": 574680,
+    "mean_concurrent_gpu": "58.12548449612403100775193798",
+    "electric_implied_kWh": [
+      "41.66666666666666666666666667",
+      "983.3333333333333333333333333",
+      "8.225E+4"
+    ]
+  }
+}

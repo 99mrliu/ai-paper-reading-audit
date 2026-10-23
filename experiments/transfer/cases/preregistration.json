@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-10-22T15:18:10.566434+00:00",
+  "formal_runs": [
+    "A1-with",
+    "A1-without",
+    "A2-with",
+    "A2-without",
+    "B-with",
+    "C1-with",
+    "C2-with"
+  ],
+  "controls": "same CLI default model selection, environment, tools, 30 calls and 900 seconds; independent sessions; only supplied skill resources differ",
+  "skill_not_yet_frozen": false,
+  "domain": "machine learning; no biological formal cases",
+  "frozen_at": "2026-10-22T15:21:14.495328+00:00",
+  "skill_version": "2.0.0",
+  "skill_file_sha256": {
+    "SKILL.md": "54d5845d1b22fd7ad6266e9a2358e2c9eddc1d3d981fd9dedba4d67baf7580d1",
+    "references/claims-schema.md": "0e5ed9dc24b90cd3671199db9c3c6fb6cbf4c7aca59ca2d18b5a700d8eca7684",
+    "scripts/build_index.py": "c8aa43c8b0661d92b1427548eb8046b35986bebc1cc1df97e5260744b3459f2c",
+    "scripts/render_report.py": "c2a6bbad33393e222d2a20a3e3a2c2e41b6130b722c81354cd83a26aedd57564",
+    "scripts/verify_claims.py": "cdc14a2469b9a2c845751a24d8378e9f8ca968509b3d0edc0d2f9e8106bab0d1",
+    "templates/claims.example.json": "e762b5639392997cf5a5c374975e0be7f24a4a8a0266f8f0074524d872769534"
+  },
+  "skill_tree_sha256": "378a73f15114a08a6590dfdaf17ff45ce49f5ed9bfa2b69ad06c3b890ab3fb83"
+}

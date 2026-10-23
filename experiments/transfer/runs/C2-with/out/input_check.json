@@ -1,0 +1,13 @@
+{
+  "command": [
+    "python3",
+    "skill/scripts/build_index.py",
+    "INPUT/paper.pdf",
+    "--out",
+    "out/index"
+  ],
+  "exit_code": 2,
+  "input_bytes": 88,
+  "input_sha256": "3dc625fc6eab836d970f32e2895f844c75c32bf5354ced301b5b8f5cf3ea5196",
+  "header_hex": "5468697320697320612064656c696265726174656c7920696e76616c69642050"
+}

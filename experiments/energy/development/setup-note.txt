@@ -1,0 +1,1 @@
+Research and task preparation by the author-side AI. Real papers were read before task specification; these are disclosed development inputs, not an unseen benchmark. Synthetic user measurement in B and incomplete fixture C are marked. No live evaluation sessions have run yet.

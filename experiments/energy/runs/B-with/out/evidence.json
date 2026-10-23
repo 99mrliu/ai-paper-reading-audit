@@ -1,0 +1,75 @@
+{
+  "paper_sha256": "798ac1ea89ea43b4db1e44d5e4306b80b4cab1db54421236402630f31de08411",
+  "evidence": [
+    {
+      "id": "E1",
+      "pdf_page_1_based": 10,
+      "short_quote": "using measurements from RAPL without corrections would double count energy usage from the CPU.",
+      "literal_match": true,
+      "meaning_review": "见 report.md 与 claims.md 人工方法解读；字符串匹配仅核对转录"
+    },
+    {
+      "id": "E2",
+      "pdf_page_1_based": 10,
+      "short_quote": "We track the parent process, and any children spawned.",
+      "literal_match": true,
+      "meaning_review": "见 report.md 与 claims.md 人工方法解读；字符串匹配仅核对转录"
+    },
+    {
+      "id": "E3",
+      "pdf_page_1_based": 10,
+      "short_quote": "relative to the total in-use resources",
+      "literal_match": true,
+      "meaning_review": "见 report.md 与 claims.md 人工方法解读；字符串匹配仅核对转录"
+    },
+    {
+      "id": "E4",
+      "pdf_page_1_based": 12,
+      "short_quote": "Users can customize the PUE value",
+      "literal_match": true,
+      "meaning_review": "见 report.md 与 claims.md 人工方法解读；字符串匹配仅核对转录"
+    },
+    {
+      "id": "E5",
+      "pdf_page_1_based": 12,
+      "short_quote": "using the smallest bounding region",
+      "literal_match": true,
+      "meaning_review": "见 report.md 与 claims.md 人工方法解读；字符串匹配仅核对转录"
+    },
+    {
+      "id": "E6",
+      "pdf_page_1_based": 12,
+      "short_quote": "every five minutes",
+      "literal_match": true,
+      "meaning_review": "见 report.md 与 claims.md 人工方法解读；字符串匹配仅核对转录"
+    },
+    {
+      "id": "E7",
+      "pdf_page_1_based": 9,
+      "short_quote": "We also log the version number of the tool itself",
+      "literal_match": true,
+      "meaning_review": "见 report.md 与 claims.md 人工方法解读；字符串匹配仅核对转录"
+    },
+    {
+      "id": "E8",
+      "pdf_page_1_based": 42,
+      "short_quote": "workloads are fairly consistent and long enough",
+      "literal_match": true,
+      "meaning_review": "见 report.md 与 claims.md 人工方法解读；字符串匹配仅核对转录"
+    },
+    {
+      "id": "E9",
+      "pdf_page_1_based": 43,
+      "short_quote": "We do not record disk I/O energy usage, power conversion and voltage regulator overhead.",
+      "literal_match": true,
+      "meaning_review": "见 report.md 与 claims.md 人工方法解读；字符串匹配仅核对转录"
+    },
+    {
+      "id": "E10",
+      "pdf_page_1_based": 39,
+      "short_quote": "integrated over the length of the experiment",
+      "literal_match": true,
+      "meaning_review": "见 report.md 与 claims.md 人工方法解读；字符串匹配仅核对转录"
+    }
+  ]
+}

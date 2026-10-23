@@ -1,0 +1,36 @@
+[
+  {
+    "check": "verify_claims",
+    "command": [
+      "python3",
+      "skill/scripts/verify_claims.py",
+      "--claims",
+      "out/claims.json",
+      "--index",
+      "out/index",
+      "--out",
+      "out/verification.json"
+    ],
+    "exit_code": 1,
+    "stdout": "{\"failures\": 1}\n",
+    "stderr": ""
+  },
+  {
+    "check": "render_report",
+    "command": [
+      "python3",
+      "skill/scripts/render_report.py",
+      "--claims",
+      "out/claims.json",
+      "--verification",
+      "out/verification.json",
+      "--index",
+      "out/index",
+      "--out",
+      "out/report.md"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "REFUSED: [Errno 2] No such file or directory: 'out/index/pages.jsonl'\n"
+  }
+]

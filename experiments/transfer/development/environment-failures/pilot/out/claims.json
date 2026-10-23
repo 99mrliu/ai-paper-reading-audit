@@ -1,0 +1,7 @@
+{
+  "status": "no_scientific_claims_made",
+  "claims": [],
+  "reason": "Task, supplied skill and paper materials could not be read due to local command tool failure.",
+  "literal_matching_proves_scientific_meaning": false,
+  "skill_compliance_verified": false
+}

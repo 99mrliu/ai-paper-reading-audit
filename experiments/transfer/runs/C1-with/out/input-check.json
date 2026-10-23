@@ -1,0 +1,6 @@
+{
+  "path": "INPUT/paper.pdf",
+  "bytes": 88,
+  "sha256": "3dc625fc6eab836d970f32e2895f844c75c32bf5354ced301b5b8f5cf3ea5196",
+  "first_64_bytes_repr": "b'This is a deliberately invalid PDF fixture for case C. It contai'"
+}

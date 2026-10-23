@@ -1,0 +1,338 @@
+{
+  "schema_version": "2.0",
+  "scope": "provided_document",
+  "errors": [],
+  "claims": [
+    {
+      "id": "C1",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 2,
+      "quote": "to evaluate Ψ(λ) for each one, and return the λ(i) that worked the best as λ̂.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C2",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 3,
+      "quote": "independent draws from a uniform density from the same configuration space as would be spanned by a regular grid",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C3",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "With grid search, nine trials only test g(x) in three distinct places. With random search, all nine trials explore distinct values of g.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C4",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 14,
+      "quote": "For each data set, a small number of hyperparameters dominate performance, but the relative importance of each hyper-parameter varies from each data set to the next.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C5",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 15,
+      "quote": "Even in this simple 7-d problem, Ψ has a much lower effective dimension of between 1 and 4, depending on the data set.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C6",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 12,
+      "quote": "Random searches of 8 trials match or outperform grid searches of (on average) 100 trials.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C7",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 11,
+      "quote": "We formed experiments for each data set by drawing S = 256 trials from this distribution.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C8",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 11,
+      "quote": "In the larger space, 32 trials were necessary to consistently outperform grid search rather than 8, indicating that there are many harmful ways to preprocess the data.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C9",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 13,
+      "quote": "with random search 64 trials are enough to find better models in a larger less promising space.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C10",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 10,
+      "quote": "The number of hidden units was drawn geometrically3 from 18 to 1024.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C11",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 11,
+      "quote": "This sampling process covers roughly the same domain with the same density as the grid used in Larochelle et al. (2007), except for the optional preprocessing steps.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C12",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 5,
+      "quote": "we report a weighted average of all the test set scores, in which each one is weighted by the probability that its particular λ(s) is in fact the best.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C13",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 7,
+      "quote": "The vertical axis shows the test accuracy of the best trial(s) from experiments of a given size, as determined by Equation 5.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C14",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 20,
+      "quote": "Random experiments of 128 random trials found an inferior best model for three data sets, a competitive model in four, and superior model in one (convex).",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C15",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 21,
+      "quote": "Comparing to the 3-layer DBN results in Larochelle et al. (2007), random search found a better model than the manual search in one data set (convex), an equally good model in four (mnist basic, mnist rotated, rectangles, and rectangles images), and an inferior model in three (mnist background images, mnist background random, mnist rotated background images).",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C16",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 20,
+      "quote": "later experiments benefited from the experience the authors had drawn from earlier ones.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C17",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 21,
+      "quote": "the scores in the original experiments were not computed using the same score-averaging technique that we described in Section 2.1, and our averaging technique is slightly biased toward underestimation.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C18",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 21,
+      "quote": "the regions of the search space with the best performance are small, and randomly chosen i.i.d. trials do not reliably find them.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C19",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 1,
+      "quote": "found statistically equal performance on four of seven data sets, and superior performance on one of seven.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C20",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 23,
+      "quote": "We hope that future work in that direction will consider random search of the form studied here as a baseline for performance, rather than grid search.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C21",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 16,
+      "quote": "There were some grids that were best at finding cubes and hyper-cubes in 3-d and 5-d, but most grids were the worst performers.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "I1",
+      "class": "INFERRED",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "Random search has the same efficiency in the relevant subspace as if it had been used to search only the relevant dimensions.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "I2",
+      "class": "INFERRED",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 11,
+      "quote": "This tradeoff between exploration and exploitation is central to the design of an effective random search.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "I3",
+      "class": "INFERRED",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 23,
+      "quote": "Random search was not generally as good as the sequential combination of manual and grid search from an expert",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "U1",
+      "class": "UNKNOWN",
+      "status": "WARN",
+      "notes": [
+        "Search describes supplied pages only; keywords cannot establish semantic absence."
+      ],
+      "search_results": [
+        {
+          "term": "tabular",
+          "hits": []
+        },
+        {
+          "term": "36",
+          "hits": []
+        },
+        {
+          "term": "effective dimension",
+          "hits": [
+            {
+              "page": 3,
+              "context": "mensional spaces because functions Ψ of interest have a low effective dimensionality; essentially, Ψ of interest are more sensitive to changes in some dimensions than others (Caflisch et al., 1997). In particular, if a function f of two va"
+            },
+            {
+              "page": 4,
+              "context": "ptimizing a function f (x, y) = g(x) + h(y) ≈ g(x) with low effective dimensionality. Above each square g(x) is shown in green, and left of each square h(y) is shown in yellow. With grid search, nine trials only test g(x) in three distinct"
+            },
+            {
+              "page": 11,
+              "context": " peaked, with small regions of good performance. 3. The Low Effective Dimension of Ψ Section 2 showed that random sampling is more efficient than grid sampling for optimizing functions Ψ corresponding to several neural network families and"
+            },
+            {
+              "page": 15,
+              "context": "a sets. Even in this simple 7-d problem, Ψ has a much lower effective dimension of between 1 and 4, depending on the data set. It would be impossible to cover just these few dimensions with a reliable grid however, because different data s"
+            },
+            {
+              "page": 16,
+              "context": "and (4), the indicator function [of the target] had a lower effective dimension than the dimensionality of the overall space because the dimensions in which the target is elongated can be almost ignored. The simulation experiment began wit"
+            },
+            {
+              "page": 21,
+              "context": " already proposed an optimization algorithm that identifies effective dimensions, for more efficient search. They present an algorithm that distinguishes between important and unimportant dimensions: a low-discrepancy point set is used to "
+            },
+            {
+              "page": 23,
+              "context": " of an expensive function must be optimized jointly and the effective dimensionality is high. We hope that future work in that direction will consider random search of the form studied here as a baseline for performance, rather than grid s"
+            }
+          ]
+        },
+        {
+          "term": "validation",
+          "hits": [
+            {
+              "page": 1,
+              "context": "n process analysis of the function from hyper-parameters to validation set performance reveals that for most data sets only a few of the hyper-parameters really matter, but that different hyper-parameters are important on differen"
+            },
+            {
+              "page": 2,
+              "context": " over Gx , we will employ the widely used technique of crossvalidation to estimate it. Cross-validation is the technique of replacing the expectation with a mean over a validation set X (valid) whose elements are drawn i.i.d x ∼ G"
+            },
+            {
+              "page": 5,
+              "context": " Because of finite data sets, test error is not monotone in validation error, and depending on the set of particular hyper-parameter values λ evaluated, the test error of the best-validation error configuration may vary. When repo"
+            },
+            {
+              "page": 6,
+              "context": "e procedure for doing so is to repeatedly draw hypothetical validation scores Z (s) from Normal distributions whose means are the Ψ(valid) (λ(s) ) and whose variances are the squared standard errors V(valid) (λ(s) ), and to count "
+            },
+            {
+              "page": 7,
+              "context": " look like if the experiment had included lucky trial whose validation score were around 77% as usual, but whose test score were 80%. In the bar plot for trials of size 1, we would see the top performer scoring 80%. In larger expe"
+            },
+            {
+              "page": 8,
+              "context": "ging to one of ten classes. We chose a different train/test/validation splitting in order to have faster experiments and see learning performance differences more clearly. We shuffled the original splits randomly, and used 10 000 "
+            },
+            {
+              "page": 9,
+              "context": "ounds. This data set included 10000 training examples, 2000 validation examples, 50 000 test examples. The rectangles data set (Figure 4, top) is a simple synthetic data set of outlines of rectangles. The images are 28x28, the out"
+            },
+            {
+              "page": 10,
+              "context": "e training data, stopping if ever, at iteration t, the best validation performance was observed before iteration t/2. With 50% 3. We will use the phrase drawn geometrically from A to B for 0 < A < B to mean drawing uniformly in th"
+            },
+            {
+              "page": 12,
+              "context": "rtical axis is test-set accuracy of the best model by cross-validation, the horizontal axis is the experiment size (the number of models compared in cross-validation). The dashed blue line represents grid search accuracy for neura"
+            },
+            {
+              "page": 19,
+              "context": "units in the last layer). Given the results obtained on the validation set (compared to those of NNet for instance) after selecting appropriate optimization parameters, we would then consider growing the number of units in all lay"
+            },
+            {
+              "page": 22,
+              "context": "ave some claim to being best. When using a relatively small validation set, the uncertainty involved in selecting the best model by crossvalidation can be larger than the uncertainty in measuring the test set performance of any on"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "derivations": [],
+  "summary": {
+    "claims_and_parameters": 25,
+    "failures": 0,
+    "warnings": 1,
+    "located_positive_claims": 24,
+    "positive_claims": 24
+  },
+  "interpretation": "Mechanical checks do not certify scientific meaning or completeness.",
+  "binding": {
+    "claims_sha256": "7409f24ab0b1a8eab402a4e3da846a0c65f8d6dfad8c2de6302c93b7d900683f",
+    "pages_sha256": "52a947e6eb70fdedaffe5e92b9d1b9f44dc9ec88e99d99bea18b46a82fe479bf",
+    "index_sha256": "1240246ef5e81ab9d34139aba087ac04401da1dd8d0e42395c8f02b73c2eeaef",
+    "source_sha256": "01e88a175a36afa399e05dc97dce9c5de980130445269cc0e5100d0471887029"
+  }
+}

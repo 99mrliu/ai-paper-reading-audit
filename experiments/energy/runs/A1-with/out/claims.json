@@ -1,0 +1,12 @@
+{
+  "scope": "人工阅读主张记录；文字匹配不证明科学语义",
+  "claims": [
+    {"id":"citation","type":"source_fact_and_unit_conversion","source":"PDF p1 Table1; p4 Table3 caption and NAS GPU row","claim":"626155 is lb CO2e for NAS GPU-equivalent search, approximately 284019.13kg, not one final model training","limit":"Estimated under paper assumptions, not direct complete-run measurement"},
+    {"id":"measurement","type":"source_fact","source":"PDF p2 Methods; p3 Models","claim":"Power sampled for at most one day; full time/hardware drawn from cited sources","limit":"Cross-hardware scaling details and raw samples unavailable"},
+    {"id":"power_scope","type":"inference","source":"PDF p2 Eq1; p4 Table3","claim":"Table3 power interpreted as aggregate IT yields matching rounded values except BERT displayed time","limit":"Arithmetic consistency does not establish measured system coverage"},
+    {"id":"bert","type":"conditional_derivation","source":"PDF p3 BERT 79.2h; p4 Table3 79h","claim":"79h nominal fails both printed outputs; 79.2h gives outputs that round to print","limit":"Plausible display explanation; internal calculation unknown"},
+    {"id":"nas_steps","type":"unresolved","source":"PDF p3 NAS 979M,300k,10h,32623h","claim":"Displayed inputs yield 32633.33h rather than 32623h","limit":"Raw step precision and original source not supplied"},
+    {"id":"rd","type":"unresolved_and_derivation","source":"PDF p4 section4.2 Table4","claim":"239942/4789 is 50.10h versus prose average52h; 9998days gives239952h; full training120h cannot multiply all jobs","limit":"Requires raw logs to resolve discrepancy"},
+    {"id":"local","type":"conditional_derivation","source":"User task; PDF p2 Eq1 Eq2","claim":"127.29612kWh IT;201.1278696kWh with1.58;87.033484kg with historical factor;201kWh facility directly gives86.978151kg under same factor","limit":"Complete IT scope, meter attribution, local intensity and uncertainty unknown"}
+  ]
+}

@@ -1,0 +1,54 @@
+                            P EDREGOSA , VAROQUAUX , G RAMFORT ET AL .
+
+
+
+
+                                     scikit-learn   mlpy    pybrain   pymvpa mdp shogun
+     Support Vector Classification       5.2        9.47     17.5      11.52    40.48     5.63
+     Lasso (LARS)                        1.17       105.3      -       37.35       -        -
+     Elastic Net                         0.52       73.7       -        1.44       -        -
+     k-Nearest Neighbors                 0.57       1.41       -        0.56     0.58     1.36
+     PCA (9 components)                  0.18         -        -        8.93     0.47     0.33
+     k-Means (9 clusters)                1.34       0.79       ⋆          -     35.75     0.68
+     License                            BSD         GPL      BSD       BSD      BSD       GPL
+-: Not implemented.                                                    ⋆: Does not converge within 1 hour.
+Table 1: Time in seconds on the Madelon data set for various machine learning libraries exposed
+         in Python: MLPy (Albanese et al., 2008), PyBrain (Schaul et al., 2010), pymvpa (Hanke
+         et al., 2009), MDP (Zito et al., 2008) and Shogun (Sonnenburg et al., 2010). For more
+         benchmarks see http://github.com/scikit-learn.
+
+
+may also provide a score method, which is an increasing evaluation of goodness of fit: a log-
+likelihood, or a negated loss function. The other important object is the cross-validation iterator,
+which provides pairs of train and test indices to split input data, for example K-fold, leave one out,
+or stratified cross-validation.
+Model selection. Scikit-learn can evaluate an estimator’s performance or select parameters using
+cross-validation, optionally distributing the computation to several cores. This is accomplished by
+wrapping an estimator in a GridSearchCV object, where the “CV” stands for “cross-validated”.
+During the call to fit, it selects the parameters on a specified parameter grid, maximizing a score
+(the score method of the underlying estimator). predict, score, or transform are then delegated
+to the tuned estimator. This object can therefore be used transparently as any other estimator. Cross
+validation can be made more efficient for certain estimators by exploiting specific properties, such
+as warm restarts or regularization paths (Friedman et al., 2010). This is supported through special
+objects, such as the LassoCV. Finally, a Pipeline object can combine several transformers and
+an estimator to create a combined estimator to, for example, apply dimension reduction before
+fitting. It behaves as a standard estimator, and GridSearchCV therefore tune the parameters of all
+steps.
+
+
+5. High-level yet Efficient: Some Trade Offs
+
+While scikit-learn focuses on ease of use, and is mostly written in a high level language, care has
+been taken to maximize computational efficiency. In Table 1, we compare computation time for a
+few algorithms implemented in the major machine learning toolkits accessible in Python. We use
+the Madelon data set (Guyon et al., 2004), 4400 instances and 500 attributes, The data set is quite
+large, but small enough for most algorithms to run.
+SVM. While all of the packages compared call libsvm in the background, the performance of scikit-
+learn can be explained by two factors. First, our bindings avoid memory copies and have up to
+40% less overhead than the original libsvm Python bindings. Second, we patch libsvm to improve
+efficiency on dense data, use a smaller memory footprint, and better use memory alignment and
+pipelining capabilities of modern processors. This patched version also provides unique features,
+such as setting weights for individual samples.
+
+                                                    2828
+

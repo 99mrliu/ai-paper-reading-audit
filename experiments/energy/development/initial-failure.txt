@@ -1,0 +1,2 @@
+First engineering invariant run failed: exact equality expected4.8 but Decimal conversion (1/60)*30 introduced a36-digit remainder. Corrected unit conversion to multiply integer seconds before dividing by3600. This was a pre-freeze engineering defect, not a paper-reading run. Recheck output is in engineering-checks.json.
+Second engineering run: equivalent values compared as JSON strings with different trailing zeros; corrected test to compare Decimals.18 invariants then passed. No reading-result assertions were altered.

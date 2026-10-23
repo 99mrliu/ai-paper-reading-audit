@@ -1,0 +1,351 @@
+{
+  "kind": "Author-side AI semantic assessment, not official scoring or independent human review",
+  "evaluated_at": "2026-10-23T01:54:52.066887+00:00",
+  "run_results": {
+    "A1-with": "核心阅读完成；无已证实质量增益，时间优势未复测保持。",
+    "A1-without": "核心阅读完成；无已证实质量增益，时间优势未复测保持。",
+    "A2-with": "核心阅读完成；无已证实质量增益，时间优势未复测保持。 独立因子换算出现小数值偏差，原文保留。",
+    "A2-without": "核心阅读完成；无已证实质量增益，时间优势未复测保持。",
+    "B-with": "同版完成分资源归因与分时核算；0.246kWh与77.4g正确，明确合成数据/默认PUE未知。",
+    "C1-with": "符合预期的材料不足降级：原单位/边界/PUE/强度未知，无真实碳排数值；保留条件公式与unknown。",
+    "C2-with": "符合预期的材料不足降级：原单位/边界/PUE/强度未知，无真实碳排数值；保留条件公式与unknown。"
+  },
+  "paired_comparison": {
+    "with_mean_seconds": 218.367,
+    "without_mean_seconds": 194.809,
+    "time_change_percent": 12.092870452597149,
+    "with_output_tokens": 16084,
+    "without_output_tokens": 12810,
+    "quality_conclusion": "No demonstrated substantive improvement in the preregistered reading task. Strong baseline covers the main goals. A2-with has a minor standalone conversion-factor transcription/calculation error; main row and user-scenario results correct.",
+    "decision": "Do not recommend another submission now. Format-valid candidate alone is not evidence of an improvement over the existing70-point submission."
+  },
+  "criteria": [
+    {
+      "id": "sampling_and_extrapolation",
+      "meaning": "测量窗口和跨硬件/完整时长外推",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "units_pue_factor",
+      "meaning": "量纲、PUE一次、历史lbs因子",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered with minor standalone factor-conversion error; retained and disclosed",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "five_rows",
+      "meaning": "五个有功率行完整复算",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "bert_precision",
+      "meaning": "BERT79小时差异与正文79.2小时解释",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "rounding_false_positive",
+      "meaning": "区分显示取整与实质错误",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "aggregate_devices",
+      "meaning": "合计功率不重复乘设备数",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "missing_tpu",
+      "meaning": "TPU缺项不是零",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "nas_budget",
+      "meaning": "NAS非单次训练、lbs非kg",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "rd_job_scope",
+      "meaning": "训练/调参/R&D、作业长度和GPU小时",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "local_it_scenario",
+      "meaning": "本地IT条件估计与排放未知",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "facility_scenario",
+      "meaning": "设施电量不乘PUE，归属/时间对齐",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    },
+    {
+      "id": "evidence_limits",
+      "meaning": "来源和事实/推断/未知及具体补读",
+      "runs": {
+        "A1-with": "covered",
+        "A1-without": "covered",
+        "A2-with": "covered",
+        "A2-without": "covered"
+      },
+      "interpretation": "Coverage is not a calibrated scientific accuracy score or an official rubric grade."
+    }
+  ],
+  "artifacts": {
+    "A1-with": {
+      "report": "runs/A1-with/out/report.md",
+      "report_sha256": "81965801fda7bdff46831d6d2f8f078c509aaec8996d665d09c5bf4943353212",
+      "session": {
+        "started_at": "2026-10-23T01:38:24.893539+00:00",
+        "duration_seconds": 178.236,
+        "exit_code": 0,
+        "timed_out": false,
+        "tool_calls": 8,
+        "tool_budget": 30,
+        "wall_time_budget_seconds": 900,
+        "usage": {
+          "input_tokens": 298713,
+          "cached_input_tokens": 263936,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 7896,
+          "reasoning_output_tokens": 115
+        },
+        "condition": "with_skill",
+        "model": "Codex CLI default; exact snapshot not exposed in event stream",
+        "harness": "Codex CLI",
+        "independent_session": true,
+        "human_steps": [],
+        "report_exists": true
+      }
+    },
+    "A1-without": {
+      "report": "runs/A1-without/out/report.md",
+      "report_sha256": "03a82b32e93f57710d84a099f3cc138245c8a08b5ef592b36e57285d06b05580",
+      "session": {
+        "started_at": "2026-10-23T01:38:24.893539+00:00",
+        "duration_seconds": 221.178,
+        "exit_code": 0,
+        "timed_out": false,
+        "tool_calls": 8,
+        "tool_budget": 30,
+        "wall_time_budget_seconds": 900,
+        "usage": {
+          "input_tokens": 278480,
+          "cached_input_tokens": 258048,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6012,
+          "reasoning_output_tokens": 102
+        },
+        "condition": "without_skill",
+        "model": "Codex CLI default; exact snapshot not exposed in event stream",
+        "harness": "Codex CLI",
+        "independent_session": true,
+        "human_steps": [],
+        "report_exists": true
+      }
+    },
+    "A2-with": {
+      "report": "runs/A2-with/out/report.md",
+      "report_sha256": "d3783879ee3407c9c490528fee31ded18a42cef689498fcf009cd92217cfa08b",
+      "session": {
+        "started_at": "2026-10-23T01:42:50.648151+00:00",
+        "duration_seconds": 258.498,
+        "exit_code": 0,
+        "timed_out": false,
+        "tool_calls": 8,
+        "tool_budget": 30,
+        "wall_time_budget_seconds": 900,
+        "usage": {
+          "input_tokens": 302660,
+          "cached_input_tokens": 265344,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 8188,
+          "reasoning_output_tokens": 180
+        },
+        "condition": "with_skill",
+        "model": "Codex CLI default; exact snapshot not exposed in event stream",
+        "harness": "Codex CLI",
+        "independent_session": true,
+        "human_steps": [],
+        "report_exists": true
+      }
+    },
+    "A2-without": {
+      "report": "runs/A2-without/out/report.md",
+      "report_sha256": "6cce1c74603f57f2ce62ab19be2fefd040641db31c52b90997a8ad5f4c694af0",
+      "session": {
+        "started_at": "2026-10-23T01:42:50.647856+00:00",
+        "duration_seconds": 168.44,
+        "exit_code": 0,
+        "timed_out": false,
+        "tool_calls": 7,
+        "tool_budget": 30,
+        "wall_time_budget_seconds": 900,
+        "usage": {
+          "input_tokens": 217439,
+          "cached_input_tokens": 197760,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6798,
+          "reasoning_output_tokens": 124
+        },
+        "condition": "without_skill",
+        "model": "Codex CLI default; exact snapshot not exposed in event stream",
+        "harness": "Codex CLI",
+        "independent_session": true,
+        "human_steps": [],
+        "report_exists": true
+      }
+    },
+    "B-with": {
+      "report": "runs/B-with/out/report.md",
+      "report_sha256": "3b3029f32cb16c818a7edaea6166360372b5d4a5f14f143df0d61ca1279343a1",
+      "session": {
+        "started_at": "2026-10-23T01:47:24.709404+00:00",
+        "duration_seconds": 212.485,
+        "exit_code": 0,
+        "timed_out": false,
+        "tool_calls": 11,
+        "tool_budget": 30,
+        "wall_time_budget_seconds": 900,
+        "usage": {
+          "input_tokens": 418963,
+          "cached_input_tokens": 387968,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5727,
+          "reasoning_output_tokens": 116
+        },
+        "condition": "with_skill",
+        "model": "Codex CLI default; exact snapshot not exposed in event stream",
+        "harness": "Codex CLI",
+        "independent_session": true,
+        "human_steps": [],
+        "report_exists": true
+      }
+    },
+    "C1-with": {
+      "report": "runs/C1-with/out/report.md",
+      "report_sha256": "d485147d725e0a688e73813ce4f9d93fe7e9bac7516b44d284f95f20d70df7fc",
+      "session": {
+        "started_at": "2026-10-23T01:47:24.709404+00:00",
+        "duration_seconds": 143.332,
+        "exit_code": 0,
+        "timed_out": false,
+        "tool_calls": 8,
+        "tool_budget": 30,
+        "wall_time_budget_seconds": 900,
+        "usage": {
+          "input_tokens": 258481,
+          "cached_input_tokens": 229632,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4149,
+          "reasoning_output_tokens": 102
+        },
+        "condition": "with_skill",
+        "model": "Codex CLI default; exact snapshot not exposed in event stream",
+        "harness": "Codex CLI",
+        "independent_session": true,
+        "human_steps": [],
+        "report_exists": true
+      }
+    },
+    "C2-with": {
+      "report": "runs/C2-with/out/report.md",
+      "report_sha256": "4b6335e112ea9b179c59afad9ea2b98bbed2efb5029aaf9b0fd01517a18e6c49",
+      "session": {
+        "started_at": "2026-10-23T01:49:48.092549+00:00",
+        "duration_seconds": 166.271,
+        "exit_code": 0,
+        "timed_out": false,
+        "tool_calls": 9,
+        "tool_budget": 30,
+        "wall_time_budget_seconds": 900,
+        "usage": {
+          "input_tokens": 286324,
+          "cached_input_tokens": 269568,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4344,
+          "reasoning_output_tokens": 87
+        },
+        "condition": "with_skill",
+        "model": "Codex CLI default; exact snapshot not exposed in event stream",
+        "harness": "Codex CLI",
+        "independent_session": true,
+        "human_steps": [],
+        "report_exists": true
+      }
+    }
+  },
+  "c_retest": "Both read the one-page synthetic fixture, retain180unit/measurement boundary/PUE/intensity as unknown, distinguish known0.72kWh recorded reading from a verified complete facility total, and present explicit conditional formulas. No numeric real carbon estimate.",
+  "b_assessment": "All eight preregistered categories covered.190W and110W attributable power;0.114 and0.132kWh facility segments;11.4 and66g carbon, total77.4g. Arithmetic-average intensity produces73.8g; energy weighting required. No independent instrument validation.",
+  "failures_and_limits": [
+    "Pre-freeze Decimal duration-unit conversion introduced tiny finite-precision remainder; multiply integer seconds before dividing3600 fixed it. Test compared formatted strings after that fix and failed again; numeric Decimal comparison corrected the test.18 engineering invariants passed. Summaries are explicitly development notes, not fabricated reading-session logs.",
+    "A1-without invoked missing python alias within a command; recovered with python3, full original output preserved. No scientist corrected it.",
+    "A2-with writes0.432725121kg/kWh for0.954lb/kWh; exact product is0.43272712098. Main energy/carbon outputs remain correct. Original report is not edited.",
+    "C2-with describes source checking as 人工审阅; this was the independent CLI AI reviewing the PDF image, not a human. FitZ deprecation warning retained.",
+    "Two pairs only, exact service snapshot unavailable, shared host/model service timings not isolated; no significance or money savings claim.",
+    "Additional structured claims/verification output was requested by the with harness; it is counted as overhead. More artifacts are not counted as benefit.",
+    "Tasks and acceptances designed after author-side AI read the papers, before live sessions; not an unseen benchmark. B and C contain declared synthetic inputs; no invented user study or third-party reproduction."
+  ]
+}

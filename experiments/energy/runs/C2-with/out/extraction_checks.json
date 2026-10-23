@@ -1,0 +1,18 @@
+[
+  {
+    "command": [
+      "pdfinfo",
+      "INPUT/paper.pdf"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "pdftotext",
+      "-layout",
+      "INPUT/paper.pdf",
+      "out/paper.txt"
+    ],
+    "exit_code": 0
+  }
+]

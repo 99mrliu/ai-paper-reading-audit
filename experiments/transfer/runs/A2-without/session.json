@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-10-22T15:24:37.096459+00:00",
+  "duration_seconds": 209.728,
+  "exit_code": 0,
+  "timed_out": false,
+  "tool_calls": 10,
+  "tool_budget": 30,
+  "wall_time_budget_seconds": 900,
+  "usage": {
+    "input_tokens": 401710,
+    "cached_input_tokens": 359936,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5132,
+    "reasoning_output_tokens": 104
+  },
+  "condition": "without_skill",
+  "model": "Codex CLI default; exact snapshot not exposed in event stream",
+  "harness": "Codex CLI",
+  "independent_session": true,
+  "human_steps": [],
+  "report_exists": true
+}

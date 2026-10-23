@@ -1,0 +1,18 @@
+{
+  "NAS_printed_lb_in_kg": "284019.13043735",
+  "ELMo_energy_using_517W": "274.46496",
+  "BERT_energy_using_79.2h": "1506.82639536",
+  "local_gpu_energy_kWh": "127.29612",
+  "local_facility_estimate_kWh": "201.1278696",
+  "local_estimate_lb": "191.8759875984",
+  "local_estimate_kg": "87.033483960848864208",
+  "local_meter_lb": "191.754",
+  "local_meter_kg": "86.97815131698",
+  "local_meter_to_gpu_ratio": "1.578995494913749138622606879",
+  "table4_full_average_hours": "50.10273543537272917101691376",
+  "table4_52h_total": "249028",
+  "table4_electric_implied_facility_kWh": "8.225E+4",
+  "table4_electric_implied_avg_IT_W": "216.9564395783833413750095092",
+  "table1_full_pipeline_implied_kWh": "82251.57232704402515723270440",
+  "NAS_steps_nominal_TPU_hours": "32633.33333333333333333333333"
+}

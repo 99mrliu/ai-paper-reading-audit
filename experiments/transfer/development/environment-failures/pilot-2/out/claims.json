@@ -1,0 +1,8 @@
+{
+  "status": "blocked_before_input_read",
+  "scientific_claims": [],
+  "verification_performed": false,
+  "skill_read": false,
+  "limitation": "Local execution tool crashed twice before returning task, skill, or paper contents. Skill-required artifact schema could not be determined.",
+  "unresolved": ["Restore local file reading and execution", "Read task and supplied skill", "Read supplied materials and perform required verification"]
+}

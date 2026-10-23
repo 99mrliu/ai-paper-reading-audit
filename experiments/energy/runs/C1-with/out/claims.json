@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "type": "source_fact",
+      "source": "INPUT/paper.pdf, PDF p1",
+      "quote": "A training run lasted 4 hours.",
+      "claim": "节选记录训练时长4小时；未提供原始日志。"
+    },
+    {
+      "id": "C2",
+      "type": "source_fact",
+      "source": "INPUT/paper.pdf, PDF p1",
+      "quote": "Average draw was recorded as 180, but its unit was lost.",
+      "claim": "平均功率数字为180，单位未知，不能直接计算能耗。"
+    },
+    {
+      "id": "C3",
+      "type": "source_fact",
+      "source": "INPUT/paper.pdf, PDF p1",
+      "quote": "A separate meter recorded 0.72 kWh.",
+      "claim": "另一个电表读数为0.72 kWh；覆盖边界、时间窗和训练归属未获确认。"
+    },
+    {
+      "id": "C4",
+      "type": "unknown",
+      "source": "INPUT/paper.pdf, PDF p1",
+      "quote": "The PUE and electricity carbon intensity are not available.",
+      "claim": "PUE与电力碳强度缺失；无数值碳排结论。"
+    },
+    {
+      "id": "C5",
+      "type": "conditional_derivation",
+      "source": "C1–C3; out/ledger.json conditional_180_W",
+      "claim": "若180为同一时间窗、同一边界的总平均功率W，则0.180 kW × 4 h = 0.720 kWh。相等不证明单位或边界。"
+    },
+    {
+      "id": "C6",
+      "type": "judgment",
+      "source": "C1–C4及PDF p1边界未知说明",
+      "claim": "可保留记录本身；不足以确认该训练的完整设施能耗、IT能耗或电力相关碳排。"
+    }
+  ],
+  "limitation": "引文及转录核对不证明科学语义、测量准确性或模型完整性。"
+}

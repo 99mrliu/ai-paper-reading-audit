@@ -1,0 +1,5 @@
+{"type":"thread.started","thread_id":"01a16425-6a9c-78d0-a7ca-cc793897ffa3"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I’ll run `pwd` once using the shell tool, without accessing files or the network."}}
+{"type":"item.completed","item":{"id":"item_1","type":"agent_message","text":"The shell tool failed before returning command output, so I cannot confirm that `pwd` actually executed. No files or network were accessed."}}
+{"type":"turn.completed","usage":{"input_tokens":47281,"cached_input_tokens":35712,"cache_write_input_tokens":0,"output_tokens":89,"reasoning_output_tokens":0}}

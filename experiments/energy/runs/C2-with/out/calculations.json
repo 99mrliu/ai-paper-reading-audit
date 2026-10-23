@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "scope": "Arithmetic for user-entered ledger; not source or scientific validation",
+  "interval_meaning": "Conditional display-rounding bounds, not measured uncertainty or confidence intervals",
+  "records": [
+    {
+      "id": "recorded_draw_missing_unit",
+      "source": "INPUT/paper.pdf，PDF第1页：4 hours；180, but its unit was lost。单位与功率覆盖范围均未知，未作补值。",
+      "status": "unknown",
+      "energy_kWh": null,
+      "carbon_kg": null,
+      "reason": "Missing unit for power"
+    },
+    {
+      "id": "recorded_meter_unknown_boundary",
+      "source": "INPUT/paper.pdf，PDF第1页：A separate meter recorded 0.72 kWh；IT/设施边界未知。",
+      "status": "unknown",
+      "energy_kWh": null,
+      "carbon_kg": null,
+      "reason": "Missing measurement_scope: it or facility"
+    },
+    {
+      "id": "conditional_meter_facility",
+      "source": "条件分支，非原文已证实边界：假设第1页0.72 kWh为本次训练对应的完整设施能耗；碳强度仍缺失。",
+      "status": "partial",
+      "energy_kWh": {
+        "nominal": "0.72",
+        "conditional_interval": [
+          "0.72",
+          "0.72"
+        ]
+      },
+      "carbon_kg": null,
+      "carbon_status": "unknown",
+      "reason": "Missing intensity"
+    },
+    {
+      "id": "conditional_meter_it",
+      "source": "条件分支，非原文已证实边界：假设第1页0.72 kWh为本次训练IT能耗；PUE仍缺失。",
+      "status": "unknown",
+      "energy_kWh": null,
+      "carbon_kg": null,
+      "reason": "Missing numerical value"
+    },
+    {
+      "id": "conditional_180W_facility",
+      "source": "纯条件算术：假设第1页180单位是W、为同一4小时完整设施总平均功率，且与0.72 kWh电表同对象同时段；这些假设未由材料证实。",
+      "status": "partial",
+      "energy_kWh": {
+        "nominal": "0.720",
+        "conditional_interval": [
+          "0.720",
+          "0.720"
+        ]
+      },
+      "carbon_kg": null,
+      "energy_check": {
+        "reported": {
+          "nominal": "0.72",
+          "conditional_interval": [
+            "0.72",
+            "0.72"
+          ]
+        },
+        "nominal_residual": "0.000",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_status": "unknown",
+      "reason": "Missing intensity"
+    }
+  ],
+  "groups": {},
+  "ledger_sha256": "d8ffddd433aa267c2859d36d26561f004c1b28a608f83e137a9b3163fd87625c"
+}

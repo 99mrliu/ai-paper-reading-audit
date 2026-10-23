@@ -1,0 +1,12 @@
+{
+  "status": "blocked_before_input_read",
+  "checks": [
+    {"id": "local_command_1", "command": "pwd; rg --files -g '!out/**' -g '!\\.git/**' .", "status": "tool_failure_before_execution", "error": "JoinError::Panic; Result::unwrap() on Err while processing inherited PATH"},
+    {"id": "local_command_2", "command": "/bin/cat INPUT/task.md skill/SKILL.md", "shell": "/bin/sh", "login": false, "status": "tool_failure_before_execution", "error": "Same JoinError::Panic and Result::unwrap() on Err"}
+  ],
+  "input_read": false,
+  "supplied_skill_read": false,
+  "paper_evidence_verified": false,
+  "unresolved": ["Local command execution unavailable", "Task and supplied skill requirements unread", "Paper reading and scientific verification not performed"],
+  "note": "Artifact format is provisional because the supplied skill could not be read."
+}

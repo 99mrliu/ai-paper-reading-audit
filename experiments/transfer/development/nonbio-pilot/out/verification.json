@@ -1,0 +1,320 @@
+{
+  "schema_version": "2.0",
+  "scope": "provided_document",
+  "errors": [],
+  "claims": [
+    {
+      "id": "C1",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 2,
+      "quote": "Scikit-learn is a Python module integrating a wide range of state-of-the-art machine learning algorithms for medium-scale supervised and unsupervised problems.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C2",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 3,
+      "quote": "Input data is presented as numpy arrays, thus integrating seamlessly with other scientific Python libraries.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C3",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 3,
+      "quote": "To facilitate the use of external objects with scikit-learn, inheritance is not enforced; instead, code conventions provide a consistent interface. The central object is an estimator, that implements a fit method, accepting as arguments an input data array and, optionally, an array of labels for supervised problems.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C4",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 3,
+      "quote": "Supervised estimators, such as SVM classifiers, can implement a predict method. Some estimators, that we call transformers, for example, PCA, implement a transform method, returning modified input data.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C5",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "may also provide a score method, which is an increasing evaluation of goodness of fit: a loglikelihood, or a negated loss function.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C6",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "The other important object is the cross-validation iterator, which provides pairs of train and test indices to split input data, for example K-fold, leave one out, or stratified cross-validation.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C7",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "Scikit-learn can evaluate an estimator’s performance or select parameters using cross-validation, optionally distributing the computation to several cores. This is accomplished by wrapping an estimator in a GridSearchCV object, where the “CV” stands for “cross-validated”. During the call to fit, it selects the parameters on a specified parameter grid, maximizing a score (the score method of the underlying estimator).",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C8",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "predict, score, or transform are then delegated to the tuned estimator. This object can therefore be used transparently as any other estimator.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C9",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "Finally, a Pipeline object can combine several transformers and an estimator to create a combined estimator to, for example, apply dimension reduction before fitting. It behaves as a standard estimator, and GridSearchCV therefore tune the parameters of all steps.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C10",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "Cross validation can be made more efficient for certain estimators by exploiting specific properties, such as warm restarts or regularization paths (Friedman et al., 2010). This is supported through special objects, such as the LassoCV.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C11",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "We use the Madelon data set (Guyon et al., 2004), 4400 instances and 500 attributes, The data set is quite large, but small enough for most algorithms to run.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C12",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "Table 1: Time in seconds on the Madelon data set for various machine learning libraries exposed in Python:",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C13",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "Support Vector Classification Lasso (LARS) Elastic Net k-Nearest Neighbors PCA (9 components) k-Means (9 clusters) License -: Not implemented. scikit-learn 5.2 1.17 0.52 0.57 0.18 1.34 BSD mlpy 9.47 105.3 73.7 1.41 0.79 GPL pybrain 17.5 ⋆ BSD pymvpa mdp shogun 11.52 40.48 5.63 37.35 1.44 0.56 0.58 1.36 8.93 0.47 0.33 35.75 0.68 BSD BSD GPL ⋆: Does not converge within 1 hour. ",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C14",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "Support Vector Classification Lasso (LARS) Elastic Net k-Nearest Neighbors PCA (9 components) k-Means (9 clusters) License -: Not implemented. scikit-learn 5.2 1.17 0.52 0.57 0.18 1.34 BSD mlpy 9.47 105.3 73.7 1.41 0.79 GPL pybrain 17.5 ⋆ BSD pymvpa mdp shogun 11.52 40.48 5.63 37.35 1.44 0.56 0.58 1.36 8.93 0.47 0.33 35.75 0.68 BSD BSD GPL ⋆: Does not converge within 1 hour. ",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C15",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "Support Vector Classification Lasso (LARS) Elastic Net k-Nearest Neighbors PCA (9 components) k-Means (9 clusters) License -: Not implemented. scikit-learn 5.2 1.17 0.52 0.57 0.18 1.34 BSD mlpy 9.47 105.3 73.7 1.41 0.79 GPL pybrain 17.5 ⋆ BSD pymvpa mdp shogun 11.52 40.48 5.63 37.35 1.44 0.56 0.58 1.36 8.93 0.47 0.33 35.75 0.68 BSD BSD GPL ⋆: Does not converge within 1 hour. ",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C16",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "First, our bindings avoid memory copies and have up to 40% less overhead than the original libsvm Python bindings. Second, we patch libsvm to improve efficiency on dense data, use a smaller memory footprint, and better use memory alignment and pipelining capabilities of modern processors.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C17",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 5,
+      "quote": "It achieves the same order of performance as the highly optimized Fortran version glmnet (Friedman et al., 2010) on medium-scale problems, but performance on very large problems is limited since we do not use the KKT conditions to define an active set.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C18",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 5,
+      "quote": "scikit-learn’s k-means algorithm is implemented in pure Python. Its performance is limited by the fact that numpy’s array operations take multiple passes over data.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "C19",
+      "class": "FACT",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 5,
+      "quote": "Future work includes online learning, to scale to large data sets.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "I1",
+      "class": "INFERRED",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 4,
+      "quote": "It behaves as a standard estimator, and GridSearchCV therefore tune the parameters of all steps.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "I2",
+      "class": "INFERRED",
+      "status": "PASS",
+      "notes": [],
+      "found_page": 5,
+      "quote": "Future work includes online learning, to scale to large data sets.",
+      "semantic_support": "requires_reader_review"
+    },
+    {
+      "id": "U1",
+      "class": "UNKNOWN",
+      "status": "WARN",
+      "notes": [
+        "Search describes supplied pages only; keywords cannot establish semantic absence."
+      ],
+      "search_results": [
+        {
+          "term": "online learning",
+          "hits": [
+            {
+              "page": 5,
+              "context": "medical imaging (Michel et al., 2011). Future work includes online learning, to scale to large data sets. References D. Albanese, G. Merler, S.and Jurman, and R. Visintainer. MLPy: high-performance python package for predictive modelin"
+            }
+          ]
+        },
+        {
+          "term": "pure Python",
+          "hits": [
+            {
+              "page": 5,
+              "context": "k-means. scikit-learn’s k-means algorithm is implemented in pure Python. Its performance is limited by the fact that numpy’s array operations take multiple passes over data. 6. Conclusion Scikit-learn exposes a wide variety of mach"
+            }
+          ]
+        },
+        {
+          "term": "release",
+          "hits": [
+            {
+              "page": 3,
+              "context": "lementations. Code quality is ensured with unit tests—as of release 0.8, test coverage is 81%—and the use of static analysis tools such as pyflakes and pep8. Finally, we strive to use consistent naming for the functions and par"
+            }
+          ]
+        },
+        {
+          "term": "GridSearchCV",
+          "hits": [
+            {
+              "page": 4,
+              "context": "l cores. This is accomplished by wrapping an estimator in a GridSearchCV object, where the “CV” stands for “cross-validated”. During the call to fit, it selects the parameters on a specified parameter grid, maximizing a score (the s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "U2",
+      "class": "UNKNOWN",
+      "status": "WARN",
+      "notes": [
+        "Search describes supplied pages only; keywords cannot establish semantic absence."
+      ],
+      "search_results": [
+        {
+          "term": "benchmark",
+          "hits": [
+            {
+              "page": 4,
+              "context": "t al., 2008) and Shogun (Sonnenburg et al., 2010). For more benchmarks see http://github.com/scikit-learn. may also provide a score method, which is an increasing evaluation of goodness of fit: a loglikelihood, or a negated loss "
+            },
+            {
+              "page": 5,
+              "context": "gs and pays a heavy price to memory copies. Elastic Net. We benchmarked the scikit-learn coordinate descent implementations of Elastic Net. It achieves the same order of performance as the highly optimized Fortran version glmnet "
+            }
+          ]
+        },
+        {
+          "term": "seconds",
+          "hits": [
+            {
+              "page": 4,
+              "context": "SD GPL ⋆: Does not converge within 1 hour. Table 1: Time in seconds on the Madelon data set for various machine learning libraries exposed in Python: MLPy (Albanese et al., 2008), PyBrain (Schaul et al., 2010), pymvpa (Hanke et"
+            }
+          ]
+        },
+        {
+          "term": "processor",
+          "hits": [
+            {
+              "page": 4,
+              "context": " use memory alignment and pipelining capabilities of modern processors. This patched version also provides unique features, such as setting weights for individual samples. 2828"
+            }
+          ]
+        },
+        {
+          "term": "parameter",
+          "hits": [
+            {
+              "page": 3,
+              "context": "y, we strive to use consistent naming for the functions and parameters used throughout a strict adherence to the Python coding guidelines and numpy style documentation. BSD licensing. Most of the Python ecosystem is licensed with"
+            },
+            {
+              "page": 4,
+              "context": "kit-learn can evaluate an estimator’s performance or select parameters using cross-validation, optionally distributing the computation to several cores. This is accomplished by wrapping an estimator in a GridSearchCV object, wher"
+            }
+          ]
+        },
+        {
+          "term": "Madelon",
+          "hits": [
+            {
+              "page": 4,
+              "context": "not converge within 1 hour. Table 1: Time in seconds on the Madelon data set for various machine learning libraries exposed in Python: MLPy (Albanese et al., 2008), PyBrain (Schaul et al., 2010), pymvpa (Hanke et al., 2009), MD"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "derivations": [],
+  "summary": {
+    "claims_and_parameters": 23,
+    "failures": 0,
+    "warnings": 2,
+    "located_positive_claims": 21,
+    "positive_claims": 21
+  },
+  "interpretation": "Mechanical checks do not certify scientific meaning or completeness.",
+  "binding": {
+    "claims_sha256": "1dd10d8aa72b7e428804c75eefedcafb7be25092b776299bb74266ed81ba5a6d",
+    "pages_sha256": "554768a7fbd2286b336046f9b616bc1c74d1c9211759521e2e6417acdcadfa57",
+    "index_sha256": "ebc30382f2f943ceeeb68323b2cae1133147a01d856694fdae61c9e75e0091cb",
+    "source_sha256": "1c338a6b3c6c1dcafda3990a8098b8b50dd6c77616361396fb75f6822c6e0778"
+  }
+}

@@ -1,0 +1,87 @@
+Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics, pages 3645–3650
+Florence, Italy, July 28 - August 2, 2019. c 2019 Association for Computational Linguistics
+3645
+Energy and Policy Considerations for Deep Learning in NLP
+Emma Strubell Ananya Ganesh Andrew McCallum
+College of Information and Computer Sciences
+University of Massachusetts Amherst
+{strubell, aganesh, mccallum}@cs.umass.edu
+Abstract
+Recent progress in hardware and methodol-
+ogy for training neural networks has ushered
+in a new generation of large networks trained
+on abundant data. These models have ob-
+tained notable gains in accuracy across many
+NLP tasks. However, these accuracy improve-
+ments depend on the availability of exception-
+ally large computational resources that neces-
+sitate similarly substantial energy consump-
+tion. As a result these models are costly to
+train and develop, both financially, due to the
+cost of hardware and electricity or cloud com-
+pute time, and environmentally, due to the car-
+bon footprint required to fuel modern tensor
+processing hardware. In this paper we bring
+this issue to the attention of NLP researchers
+by quantifying the approximate financial and
+environmental costs of training a variety of re-
+cently successful neural network models for
+NLP. Based on these findings, we propose ac-
+tionable recommendations to reduce costs and
+improve equity in NLP research and practice.
+1 Introduction
+Advances in techniques and hardware for train-
+ing deep neural networks have recently en-
+abled impressive accuracy improvements across
+many fundamental NLP tasks (Bahdanau et al.,
+2015; Luong et al., 2015; Dozat and Man-
+ning, 2017; Vaswani et al., 2017), with the
+most computationally-hungry models obtaining
+thehighestscores(Petersetal.,2018;Devlinetal.,
+2019; Radford et al., 2019; So et al., 2019). As
+a result, training a state-of-the-art model now re-
+quires substantial computational resources which
+demand considerable energy, along with the as-
+sociated financial and environmental costs. Re-
+search and development of new models multiplies
+these costs by thousands of times by requiring re-
+training to experiment with model architectures
+and hyperparameters. Whereas a decade ago most
+Consumption CO2e (lbs)
+Air travel, 1 person, NY↔SF 1984
+Human life, avg, 1 year 11,023
+American life, avg, 1 year 36,156
+Car, avg incl. fuel, 1 lifetime 126,000
+Training one model (GPU)
+NLP pipeline (parsing, SRL) 39
+w/ tuning & experiments 78,468
+Transformer (big) 192
+w/ neural arch. search 626,155
+Table 1: Estimated CO2 emissions from training com-
+mon NLP models, compared to familiar consumption.1
+NLP models could be trained and developed on
+a commodity laptop or server, many now require
+multiple instances of specialized hardware such as
+GPUs or TPUs, therefore limiting access to these
+highly accurate models on the basis of finances.
+Even when these expensive computational re-
+sources are available, model training also incurs a
+substantial cost to the environment due to the en-
+ergy required to power this hardware for weeks or
+months at a time. Though some of this energy may
+come from renewable or carbon credit-offset re-
+sources, the high energy demands of these models
+are still a concern since (1) energy is not currently
+derived from carbon-neural sources in many loca-
+tions, and (2) when renewable energy is available,
+it is still limited to the equipment we have to pro-
+duce and store it, and energy spent training a neu-
+ral network might better be allocated to heating a
+family’s home. It is estimated that we must cut
+carbon emissions by half over the next decade to
+deter escalating rates of natural disaster, and based
+on the estimated CO2 emissions listed in Table 1,
+1
+Sources: (1) Air travel and per-capita consumption:
+https://bit.ly/2Hw0xWc; (2) car lifetime: https:
+//bit.ly/2Qbr0w1.

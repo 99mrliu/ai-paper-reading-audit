@@ -1,0 +1,24 @@
+{
+  "kind": "Engineering invariants only, not reading accuracy",
+  "passed": 18,
+  "checks": [
+    "Power times duration, PUE once, grams to kilograms",
+    "Equivalent physical units yield equal output",
+    "Per-device count applies once",
+    "Aggregate plus device count rejects double counting",
+    "Facility plus PUE rejects double counting",
+    "Energy plus power rejects ambiguous duplicate inputs",
+    "Pounds conversion is exact",
+    "Unsupported unit is not guessed",
+    "Missing unit remains unknown",
+    "Missing power not zero",
+    "Missing intensity preserves energy but not carbon",
+    "Nonfinite rejected",
+    "Rounded displayed duration can reconcile a nominal mismatch",
+    "No hidden precision assumption",
+    "Missing carbon invalidates complete group carbon total",
+    "Missing energy invalidates complete group energy total",
+    "Resource-specific allocations",
+    "Duplicate identities rejected"
+  ]
+}

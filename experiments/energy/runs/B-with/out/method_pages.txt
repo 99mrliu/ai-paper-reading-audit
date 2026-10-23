@@ -1,0 +1,608 @@
+===== PDF PAGE 1 =====
+Journal of Machine Learning Research 21 (2020) 1-43            Submitted 4/20; Revised 10/20; Published 11/20
+
+
+
+
+Towards the Systematic Reporting of the Energy and Carbon
+              Footprints of Machine Learning
+
+Peter Henderson                                                                phend@cs.stanford.edu
+Stanford University, Stanford, CA, USA
+Jieru Hu                                                                                       jieru@fb.com
+Facebook, Menlo Park, CA, USA
+Joshua Romoff                                                         joshua.romoff@mail.mcgill.ca
+Mila, McGill University, Montreal, QC, Canada
+Emma Brunskill                                                                 ebrun@cs.stanford.edu
+Stanford University, Stanford, CA, USA
+Dan Jurafsky                                                                   jurafsky@stanford.edu
+Stanford University, Stanford, CA, USA
+Joelle Pineau                                                                     jpineau@cs.mcgill.ca
+Facebook AI Research, Mila, McGill University, Montreal, QC, Canada
+
+
+Editor: David Sontag
+
+
+                                                Abstract
+     Accurate reporting of energy and carbon usage is essential for understanding the potential
+     climate impacts of machine learning research. We introduce a framework that makes this
+     easier by providing a simple interface for tracking realtime energy consumption and carbon
+     emissions, as well as generating standardized online appendices. Utilizing this framework,
+     we create a leaderboard for energy efficient reinforcement learning algorithms to incentivize
+     responsible research in this area as an example for other areas of machine learning. Finally,
+     based on case studies using our framework, we propose strategies for mitigation of carbon
+     emissions and reduction of energy consumption. By making accounting easier, we hope
+     to further the sustainable development of machine learning experiments and spur more
+     research into energy efficient algorithms.
+     Keywords: energy efficiency, green computing, reinforcement learning, deep learning,
+     climate change
+
+
+1. Introduction
+Global climate change is a scientifically well-recognized phenomenon and appears to be
+accelerated due to greenhouse gas (GHG) emissions such as carbon dioxide or equivalents
+(CO2eq ) (Crowley, 2000; IPCC, 2018). The harmful health and safety impacts of global
+climate change are projected to “fall disproportionately on the poor and vulnerable” (IPCC,
+2018). Energy production remains a large factor in GHG emissions, contributing about ∼ 25%
+of GHG emissions in 2010 (IPCC, 2018). With the compute and energy demands of many
+modern machine learning (ML) methods growing exponentially (Amodei and Hernandez,
+2018), ML systems have the potential to significantly contribute to carbon emissions. Recent
+
+©2020 Peter Henderson, Jieru Hu, Joshua Romoff, Emma Brunskill, Dan Jurafsky, Joelle Pineau.
+License: CC-BY 4.0, see https://creativecommons.org/licenses/by/4.0/. Attribution requirements are provided
+at http://jmlr.org/papers/v21/20-312.html.
+
+
+===== PDF PAGE 4 =====
+                Henderson, Hu, Romoff, Brunskill, Jurafsky, and Pineau
+
+
+
+
+nuances in the estimation methods may make them inaccurate—particularly in experiments
+which utilize combined CPU and GPU workloads heavily. We build a framework aiming to
+provide more accurate and easier systematic reporting of carbon and energy footprints. We
+also provide additional mitigation and reporting strategies—beyond those discussed by these
+prior works—to emphasize how both companies and research labs can be more carbon and
+energy efficient.
+    It is worth noting that prior work has also examined the carbon impacts of research in
+other fields, focusing mostly on emissions from conference travel (Spinellis and Louridas,
+2013; Astudillo and AzariJafari, 2018; Hackel and Sparkman, 2018). We provide a brief
+discussion on ML-related conference travel in Appendix A, but will focus mainly on accurate
+accounting of energy and carbon footprints of ML compute.
+
+
+3. Background
+We briefly provide a primer on energy and carbon accounting, which form the basis of our
+proposed framework for measuring and reporting the ecological footprint of ML research.
+
+3.1 Energy Accounting
+Energy accounting is fairly straightforward. The energy consumption of a system can be
+measured in Joules (J) or Watt-hours (Wh),6 representing the amount of energy needed
+to power the system. Life-cycle accounting might also consider the energy required to
+manufacture components of the system—for example, the production of GPUs or CPUs (Jones
+et al., 2013). However, we largely ignore life-cycle aspects of energy accounting due to the
+difficulties in attributing manufacturing impacts on a per-experiment basis. Measuring data-
+center energy impacts also contain several layers, focusing on hardware-centric and software-
+centric analyses. Many parts contribute to the power consumption of any computational
+system. Dayarathna et al. (2015) survey energy consumption components of a data center and
+their relative consumption: cooling (50%), lighting (3%), power conversion (11%), network
+hardware (10%), and server/storage (26%).
+     The server and storage component can further be broken down into contributions from
+DRAM, CPUs, among other compute components. Accurate accounting for all of these
+components requires complex modeling and varies depending on workload. In particular,
+the efficiency of the hardware varies with utilization—often most efficient near maximum
+utilization—making utilization an important factor in optimization (particularly in large
+cloud compute systems) Barroso et al. (2018). Since we aim to provide a framework at the
+per-experiment software level, we only account for aspects of energy consumption which
+expose interfaces for energy metrics (giving us real-time energy usage and compensating for
+such workload differences). For the purpose of our work, this is constrained to DRAM, CPUs,
+and GPUs. To account for all other components, we rely on a power usage effectiveness
+(PUE) factor (Strubell et al., 2019). This factor rescales the available power metrics by an
+average projected overhead of other components. With more available software interfaces,
+more robust modeling can be performed as reviewed by Dayarathna et al. (2015).
+
+ 6. One Watt is a unit of power—equivalent to one Joule per second.
+
+
+                                                   4
+
+
+===== PDF PAGE 5 =====
+ Towards the Systematic Reporting of the Energy and Carbon Footprints of ML
+
+
+
+
+3.2 Carbon Accounting
+
+Carbon accounting can be all-expansive, so we focus on a narrow definition provided by
+Stechemesser and Guenther (2012): “carbon accounting at the project scale can be defined
+as the measuring and non-monetary valuation of carbon and GHG emissions and offsetting
+from projects, and the monetary assessment of these emissions with offset credits to inform
+project-owners and investors but also to establish standardized methodologies.” Carbon and
+GHG emissions are typically measured in some form close to units CO2eq . This is the amount
+of carbon—and other GHG converted to carbon amounts—released into the atmosphere as a
+result of the project. Carbon offsetting is the amount of carbon emissions saved as a result
+of the project. For example, a company may purchase renewable energy in excess of the
+energy required for their project to offset for the carbon emissions they contributed. Since
+our goal is to inform and assess carbon emissions of machine learning systems, we ignore
+carbon offsetting. Typical carbon offsetting involves the use of Power Purchase Agreements
+(PPAs) or other similar agreements which may not reflect the current carbon make-up
+of the power draw (as they may account for future clean energy).7 Since carbon effects
+contribute to feedback loops, cutting emissions now will improve the likelihood of preventing
+further emissions.8 . We also do not consider carbon accounting in the financial sense, but
+do provide metrics on monetary impacts through the social cost of carbon (SC-CO2). The
+U.S. Environment Protection Agency (2013) uses this metric when developing administrative
+rules and regulations. According to the EPA, “The SC-CO2 is a measure, in dollars, of the
+long-term damage done by a ton of carbon dioxide (CO2) emissions in a given year. This
+dollar figure also represents the value of damages avoided for a small emission reduction (i.e.,
+the benefit of a CO2 reduction).” We rely on the per-country social cost of carbon developed
+by Ricke et al. (2018), which accounts for different risk profiles of country-level policies and
+GDP growth in their estimates of SC-CO2.
+     Carbon emissions from a project can also consider life-cycle emissions (for example,
+manufacturing of CPUs may emit carbon as part of the process). We do not consider these
+aspects of emissions. We instead, consider only carbon emissions from energy consumption.
+A given energy grid powering an experiment will have a carbon intensity: the grams of
+CO2eq emitted per kWh of energy used. This carbon intensity is determined based on the
+energy sources supplying the grid. Each energy source has its own carbon intensity accounted
+for through a full life-cycle analysis (IPCC, 2015). For example, coal power has a median
+carbon intensity of 820 gCO2eq / kWh, while hydroelectricity has a mean carbon intensity
+of 24 gCO2eq / kWh. The life-cycle emissions of energy source take into account not just
+emissions from production, but from waste disposal as well. For example, nuclear energy
+waste disposal has some carbon emissions associated that would be taken into account in
+a life-cycle carbon intensity metric (IPCC, 2018). Carbon emissions for a compute system
+can be estimated by understanding the carbon intensity of the local energy grid and the
+energy consumption of the system. Similar analyses have been done for bitcoin (Krause
+and Tolaymat, 2018). These analyses, however, attempt to extrapolate impacts of bitcoin
+
+
+ 7. See discussion in Appendix C for further information.
+ 8. See, e.g., https://www.esrl.noaa.gov/gmd/outreach/info_activities/pdfs/TBI_understanding_
+    feedback_loops.pdf
+
+
+                                               5
+
+
+===== PDF PAGE 9 =====
+ Towards the Systematic Reporting of the Energy and Carbon Footprints of ML
+
+
+
+
+carbon region and electricity grid information can be added as needed to similar centralized
+locations.12
+    Reproducibility:      Running an algorithm on different sets of hardware has been
+shown to affect the reproducibility of algorithmic results (Gundersen and Kjensmo, 2018;
+Sukhoy and Stoytchev, 2019). Our framework aides in automating reproducibility by logging
+additional metrics like hardware information, Python package versions, etc. These metrics
+can help future work assess statistically significant differences in model energy requirements
+by accounting for controlled and random variates (Boquet et al., 2019).
+    Fault tolerance: Mistakes in software are inevitable—as is discussed in Sidor and
+Schulman (2017). We try to log all raw information so that accounting can be recreated and
+updated based on new information. We also log the version number of the tool itself, to
+ensure future comparisons do not mismatch information between versions that may have
+changed.
+
+4.3 Proposed Framework
+The experiment-impact-tracker requires a simple code change to automatically gather available
+metrics and a script to generate online appendices for reporting the data. Currently, on
+compatible systems, we gather:
+
+   • all python packages and version numbers
+
+   • CPU and GPU hardware information
+
+   • experiment start and end-times
+
+   • the version of the experiment-impact-tracker framework used
+
+   • the energy grid region the experiment is being run in (based on IP address)
+
+   • the average carbon intensity in the energy grid region
+
+   • CPU- and GPU-package power draw
+
+   • per-process utilization of CPUs and GPUs
+
+   • GPU performance states
+
+   • memory usage
+
+   • the realtime CPU frequency (in Hz)
+
+   • realtime carbon intensity (only supported in CA right now)
+
+   • disk write speed
+
+   The code change required for immediate logging of metrics can be seen in Listing 1. In
+the background, the framework launches a thread which polls system supported tools. For
+example, the thread polls psutil (Rodola, 2016) for measuring CPU utilization. All of these
+12. See https://breakend.github.io/experiment-impact-tracker/contributing_carbon_region.html.
+
+
+                                              9
+
+
+===== PDF PAGE 10 =====
+                   Henderson, Hu, Romoff, Brunskill, Jurafsky, and Pineau
+
+
+
+
+    metrics are logged in parallel with the main machine learning process as described in Figure 1.
+    A script13 is provided to generate an HTML web page showing graphs and tables for all
+    these metrics, meant to serve as an online appendix for research papers.14 Results in the
+    generated appendix can be aggregated across multiple experiments to show averages along
+    with standard error as recommended in prior work (Henderson et al., 2018; Colas et al., 2018;
+    Reimers and Gurevych, 2017).
+1 from e xp e r i m e n t _ i mp a c t _ t r a c k e r . compute_tracker import ImpactTracker
+2 tracker = ImpactTracker ( < your log directory here >)
+3 tracker . laun ch_im pact_m onito r ()
+
+
+       Listing 1: Simple code addition required to log experiment details via our framework.
+
+    4.3.1 Tracking Energy Consumption
+    Different hardware vendors provide different tooling for tracking energy consumption. Our
+    framework hides these complications from users. We currently use Intel’s RAPL tool with
+    the powercap interface (David et al., 2010) or Intel’s PowerGadget Tool15 (depending on
+    availability) to gather CPU/DRAM power draw and Nvidia’s nvidia-smi 16 for GPU power
+    draw. We use psutil for gathering per-process CPU utilization and nvidia-smi for per-process
+    GPU utilization. We found that on a shared machine—as when running a job on Slurm—
+    using Intel’s RAPL would provide energy metrics for the entire machine (including other jobs
+    running on the worker). If two experiments were launched with Slurm to the same worker,
+    using measurements from RAPL without corrections would double count energy usage from
+    the CPU.
+        As a result, we assign energy credits on a per-process basis (though we log system-wide
+    information as well). We track the parent process, and any children spawned. Power credits
+    are provided based on relative usage of system resources. If a process uses 25% of the CPU
+    (relative to the entire system’s usage), we will credit the process with 25% of the CPU-based
+    power draw. This ensures that any non-experiment-related background processes— software
+    updates, weekly jobs, or multiple experiments on the same machine—will not be taken into
+    account during training.
+        We calculate total energy as:
+                                        X
+                         etotal = PUE    (pdram edram + pcpu ecpu + pgpu egpu ),                   (1)
+                                         p
+
+        where presource are the percentages of each system resource used by the attributable
+    processes relative to the total in-use resources and eresource is the energy usage of that
+    resource. This is the per-process equivalent of the method which Strubell et al. (2019) use.
+    13. https://github.com/Breakend/experiment-impact-tracker/blob/master/scripts/create-
+        compute-appendix
+    14. Appendices generated by our framework for Figure 7 and Figure 3 are available at:
+        https://breakend.github.io/ClimateChangeFromMachineLearningResearch/measuring_and_
+        mitigating_energy_and_carbon_footprints_in_machine_learning/.           Experiments in Figure 5
+        are available at https://breakend.github.io/RL-Energy-Leaderboard/reinforcement_learning_
+        energy_leaderboard/index.html.
+    15. https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html
+    16. https://developer.nvidia.com/nvidia-system-management-interface
+
+
+                                                    10
+
+
+===== PDF PAGE 11 =====
+ Towards the Systematic Reporting of the Energy and Carbon Footprints of ML
+
+
+
+
+      a:main         b:experiment-impact-tracker     c:other-tools             d:log-file
+               launch_monitor
+
+                     loop   loop         get_metric_from_router
+
+                                    is_metric_compatible
+                                          compatible
+                                      gather_metric_info
+                                             info
+
+
+
+                                                   log_gathered_info
+
+
+           check_for_exceptions
+                exceptions
+                   atexit
+                                                    log_final_info
+                                                       success
+                end_process
+
+
+
+
+Figure 1: A diagram demonstrating how the released version of the tool works. The main
+          process launches a monitoring thread which iterates over a list of metrics associated
+          with function calls to other tools. For example, if available, we call Intel RAPL
+          to collect CPU power draw or query caiso.org to get realtime carbon intensity
+          data for California. Once all the data that is compatible with the current system
+          is gathered, it is logged to a standardized log file and the process repeats. The
+          main thread may check in on this thread for exceptions, but the thread will not
+          interrupt the main process. Once the main thread exits, an atexit hook (which is
+          called whenever the main process exits, either successfully or through an exception)
+          gathers the final information (such as the time the experiment ended), logs it, and
+          then ends both the monitor and main process.
+
+
+
+
+                                              11
+
+
+===== PDF PAGE 12 =====
+              Henderson, Hu, Romoff, Brunskill, Jurafsky, and Pineau
+
+
+
+
+We assume the same constant power usage effectiveness (PUE) as Strubell et al. (2019) to
+be the framework’s default PUE. This value compensates for excess energy from cooling or
+heating the data-center. Users can customize the PUE value when using the framework if
+needed.
+
+4.3.2 Carbon Accounting
+
+
+
+
+Figure 2: Realtime carbon intensity (gCO2eq /kWh) collected during one experiment using
+          our framework. As the experiment continued, the sun rose in California, and with
+          it the carbon intensity decreased.
+
+
+
+    For calculating carbon emissions, we use the power estimate from the previous section
+in kilowatt-hours (kWh) and multiply it by the carbon intensity of the local energy grid
+(g CO2eq / kWh). To gather carbon intensity metrics for energy grids, we build on the
+open-source portions of https://www.electricitymap.org and define regions based on
+map-based geometries, using the smallest bounding region for a given location as the carbon
+intensity estimate of choice. For example, for an experiment run in San Francisco, if the
+average carbon intensity is available for both the USA and California, the latter will be
+used. We estimate the region the experiment is conducted in based on the machine’s IP
+address. Carbon intensities are gathered from the average fallback values provided in the
+https://www.electricitymap.org code where available and supplemented with additional
+metrics from various governmental or corporate reports. We note that electricitymap.org
+estimates are based on a closed-source system and uses the methodology described by Tranberg
+et al. (2019). All estimates from electricitymap.org are of the regional supply, rather than
+production (accounting for imports from other regions). Since https://caiso.com provides
+realtime intensities including imports for free, for experiments run in California, we also
+provide realtime carbon intensity information. We do this by polling https://caiso.com for
+the current intensity of the California energy grid every five minutes. This helps gather even
+more accurate estimates of carbon emissions to account for daily shifts in supply. For example,
+experiments run in California during the day time use roughly 23 of night-time experiments.
+This is because much of California’s renewable energy comes from solar plants. Figure 2 is
+an automatically generated graph showing this phenomenon from an experiment using our
+framework. We hope that as users find more accurate realtime or average measurements
+
+                                              12
+
+
+===== PDF PAGE 25 =====
+ Towards the Systematic Reporting of the Energy and Carbon Footprints of ML
+
+
+
+
+finds carbon intensity information automatically, and corrects for multiple processes on one
+machine. Yet, a few other challenges may be hidden by using the framework which remain
+difficult to circumvent.
+     As Khan et al. (2018) discuss, and we encounter ourselves, poor driver support makes
+tracking energy difficult. Not every chipset supports RAPL, nor does every Linux kernel.
+Intel also does not provide first party supported python libraries for access to measurements.
+nvidia-smi per-process measurements in docker containers are not supported.34 A body
+of work has also looked at improving estimates of energy usage from RAPL by fitting a
+regression model to real energy usage patterns (Povoa et al., 2019; Kavanagh and Djemame,
+2019; Ghosh et al., 2013; Song et al., 2013). The Slurm workload manager provides an energy
+accounting plugin,35 but requires administrator access to add. For those without access to
+Slurm, Intel’s RAPL supports access to measurements through three mechanisms, but only
+one of these (the powercap interface only available on some systems) does not require root
+access (see more discussion by Khan et al. (2018)). To promote widespread reporting, we
+avoid any tool which requires administrative access or would not be accessible on most Linux
+systems. Providing better supported tools for user-level access to power metrics would make
+it possible to more robustly measure energy usage. Aggregating metrics and handling the
+intricacies of these downstream tools requires time and knowledge. We try to abstract as
+much of these challenges away in the experiment-impact-tracker, though some driver-related
+issues require driver developer support. However, these issues make it difficult to support
+every on-premises or cloud machine. As such, we currently only support instances which
+have Intel RAPL or PowerGadget capabilities for Mac OS and Linux.
+     We also note that carbon intensities for machines in cloud data centers may not reflect
+the regional carbon intensities. Some providers buy clean energy directly for some data
+centers, changing the realtime energy mix for that particular data center. We were unable
+to find any information regarding realtime energy mixes in such cases and thus could not
+account for these scenarios. If providers exposed realtime APIs for such information this
+would help in generating more accurate estimates. Moreover, customized hardware in cloud
+provider regions does not always provide energy accounting mechanisms or interfaces. If
+cloud providers supported libraries for custom hardware, this could be used for more detailed
+accounting in a wider range of cloud-based compute scenarios.
+     We further discuss other sources of error and issues arising from these difficulties in
+Appendix G.
+
+8. Concluding Remarks and Recommendations
+We have shown how the experiment-impact-tracker and associated tools can help ease the
+burden of consistent accounting and reporting of energy, compute, and carbon metrics;
+we encourage contribution to help expand the framework. We hope the Deep RL Energy
+Leaderboard helps spread information on energy efficient algorithms and encourages research
+in efficiency. While we focus on compute impacts of machine learning production and
+research, a plethora of other work considers costs of transportation for conferences (Holden
+et al., 2017; Spinellis and Louridas, 2013; Bossdorf et al., 2010) and compute hardware
+34. https://github.com/NVIDIA/nvidia-docker/issues/179#issuecomment-242150861
+35. https://slurm.schedmd.com/acct_gather_energy_plugins.html
+
+
+                                               25
+
+
+===== PDF PAGE 39 =====
+ Towards the Systematic Reporting of the Energy and Carbon Footprints of ML
+
+
+
+
+Figure 9: The same experiments as in Figure 3, plotting parameters as the varying factor
+          instead. See Figure 3 for correlation values.
+
+
+
+
+Appendix E. Estimation Methods
+
+We use our PPO Pong experiment (see Appendix F for more details) as the experiment
+under comparison. For carbon emission estimates, we use three estimation methods: realtime
+emissions data for California (collected by our framework from caiso.org) times the power
+usage at that time integrated over the length of the experiment; multiplying total energy
+usage recorded by our method by the California average carbon intensity; multiplying total
+energy usage recorded by our method by the EPA US average carbon intensity (Strubell
+et al., 2019). For energy estimates, we use: (1) the experiment time multiplied by the number
+of GPUs, a utilization factor of 1/3 or 1, and the Thermal Design Power (TDP)—which can
+be thought of as the maximum Watt draw—of the GPU (Amodei and Hernandez, 2018); (2)
+the measured GPU-hrs of our tool multiplied by the TDP; a rough calculation of PFLOPs-hr
+(following the methodology of (Amodei and Hernandez, 2018) by the PFLOPs/TDP of the
+GPU; (3) our tool’s accounting method which tracks energy from GPU readings, accounts
+for CPU time/energy, and measures utilization in realtime.
+
+
+Appendix F. Reinforcement Learning
+
+We investigate the energy efficiency of four baseline RL algorithms: PPO (Hill et al., 2018;
+Schulman et al., 2017), A2C (Hill et al., 2018; Mnih et al., 2016), A2C with VTraces (Espeholt
+et al., 2018; Dalton et al., 2019), and DQN (Hill et al., 2018; Mnih et al., 2016). We evaluate
+on PongNoFrameskip-v4 (left) and BreakoutNoFrameskip-v4 (right), two common evaluation
+environments included in OpenAI Gym (Bellemare et al., 2013; Brockman et al., 2016; Mnih
+et al., 2013).
+    We train for only 5M timesteps, less than prior work, to encourage energy efficiency (Mnih
+et al., 2016, 2013). We use default settings from code provided in stable-baselines (Hill et al.,
+2018) and cule (Dalton et al., 2019), we only modify evaluation code slightly. Modifications
+can be found here:
+
+                                               39
+
+
+===== PDF PAGE 41 =====
+ Towards the Systematic Reporting of the Energy and Carbon Footprints of ML
+
+
+
+
+Figure 11: Pong (left) and Breakout (right) as a function of experiment length and asymptotic
+           return.
+
+
+
+
+Figure 12: Pong (left) and Breakout (right) as a function of experiment length and average
+           return.
+
+
+
+Appendix G. Possible Sources of Error, Limitations, and Overheads
+
+In Sections 5.2 and 5.1, we compared different methods for estimating energy and carbon
+emissions including extrapolating from FPOs. However, we note that our own framework
+is not perfect. For transparency, we highlight several such sources here, but we note that
+utilizing more information—as we do here—is by definition superior to approximations which
+rely on less accurate assumptions (see Section 5.2).
+   First, we rely on downstream hardware APIs which themselves have errors. Several works
+have sought to evaluate the accuracy of RAPL—see for example Desrochers et al. (2016)
+and Kavanagh and Djemame (2019)—and Nvidia’s power profiling tool—see for example,
+Sen et al. (2018) and Arafa et al. (2020). Errors highly depend on the specific chipset and
+even the workload, so we refer the reader to these other works for techniques in assessing
+
+                                             41
+
+
+===== PDF PAGE 42 =====
+               Henderson, Hu, Romoff, Brunskill, Jurafsky, and Pineau
+
+
+
+
+exact errors. Nvidia’s documentation, however, states that the power reading “is accurate to
+within +/- 5 watts.” 39
+    Second, we rely on a polling mechanism due to the constraints of these downstream APIs
+(for GPUs typically only power is provided, rather than an energy counter). In particularly
+short jobs or highly erratic workloads, the tool may poll at a time that is not representative of
+the full workload, estimating energy usage from an outlier power sample. Our assumption is
+that workloads are fairly consistent and long enough that such variability will average out. In
+the event that comparisons of energy readings across models are needed, we encourage users
+to report standard errors across several runs (with n appropriate for the experiment setting).
+Furthermore, because we record many auxiliary data sources (such as CPU frequency), more
+accurate estimates can further be conducted via mixed effects models to control for sources
+of variation and noise in energy readings. For an example of how such an analysis would
+work, see for example Boquet et al. (2019), which compare machine learning algorithms
+controlling for hyperparameter choice and randomness.
+    Third, for cloud regions, we do not have access to the exact carbon intensities or PUEs.
+For example, if a cloud provider has a direct connection to a clean energy power plant for
+100% of its energy, we have no way of accessing this information and using it in our tool.
+We encourage companies to report this information per cloud region so that this may be
+more accurate. In the case of indirect carbon offsetting, we do not consider this to be an
+inaccuracy—see discussion in Appendix C. Moreover, we rely on IP address information and
+hand-gathered energy grid information to estimate the energy grid. Either of these may
+incur errors. Since we report this information and allow users to override grid regions in
+calculations, these may be corrected by users. We also may not be able to access particular
+drivers needed on every cloud instance. As such, support may depend on the cloud machine
+image being used and the drivers available on that image. Generally, if Intel’s RAPL is
+available or PowerGadget can be installed—and nvidia-smi is available—then the system
+should be compatible.
+    Regarding overheads to adding a separate process gathering these metrics, the cost should
+be generally fairly low. There are some startup and shutdown costs associated with adding
+the tool, so for short-running scripts the absolute percentage of overhead may be he higher.
+Additionally, if computational capacity of a chipset is maximally used due to the main
+process, there may be some added cost for thread switching to gather metrics. However,
+assuming that a core is preserved for the impact tracker there should be minimal overhead.
+Note, for the sake of reproducibility we also record disk read/write speeds, but this can be
+turned off if the disk is particularly slow or there is too much disk I/O for the user’s liking.
+While workload overhead can vary depending on the machine and workload, we found that in
+a small experiment of 200 epochs of regression for a one hidden layer neural network, runtime
+overheads were less than 1%. For 500 epochs, the overhead was around .5% (indicating that
+startup/shutdown are the most intensive). This experiment was run on a CPU-only Mac OS
+machine with a 2.7 GHz Quad-Core Intel Core i7 and 16 GB 2133 MHz LPDDR3.
+    Supporting every driver and hardware combination is difficult. We note that most of the
+aforementioned metrics are only supported on Linux systems and we were only able to test
+hardware combinations available to us. Mac OS support is limited to machines that have
+
+39. https://developer.download.nvidia.com/compute/DCGM/docs/nvidia-smi-367.38.pdf
+
+
+                                               42
+
+
+===== PDF PAGE 43 =====
+ Towards the Systematic Reporting of the Energy and Carbon Footprints of ML
+
+
+
+
+Intel’s Power Gadget40 installed and to CPU-only recordings. We hope that future users will
+help identify missing capabilities and expand the framework for new use-cases and machines.
+We also note that the tool is limited by driver support in cases that we cannot work around
+(see Section 7.7).
+    Finally, we note that we only record CPU, GPU, and DRAM power draw. We do not
+record disk I/O energy usage, power conversion and voltage regulator overhead. As such, we
+can expect there to be missing components that contribute to energy that we do not record
+here. However, we expect that the PUE re-scaling will correct for some of these missing
+components to some extent.
+
+Appendix H. Comparing Models
+We note that it may be tempting to use carbon emissions as a comparative tool: model A
+is less carbon intensive that model B. However, unless the carbon intensity used for either
+model is held constant, this comparison cannot be done. In particular, our tool should not be
+used to compare carbon emissions between models without overriding the carbon intensity
+used as we sometimes use real-time values. If two models are compared, as in Section 6.1.1,
+multiple runs on comparable machines should be used. In the event that a robust conclusion
+is to be made (e.g., Algorithm A is more energy efficient than Algorithm B), additional
+metrics regarding workload that we record can be utilized to run a mixed-effects regression
+analysis. Such an analysis would ensure that there aren’t confounding factors jeopardizing
+the conclusion.
+
+
+
+
+40. https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html
+
+
+                                                  43

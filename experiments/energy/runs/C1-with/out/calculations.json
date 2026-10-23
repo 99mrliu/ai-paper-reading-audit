@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "scope": "Arithmetic for user-entered ledger; not source or scientific validation",
+  "interval_meaning": "Conditional display-rounding bounds, not measured uncertainty or confidence intervals",
+  "records": [
+    {
+      "id": "observed_power_missing_unit",
+      "source": "INPUT/paper.pdf v1.7, p1: average draw 180, unit lost; duration 4 hours. Actual record, boundary also unknown.",
+      "status": "unknown",
+      "energy_kWh": null,
+      "carbon_kg": null,
+      "reason": "Missing unit for power"
+    },
+    {
+      "id": "observed_meter_unknown_boundary",
+      "source": "INPUT/paper.pdf p1: separate meter 0.72 kWh; IT/facility coverage unknown. Actual record.",
+      "status": "unknown",
+      "energy_kWh": null,
+      "carbon_kg": null,
+      "reason": "Missing measurement_scope: it or facility"
+    },
+    {
+      "id": "conditional_meter_facility",
+      "source": "INPUT/paper.pdf p1: 0.72 kWh. Conditional only: assume meter is facility boundary and exclusively covers the full run. No measured intensity.",
+      "status": "partial",
+      "energy_kWh": {
+        "nominal": "0.72",
+        "conditional_interval": [
+          "0.72",
+          "0.72"
+        ]
+      },
+      "carbon_kg": null,
+      "carbon_status": "unknown",
+      "reason": "Missing intensity"
+    },
+    {
+      "id": "conditional_meter_it",
+      "source": "INPUT/paper.pdf p1: 0.72 kWh. Conditional only: assume meter is IT boundary and exclusively covers the full run. PUE absent.",
+      "status": "unknown",
+      "energy_kWh": null,
+      "carbon_kg": null,
+      "reason": "Missing factor"
+    },
+    {
+      "id": "conditional_180_W",
+      "source": "INPUT/paper.pdf p1: 180 unit lost; 4 hours; separate meter 0.72 kWh. Hypothesis only: 180 W aggregate average, same interval and facility boundary as meter; no rounding quantum assumed.",
+      "status": "partial",
+      "energy_kWh": {
+        "nominal": "0.720",
+        "conditional_interval": [
+          "0.720",
+          "0.720"
+        ]
+      },
+      "carbon_kg": null,
+      "energy_check": {
+        "reported": {
+          "nominal": "0.72",
+          "conditional_interval": [
+            "0.72",
+            "0.72"
+          ]
+        },
+        "nominal_residual": "0.000",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_status": "unknown",
+      "reason": "Missing intensity"
+    }
+  ],
+  "groups": {},
+  "ledger_sha256": "7b8be8ff5710b446f73c7f149ceecc0a2a83c8299d319ae815176df38cdab32d"
+}

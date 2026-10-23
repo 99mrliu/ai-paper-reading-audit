@@ -1,0 +1,27 @@
+[
+  {
+    "path": "INPUT/task.md",
+    "sha256": "8faac6cb3de02850a6056f37cbe14df230d745ebd6cdfb943ee53aa7f26b2754",
+    "bytes": 525
+  },
+  {
+    "path": "INPUT/paper.pdf",
+    "sha256": "906f65b8d94f2b44b6b9d22f39170a927d717b8bc6e73dead8ad0a2e9ad7050f",
+    "bytes": 1394
+  },
+  {
+    "path": "skill/SKILL.md",
+    "sha256": "6389010ac68736c80a18b07896a4f77ff7b04440281283c371f3366e2761e1c9",
+    "bytes": 3748
+  },
+  {
+    "path": "skill/references/ledger.md",
+    "sha256": "7a504f55d30908d655c9ce3bb65f5b580133c112b3a2c4bf9d683afd00aa306d",
+    "bytes": 2713
+  },
+  {
+    "path": "skill/scripts/audit_energy.py",
+    "sha256": "83900c5eae4c3ef80a5196d130070768c358943be08a3665ad33be16764402f7",
+    "bytes": 8667
+  }
+]

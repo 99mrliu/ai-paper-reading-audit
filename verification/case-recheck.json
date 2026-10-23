@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-10-23T15:04:01.404560+00:00",
+  "scope": "New author-side recheck of preserved inputs and reports, not a new independent model session or physical measurement.",
+  "paper_sha256": "184c42b148a3db99f4a59ed8336c403dc2229bf3100bbc934212116acd8c61d9",
+  "source_text_sha256": "c7a188bb9f351071b55f60dcaeb437d24abd34827c3827988e7d69a8ea9af2b1",
+  "five_rows": [
+    {
+      "model": "T2Tbase",
+      "power_W": "1415.78",
+      "hours": "12",
+      "facility_kWh": "26.8431888",
+      "co2_lb": "25.6084021152",
+      "printed_kWh": 27,
+      "printed_lb": 26,
+      "integer_rounding_matches": true
+    },
+    {
+      "model": "T2Tbig",
+      "power_W": "1515.43",
+      "hours": "84",
+      "facility_kWh": "201.1278696",
+      "co2_lb": "191.8759875984",
+      "printed_kWh": 201,
+      "printed_lb": 192,
+      "integer_rounding_matches": true
+    },
+    {
+      "model": "ELMo",
+      "power_W": "517.66",
+      "hours": "336",
+      "facility_kWh": "274.8153408",
+      "co2_lb": "262.1738351232",
+      "printed_kWh": 275,
+      "printed_lb": 262,
+      "integer_rounding_matches": true
+    },
+    {
+      "model": "BERTbase",
+      "power_W": "12041.51",
+      "hours": "79",
+      "facility_kWh": "1503.0212782",
+      "co2_lb": "1433.8822994028",
+      "printed_kWh": 1507,
+      "printed_lb": 1438,
+      "integer_rounding_matches": false
+    },
+    {
+      "model": "NAS",
+      "power_W": "1515.43",
+      "hours": "274120",
+      "facility_kWh": "656347.281128",
+      "co2_lb": "626155.306196112",
+      "printed_kWh": 656347,
+      "printed_lb": 626155,
+      "integer_rounding_matches": true
+    }
+  ],
+  "body_79_2h": {
+    "facility_kWh": "1506.82639536",
+    "co2_lb": "1437.51238117344"
+  },
+  "original_report_sha256": {
+    "experiments/energy/runs/A1-with/out/report.md": "81965801fda7bdff46831d6d2f8f078c509aaec8996d665d09c5bf4943353212",
+    "experiments/energy/runs/A1-without/out/report.md": "03a82b32e93f57710d84a099f3cc138245c8a08b5ef592b36e57285d06b05580"
+  },
+  "facility_meter_201kWh_historical_lb": "191.754",
+  "no_new_model_session": true
+}

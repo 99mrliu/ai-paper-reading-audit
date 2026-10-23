@@ -2,6 +2,8 @@
 
 先看一个具体发现：能耗表里的 BERT 训练时长印为 79 小时，正文使用 79.2 小时，只有回到上下文才能解释表内能耗与排放的差异。随后用两轮、四组公平对照检验流程本身：更多核验步骤是否值得其额外投入。下述数字来自 14 次真实独立 Codex 会话；原文、AI 输出和作者侧核查分别保留。
 
+先按 [CASE_STUDY.md](CASE_STUDY.md) 完整走一遍单案例证据链，再读下面的跨案例分析。
+
 ## 两个具体阅读问题
 
 第一轮把“论文方法能否迁移到研究者手头任务”做成Skill：索引PDF页、整理FACT/INFERRED/UNKNOWN、查引文及显式算式、形成适配判断。A使用Bergstra与Bengio的[Random Search for Hyper-Parameter Optimization](https://jmlr.org/papers/v13/bergstra12a.html)；两组独立会话均需判断6个超参数、36次完整训练及跨任务分布变化下的基线选择。不是泛泛的摘要任务。

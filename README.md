@@ -16,6 +16,8 @@ python3 quick_check.py
 
 ## 阅读顺序
 
+先读 [单案例逐步核查](CASE_STUDY.md)：原文、实际 AI 输出、计算过程与作者判断放在一处。
+
 1. [技术文章](ARTICLE.md)：阅读问题、证据核对、BERT表格时长差异、代码取舍、公平性与负面结果。
 2. [离线复算教程](REPRODUCE.md)与[结果复算](verification/results.json)：由14份原始session.json汇总，附文件哈希；运行`python3 verify_results.py`可重算。
 3. [方法迁移完整报告](experiments/transfer/report.md)与[能耗完整报告](experiments/energy/report.md)：细化任务和逐项作者侧AI核查。

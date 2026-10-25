@@ -1,0 +1,76 @@
+{
+  "scope": "Preserved genuine A1-with reading, 2026-10-23; complete paper and all final numerical records.",
+  "original_files": {
+    "paper/acl-energy.pdf": {
+      "source": "experiments/energy/materials/acl-energy.pdf",
+      "sha256": "184c42b148a3db99f4a59ed8336c403dc2229bf3100bbc934212116acd8c61d9"
+    },
+    "evidence/task.md": {
+      "source": "experiments/energy/cases/A/task.md",
+      "sha256": "78c7d5fdc23c53a14eb7c5a2c024cfd9d7279bc24ac3d2254ba2cd44ff12c2ce"
+    },
+    "evidence/prompt.txt": {
+      "source": "experiments/energy/runs/A1-with/prompt.txt",
+      "sha256": "e4ae1078310e0ecfd0245a41eefb7938c8b07c83236cb6356d7420be75ce2b5f"
+    },
+    "evidence/session.json": {
+      "source": "experiments/energy/runs/A1-with/session.json",
+      "sha256": "9dc1eaf4d39f0af98928c1c31efdf129c81d85973c5e713d5674928aec47a75c"
+    },
+    "evidence/report.md": {
+      "source": "experiments/energy/runs/A1-with/out/report.md",
+      "sha256": "81965801fda7bdff46831d6d2f8f078c509aaec8996d665d09c5bf4943353212"
+    },
+    "evidence/ledger.json": {
+      "source": "experiments/energy/runs/A1-with/out/ledger.json",
+      "sha256": "5c97b4d10204d26b80da8174bdf61b0d9335b494940f0ba2ccb9b734bc77bd4a"
+    },
+    "evidence/calculations.json": {
+      "source": "experiments/energy/runs/A1-with/out/calculations.json",
+      "sha256": "d92d310f0c7ddc36924998e088c618b3b3a321d437a75fa5668fe277a5f7f0b7"
+    },
+    "evidence/claims.json": {
+      "source": "experiments/energy/runs/A1-with/out/claims.json",
+      "sha256": "a58d83ca5db155674a162fb123c4ab8a421d3a3bf5953b54646de3c4e89fd5f2"
+    },
+    "evidence/verification.md": {
+      "source": "experiments/energy/runs/A1-with/out/verification.md",
+      "sha256": "5521c997a823344fa212974a3b739cb53d91809129d93e19846f37e21816e7ec"
+    },
+    "evidence/source_manifest.json": {
+      "source": "experiments/energy/runs/A1-with/out/source_manifest.json",
+      "sha256": "22cdd077f9eed66a6ad820f38903c1afc84208b996eb93c747f9491815e44ead"
+    },
+    "evidence/build_ledger.py": {
+      "source": "experiments/energy/runs/A1-with/out/build_ledger.py",
+      "sha256": "8da5ab2d911554410e1861eb428178bf365fc157a251dfec627749cdec7715bf"
+    },
+    "paper/page4.png": {
+      "source": "experiments/energy/runs/A1-with/out/page4.png",
+      "sha256": "8e660926f6ffd02a3d8db9fd23df331d31eaffa3c1c598804a0cc4c475d9b47d"
+    },
+    "skill/SKILL.md": {
+      "source": "experiments/energy/skill/SKILL.md",
+      "sha256": "6389010ac68736c80a18b07896a4f77ff7b04440281283c371f3366e2761e1c9"
+    },
+    "skill/references/ledger.md": {
+      "source": "experiments/energy/skill/references/ledger.md",
+      "sha256": "7a504f55d30908d655c9ce3bb65f5b580133c112b3a2c4bf9d683afd00aa306d"
+    },
+    "skill/scripts/audit_energy.py": {
+      "source": "experiments/energy/skill/scripts/audit_energy.py",
+      "sha256": "83900c5eae4c3ef80a5196d130070768c358943be08a3665ad33be16764402f7"
+    }
+  },
+  "complete_selected_operations": [
+    "item_5",
+    "item_6",
+    "item_7",
+    "item_10"
+  ],
+  "original_events_sha256": "99c285aac7ced1f9e2864990aca6beb83c2583d78d97551e27c96be821bd5175",
+  "selected_events_sha256": "aa93dcdd1a740690eefa5281897ea24b66adcf38c541ab5a22ad74c79db5db92",
+  "selection": "Whole original completed command events for render/source hash, initial calculation, fixed-hours comparison, and final claims/integrity. No event truncated.",
+  "full_trace": "Full original 23-event Codex CLI stream is retained separately for platform submission.",
+  "new_independent_model_sessions": 0
+}

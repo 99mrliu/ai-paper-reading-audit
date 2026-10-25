@@ -4,7 +4,7 @@ r=Path(__file__).resolve().parent;rows=[];images=[];pdfs=[]
 for p in sorted(r.rglob('*')):
  if not p.is_file() or '.git' in p.parts or '__pycache__' in p.parts or p.suffix=='.pyc':continue
  raw=p.read_bytes();name=str(p.relative_to(r))
- if raw.startswith(b'\x89PNG\r\n\x1a\n'):images.append(name);continue
+ if raw.startswith(b'\x89PNG\r\n\x1a\n') or raw.startswith(b'\xff\xd8\xff'):images.append(name);continue
  if raw.startswith(b'%PDF'):
   assert len(raw)<=10*1024**2
   sizes={}

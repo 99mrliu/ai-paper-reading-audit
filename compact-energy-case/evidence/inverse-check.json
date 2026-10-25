@@ -23,5 +23,10 @@
     ],
     "example_1_5841_compatible": true
   },
+  "counterexample_79_21_hours": {
+    "energy_kWh": "1507.016651218",
+    "carbon_lb": "1437.693885261972"
+  },
+  "facility_201_kWh_historical_carbon_lb": "191.754",
   "interpretation": "79.2 has direct source support on PDF page3. Alternative PUE is hypothetical, not observed. Arithmetic compatibility cannot identify authors internal computation or establish measurement validity."
 }

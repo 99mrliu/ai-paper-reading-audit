@@ -2,7 +2,7 @@
 name: paper-budget-audit
 description: Audit an energy or carbon methods paper and its quantitative tables, recompute estimates with explicit units and accounting boundaries, and judge whether the method transfers to a proposed measurement. Use for reading and checking published estimates, including rounding discrepancies and shared-resource attribution.
 metadata:
-  version: "1.1.0"
+  version: "1.1.1"
 ---
 
 # 能耗论文：读懂口径，再核算
@@ -37,3 +37,7 @@ PDF 无法解析或关键材料缺失时，只报告实际可读范围和已有�
 对于可执行账本，先以 `python3 tests/test_boundaries.py` 检查随 Skill 附带的输入边界与单位等价性。测试只证明列出的算术与输入处理行为，不替代论文语义核查。component 不是对象时应给出 invalid，而不能使整份账本因 AttributeError 中断。一个坏记录不应阻止后续有效记录被检查。
 
 表格不符时，先冻结名义输入和首次结果；再建立带不同 id 的候选解释。不要把候选解释覆盖进原始行。给出候选解释所需的新证据、原文位置与仍不可识别的信息。对于共享资源，计算器不检测不同记录是否重复认领同一设备或时间段，须由读者先检查来源与归因。没有采样日志时，即使所有算术测试通过也停止在条件性结论。
+
+## 防止来源与解释被合并
+
+用户外部测量、论文表值和构造反例即使数字相同，也分别记录来源、时间和边界；不能把用户的假设当成论文观测再否定。若写“只有X才兼容”，先检查邻近值或反解允许区间；单个反例可否定唯一性，但不能证明反例曾被作者采用。同值不能单独证明同源或未独立测量。先把这些判断写为待核查推断，再索取方法或日志支持。

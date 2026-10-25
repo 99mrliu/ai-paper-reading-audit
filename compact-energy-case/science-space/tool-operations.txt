@@ -1,0 +1,2 @@
+Scientific Space visible tool operation labels; UI does not expose full arguments here.
+The focused UI element is 283 button 已运行 Extract PDF text to scratch file

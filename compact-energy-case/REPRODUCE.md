@@ -19,3 +19,5 @@ Python3.11+标准库，在包根运行`python3 recheck.py`。它校验来源哈�
 ## 文本容量
 
 `python3 check_text_budget.py`需要Poppler的pdftotext；逐个统计全部UTF-8文件，PDF取-layout与-raw两种提取结果的较大字节数，再加8KiB转换余量。PDF只有6页、约216KiB文件大小。该保守预算不是压缩ZIP大小。未把完整PDF和重复提取全文同时放入材料。
+
+新增验证见README末节：inverse_check.py、skill-v1.1/tests/test_boundaries.py及evidence/boundary-v*.json。原prepare_case.py继续重建历史v1.0；测试新版时明确将skill-v1.1复制为新会话的skill，记录这一差异。新增计算只需Python标准库，无联网或模型依赖。

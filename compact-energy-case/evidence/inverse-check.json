@@ -1,0 +1,27 @@
+{
+  "assumptions": "power 12041.51 W and intensity .954 lb/kWh fixed, whole table values within +/-0.5; closed bounds conservative, not confidence interval",
+  "duration_hours_at_fixed_PUE_1.58": {
+    "energy_constraint": [
+      "79.1828443989356690399514531636655309",
+      "79.2354051984039303536188620273652757"
+    ],
+    "carbon_constraint": [
+      "79.1993178570499354265201693588921804",
+      "79.2544130346896223381212268680114098"
+    ],
+    "intersection": [
+      "79.1993178570499354265201693588921804",
+      "79.2354051984039303536188620273652757"
+    ],
+    "79_2_compatible": true,
+    "79_compatible": false
+  },
+  "PUE_at_fixed_79_hours": {
+    "intersection": [
+      "1.58398635714099870853040338717784361",
+      "1.58470810396807860707237724054730551"
+    ],
+    "example_1_5841_compatible": true
+  },
+  "interpretation": "79.2 has direct source support on PDF page3. Alternative PUE is hypothetical, not observed. Arithmetic compatibility cannot identify authors internal computation or establish measurement validity."
+}

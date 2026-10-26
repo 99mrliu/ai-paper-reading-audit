@@ -1,0 +1,14 @@
+{
+  "software": "com.bohrium.scix 0.10.11",
+  "date": "2026-10-26",
+  "model": "not disclosed in captured UI",
+  "cost": "unknown",
+  "session_count": 1,
+  "turn_count": 2,
+  "capture_type": "raw AX visible final conversation; not native model trace",
+  "files": {
+    "conversation-ax.txt": "b0f84436b11839d033c6d0a7f2d7f62acbaaedc7f246a2a21c2d9edb84d82d9a",
+    "tool-operations.txt": "6fbb35383d700adbac11768a6cc380c8efca6924dfff1fa8703a92efe36e1c17",
+    "reader-final.jpg": "2e9638cf6fe97d0474bbd44265525201a24d9dcc1e4b9fe51d65c72373f0ad27"
+  }
+}

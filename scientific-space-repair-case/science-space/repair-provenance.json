@@ -1,0 +1,29 @@
+{
+  "capture_method": "cua native accessibility snapshot; processing/thinking collapsed; final answer retained verbatim including all errors and tables",
+  "round3_source_full_capture_sha256": "487df172c449e470a548bb517dc7e627fe2ddb165a879f6baabed10765e1f588",
+  "round3_source_line_span_1based_inclusive": [
+    241,
+    479
+  ],
+  "round3_retained_answer_sha256": "db5777d97450c1c8d28a675122bb3f817f4f6b2da99c5a315b0f80f812fca2d9",
+  "round3_elapsed_display": "2m9s",
+  "app": "com.bohrium.scix",
+  "app_version": "0.10.11",
+  "date": "2026-10-26",
+  "model_snapshot": "not exposed in UI",
+  "cost": "not exposed in UI",
+  "scope": "continuation of same real two-turn conversation; not fresh/independent/model comparison",
+  "round4_source_full_capture_sha256": "41c75b68cc930b686ea25e7ffcd2ae4b536e4cc361f7a3362b1631668c3f56ca",
+  "round4_source_line_span_1based_inclusive": [
+    487,
+    583
+  ],
+  "round4_retained_answer_sha256": "6159199312955a375cd874059ef67f7f576b9f1fa79cd461d3d8c35427a58e9b",
+  "round4_elapsed_display": "2m50s",
+  "tool_detail": "Actual native UI shows completed terminal command 554ms. JSON input and STDOUT accessibility fields are truncated by UI; full flattened COMMAND and complete final answer are retained, not claimed full command-native log.",
+  "round4_tool_source_sha256": "efa309664532967b5c124545606958f6526c3035eb39d7ece332f87b89e6c0ff",
+  "round4_tool_source_line_span_1based_inclusive": [
+    608,
+    638
+  ]
+}

@@ -1,0 +1,31 @@
+				574 button 终端命令 554ms
+				575 container 输入
+					576 heading 输入, Value: 4
+						577 text 输入
+					578 button 复制输入内容
+					579 text {
+  "command": "python3 << 'EOF'\nfrom fractions import Fraction\nfrom decimal import Decimal, ROUND_HALF_UP, ROUND_DOWN\n\n# ---- exact constants as rationals ----\nP   = Fraction(1204151, 100)   # 12041.51 W\nPUE = Fraction(79, 50)         # 1.58\nF   = Fraction(477, 500)       # 0.954 lb/kWh\n\n# kWh(t) = P * t * PUE / 1000   ;   t(kwh) = kwh * 1000 / (P*PUE)\n# lb(t)  = F * kWh(t)           ;   t(lb)  = lb * 1000 / (F*P*PUE)\nDEN_K = P * PUE * 1000\nDEN_L = F * P * PUE * 1000\ndef t_of_kwh(k): return k 
+				580 container 输出
+					581 heading 输出, Value: 4
+						582 text 输出
+					583 button 复制输出内容
+					584 text Completed 0.554 s
+					585 heading COMMAND, Value: 4
+						586 text COMMAND
+					587 container
+						588 text python3 << 'EOF' from fractions import Fraction from decimal import Decimal, ROUND_HALF_UP, ROUND_DOWN # ---- exact constants as rationals ---- P   = Fraction(1204151, 100)   # 12041.51 W PUE = Fraction(79, 50)         # 1.58 F   = Fraction(477, 500)       # 0.954 lb/kWh # kWh(t) = P * t * PUE / 1000   ;   t(kwh) = kwh * 1000 / (P*PUE) # lb(t)  = F * kWh(t)           ;   t(lb)  = lb * 1000 / (F*P*PUE) DEN_K = P * PUE * 1000 DEN_L = F * P * PUE * 1000 def t_of_kwh(k): return k * 1000 / (P*PUE) def t_of_lb(l):  return l * 1000 / (F*P*PUE) def fdec(x, nd=8):     # high-precision decimal string of a Fraction     return str(Decimal(x.numerator)/Decimal(x.denominator)) print("denominator check: P*PUE*1000 =", DEN_K, "=", fdec(DEN_K)) print("lb slope check     : F*P*PUE*1000 =", DEN_L, "=", fdec(DEN_L)) print() # ---------- MODEL 1: round-half-up everywhere ---------- # display constraints -> exact half-open intervals in t c1_lo, c1_hi = Fraction(785,10), Fraction(795,10)      # table Hours=79   : [78.5, 79.5) c2_lo, c2_hi = Fraction(7915,100), Fraction(7925,100)  # text 79.2 (1 dec): [79.15, 79.25) c3_lo, c3_hi = t_of_kwh(Fraction(15065,10)), t_of_kwh(Fraction(15075,10))  # kWh 1507: [1506.5,1507.5) c4_lo, c4_hi = t_of_lb(Fraction(14375,10)), t_of_lb(Fraction(14385,10))   # lb 1438: [1437.5,1438.5) HU_lo = max(c1_lo, c2_lo, c3_lo, c4_lo) HU_hi = min(c1_hi, c2_hi, c3_hi, c4_hi) print("=== MODEL half-up (round-half-up) ===") print("Hours=79  ->", fdec(c1_lo), ",", fdec(c1_hi)) print("79.2(1dec)->", fdec(c2_lo), ",", fdec(c2_hi)) print("kWh=1507  ->", fdec(c3_lo), ",", fdec(c3_hi)) print("lb=1438   ->", fdec(c4_lo), ",", fdec(c4_hi)) print("INTERSECT ->", fdec(HU_lo), ",", fdec(HU_hi)) print() # ---------- MODEL 2: truncation (floor, non-negative) everywhere ---------- d1_lo, d1_hi = Fraction(79), Fraction(80)              # table Hours=79   : [79, 80) d2_lo, d2_hi = Fraction(792,10), Fraction(793,10)      # text 79.2 (1 dec): [79.2, 79.3) d3_lo, d3_hi = t_of_kwh(Fraction(1507)), t_of_kwh(Fraction(1508))  # kWh 1507: [1507,1508) d4_lo, d4_hi = t_of_lb(Fraction(1438)), t_of_lb(Fraction(1439))   # lb 1438: [1438,1439) TR_lo = max(d1_lo, d2_lo, d3_lo, d4_lo) TR_hi = min(d1_hi, d2_hi, d3_hi, d4_hi) print("=== MODEL truncation (floor) ===") print("Hours=79  ->", fdec(d1_lo), ",", fdec(d1_hi)) print("79.2(1dec)->", fdec(d2_lo), ",", fdec(d2_hi)) print("kWh=1507  ->", fdec(d3_lo), ",", fdec(d3_hi)) print("lb=1438   ->", fdec(d4_lo), ",", fdec(d4_hi)) print("INTERSECT ->", fdec(TR_lo), ",", fdec(TR_hi)) print() # ---------- demonstrate display rounding for t=79.2 ---------- def kwh(t): return P*t*PUE/1000 def lb(t):  return F*kwh(t) t = Fraction(792,10)   # 79.2 k = kwh(t); l = lb(t) print("=== display check at t=79.2 ===") print("kWh(t)=", fdec(k), "; lb(t)=", fdec(l)) for name, mode in (("half-up", ROUND_HALF_UP), ("trunc", ROUND_DOWN)):     dk = Decimal(k.numerator)/Decimal(k.denominator)     dl = Decimal(l.numerator)/Decimal(l.denominator)     print(name, "-> kWh:", dk.quantize(Decimal('1'), rounding=mode),           " lb:", dl.quantize(Decimal('1'), rounding=mode)) print() # membership of 79.2 and 79.21 in each intersection for tval in (Fraction(792,10), Fraction(7921,100)):     in_hu = HU_lo <= tval < HU_hi     in_tr = TR_lo <= tval < TR_hi     print("t=%s in half-up interval: %s ; in truncation interval: %s" % (fdec(tval,4), in_hu, in_tr)) EOF
+					589 heading STDOUT, Value: 4
+						590 text STDOUT
+					591 text denominator check: P*PUE*1000 = 95127929/5 = 19025585.8
+lb slope check     : F*P*PUE*1000 = 45376022133/2500 = 18150408.8532
+
+=== MODEL half-up (round-half-up) ===
+Hours=79  -> 78.5 , 79.5
+79.2(1dec)-> 79.15 , 79.25
+kWh=1507  -> 79.18284439893566903995145316 , 79.23540519840393035361886203
+lb=1438   -> 79.19931785704993542652016936 , 79.25441303468962233812122687
+INTERSECT -> 79.19931785704993542652016936 , 79.23540519840393035361886203
+
+=== MODEL truncation (floor) ===
+Hours=79  -> 79 , 80
+79.2(1dec)-> 79.

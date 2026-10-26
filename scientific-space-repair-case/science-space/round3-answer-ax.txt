@@ -1,0 +1,239 @@
+						235 text 已按要求用五栏方法处理四个遗留点。前两轮结论保留，以下为修订与补充；Python 输出均为本地实际运行结果。 五栏定义： 声明 （要核查的断言）·  原文 （带 PDF 页码的原句）·  算式 （实际运算与输出）·  边界 （使声明成立/失效的条件）·  判定 （分级结论）。
+						236 heading 第 1 点：201 × 0.954 与未舍入值 × 0.954 分别精确计算, Value: 2
+							237 text 第 1 点：201 × 0.954 与未舍入值 × 0.954 分别精确计算
+						238 button 复制表格 Markdown
+						239 table
+							240 row (selectable) 栏
+内容
+							241 row (selectable)
+								242 cell (selectable) 声明
+								243 cell (selectable) 前一轮写 “201×0.954=191.88→192” 混用了显示值与未舍入值
+							244 row (selectable)
+								245 cell (selectable) 原文
+								246 cell (selectable) Table 3（PDF p.4 / 3648）T2Tbig 行 “1515.43 / 84 /
+201
+/
+192
+”；公式 (2) “CO₂e =
+0.954
+pt”、公式 (1) “pt = 1.58t(…) / 1000”（PDF p.2 / 3646）
+							247 row (selectable)
+								248 cell (selectable) 算式
+								249 cell (selectable) 见下方 Python 输出
+							250 row (selectable)
+								251 cell (selectable) 边界
+								252 cell (selectable) “191.88” 属于哪个输入，取决于用的是显示值 201 还是未舍入的 kWh·PUE
+							253 row (selectable)
+								254 cell (selectable) 判定
+								255 cell (selectable) 前一轮 “201×0.954=191.88” 有误；191.88 来自
+未舍入
+值，而非显示值 201
+						256 button Copy Code
+						257 container
+							258 text 1 显示值 201 x 0.954          = 191.754     -> 两位小数 191.75 -> 整数 192 2 未舍入 1515.43*84*1.58/1000 = 201.12787   kWh-PUE 3 未舍入 kWh-PUE x 0.954      = 191.875988  -> 两位小数 191.88 -> 整数 192
+						259 text 修订结论 ：应分别表述为——显示值 
+						260 text 201×0.954 = 191.754
+						261 text ；未舍入 
+						262 text 201.12787×0.954 = 191.876
+						263 text 。两者四舍五入到整数都是 192，所以“表内 192 自洽”这一结论不变，但 191.88 对应未舍入输入，不对应 201 。今后换算必须声明用的是显示值还是未舍入值，不得混用。
+						264 heading 第 2 点：PDU 名称 ≠ 计量边界, Value: 2
+							265 text 第 2 点：PDU 名称 ≠ 计量边界
+						266 button 复制表格 Markdown
+						267 table
+							268 row (selectable) 栏
+内容
+							269 row (selectable)
+								270 cell (selectable) 声明
+								271 cell (selectable) 前一轮把“PDU 级”与“全设施级”并列，并暗示 PDU 名称能判定是否含制冷
+							272 row (selectable)
+								273 cell (selectable) 原文
+								274 cell (selectable) 论文
+无任何设施电表
+（已确认）；唯一 “meter” 是 nvidia-smi 与 “RAPL power meter”（PDF p.2 / 3646）。201 是你提出的
+外部假设输入
+，不是论文实测
+							275 row (selectable)
+								276 cell (selectable) 算式
+								277 cell (selectable) 无（这是边界/语义问题，非算术）
+							278 row (selectable)
+								279 cell (selectable) 边界
+								280 cell (selectable) PDU = Power Distribution Unit，只是“配电单元”这一设备名；是否含制冷取决于电表在电力单线图中的
+位置及其下游供电对象
+							281 row (selectable)
+								282 cell (selectable) 判定
+								283 cell (selectable) 单凭 “PDU” 这个名字不能断定含制冷
+。前一轮“PDU 级已含制冷、不需再乘 PUE”过强，应撤回
+						284 text 边界未知时应追问的最小字段 ：
+						285 content list
+							286 container 计量层级/位置：市电表 / 中压主馈 / 低压主配 / 列头柜 PDU / 机架内 PDU / 服务器级。
+								287 list marker 1
+								288 text 计量层级/位置 ：市电表 / 中压主馈 / 低压主配 / 列头柜 PDU / 机架内 PDU / 服务器级。
+							289 container 下游负载清单：是否只给 IT（服务器/网络/存储）；是否含制冷（CRAC/CRAH/chiller/冷却塔/泵）、UPS/变压器损耗、照明、办公、其他租户。
+								290 list marker 2
+								291 text 下游负载清单 ：是否只给 IT（服务器/网络/存储）；是否含制冷（CRAC/CRAH/chiller/冷却塔/泵）、UPS/变压器损耗、照明、办公、其他租户。
+							292 container 时间窗：201 kWh 覆盖的起止时段，是否与训练任务时段一致。
+								293 list marker 3
+								294 text 时间窗 ：201 kWh 覆盖的起止时段，是否与训练任务时段一致。
+							295 container 归属方式：是否该任务专属回路；201 是增量（扣基线后）还是总量（含非任务负载）。
+								296 list marker 4
+								297 text 归属方式 ：是否该任务专属回路；201 是 增量（扣基线后） 还是 总量（含非任务负载） 。
+							298 container 地点与时间：哪个电网/区域、哪个时段，用于选平均/边际排放因子。
+								299 list marker 5
+								300 text 地点与时间 ：哪个电网/区域、哪个时段，用于选平均/边际排放因子。
+						301 text 修订结论 ：是否乘 PUE 只能由 实际计量边界 决定（含制冷与供电损耗则不乘，仅计 IT 设备则需乘当地 PUE），不能由“设备叫 PDU”决定。论文没有这些信息，故无法从论文判定。
+						302 heading 第 3 点：同一 t 同时兼容 79 / 1507 / 1438 的区间, Value: 2
+							303 text 第 3 点：同一 t 同时兼容 79 / 1507 / 1438 的区间
+						304 button 复制表格 Markdown
+						305 table
+							306 row (selectable) 栏
+内容
+							307 row (selectable)
+								308 cell (selectable) 声明
+								309 cell (selectable) 明确取整假设；给出同时兼容四个显示值的 t 区间；保留“79 当精确数时失败”
+							310 row (selectable)
+								311 cell (selectable) 原文
+								312 cell (selectable) Table 3 “79 / 1507 / 1438”（PDF p.4 / 3648）；正文 “3.3 days (
+79.2 hours
+)”（PDF p.3 / 3647）；公式 (1)(2)（PDF p.2 / 3646）
+							313 row (selectable)
+								314 cell (selectable) 算式
+								315 cell (selectable) 见下方 Python 输出
+							316 row (selectable)
+								317 cell (selectable) 边界
+								318 cell (selectable) 取整假设 =
+四舍五入到整数
+（Hours/kWh/lb），正文时长到一位小数；若改“截断”，结论不变
+							319 row (selectable)
+								320 cell (selectable) 判定
+								321 cell (selectable) 存在区间使同一 t 兼容全部显示值；但这是
+兼容性推断
+，不是作者内部事实
+						322 button Copy Code
+						323 container
+							324 text 1 kWh 显示 1507   -> t in [79.1828, 79.2354) 2 lb  显示 1438   -> t in [79.1993, 79.2544) 3 正文 79.2(1位小数) -> t in [79.1500, 79.2500) 4 表格 79(整数四舍五入) -> t in [78.5000, 79.5000) 5 四者交集        -> t in [79.1993, 79.2354) 小时 6 7 t=79.00000 -> kWh=1503.0213(round 1503), lb=1433.8823(round 1434)   # 79 精确：失败 8 t=79.20000 -> kWh=1506.8264(round 1507), lb=1437.5124(round 1438)   # 兼容 9 t=79.21000 -> kWh=1507.0167(round 1507), lb=1437.6939(round 1438)   # 兼容 10 t=79.23540 -> kWh=1507.4999(round 1507), lb=1438.1549(round 1438)   # 上边界附近 11 t=79.24000 -> kWh=1507.5874(round 1508), lb=1438.2384(round 1438)   # 失败
+						325 text 修订结论 ：
+						326 content list
+							327 container 取整假设：所有显示值按四舍五入到整数（正文时长到一位小数）。
+								328 list marker •
+								329 text 取整假设：所有显示值按 四舍五入到整数 （正文时长到一位小数）。
+							330 container 同一 t 同时兼容 “79、79.2、1507、1438” 的区间是 t ∈ [79.1993, 79.2354) 小时；79.2 与 79.21 均在其中。
+								331 list marker •
+								332 text 同一 t 同时兼容 “79、79.2、1507、1438” 的区间是  t ∈ [79.1993, 79.2354) 小时 ；79.2 与 79.21 均在其中。
+							333 container 79 当精确数时失败：t=79 得 kWh=1503、lb=1434，与表内 1507/1438 不符——这条保留，且与“存在自洽 t”不矛盾。
+								334 list marker •
+								335 text 79 当精确数时失败 ：t=79 得 kWh=1503、lb=1434，与表内 1507/1438 不符——这条保留，且与“存在自洽 t”不矛盾。
+							336 container 不升级：以上只说明“存在一个自洽的未舍入时长”，不能据此断言作者内部用了 79.21 或某个具体值。作者实际取的时长、取整位置与精度，原文未写，仍属未知。
+								337 list marker •
+								338 text 不升级 ：以上只说明“存在一个自洽的未舍入时长”，不能据此断言作者内部用了 79.21 或某个具体值。作者实际取的时长、取整位置与精度，原文未写，仍属未知。
+						339 heading 第 4 点：“沿用 T2Tbig”的证据分级，替换“高置信”, Value: 2
+							340 text 第 4 点：“沿用 T2Tbig”的证据分级，替换“高置信”
+						341 button 复制表格 Markdown
+						342 table
+							343 row (selectable) 栏
+内容
+							344 row (selectable)
+								345 cell (selectable) 声明
+								346 cell (selectable) 前一轮对“沿用 T2Tbig 功率”用了“高置信”标签
+							347 row (selectable)
+								348 cell (selectable) 原文
+								349 cell (selectable) §2 方法 “sample GPU and CPU power … each model was trained for a maximum of 1 day … on a single NVIDIA Titan X GPU（ELMo 为 3×GTX1080Ti）”（PDF p.2 / 3646）；NAS “So et al. (2019) report …
+274,120 hours on 8 P100 GPUs
+”（PDF p.3 / 3647）；Table 3 NAS 行 1515.43（PDF p.4 / 3648）
+							350 row (selectable)
+								351 cell (selectable) 算式
+								352 cell (selectable) 无（证据分级，非算术）
+							353 row (selectable)
+								354 cell (selectable) 边界
+								355 cell (selectable) 分级标准：A=原文明确陈述；B=多项独立证据收敛的强推断；C=单一/弱线索；D=无证据
+							356 row (selectable)
+								357 cell (selectable) 判定
+								358 cell (selectable) “无 NAS 独立功率来源”这一条
+单独不足以
+支撑“沿用”，应降级为 B 级强推断
+						359 text 证据分级（替换“高置信”） ：
+						360 content list
+							361 container A 级（原文明确陈述）：不存在。论文未写“我们沿用 T2Tbig 的功率”。
+								362 list marker •
+								363 text A 级（原文明确陈述） ：不存在。论文未写“我们沿用 T2Tbig 的功率”。
+							364 container B 级（多项证据收敛 → 很可能/强推断）：①方法段只测自己跑过的模型；②NAS 的 274,120 小时取自 So et al.，非作者运行；③全文无 NAS 功耗来源；④数字恰与 T2Tbig 相同。四项合起来 → “最可能沿用 T2Tbig 功耗”。
+								365 list marker •
+								366 text B 级（多项证据收敛 → 很可能/强推断） ：①方法段只测自己跑过的模型；②NAS 的 274,120 小时取自 So et al.，非作者运行；③全文无 NAS 功耗来源；④数字恰与 T2Tbig 相同。四项合起来 → “ 最可能沿用 T2Tbig 功耗 ”。
+							367 container C 级（单一弱线索）：仅“数字相等”或仅“无独立来源”，只能得“可能/提示性”，不能得“沿用”。
+								368 list marker •
+								369 text C 级（单一弱线索） ：仅“数字相等”或仅“无独立来源”，只能得“ 可能/提示性 ”，不能得“沿用”。
+							370 container D 级（无证据）：→ “未知”。
+								371 list marker •
+								372 text D 级（无证据） ：→ “未知”。
+						373 text 修订结论 ：把“高置信”改为“ 证据支持的强推断（很可能，未证实） ”。即：最可能沿用 T2Tbig 的 1515.43 W，但这不是论文明确陈述，也不是可单独由“无来源”推出的结论。
+						374 heading 可直接引用的修订结论（汇总）, Value: 2
+							375 text 可直接引用的修订结论（汇总）
+						376 content list
+							377 container 表内 192 由未舍入 kWh·PUE 乘 0.954 得到（201.12787×0.954=191.876→192）；显示值 201×0.954=191.754→192，两者恰好都入到 192，但中间值 191.88 只对应未舍入输入。
+								378 list marker 1
+								379 text 表内  192  由未舍入 kWh·PUE 乘 0.954 得到（201.12787×0.954=191.876→192）；显示值 201×0.954=191.754→192，两者恰好都入到 192，但中间值 191.88 只对应未舍入输入。
+							380 container “PDU”是设备名，不是计量边界；是否含制冷须看电表下游供电对象。论文无设施电表，201 是外部假设。
+								381 list marker 2
+								382 text “PDU”是设备名，不是计量边界 ；是否含制冷须看电表下游供电对象。论文无设施电表，201 是外部假设。
+							383 container 取整假设为四舍五入；同时兼容 79/79.2/1507/1438 的 t 区间是 [79.1993, 79.2354) h；t=79 精确时失败（1503/1434）；兼容性不等于作者内部用了该值。
+								384 list marker 3
+								385 text 取整假设为四舍五入；同时兼容 79/79.2/1507/1438 的 t 区间是  [79.1993, 79.2354) h ； t=79 精确时失败（1503/1434） ；兼容性不等于作者内部用了该值。
+							386 container “沿用 T2Tbig”应表述为 B 级强推断（很可能，未证实），非“高置信”；“无 NAS 独立来源”单独不成立。
+								387 list marker 4
+								388 text “沿用 T2Tbig”应表述为  B 级强推断（很可能，未证实） ，非“高置信”；“无 NAS 独立来源”单独不成立。
+						389 heading 仍然不能判断的项, Value: 2
+							390 text 仍然不能判断的项
+						391 content list
+							392 container 作者计算 BERT 1507/1438 实际用的时长与舍入位置（79 还是 79.2 或更精确值、哪一步四舍五入）——原文未写。
+								393 list marker 1
+								394 text 作者计算 BERT 1507/1438 实际用的时长与舍入位置（79 还是 79.2 或更精确值、哪一步四舍五入）——原文未写。
+							395 container T2Tbig 的 1515.43 W 是实测还是取自他处，以及方法段（Titan X 采样）与表 3（P100/V100 功耗）的对应关系——未说明。
+								396 list marker 2
+								397 text T2Tbig 的 1515.43 W 是实测还是取自他处，以及方法段（Titan X 采样）与表 3（P100/V100 功耗）的对应关系——未说明。
+							398 container NAS 功耗的确切来源——未说明。
+								399 list marker 3
+								400 text NAS 功耗的确切来源——未说明。
+							401 container 论文无地点/时间信息，无法得当地实际碳排——只能给美国平均 0.954 lb/kWh。
+								402 list marker 4
+								403 text 论文无地点/时间信息，无法得当地实际碳排——只能给美国平均 0.954 lb/kWh。
+							404 container 外部假设 201 kWh 的计量边界与时间归属——不在论文中，需外部字段补齐。
+								405 list marker 5
+								406 text 外部假设 201 kWh 的计量边界与时间归属——不在论文中，需外部字段补齐。
+						407 heading 附：可复用提问模板（能耗/碳排类论文核查）, Value: 2
+							408 text 附：可复用提问模板（能耗/碳排类论文核查）
+						409 text 六问 ：
+						410 content list
+							411 container 数值溯源：该数字是测量还是估计？若是估计，输入（功率、时长、PUE、排放因子）各来自哪里？
+								412 list marker 1
+								413 text 数值溯源 ：该数字是 测量 还是 估计 ？若是估计，输入（功率、时长、PUE、排放因子）各来自哪里？
+							414 container 显示值 vs 真值：表内数值是精确值还是舍入显示值？取整规则（四舍五入/截断）与保留位数是什么？反推时是否把显示值与未舍入值混用？
+								415 list marker 2
+								416 text 显示值 vs 真值 ：表内数值是精确值还是舍入显示值？取整规则（四舍五入/截断）与保留位数是什么？反推时是否把显示值与未舍入值混用？
+							417 container 口径/边界：能耗是设备端、机架/PDU 端还是全设施端？是否已含 PUE/制冷/供电损耗？传感器/设备“名称”与实际“计量边界”是否一致？
+								418 list marker 3
+								419 text 口径/边界 ：能耗是设备端、机架/PDU 端还是全设施端？是否已含 PUE/制冷/供电损耗？传感器/设备“名称”与实际“计量边界”是否一致？
+							420 container 时长一致性：正文与表格的时长是否同一来源、同一精度？用表内时长能否复现表内 kWh 与碳排？
+								421 list marker 4
+								422 text 时长一致性 ：正文与表格的时长是否同一来源、同一精度？用表内时长能否复现表内 kWh 与碳排？
+							423 container 排放因子：用的是平均还是边际因子？全国平均还是当地/时段因子？能否支撑“当地实际碳排”？
+								424 list marker 5
+								425 text 排放因子 ：用的是平均还是边际因子？全国平均还是当地/时段因子？能否支撑“当地实际碳排”？
+							426 container 证据分级：结论属 A（原文明确）/ B（多证据强推断）/ C（单一弱线索）/ D（无证据）？
+								427 list marker 6
+								428 text 证据分级 ：结论属 A（原文明确）/ B（多证据强推断）/ C（单一弱线索）/ D（无证据）？
+						429 text 何时停止推断（规则） ：
+						430 content list
+							431 container 原文有明确陈述 → 以原文为准，停止推断。
+								432 list marker •
+								433 text 原文有明确陈述 → 以原文为准，停止推断。
+							434 container 只有单一/弱线索（如仅数字相等、仅“未见来源”）→ 停止升级，标“可能/未知”。
+								435 list marker •
+								436 text 只有单一/弱线索（如仅数字相等、仅“未见来源”）→ 停止升级，标“可能/未知”。
+							437 container 推断触及“作者内部做了什么”（用了哪个未写明的数、在哪一步舍入）而原文未写 → 停止，标“未知”，不得表述为作者事实。
+								438 list marker •
+								439 text 推断触及“作者内部做了什么”（用了哪个未写明的数、在哪一步舍入）而原文未写 → 停止，标“未知”，不得表述为作者事实。
+							440 container 需要外部输入才能判定（计量边界、地点、时间）而原文没有 → 停止，列出最小待补字段，而非替作者假设。
+								441 list marker •
+								442 text 需要外部输入才能判定（计量边界、地点、时间）而原文没有 → 停止，列出最小待补字段，而非替作者假设。
+							443 container 任何“兼容”只说明“存在自洽解释”，不等于“作者确实如此”，一律不升级为作者内部事实。
+								444 list marker •
+								445 text 任何“兼容”只说明“存在自洽解释”，不等于“作者确实如此”，一律不升级为作者内部事实。

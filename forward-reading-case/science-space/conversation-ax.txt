@@ -1,0 +1,286 @@
+Window: "玻尔·科学空间", App: 玻尔·科学空间.
+0 standard window 玻尔·科学空间, Secondary Actions: Raise
+	1 scroll area
+		2 HTML content Description: 玻尔·科学空间, URL: tauri://localhost
+			3 container
+				4 button 调整工作台面板宽度
+				5 container PDF 路径
+					6 text acl-energy.pdf
+				7 button 退出
+				8 pop up button 选择本地打开方式
+				9 button 复制路径
+				10 pop up button 更多操作
+				11 splitter 调整 PDF 和右侧内容宽度, Value: 34
+				12 button 新建对话
+				13 button 核查Strubell论文三点与原文页码 · 重命名
+				14 pop up button 会话操作
+				15 button 收起对话
+				16 pop up button 分享
+				17 container
+					18 text 请只根据当前导入的Strubell等ACL2019论文独立核查三点，并给PDF页码和短原文，区分原文、计算、判断及未知：1）626155的质量单位、预算归属、GPU/TPU情景，是测量还是估计？2）Table3 BERT的12041.51W×79小时×PUE1.58及0.954lb/kWh是否得到1507kWh、1438lb？请保留首次不匹配，回查正文时长，不要把兼容解释认定为作者内部计算。3）已记录的设施电表201kWh还需乘PUE吗？没有地点时间能否得当地实际碳排？可以本地计算，不联网不训练。无法读取原文时请如实说明。
+					19 button 复制
+					20 button (collapsed) 已处理（用时 1m 53s）, Secondary Actions: Expand
+					21 container
+						22 text 已用 
+						23 text pdftotext
+						24 text  从原始 PDF 成功提取全文并逐页核对（原解析文本确实不可用，但 PDF 本身可读）。以下所有页码为 PDF 页码，括号内为期刊页码（3645–3650）。
+						25 heading 结论总览, Value: 2
+							26 text 结论总览
+						27 content list
+							28 container 626,155 的单位是 lb CO₂e（磅二氧化碳当量），归属 NAS（神经架构搜索，So et al. 2019 全量搜索），对应 GPU（8×P100）情景；是估计值，非实测。
+								29 list marker 1
+								30 text 626,155 的单位是  lb CO₂e（磅二氧化碳当量） ，归属  NAS（神经架构搜索，So et al. 2019 全量搜索） ，对应  GPU（8×P100）情景 ；是 估计值 ，非实测。
+							31 container 表内 79 小时算不出 1507 kWh：12041.51 W × 79 h × 1.58 / 1000 = 1503 kWh；只有用正文的 79.2 小时才得到 1507（1506.83）。1438 lb 与 1507 自洽。
+								32 list marker 2
+								33 text 表内  79 小时算不出 1507 kWh ：12041.51 W × 79 h × 1.58 / 1000 =  1503 kWh ；只有用正文的  79.2 小时 才得到 1507（1506.83）。1438 lb 与 1507 自洽。
+							34 container 该论文没有“设施电表 201 kWh”；201 是 Table 3 中 T2Tbig 的“kWh·PUE”，已经乘过 PUE，不应再乘。论文只给美国平均 0.954 lb/kWh，无地点、时间，得不到当地实际碳排。
+								35 list marker 3
+								36 text 该论文 没有“设施电表 201 kWh” ；201 是 Table 3 中 T2Tbig 的“kWh·PUE”， 已经乘过 PUE ，不应再乘。论文只给美国平均 0.954 lb/kWh， 无地点、时间，得不到当地实际碳排 。
+						37 heading 1) 626,155 的单位 / 归属 / 情景 / 实测还是估计, Value: 2
+							38 text 1) 626,155 的单位 / 归属 / 情景 / 实测还是估计
+						39 text 原文（单位）  — PDF 第 1 页（3645），Table 1 列标题及该行： “CO₂ e (lbs)” “w/ neural arch. search  626,155 ” “Table 1: Estimated CO2 emissions  from training common NLP models, compared to familiar consumption.” 原文（归属与 GPU/TPU 情景）  — PDF 第 4 页（3648），Table 3： “NAS　P100x8　1515.43　274,120　656,347　 626,155
+						40 container
+							41 text 942 , 973 –
+						42 text 3,201,722” “NAS　TPUv2x1　—　32,623　—　 —
+						43 container
+							44 text 44 , 055 –
+						45 text 146,848” 表注：“Power and carbon footprint are omitted for TPUs due to lack of public information on power draw for this hardware.” 原文（搜索预算来源）  — PDF 第 3 页（3647）： “So et al. (2019) report that their  full architecture search  ran for a total of 979M training steps … This equates to  32,623 hours of TPU or 274,120 hours on 8 P100 GPUs .” 判断 ：626,155 lb 是  NAS（神经架构搜索）全量搜索 的碳排估计，且只出现在  GPU（8×P100）  情景行；TPU 情景的碳排与电量栏为“—”（作者说明是因缺乏 TPU 功耗公开数据）。 判断（估计而非实测） ：这是 估计值 ，不是实测。原文多处用 “Estimated CO2 emissions / Estimated cost” 表述；且该行 GPU 功耗 1515.43 W 与 T2Tbig（P100x8）完全相同，是沿用而非对 NAS 单独测量。正文 §2（PDF 第 2 页）明说“We  estimate  the total time … using training times and hardware reported in the original papers”，再按公式换算。
+						46 heading 2) Table 3 BERT 行的换算核查, Value: 2
+							47 text 2) Table 3 BERT 行的换算核查
+						48 text 原文  — PDF 第 4 页（3648），Table 3： “BERTbase　V100x64　 12,041.51 79 1507 1438
+						49 container
+							50 text 3751 –
+						51 text 12,571” （列依次为 Power (W)、Hours、kWh·PUE、CO₂e） 原文（正文时长）  — PDF 第 3 页（3647）： “NVIDIA reports that they can train a BERT model in  3.3 days (79.2 hours)  using 4 DGX-2H servers, totaling 64 Tesla V100 GPUs (Forster et al., 2019).” 原文（公式与系数）  — PDF 第 2 页（3646）： “We use a PUE coefficient of  1.58 ” “pt =  1.58 t (pc + pr + g·pg) / 1000 　(1)” “CO₂e =  0.954 pt 　(2)” 计算（保留首次不匹配） ：
+						52 content list
+							53 container 12,041.51 W × 79 h × 1.58 / 1000 = 1503.02 kWh（四舍五入为 1503，≠ 1507）。
+								54 list marker •
+								55 text 12,041.51 W ×  79 h  × 1.58 / 1000 =  1503.02 kWh （四舍五入为 1503， ≠ 1507 ）。
+							56 container 12,041.51 W × 79.2 h × 1.58 / 1000 = 1506.83 kWh（≈ 1507）。
+								57 list marker •
+								58 text 12,041.51 W ×  79.2 h  × 1.58 / 1000 =  1506.83 kWh （≈ 1507）。
+							59 container 1507 × 0.954 = 1437.68 ≈ 1438 ✓。
+								60 list marker •
+								61 text 1507 × 0.954 = 1437.68 ≈  1438  ✓。
+							62 container 1503 × 0.954 = 1433.86 ≈ 1434（若按 1503 则对不上 1438）。
+								63 list marker •
+								64 text 1503 × 0.954 = 1433.86 ≈ 1434（若按 1503 则对不上 1438）。
+						65 text 判断 ：表中  79 小时与 1507 kWh 不匹配 ——按表内明写的 79 小时，公式(1)只能得到 1503。 1438 lb 只与表内的 1507 自洽 （1507×0.954=1437.68），因此 CO₂ 值同样依赖那个无法由 79 小时复现的 1507。 判断（我的兼容推断，非作者内部计算） ：1507 只有在采用正文的  79.2 小时 时才成立（1506.83→1507）。这说明表内 “Hours=79” 很可能是把正文 79.2 小时向下取整后，又用未取整的 79.2 小时去算 kWh，造成内部不一致。 论文没有明写这一计算过程 ，这只是我的推断。 未知 ：作者实际代入的是 79、79.2 还是其他值、中间保留几位小数，论文均未说明；表内 79 与正文 79.2 的差异及其如何得到 1507，是论文未交代之处。
+						66 heading 3) “设施电表 201 kWh”、PUE 与当地实际碳排, Value: 2
+							67 text 3) “设施电表 201 kWh”、PUE 与当地实际碳排
+						68 text 原文 / 判断（“设施电表”不存在） ：本论文 没有记录任何“设施电表（facility meter）”读数 。全文仅有的 “meter” 是 nvidia-smi（GPU 功耗采样）和 RAPL（CPU 功耗采样），均非设施级电表。你所说的 “201 kWh” 在论文中只有一处，即 Table 3 的 T2Tbig 行： 原文  — PDF 第 4 页（3648），Table 3： “T2Tbig　P100x8　1515.43　84　 201 　192　
+						69 container
+							70 text 289 –
+						71 text 981” 该列标题是 “ kWh·PUE ”，即 已经乘过 PUE 的估计值 ，不是设施电表实测。 计算 ：1515.43 W × 84 h = 127.30 kWh（设备端），× 1.58 =  201.13 kWh·PUE 。可见 201 已含 PUE。 判断（是否再乘 PUE） ：按论文公式(1)，PUE 只对“设备功耗（GPU/CPU/DRAM）”乘一次；表中的 201 已经是乘过后的结果， 不应再乘 。若你另有真实的设施级电表读数，那种读数通常已包含制冷等基础设施开销，再乘 PUE 会重复计算——但这属于一般方法判断，论文本身没有讨论，因为论文里根本没有设施电表数据。 原文（碳换算系数）  — PDF 第 2 页（3646）： “The U.S. EPA provides  average CO₂  produced (in pounds per kilowatt-hour) for power consumed  in the U.S.  (EPA, 2018)” “CO₂e =  0.954 pt ” 且 Table 2 给出中美德及云厂商的能源结构差异。 判断 / 未知（当地实际碳排） ： 得不到 。论文只提供一个  0.954 lb/kWh 的美国全国平均 系数，没有记录任何 地点 （具体电网/云区域）和 时间 （季节、日内时段）。没有这两项，无法换算“当地实际”碳排放（尤其无法区分平均排放因子与边际排放因子）。因此论文中的碳排都是“美国平均”口径的估计，不是地点/时间特定的实际值。
+						72 heading 补充说明, Value: 3
+							73 text 补充说明
+						74 content list
+							75 container 原文提取方式：因“parsed text unavailable”，我改用pdftotext -layout 直接解析原始 PDF（acl-energy.pdf），全文可读，未联网、未训练。
+								76 list marker •
+								77 text 原文提取方式：因“parsed text unavailable”，我改用
+								78 text pdftotext -layout
+								79 text  直接解析原始 PDF（
+								80 text acl-energy.pdf
+								81 text ），全文可读，未联网、未训练。
+							82 container 唯一需要你留意的实质性不一致是第 2 点：Table 3 的 “79 小时”与 “1507 kWh” 相互矛盾，1507 只能由正文的 79.2 小时复现，且论文未说明。
+								83 list marker •
+								84 text 唯一需要你留意的实质性不一致是 第 2 点 ：Table 3 的 “79 小时”与 “1507 kWh” 相互矛盾，1507 只能由正文的 79.2 小时复现，且论文未说明。
+					85 button 复制
+					86 toggle button 点赞, Value: off
+					87 toggle button 点踩, Value: off
+					88 text 00:37 请对你刚才的答案做三个定点复核，保留原答不覆盖：A）你写“只有79.2小时才成立”。在功率、PUE和因子固定、1507kWh及1438lb都按整数四舍五入显示的假设下，79.21小时能否同时兼容这两个显示值？请计算，再决定“只有”及“相互矛盾”的措辞是否过强。兼容不意味着原作者用了79.21。B）我说的设施电表201kWh是一个假设的外部本地测量输入，并非声称论文测过，请分别回答论文201与外部电表201，说明时间和边界匹配条件。C）NAS与T2Tbig功率相同，单凭这个数字相等能否证明作者沿用功率且没有单独测量？如需其他证据请说明。请输出修订结论及仍未知项，不联网。
+					89 button 复制
+					90 button 编辑消息
+					91 button (collapsed) 已处理（用时 1m 33s）, Secondary Actions: Expand
+					92 container
+						93 text 已按你的要求做定点复核。以下 保留原答不动 ，只给出三点复核的修订结论与仍未知项。计算全部本地完成，未联网。
+						94 heading A) 79.21 小时能否同时兼容 1507 kWh 与 1438 lb —— 是，“只有”“相互矛盾”都过强, Value: 2
+							95 text A) 79.21 小时能否同时兼容 1507 kWh 与 1438 lb —— 是，“只有”“相互矛盾”都过强
+						96 text 计算 （固定 P=12,041.51 W、PUE=1.58、因子 0.954，两个显示值均按“四舍五入到整数”）：
+						97 content list
+							98 container kWh(t) = 12041.51 × t × 1.58 / 1000，lb(t) = 0.954 × kWh(t)。
+								99 list marker •
+								100 text kWh(t) = 12041.51 × t × 1.58 / 1000，lb(t) = 0.954 × kWh(t)。
+							101 container kWh 显示为 1507 ⇔ 1506.5 ≤ kWh < 1507.5 ⇔ t ∈ [79.1828, 79.2354)。
+								102 list marker •
+								103 text kWh 显示为 1507 ⇔ 1506.5 ≤ kWh < 1507.5 ⇔ t ∈  [79.1828, 79.2354) 。
+							104 container lb 显示为 1438 ⇔ 1437.5 ≤ 0.954·kWh < 1438.5 ⇔ t ∈[79.1993, 79.2544)。
+								105 list marker •
+								106 text lb 显示为 1438 ⇔ 1437.5 ≤ 0.954·kWh < 1438.5 ⇔ t ∈ [79.1993, 79.2544) 。
+							107 container 两者交集：t ∈ [79.1993, 79.2354) 小时（约 0.036 小时宽）。
+								108 list marker •
+								109 text 两者交集： t ∈ [79.1993, 79.2354) 小时 （约 0.036 小时宽）。
+						110 text 代入核对：
+						111 button 复制表格 Markdown
+						112 table
+							113 row (selectable) t (h)
+kWh
+四舍五入
+lb
+四舍五入
+							114 row (selectable)
+								115 cell (selectable) 79.00
+								116 cell (selectable) 1503.021
+								117 cell (selectable) 1503
+								118 cell (selectable) 1433.882
+								119 cell (selectable) 1434
+							120 row (selectable)
+								121 cell (selectable) 79.20
+								122 cell (selectable) 1506.826
+								123 cell (selectable) 1507
+								124 cell (selectable) 1437.512
+								125 cell (selectable) 1438
+							126 row (selectable)
+								127 cell (selectable) 79.21
+								128 cell (selectable) 1507.017
+								129 cell (selectable) 1507
+								130 cell (selectable) 1437.694
+								131 cell (selectable) 1438
+							132 row (selectable)
+								133 cell (selectable) 79.22
+								134 cell (selectable) 1507.207
+								135 cell (selectable) 1507
+								136 cell (selectable) 1437.875
+								137 cell (selectable) 1438
+							138 row (selectable)
+								139 cell (selectable) 79.23
+								140 cell (selectable) 1507.397
+								141 cell (selectable) 1507
+								142 cell (selectable) 1438.057
+								143 cell (selectable) 1438
+							144 row (selectable)
+								145 cell (selectable) 79.24
+								146 cell (selectable) 1507.587
+								147 cell (selectable) 1508
+								148 cell (selectable) 1438.238
+								149 cell (selectable) 1438
+						150 text 修订结论 ：
+						151 content list
+							152 container “只有 79.2 小时才成立”——过强，应撤回。即使只看 kWh 一项，能显示为 1507 的时长也是一个区间 [79.1828, 79.2354)，而非单点；同时兼容两个显示值的区间是 [79.1993, 79.2354)。79.21 完全落在其中，此外 79.20、79.22、79.23 也都成立。所以正确说法是“正文的 79.2 小时属于一个约 79.20–79.235 小时的区间，区间内任意时长都能同时复现 1507 与 1438”。兼容性不意味着作者用了 79.21——我只是证明该值在数学上可兼容。
+								153 list marker 1
+								154 text “ 只有 79.2 小时才成立 ”—— 过强，应撤回 。即使只看 kWh 一项，能显示为 1507 的时长也是一个区间 [79.1828, 79.2354)，而非单点；同时兼容两个显示值的区间是 [79.1993, 79.2354)。79.21 完全落在其中，此外 79.20、79.22、79.23 也都成立。所以正确说法是“正文的 79.2 小时属于一个约 79.20–79.235 小时的区间，区间内任意时长都能同时复现 1507 与 1438”。 兼容性不意味着作者用了 79.21 ——我只是证明该值在数学上可兼容。
+							155 container “相互矛盾”——需限定范围，原措辞过宽。真正不匹配的只是表内显示为整数的 “Hours=79” 与 “1507/1438”：79 → 1503/1434。而正文的 79.2 小时与 1507/1438 并不矛盾。因此保留“表内 79 与 1507 不匹配”这一发现，但撤回任何“正文时长与输出矛盾”或“唯一解是 79.2”的暗示。
+								156 list marker 2
+								157 text “ 相互矛盾 ”—— 需限定范围，原措辞过宽 。真正不匹配的只是 表内显示为整数的 “Hours=79” 与 “1507/1438” ：79 → 1503/1434。而 正文的 79.2 小时与 1507/1438 并不矛盾 。因此保留“表内 79 与 1507 不匹配”这一发现，但撤回任何“正文时长与输出矛盾”或“唯一解是 79.2”的暗示。
+							158 container 一个可提但不必夸大的细节：79.2 恰好在 lb 边界附近（lb=1437.512，刚过 1437.5），这只是巧合，不影响结论。
+								159 list marker 3
+								160 text 一个可提但不必夸大的细节：79.2 恰好在 lb 边界附近（lb=1437.512，刚过 1437.5），这只是巧合，不影响结论。
+						161 heading B) 论文的 201 与“外部设施电表 201”分别回答, Value: 2
+							162 text B) 论文的 201 与“外部设施电表 201”分别回答
+						163 text 论文中的 201（Table 3，T2Tbig 行，列 “kWh·PUE”） ——PDF 第 4 页（3648）：
+						164 content list
+							165 container 它是作者按公式(1)算出的估计值，不是电表读数：1515.43 W × 84 h × 1.58 / 1000 = 201.13 → 显示 201。
+								166 list marker •
+								167 text 它是 作者按公式(1)算出的估计值 ，不是电表读数：1515.43 W × 84 h × 1.58 / 1000 =  201.13 → 显示 201 。
+							168 container 它已经是“设备功耗 × PUE”之后的全设施口径总量（含制冷、供电损耗等），不能再乘 PUE。
+								169 list marker •
+								170 text 它已经是“设备功耗 × PUE”之后的 全设施口径总量 （含制冷、供电损耗等）， 不能再乘 PUE 。
+							171 container 它的碳排用美国平均因子：201 × 0.954 = 191.88 → 表内 192，自洽。
+								172 list marker •
+								173 text 它的碳排用美国平均因子：201 × 0.954 = 191.88 → 表内  192 ，自洽。
+							174 container 边界：IT 设备功耗(1515.43 W) × PUE(1.58)；时间窗口：84 小时（T2Tbig 训练时长）。
+								175 list marker •
+								176 text 边界：IT 设备功耗(1515.43 W) × PUE(1.58)；时间窗口：84 小时（T2Tbig 训练时长）。
+						177 text 假设的外部设施电表 201 kWh（本地实测输入） ： 是否乘 PUE  取决于计量边界 ：
+						178 content list
+							179 container 设施/建筑/PDU 级电表（已含制冷与供电损耗）→ 它已是总设施电量，不需再乘 PUE，再乘 1.58 属重复计算。
+								180 list marker •
+								181 text 设施/建筑/PDU 级电表 （已含制冷与供电损耗）→ 它已是总设施电量， 不需再乘 PUE ，再乘 1.58 属重复计算。
+							182 container 仅 IT 设备/机柜级电表（只计服务器，不含制冷）→ 要折算全设施能耗，需乘 PUE，且应使用当地实际 PUE，不是论文的 1.58。
+								183 list marker •
+								184 text 仅 IT 设备/机柜级电表 （只计服务器，不含制冷）→ 要折算全设施能耗， 需乘 PUE ，且应使用 当地实际 PUE ，不是论文的 1.58。
+						185 text 时间与边界匹配条件 （要把这 201 kWh 换算成“该训练任务的碳排”）：
+						186 content list
+							187 container 时间对齐：201 kWh 必须恰好覆盖该训练任务的起止时段，且能归属到该任务——若 201 是整个设施某周期总耗电，须扣除空闲/基线负载并做增量归属，不能直接当任务能耗。
+								188 list marker 1
+								189 text 时间对齐 ：201 kWh 必须恰好覆盖该训练任务的起止时段，且能 归属到该任务 ——若 201 是整个设施某周期总耗电，须扣除空闲/基线负载并做增量归属，不能直接当任务能耗。
+							190 container 边界一致：电表口径（是否含 PUE/线损、备用电源、其他租户负载）必须与所用的排放因子口径一致。
+								191 list marker 2
+								192 text 边界一致 ：电表口径（是否含 PUE/线损、备用电源、其他租户负载）必须与所用的排放因子口径一致。
+							193 container 地点与时间：论文只提供美国平均 0.954 lb/kWh（PDF 第 2 页），无地点、无季节/日内时段，因此得不出“当地实际”碳排；需要具体电网/区域以及时段的平均或边际排放因子。
+								194 list marker 3
+								195 text 地点与时间 ：论文只提供 美国平均 0.954 lb/kWh （PDF 第 2 页），无地点、无季节/日内时段，因此 得不出“当地实际”碳排 ；需要具体电网/区域以及时段的平均或边际排放因子。
+						196 text 结论 ：论文的 201 已含 PUE、是估计值；外部电表 201 是否乘 PUE 取决于计量边界，且无论哪种都缺地点/时间，无法由论文得到当地实际碳排。
+						197 heading C) 数字相等（1515.43 W）能否单独证明“沿用功率、未单独测量” —— 不能, Value: 2
+							198 text C) 数字相等（1515.43 W）能否单独证明“沿用功率、未单独测量” —— 不能
+						199 text 结论 ： 不能单独证明 。一个显示到小数点后两位的数值相等，只能算 旁证/强烈暗示 ，不是逻辑证明——理论上可能：巧合、两者取自同一公开来源或同一硬件配置的参考值、或 NAS 确实被独立测得且恰好相同（概率低但非零）。 论文中可作为补充证据的原文 ：
+						200 content list
+							201 container 方法段（PDF 第 2 页，3646）：作者只对自己实际跑过的模型采样功耗——“We train the models described in §2.1 … and sample GPU and CPU power consumption during training. Each model was trained for a maximum of 1 day … on a single NVIDIA Titan X GPU（ELMo 为 3×GTX 1080 Ti）。” 即实测范围是 Titan X/GTX1080Ti、最多 1 天。
+								202 list marker 1
+								203 text 方法段（PDF 第 2 页，3646）：作者只对自己实际跑过的模型采样功耗——“We train the models described in §2.1 … and  sample GPU and CPU power consumption  during training. Each model was trained for a maximum of 1 day … on a single NVIDIA Titan X GPU（ELMo 为 3×GTX 1080 Ti）。” 即实测范围是 Titan X/GTX1080Ti、最多 1 天。
+							204 container NAS 并非作者自己运行（PDF 第 3 页，3647）：“So et al. (2019) report that their full architecture search ran for … 274,120 hours on 8 P100 GPUs。” 作者只是从原论文取时长/步数，未跑 979M 步搜索。
+								205 list marker 2
+								206 text NAS 并非作者自己运行（PDF 第 3 页，3647）：“So et al. (2019) report that their full architecture search ran for … 274,120 hours on 8 P100 GPUs。” 作者只是从原论文取时长/步数，未跑 979M 步搜索。
+							207 container 全文中没有任何针对 NAS 的独立功耗测量或引用来源。
+								208 list marker 3
+								209 text 全文中 没有 任何针对 NAS 的独立功耗测量或引用来源。
+						210 text 修订判断 ：把 1、2、3 三条 结合 起来，才能较有把握地说“NAS 行的 1515.43 W 是沿用 T2Tbig（同为 P100x8）的功耗，而非对 NAS 单独测量”。 数字相等只是其中一条佐证，单独不足以成立 。 仍未知项 ：
+						211 content list
+							212 container T2Tbig 的 1515.43 W 本身是作者实测还是取自他处，论文未明说；方法段（Titan X 采样）与表 3（P100/V100 功耗）之间的对应关系论文没有交代。
+								213 list marker •
+								214 text T2Tbig 的 1515.43 W 本身是作者实测还是取自他处，论文未明说；方法段（Titan X 采样）与表 3（P100/V100 功耗）之间的对应关系论文没有交代。
+							215 container NAS 功耗的确切来源（沿用哪个值、是否用了未写明的假设）论文未说明。
+								216 list marker •
+								217 text NAS 功耗的确切来源（沿用哪个值、是否用了未写明的假设）论文未说明。
+							218 container 因此“沿用”是高置信推断，不是论文明确陈述，也非可由数字相等单独证明。
+								219 list marker •
+								220 text 因此“沿用”是 高置信推断 ，不是论文明确陈述，也非可由数字相等单独证明。
+						221 heading 复核后的一句话修订总结, Value: 3
+							222 text 复核后的一句话修订总结
+						223 content list
+							224 container A：撤回“只有 79.2”与过宽的“相互矛盾”；改为“表内 79 与 1507/1438 不匹配，正文 79.2 及约 79.20–79.235 小时的区间都能同时复现 1507 与 1438，79.21 也在其中”。
+								225 list marker •
+								226 text A：撤回“只有 79.2”与过宽的“相互矛盾”；改为“表内 79 与 1507/1438 不匹配，正文 79.2 及约 79.20–79.235 小时的区间都能同时复现 1507 与 1438，79.21 也在其中”。
+							227 container B：论文 201 已含 PUE、是估计；外部电表 201 是否乘 PUE 取决于计量边界；两地情形都因缺地点/时间得不出当地实际碳排。
+								228 list marker •
+								229 text B：论文 201 已含 PUE、是估计；外部电表 201 是否乘 PUE 取决于计量边界；两地情形都因缺地点/时间得不出当地实际碳排。
+							230 container C：数字相等不能单独证明沿用；须结合“方法只测自己跑过的模型 + NAS 未实测 + 无 NAS 功耗来源”才能推断沿用。
+								231 list marker •
+								232 text C：数字相等不能单独证明沿用；须结合“方法只测自己跑过的模型 + NAS 未实测 + 无 NAS 功耗来源”才能推断沿用。
+					233 button 复制
+					234 toggle button 点赞, Value: off
+					235 toggle button 点踩, Value: off
+					236 text 00:40
+				237 button 已完成
+				238 text entry area (settable) 询问一个科学问题
+					239 text 询问一个科学问题
+				240 button 添加附件或引用
+				241 pop up button 请求批准, Help: 选择授权方式
+				242 image 上下文已使用 14%
+				243 pop up button 推理强度
+				244 toggle button 开始语音输入, Value: off
+				245 button (disabled) 发送
+				246 text 内容由 AI 生成，请仔细甄别
+				247 container Notifications alt+T
+				248 container
+					249 button 目录
+					250 text field (settable) 页码, Value: 1
+					251 text /  6
+					252 button 缩小
+					253 text 155 %
+					254 pop up button 缩放比例, Value: 155%
+					255 button 放大
+					256 toggle button 标注, Value: off
+					257 button 搜索
+					258 button 引用
+					259 pop up button 下载
+					260 container PDF 阅读操作
+						261 text 全文翻译
+						262 switch (settable, boolean) 全文翻译, Value: off
+						263 toggle button 阅读助手, Value: on
+						264 toggle button 论文速览, Value: off
+						265 toggle button 图表速览, Value: off
+					266 image
+					267 image
+					268 image
+					269 image
+					270 image
+			271 pop up button 开发工具
+	272 close button
+	273 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	274 minimize button
+275 menu bar
+	276 玻尔·科学空间
+	277 Edit
+	278 Window
+
+The focused UI element is 238 text entry area (settable) 询问一个科学问题

@@ -1,0 +1,48 @@
+{
+  "scope": "new complete scoped case; original 89-point release remains unchanged at its fixed commit",
+  "new_session": "Codex CLI 0.164.0-alpha.11.1; default model exact snapshot unavailable",
+  "source_run": "work/github-energy-forward-20261026/run",
+  "selected_complete_events": [
+    "item_1",
+    "item_3",
+    "item_6",
+    "item_7",
+    "item_8",
+    "item_10",
+    "item_11"
+  ],
+  "omitted_duplicate_files": [
+    "out/paper.txt: full extracted paper already supplied as original PDF"
+  ],
+  "omitted_duplicate_events": [
+    "item_2: reads task and frozen skill already supplied",
+    "item_4: extracts and prints original full PDF already supplied"
+  ],
+  "full_native_trace": "separately attached by platform CLI; not replaced by selected events",
+  "files": {
+    "session.json": "6c1f7b8bc0ac4991973841d4935706386e4bf7278f35942d4bb021c7cfa2e2db",
+    "prompt.txt": "e4ae1078310e0ecfd0245a41eefb7938c8b07c83236cb6356d7420be75ce2b5f",
+    "out/source-manifest.json": "63754e1be0ed4e85c5c3d41a3ece547e8dd4bf113d5a979c9471e5f17169815e",
+    "out/calculations-rounding.json": "3d622e20c4990a184b6b98b4a3abec34ed3cd8d1b16ecbf46852110eab5ac692",
+    "out/ledger-candidates.json": "cd32cf50ac690c58010ca9934ed78366ae3a6e68e2f4971d22d392fc7b1c4b1d",
+    "out/ledger-rounding.json": "75c39c8af817e1bd2dbf32f135517174a9da3a94caef9291b35799399f9e3a23",
+    "out/assistant_final.md": "a8ed9e0492f27ce3ca567f68ea3ada7fb4109397cc4acd84b15817743618eed5",
+    "out/calculations-nominal.json": "7b8e4a110e60f41758fb85aa4f0088d517264a3665bf284292b98b5b55592bfa",
+    "out/report.md": "ff0ad7c2541fda8d86bef82a3c8883ae08bf3eade8a6225db0bcb823547b5240",
+    "out/independent-results.json": "82481a7e98d79180146a03e9b0f8570e155800ded20a5af4cdb0882bd0ac22a5",
+    "out/calculations-candidates.json": "7056a4f6ba06d947d726870f43f24c7468b7b52828fd4594ecb50754e1471a3e",
+    "out/nominal-run.log": "c14a1cfa5995f0b24041cc16bab03eb512b05717ad609e0509a87f822d3d870b",
+    "out/ledger-nominal.json": "8aa06c75a9f6c20567488871ba7ff6a1a3f82bd3120ee5fda36f3667c8bb98db",
+    "out/rounding-run.log": "3913a6a5d979bea004cf5362bbe98ba6557003596cdbd788e24b1a135d9a03e3",
+    "out/candidates-run.log": "e40d8ede702b87c02cbd1c32ca457b9d285067e78e8de2c73d271988961e3e45",
+    "out/finalize_evidence.py": "dbd3d50554b1f626d56b9fc5fd1f98bbf0a4c668e1bb9d540338c8fb63396c34",
+    "out/verification.json": "99e6dff98f9fb04a961dae4e0b3186acc32560d924d34e0e376c86d9d4c66d63",
+    "out/boundary-tests.json": "3db2e106b1f01f1e4df8f752b2a08f8272edfd1635619418429ab861c8515bb2",
+    "out/claims.json": "44f1a41a0beced1f1389a5177d607f358f9b06f6bb7ff912ecb31cc47498f32e",
+    "out/build_ledgers.py": "1702edce5db6679e39475b4131e233c38d38235f239b9e6e95d04822d1cc3aac",
+    "out/table3-page4.png": "2d566cc63c2ec4714112fd90a2510f41b51b37ebb59f3e53cf8272668abbccf1",
+    "out/independent_check.py": "deda2b14a149ef7ecea11bfd4d234786932f2d87b753d3270f2e29fbe06b61cc",
+    "INPUT/paper.pdf": "184c42b148a3db99f4a59ed8336c403dc2229bf3100bbc934212116acd8c61d9",
+    "INPUT/task.md": "7f463e10175a1fc71ca46340488b2a2cdcf5bd9fcae4077715c74b5205cbead7"
+  }
+}

@@ -1,0 +1,7 @@
+# 来源与贡献
+
+Emma Strubell、Ananya Ganesh、Andrew McCallum，Energy and Policy Considerations for Deep Learning in NLP，ACL2019，pp.3645–3650，ACL Anthology P19-1355，6页原版。来源https://aclanthology.org/P19-1355/ ，PDF https://aclanthology.org/P19-1355.pdf 。ACL2016年后材料为CC BY4.0，保留署名、出处及完整未修改PDF。INPUT/paper.pdf的SHA256为184c42b148a3db99f4a59ed8336c403dc2229bf3100bbc934212116acd8c61d9。out/table3-page4.png来自原PDF第4页（3648），保留表头和上下文。
+
+用户委托改善作品，作者侧AI完成Skill、科学空间实际操作、原文核查、独立代码与新会话；不冒充真人审稿或独立第三方复现。三条拟引用句及本地电表为构造测试问题，非实测数据。科学空间输出是一次会话两轮，新Codex阅读另为一次会话；准确模型、采样参数及实际账单未披露。科学空间原始可见输出保留错误，作者审查不认可其中错误判断。
+
+本次个人贡献是从真实过强推断中形成可执行核查规则，再做干净输入的新会话验证，并整理完整真实产物供复做。无随机化、无盲测、无公平模型对照，不声称准确率、速度、成本或稳定性普遍提升。原始作者采样日志、内部计算表和本地电网因子仍未取得。

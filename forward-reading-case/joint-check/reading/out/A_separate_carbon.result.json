@@ -1,0 +1,51 @@
+{
+  "scope": "one shared nonnegative parameter, fixed positive normalized rates, explicit display-rounding assumption; not physical validation",
+  "rounding": "half_up",
+  "constraints": {
+    "time": {
+      "lower": {
+        "exact": "0",
+        "decimal": "0"
+      },
+      "upper": {
+        "exact": "10",
+        "decimal": "10"
+      },
+      "lower_closed": true,
+      "upper_closed": false,
+      "nonempty": true
+    },
+    "carbon": {
+      "lower": {
+        "exact": "15/2",
+        "decimal": "7.5"
+      },
+      "upper": {
+        "exact": "17/2",
+        "decimal": "8.5"
+      },
+      "lower_closed": true,
+      "upper_closed": false,
+      "nonempty": true
+    }
+  },
+  "joint": {
+    "lower": {
+      "exact": "15/2",
+      "decimal": "7.5"
+    },
+    "upper": {
+      "exact": "17/2",
+      "decimal": "8.5"
+    },
+    "lower_closed": true,
+    "upper_closed": false,
+    "nonempty": true
+  },
+  "joint_feasible": true,
+  "witness_parameter": {
+    "exact": "8",
+    "decimal": "8"
+  },
+  "fixed_parameter_feasible": null
+}

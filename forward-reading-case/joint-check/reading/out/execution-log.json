@@ -1,0 +1,145 @@
+[
+  {
+    "case": "A",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/A.input.json",
+      "--out",
+      "out/A.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "C_half_up",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/C_half_up.input.json",
+      "--out",
+      "out/C_half_up.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "C_half_even",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/C_half_even.input.json",
+      "--out",
+      "out/C_half_even.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "B_half_up_79",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/B_half_up_79.input.json",
+      "--out",
+      "out/B_half_up_79.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "B_half_up_79.2",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/B_half_up_79.2.input.json",
+      "--out",
+      "out/B_half_up_79.2.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "B_half_up_79.21",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/B_half_up_79.21.input.json",
+      "--out",
+      "out/B_half_up_79.21.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "B_half_even_79",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/B_half_even_79.input.json",
+      "--out",
+      "out/B_half_even_79.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "B_half_even_79.2",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/B_half_even_79.2.input.json",
+      "--out",
+      "out/B_half_even_79.2.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "B_half_even_79.21",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/B_half_even_79.21.input.json",
+      "--out",
+      "out/B_half_even_79.21.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "A_separate_energy",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/A_separate_energy.input.json",
+      "--out",
+      "out/A_separate_energy.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "case": "A_separate_carbon",
+    "argv": [
+      "python3",
+      "skill/scripts/joint_bounds.py",
+      "out/A_separate_carbon.input.json",
+      "--out",
+      "out/A_separate_carbon.result.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

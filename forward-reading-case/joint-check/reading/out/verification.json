@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "check": "A separate energy",
+      "passed": true
+    },
+    {
+      "check": "A separate carbon",
+      "passed": true
+    },
+    {
+      "check": "A joint expected false",
+      "passed": true
+    },
+    {
+      "check": "B half_up 79 joint exists",
+      "passed": true
+    },
+    {
+      "check": "B half_up 79 candidate matches expected",
+      "passed": true
+    },
+    {
+      "check": "B half_up 79.2 joint exists",
+      "passed": true
+    },
+    {
+      "check": "B half_up 79.2 candidate matches expected",
+      "passed": true
+    },
+    {
+      "check": "B half_up 79.21 joint exists",
+      "passed": true
+    },
+    {
+      "check": "B half_up 79.21 candidate matches expected",
+      "passed": true
+    },
+    {
+      "check": "B half_even 79 joint exists",
+      "passed": true
+    },
+    {
+      "check": "B half_even 79 candidate matches expected",
+      "passed": true
+    },
+    {
+      "check": "B half_even 79.2 joint exists",
+      "passed": true
+    },
+    {
+      "check": "B half_even 79.2 candidate matches expected",
+      "passed": true
+    },
+    {
+      "check": "B half_even 79.21 joint exists",
+      "passed": true
+    },
+    {
+      "check": "B half_even 79.21 candidate matches expected",
+      "passed": true
+    },
+    {
+      "check": "C half_up expected false",
+      "passed": true
+    },
+    {
+      "check": "C half_even singleton",
+      "passed": true
+    },
+    {
+      "check": "all script executions exit 0",
+      "passed": true
+    },
+    {
+      "check": "report Chinese characters <=1200",
+      "passed": true
+    },
+    {
+      "check": "report total characters <=1200",
+      "passed": true
+    }
+  ],
+  "report_han_characters": 438,
+  "failed_feasibility_checks_preserved": [
+    "A.result.json",
+    "C_half_up.result.json",
+    "B_half_up_79.result.json",
+    "B_half_even_79.result.json"
+  ],
+  "warnings": [
+    "PyMuPDF fitz alias deprecated; rendering succeeded"
+  ],
+  "unresolved": [
+    "Actual author rounding rule",
+    "Unrounded power and actual runtime"
+  ],
+  "scope": "Independent local conditional arithmetic and source inspection; no scientific validation",
+  "report_total_characters": 1196
+}

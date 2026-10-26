@@ -1,0 +1,26 @@
+{
+  "energy_rate": "19.0255858",
+  "carbon_rate": "18.1504088532",
+  "candidates": [
+    {
+      "t": "79",
+      "energy": "1503.0212782",
+      "carbon": "1433.8822994028"
+    },
+    {
+      "t": "79.2",
+      "energy": "1506.82639536",
+      "carbon": "1437.51238117344"
+    },
+    {
+      "t": "79.21",
+      "energy": "1507.016651218",
+      "carbon": "1437.693885261972"
+    }
+  ],
+  "sha256": {
+    "INPUT/paper.pdf": "184c42b148a3db99f4a59ed8336c403dc2229bf3100bbc934212116acd8c61d9",
+    "skill/SKILL.md": "8107af971a66d8e0839c3e1f069b9ed38be64da10b111b3bccd7607e98da05ba",
+    "skill/scripts/joint_bounds.py": "f8d53a8cc516f9f38f826b674de8d73097377fc289a3dc5723fa24085fa42454"
+  }
+}

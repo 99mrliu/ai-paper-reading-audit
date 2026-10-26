@@ -1,0 +1,51 @@
+[
+  {
+    "id": "A",
+    "claim": "各自可行但联合不可行",
+    "kind": "constructed_counterexample",
+    "evidence": [
+      "A_separate_energy.result.json",
+      "A_separate_carbon.result.json",
+      "A.result.json"
+    ]
+  },
+  {
+    "id": "B-source",
+    "claim": "公式、表头、BERT行、正文时长已核对",
+    "kind": "source_reading",
+    "evidence": [
+      "pdf-page-2.png",
+      "pdf-page-3.png",
+      "pdf-page-4.png",
+      "source-pages.txt"
+    ],
+    "limit": "来源核对不证明科学解释；合计设备功率为题设和公式表头下的建模解释"
+  },
+  {
+    "id": "B",
+    "claim": "指定half_up假设下联合非空，79失败，79.2和79.21通过",
+    "kind": "conditional_mathematical_result",
+    "evidence": [
+      "B_half_up_79.result.json",
+      "B_half_up_79.2.result.json",
+      "B_half_up_79.21.result.json"
+    ]
+  },
+  {
+    "id": "C",
+    "claim": "half_up联合为空；half_even联合仅2.5",
+    "kind": "conditional_mathematical_result",
+    "evidence": [
+      "C_half_up.result.json",
+      "C_half_even.result.json"
+    ]
+  },
+  {
+    "id": "unknown",
+    "claim": "不能确定作者真实舍入规则、原始功率和实际计算时长",
+    "kind": "unresolved",
+    "evidence": [
+      "source-pages.txt"
+    ]
+  }
+]

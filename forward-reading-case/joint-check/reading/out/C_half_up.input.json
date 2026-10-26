@@ -1,0 +1,17 @@
+{
+  "rounding": "half_up",
+  "constraints": [
+    {
+      "id": "y1",
+      "rate": "1",
+      "display": "2",
+      "quantum": "1"
+    },
+    {
+      "id": "y2",
+      "rate": "3",
+      "display": "8",
+      "quantum": "1"
+    }
+  ]
+}

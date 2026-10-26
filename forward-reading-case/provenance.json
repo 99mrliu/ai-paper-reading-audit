@@ -6,19 +6,19 @@
     "item_1",
     "item_3",
     "item_6",
-    "item_7",
-    "item_8",
-    "item_10",
-    "item_11"
+    "item_8"
   ],
   "omitted_duplicate_files": [
     "out/paper.txt: full extracted paper already supplied as original PDF"
   ],
   "omitted_duplicate_events": [
     "item_2: reads task and frozen skill already supplied",
-    "item_4: extracts and prints original full PDF already supplied"
+    "item_4: extracts and prints original full PDF already supplied",
+    "item_7: creates scripts already supplied; full actual saved results and execution logs retained",
+    "item_10: creates scripts/claims/report already supplied; original outputs retained",
+    "item_11: report character count operation, not critical numerical evidence"
   ],
-  "full_native_trace": "separately attached by platform CLI; not replaced by selected events",
+  "full_native_trace": "Current platform attachment is the NEW joint-constraint session, not this older session. This earlier session retains complete selected operations, task, prompt, all necessary original saved outputs and metadata inside materials.",
   "files": {
     "session.json": "6c1f7b8bc0ac4991973841d4935706386e4bf7278f35942d4bb021c7cfa2e2db",
     "prompt.txt": "e4ae1078310e0ecfd0245a41eefb7938c8b07c83236cb6356d7420be75ce2b5f",

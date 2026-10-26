@@ -1,0 +1,23 @@
+{
+  "rounding": "half_up",
+  "constraints": [
+    {
+      "id": "time",
+      "rate": "1",
+      "display": "0",
+      "quantum": "20"
+    },
+    {
+      "id": "energy",
+      "rate": "1",
+      "display": "2",
+      "quantum": "1"
+    },
+    {
+      "id": "carbon",
+      "rate": "1",
+      "display": "8",
+      "quantum": "1"
+    }
+  ]
+}

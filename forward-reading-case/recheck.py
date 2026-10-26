@@ -15,4 +15,6 @@ with tempfile.TemporaryDirectory() as tmp:
   assert json.loads((t/'out'/n).read_text())==json.loads((r/'out'/n).read_text()),n
  a=json.loads((t/'out/independent-results.json').read_text());assert a['paper_factor_applied_to_201_lb']=='191.754'
  assert a['bert_point_calculations']['79.21']['carbon_lb']=='1437.693885261972'
-print(json.dumps({'status':'passed','recomputed_json_artifacts':9,'boundary_tests':22,'scope':'saved arithmetic and PDF integrity, not semantic or model performance proof'}))
+joint=subprocess.run([sys.executable,str(r/'joint-check/recheck.py')],capture_output=True,text=True,check=True)
+assert json.loads(joint.stdout)['status']=='passed'
+print(json.dumps({'joint_constraint_checks':json.loads(joint.stdout),'status':'passed','recomputed_json_artifacts':9,'boundary_tests':22,'scope':'saved arithmetic and PDF integrity, not semantic or model performance proof'}))

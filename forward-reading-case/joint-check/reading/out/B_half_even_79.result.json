@@ -1,0 +1,64 @@
+{
+  "scope": "one shared nonnegative parameter, fixed positive normalized rates, explicit display-rounding assumption; not physical validation",
+  "rounding": "half_even",
+  "constraints": {
+    "time": {
+      "lower": {
+        "exact": "157/2",
+        "decimal": "78.5"
+      },
+      "upper": {
+        "exact": "159/2",
+        "decimal": "79.5"
+      },
+      "lower_closed": false,
+      "upper_closed": false,
+      "nonempty": true
+    },
+    "energy": {
+      "lower": {
+        "exact": "7532500000/95127929",
+        "decimal": "79.18284439893566903995145316"
+      },
+      "upper": {
+        "exact": "7537500000/95127929",
+        "decimal": "79.23540519840393035361886203"
+      },
+      "lower_closed": false,
+      "upper_closed": false,
+      "nonempty": true
+    },
+    "carbon": {
+      "lower": {
+        "exact": "3593750000000/45376022133",
+        "decimal": "79.19931785704993542652016936"
+      },
+      "upper": {
+        "exact": "1198750000000/15125340711",
+        "decimal": "79.25441303468962233812122687"
+      },
+      "lower_closed": true,
+      "upper_closed": true,
+      "nonempty": true
+    }
+  },
+  "joint": {
+    "lower": {
+      "exact": "3593750000000/45376022133",
+      "decimal": "79.19931785704993542652016936"
+    },
+    "upper": {
+      "exact": "7537500000/95127929",
+      "decimal": "79.23540519840393035361886203"
+    },
+    "lower_closed": true,
+    "upper_closed": false,
+    "nonempty": true
+  },
+  "joint_feasible": true,
+  "witness_parameter": {
+    "exact": "3594568750000/45376022133",
+    "decimal": "79.21736152772693289006951569"
+  },
+  "fixed_parameter_feasible": false
+}

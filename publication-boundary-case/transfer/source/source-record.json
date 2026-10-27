@@ -1,0 +1,94 @@
+{
+  "source_title": "Energy and Policy Considerations for Modern Deep Learning Research",
+  "authors": [
+    "Emma Strubell",
+    "Ananya Ganesh",
+    "Andrew McCallum"
+  ],
+  "venue": "AAAI2020 34(09),13693-13696",
+  "doi": "10.1609/aaai.v34i09.7123",
+  "official_landing": "https://ojs.aaai.org/index.php/AAAI/article/view/7123",
+  "official_pdf": "https://ojs.aaai.org/index.php/AAAI/article/download/7123/6977",
+  "original_pdf_sha256": "d66b468eec9ac7b17356dc6a227de3d8566226bf51be5cacde182816059cf93f",
+  "pages": 4,
+  "redistribution": "Complete 2020 PDF NOT redistributed. Necessary attributed excerpts/crops for criticism and verification only; no full-paper license assumed. Copyright2020AAAI notice on p1. Figures are unmodified crops, coordinates in PDF points.",
+  "clips": [
+    {
+      "file": "table2.png",
+      "PDF_page_1based": 3,
+      "printed_page": 13695,
+      "rect_points": [
+        54,
+        50,
+        560,
+        190
+      ]
+    },
+    {
+      "file": "bert-models.png",
+      "PDF_page_1based": 2,
+      "printed_page": 13694,
+      "rect_points": [
+        53,
+        457,
+        295,
+        569
+      ]
+    },
+    {
+      "file": "method-definitions.png",
+      "PDF_page_1based": 2,
+      "printed_page": 13694,
+      "rect_points": [
+        53,
+        636,
+        295,
+        707
+      ]
+    },
+    {
+      "file": "method-pue-equation.png",
+      "PDF_page_1based": 2,
+      "printed_page": 13694,
+      "rect_points": [
+        318,
+        54,
+        560,
+        170
+      ]
+    },
+    {
+      "file": "factor-assumptions.png",
+      "PDF_page_1based": 2,
+      "printed_page": 13694,
+      "rect_points": [
+        318,
+        169,
+        560,
+        505
+      ]
+    },
+    {
+      "file": "training-method.png",
+      "PDF_page_1based": 1,
+      "printed_page": 13693,
+      "rect_points": [
+        318,
+        557,
+        560,
+        706
+      ]
+    }
+  ],
+  "author_search": {
+    "tool": "pdftotext -layout (Poppler)",
+    "extraction_sha256": "327fb5171d3dda420618e0af1e83f438072ff9bab30a4bbc58ed4b4664be4f4f",
+    "exact_string_pages_found": {
+      "79.2": [],
+      "3.3": [],
+      "1438": [],
+      "1,438": []
+    },
+    "limitation": "No matches is extraction/search evidence only, not proof of absence in unsearched supplements, other editions or semantic paraphrases. Models BERT paragraph and Table2 supplied locally for narrower check."
+  }
+}

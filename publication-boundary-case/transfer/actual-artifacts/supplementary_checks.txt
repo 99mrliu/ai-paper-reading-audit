@@ -1,0 +1,45 @@
+{
+  "nominal_79h": {
+    "note": "Power(W)/1000 * Hours * PUE; Power column is whole-system aggregate, NOT per-GPU",
+    "it_energy_kWh_before_PUE": "951.27929",
+    "total_energy_kWh_PUE": "1503.0212782",
+    "printed_kWh_PUE": "1507",
+    "gap_kWh": "-3.9787218",
+    "gap_pct": "-0.2640160451227604512276045123",
+    "co2_lb_from_nominal_energy": "716.9411497014",
+    "printed_co2e_lb": "719"
+  },
+  "co2e_vs_printed_kwh": {
+    "note": "CO2e printed column = 0.477 * printed kWh·PUE (factor applied to the *printed* 1507, not to the 1503 recompute)",
+    "0.477_times_1507": "718.839",
+    "rounds_to_719": "719",
+    "printed_co2e_lb": "719"
+  },
+  "factor_derivation": {
+    "note": "Paper states EPA US avg = 0.954 lb/kWh, then 'we cut this number in half' for AWS 50% renewable. So 0.477 is a constructed AWS-assumption factor, NOT a current universal measured US-grid intensity.",
+    "epa_halved": "0.477",
+    "uses_epa_2018": true,
+    "is_universal_measured_intensity": false
+  },
+  "conditional_candidates": {
+    "candidate_A_implied_hours_if_power_and_pue_exact": {
+      "label": "conditional candidate, NOT a paper fact",
+      "value_hours": "79.20912479866979969678515760",
+      "rounds_to": "79.2"
+    },
+    "candidate_B_implied_power_W_if_hours_and_pue_exact": {
+      "label": "conditional candidate, NOT a paper fact",
+      "value_watts": "12073.38567537253645249158789"
+    },
+    "candidate_C_old_factor_0p954_never_in_this_paper": {
+      "label": "old EPA factor result, from the earlier ACL-2019 paper, NOT this AAAI-20 paper",
+      "0p954_times_1507_lb": "1437.678",
+      "rounds_to": "1438"
+    }
+  },
+  "nas_vs_t2tbig": {
+    "observation": "Table 2 lists identical Power = 1515.43 W for 'NAS P100x8' and 'T2Tbig P100x8'.",
+    "claim_evaluated": "NAS与T2Tbig功率相同，证明直接复制了同一测量值",
+    "verdict": "Equality is real in the table, but the paper does not state that one was copied from the other; same value alone cannot prove shared origin or non-independence. Keep as an unchecked inference requiring method/log evidence."
+  }
+}

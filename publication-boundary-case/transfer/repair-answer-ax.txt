@@ -1,0 +1,112 @@
+						119 text 事后诊断完成（明确标注，不计入首答）。首答五个交付文件未改动（时间戳仍为 23:33–23:34，本次新增文件均为 23:46 之后），新增文件已另存。
+						120 heading 1. 精确等号 vs 显示取整（已实际运行）, Value: 2
+							121 text 1. 精确等号 vs 显示取整（已实际运行）
+						122 content list
+							123 container 1507 × 0.477 = 718.839（精确），不是 719；719 是四舍五入。所以报告里“1507×0.477=719”是显示取整，精确式为 718.839≈719。这恰好是本文 Table 2（13695）CO₂e 列显示 719 的来源（本文自己取整）。
+								124 list marker •
+								125 text 1507 × 0.477 =  718.839 （精确）， 不是  719；719 是四舍五入。所以报告里“1507×0.477=719”是 显示取整 ，精确式为 718.839≈719。这恰好是本文 Table 2（13695）CO₂e 列显示 719 的来源（本文自己取整）。
+							126 container 1507 × 0.954 = 1437.678（精确），不是 1438；1438 是取整。引用里“1438=1507×0.954”也是显示取整。
+								127 list marker •
+								128 text 1507 × 0.954 =  1437.678 （精确）， 不是  1438；1438 是取整。引用里“1438=1507×0.954”也是 显示取整 。
+						129 text ACL-2019 核查边界（只读当前 AAAI-20）
+						130 content list
+							131 container 已直接核实的是陈述而非表值：方法段（13694）说 ACL-2019“use this conversion [0.954] without modification”；Table 1 表注（13694）“country percentages taken from …(2019)”；Table 2/3 标题（13695）以该文为来源。
+								132 list marker •
+								133 text 已直接核实的是 陈述 而非表值：方法段（13694）说 ACL-2019“use this conversion [0.954] without modification”；Table 1 表注（13694）“country percentages taken from …(2019)”；Table 2/3 标题（13695）以该文为来源。
+							134 container 未核实：ACL-2019 的任何具体表值（其 BERTbase 的 kWh 与 CO₂e）。本文未复现其表格，我也没有 ACL-2019 原文。因此“1438 属 ACL-2019 一文口径”应改口：1438 只是“本文 1507 × 本文 0.954”的乘积取整，不是已核实的 ACL-2019 数字。
+								135 list marker •
+								136 text 未核实 ：ACL-2019 的任何具体表值（其 BERTbase 的 kWh 与 CO₂e）。本文未复现其表格，我也没有 ACL-2019 原文。因此“1438 属 ACL-2019 一文口径”应改口：1438 只是“本文 1507 × 本文 0.954”的乘积取整， 不是已核实的 ACL-2019 数字 。
+						137 heading 2. conditional_rounding_overlap=false 排除了什么, Value: 2
+							138 text 2. 
+							139 text conditional_rounding_overlap=false
+							140 text  排除了什么
+						141 container
+							142 text 无 quantum 时脚本区间退化为单点， false  只表示 “零舍入点假设下 1503.02 ≠ 1507” ，它 不是舍入检验，不能排除时长等输入的显示舍入 。验证：
+						143 content list
+							144 container 给 duration 加 quantum=1h（条件假设，本文未声明）→ 计算区间 [1493.51, 1512.53]，overlap=True：时长显示舍入假设未被排除、且可兼容。
+								145 list marker •
+								146 text 给 
+								147 text duration
+								148 text  加 
+								149 text quantum=1h
+								150 text （条件假设，本文未声明）→ 计算区间 
+								151 text [1493.51, 1512.53]
+								152 text ，
+								153 text overlap=True
+								154 text ： 时长显示舍入假设未被排除、且可兼容 。
+							155 container 只给 reported_energy=1507 加 quantum=1kWh → 仍overlap=False：仅把印刷 1507 当整数舍入解释不了 −3.98 kWh 差距，差距更可能来自输入侧。
+								156 list marker •
+								157 text 只给 
+								158 text reported_energy=1507
+								159 text  加 
+								160 text quantum=1kWh
+								161 text  → 仍
+								162 text overlap=False
+								163 text ：仅把印刷 1507 当整数舍入解释不了 −3.98 kWh 差距，差距更可能来自输入侧。
+						164 container
+							165 text carbon_check 残差单位是 kg （脚本把 g/kg/lb 统一换算为 kg）： -0.933878786417181682 kg = -2.0588502986 lb ，不要把该字段读成 lb。
+						166 heading 3. 三句表述的原文支持度, Value: 2
+							167 text 3. 三句表述的原文支持度
+						168 button 复制表格 Markdown
+						169 table
+							170 row (selectable) 表述
+判定
+位置/性质
+							171 row (selectable)
+								172 cell (selectable) “CPU+DRAM+64×GPU 合计的采样功率”
+								173 cell (selectable) 部分支持
+								174 cell (selectable) “合计=CPU+DRAM+GPU 和”在方法段
+13694
+（“sum of GPU, CPU and DRAM draw”，
+pt=1.58(pc+pr+g·pg)/1000
+，V100x64→g=64）；“采样”仅是本文
+声称
+，在
+13693
+（“sample power consumption …command-line tools”），未给分项/日志，无法核实；12,041.51 W 是 Table 2（13695）
+表列显示值
+；真实物理能耗=未知
+							175 row (selectable)
+								176 cell (selectable) “能耗 1507 未变”
+								177 cell (selectable) “1507”存在；“未变(相对旧文)”不支持
+								178 cell (selectable) 1507 kWh=Table 2（13695）表列显示值；本文未声明其与 ACL-2019 相同。仅支持“本文只减半换算因子，能耗列仍 1507”
+							179 row (selectable)
+								180 cell (selectable) “仅有 79 小时”
+								181 cell (selectable) 需限定到 V100 行，且为估算
+								182 cell (selectable) 仅 V100x64 行 Hours=79（13695）；79 是
+估算
+（13693“estimate the time to train …wall-clock training times”），非实测墙钟；TPUv2x16 行另有 96 h（不同硬件）
+						183 heading 4. supplementary_checks.py 两处问题（仅指出，未改原文件）, Value: 2
+							184 text 4. supplementary_checks.py 两处问题（仅指出，未改原文件）
+						185 content list
+							186 container 第 19 行注释 # --- Transcribed from Table 2 (printed page 13694) ---：与第 6–7 行题头、ledger.json 的“Table 2 打印页 13695”冲突，应改 13695（13694 是方法段）。
+								187 list marker •
+								188 text 第 19 行注释 
+								189 text # --- Transcribed from Table 2 (printed page 13694) ---
+								190 text ：与第 6–7 行题头、
+								191 text ledger.json
+								192 text  的“Table 2 打印页 13695”冲突，应改 13695（13694 是方法段）。
+							193 container 键名candidate_C_old_factor_0p954_never_in_this_paper：把“0.954 在方法段（13694）确实出现”与“1438 lb 未在 Table 2/全文出现”两件事绑在一起；正确说法是“0.954 在本文存在，0.954×1507=1437.678→1438 只是条件乘积，既不在本文 Table 2，也未证实为 ACL-2019 数值”。
+								194 list marker •
+								195 text 键名
+								196 text candidate_C_old_factor_0p954_never_in_this_paper
+								197 text ：把“ 0.954 在方法段（13694）确实出现 ”与“ 1438 lb 未在 Table 2/全文出现 ”两件事绑在一起；正确说法是“0.954 在本文存在，0.954×1507=1437.678→1438 只是条件乘积，既不在本文 Table 2，也未证实为 ACL-2019 数值”。
+						198 heading 最终可引用短段（修正后）, Value: 2
+							199 text 最终可引用短段（修正后）
+						200 text 据 Strubell, Ganesh & McCallum《Energy and Policy Considerations for Modern Deep Learning Research》(AAAI-20, 2020, 打印页 13693–13696；Table 2 在 13695)，BERTbase 的 V100x64 行：整机功率 12,041.51 W、Hours=79、kWh·PUE=1507、CO₂e=719 lb。功率按方法(13694)为 pc+pr+g·pg（CPU+DRAM+64×GPU 合计），系训练时采样功率的估算；时长 79 h 是据原论文墙钟时间的估算(13693)，非电表实测，本文未给 V100 行第二时长（96 h 属 TPUv2x16 行，硬件不同）。能耗 1507 kWh 为估算值(含 PUE 1.58)，排放按 0.477 lb/kWh(=EPA 2018 均值 0.954 减半的构造因子)换算，故 1507×0.477=718.839，取整得 719 lb。本文只把换算因子减半(0.954→0.477)，未声明能耗 1507 是否与 ACL-2019 相同，故“排放
+						201 container 交付清单
+							202 container
+								203 button repair_notes.md MD, Help: 事后诊断修复说明与最终可引用短段
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/repair_notes.md
+								204 button repair_checks.py PY, Help: 精确乘积与kg↔lb换算脚本
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/repair_checks.py
+								205 button repair_checks.json JSON, Help: 精确值/取整与残差单位结果
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/repair_checks.json
+								206 button ledger_quantum_1h.json JSON, Help: 时长quantum=1h条件候选输入
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/ledger_quantum_1h.json
+								207 button calculations_quantum_1h.json JSON, Help: 时长quantum=1h条件候选输出(overlap=True)
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/calculations_quantum_1h.json
+								208 button ledger_quantum_reported_kwh.json JSON, Help: 报告值quantum=1kWh条件候选输入
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/ledger_quantum_reported_kwh.json
+								209 button calculations_quantum_reported_kwh.json JSON, Help: 报告值quantum=1kWh条件候选输出(overlap=False)
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/calculations_quantum_reported_kwh.json

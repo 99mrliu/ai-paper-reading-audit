@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scope": "Arithmetic for user-entered ledger; not source or scientific validation",
+  "interval_meaning": "Conditional display-rounding bounds, not measured uncertainty or confidence intervals",
+  "records": [
+    {
+      "id": "bertbase_v100_79h_CANDIDATE_duration_quantum_1h",
+      "source": "条件候选（非本文事实）：假设 Table 2 打印页13695 的 Hours=79 为按 1 小时步长显示舍入（本文未声明此步长），quantum=1h 仅用于演示 conditional_rounding_overlap 的语义。其余同 ledger.json。",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "1503.0212782",
+        "conditional_interval": [
+          "1493.50848530",
+          "1512.53407110"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "325.199035243582818318",
+        "conditional_interval": [
+          "323.1408135015348257970",
+          "327.2572569856308108390"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "1507",
+          "conditional_interval": [
+            "1507",
+            "1507"
+          ]
+        },
+        "nominal_residual": "-3.9787218",
+        "conditional_rounding_overlap": true
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "326.13291403",
+          "conditional_interval": [
+            "326.13291403",
+            "326.13291403"
+          ]
+        },
+        "nominal_residual": "-0.933878786417181682",
+        "conditional_rounding_overlap": true
+      }
+    }
+  ],
+  "groups": {},
+  "ledger_sha256": "bdf055d59184191190cbe74ae459929943e21d5d3ae0f6f909f90e1c193e5b54"
+}

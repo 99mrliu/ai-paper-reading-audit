@@ -1,0 +1,103 @@
+{
+  "kind": "author exact arithmetic, conditional, not scientific validation",
+  "nominal": {
+    "formula": "E_kWh = W * h * PUE / 1000; C_lb = E_kWh * lb_per_kWh",
+    "energy_kWh": {
+      "fraction": "7515106391/5000000",
+      "decimal": "1503.0212782"
+    },
+    "carbon_lb": {
+      "fraction": "3584705748507/5000000000",
+      "decimal": "716.9411497014"
+    },
+    "energy_residual_kWh": {
+      "fraction": "-19893609/5000000",
+      "decimal": "-3.9787218"
+    },
+    "carbon_residual_lb": {
+      "fraction": "-10294251493/5000000000",
+      "decimal": "-2.0588502986"
+    },
+    "carbon_residual_kg": {
+      "fraction": "-466939393208590841/500000000000000000",
+      "decimal": "-0.933878786417181682"
+    }
+  },
+  "display_products": {
+    "1507_x_0477": {
+      "fraction": "718839/1000",
+      "decimal": "718.839"
+    },
+    "1507_x_0954": {
+      "fraction": "718839/500",
+      "decimal": "1437.678"
+    },
+    "warning": "718.839 rounds to719; compatible arithmetic does not identify authors' internal input/order"
+  },
+  "zero_quantum_energy_point_overlap": false,
+  "duration_quantum_1h_closed_envelope_kWh": [
+    {
+      "fraction": "14935084853/10000000",
+      "decimal": "1493.5084853"
+    },
+    {
+      "fraction": "15125340711/10000000",
+      "decimal": "1512.5340711"
+    }
+  ],
+  "reported_energy_quantum_only_overlap": false,
+  "three_display_joint_half_up_hours": {
+    "assumptions": "Fixed exact displayed power/PUE/factor; hours,energy,carbon shown at step1, all positive round-half-up. Article did not specify this implementation. No2020body79.2 constraint.",
+    "constraints": {
+      "displayed_hours": [
+        {
+          "fraction": "157/2",
+          "decimal": "78.5"
+        },
+        {
+          "fraction": "159/2",
+          "decimal": "79.5"
+        }
+      ],
+      "displayed_energy": [
+        {
+          "fraction": "7532500000/95127929",
+          "decimal": "79.182844398935669039951453163666"
+        },
+        {
+          "fraction": "7537500000/95127929",
+          "decimal": "79.235405198403930353618862027365"
+        }
+      ],
+      "displayed_carbon": [
+        {
+          "fraction": "1197500000000/15125340711",
+          "decimal": "79.171770268230091970719640604333"
+        },
+        {
+          "fraction": "3597500000000/45376022133",
+          "decimal": "79.281960623509465793921755622571"
+        }
+      ]
+    },
+    "intersection": [
+      {
+        "fraction": "7532500000/95127929",
+        "decimal": "79.182844398935669039951453163666"
+      },
+      {
+        "fraction": "7537500000/95127929",
+        "decimal": "79.235405198403930353618862027365"
+      }
+    ],
+    "lower_included": true,
+    "upper_included": false,
+    "candidate79.21_is_compatible": true,
+    "exact79_is_compatible": false
+  },
+  "scope_limits": [
+    "calculator closed envelopes are not exact half-up membership at upper ties",
+    "individual energy/carbon envelope overlaps do not generally imply one shared feasible time",
+    "a possible duration is not the actual training time; no measurements, logs or universal factor inferred"
+  ]
+}

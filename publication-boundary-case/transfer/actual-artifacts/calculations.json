@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "scope": "Arithmetic for user-entered ledger; not source or scientific validation",
+  "interval_meaning": "Conditional display-rounding bounds, not measured uncertainty or confidence intervals",
+  "records": [
+    {
+      "id": "bertbase_v100_79h_nominal",
+      "source": "paper.pdf 打印页13695 (PDF第3页) Table 2 'BERTbase V100x64' 行: Power=12,041.51 W, Hours=79, kWh·PUE=1507, CO2e=719 lb; 方法段在打印页13694 (PDF第2页): 公式(1) PUE=1.58, 公式(2) 排放因子 0.477 lb/kWh (=EPA 0.954 减半)。Power 列按方法=pc+pr+g·pg 整机合计(aggregate)。",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "1503.0212782",
+        "conditional_interval": [
+          "1503.0212782",
+          "1503.0212782"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "325.199035243582818318",
+        "conditional_interval": [
+          "325.199035243582818318",
+          "325.199035243582818318"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "1507",
+          "conditional_interval": [
+            "1507",
+            "1507"
+          ]
+        },
+        "nominal_residual": "-3.9787218",
+        "conditional_rounding_overlap": false
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "326.13291403",
+          "conditional_interval": [
+            "326.13291403",
+            "326.13291403"
+          ]
+        },
+        "nominal_residual": "-0.933878786417181682",
+        "conditional_rounding_overlap": false
+      }
+    },
+    {
+      "id": "bertbase_tpu_blank_is_unknown",
+      "source": "paper.pdf 打印页13695 (PDF第3页) Table 2 'BERTbase TPUv2x16' 行: Hours=96, Power/kWh·PUE/CO2e 均为 '—'; 表注 'Power and carbon footprint are omitted for TPUs due to lack of public information on power draw.' 缺失功率=未知, 不是零。",
+      "status": "unknown",
+      "energy_kWh": null,
+      "carbon_kg": null,
+      "reason": "Missing power"
+    }
+  ],
+  "groups": {},
+  "ledger_sha256": "ad4a855e5242bea5b6960125ea83f3ceb9fa34f817251a2b52872a486c9110f1"
+}

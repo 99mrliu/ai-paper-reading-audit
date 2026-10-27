@@ -1,0 +1,108 @@
+						23 container
+							24 text 核查完成。所有脚本与输出已保存到会话工作目录的  output/  下。结论如下。
+						25 heading 来源定位, Value: 2
+							26 text 来源定位
+						27 content list
+							28 container 题名：Energy and Policy Considerations for Modern Deep Learning Research（Strubell, Ganesh & McCallum）
+								29 list marker •
+								30 text 题名 ：Energy and Policy Considerations for Modern Deep Learning Research（Strubell, Ganesh & McCallum）
+							31 container 会议/年份：AAAI-20（The Thirty-Fourth AAAI Conference on Artificial Intelligence，2020）
+								32 list marker •
+								33 text 会议/年份 ：AAAI-20（The Thirty-Fourth AAAI Conference on Artificial Intelligence，2020）
+							34 container 打印页：13693–13696（PDF 共 4 页）
+								35 list marker •
+								36 text 打印页 ：13693–13696（PDF 共 4 页）
+							37 container 关键表格：Table 2 在打印页 13695（PDF 第 3 页）；方法段（PUE=1.58、0.954→0.477、式(1)(2)）在打印页 13694（PDF 第 2 页）
+								38 list marker •
+								39 text 关键表格 ：Table 2 在 打印页 13695（PDF 第 3 页） ；方法段（PUE=1.58、0.954→0.477、式(1)(2)）在 打印页 13694（PDF 第 2 页）
+						40 heading 逐项核查（Table 2，打印页 13695）, Value: 2
+							41 text 逐项核查（Table 2，打印页 13695）
+						42 button 复制表格 Markdown
+						43 table
+							44 row (selectable) 笔记断言
+本文实况
+判定
+							45 row (selectable)
+								46 cell (selectable) 64 张 V100
+								47 cell (selectable) 硬件列 “V100x64”
+								48 cell (selectable) 属实
+							49 row (selectable)
+								50 cell (selectable) 运行 79 小时
+								51 cell (selectable) Hours=79（方法注明是
+估算
+时长，非电表实测）
+								52 cell (selectable) 数值属实，定性不准
+							53 row (selectable)
+								54 cell (selectable) 实测 1507 kWh
+								55 cell (selectable) “kWh·PUE=1507”，是
+估算
+（采样功率×估算时长×PUE 1.58），非独立电表实测
+								56 cell (selectable) 数值属实，性质/口径错
+							57 row (selectable)
+								58 cell (selectable) 1438 lb
+								59 cell (selectable) 本文 CO₂e=
+719 lb
+；1438=1507×0.954，属更早 ACL-2019 一文口径，
+不在本文
+								60 cell (selectable) 不属实
+							61 row (selectable)
+								62 cell (selectable) 排放减半→耗电减半
+								63 cell (selectable) 只减半了
+换算因子
+（0.954→0.477），能耗 1507 kWh 未变
+								64 cell (selectable) 推断错误
+							65 row (selectable)
+								66 cell (selectable) 0.477 是当前美国电网普适实测强度
+								67 cell (selectable) 0.477=0.954(EPA 2018)÷2，是 AWS 50% 可再生的
+构造因子
+								68 cell (selectable) 不属实
+							69 row (selectable)
+								70 cell (selectable) NAS 与 T2Tbig 功率相同=复制
+								71 cell (selectable) 表值确实同为 1515.43 W，但论文
+未声明
+同源
+								72 cell (selectable) 过度推断
+							73 row (selectable)
+								74 cell (selectable) TPU 空=零排放
+								75 cell (selectable) 表注“因缺乏公开功率数据而省略”，空=
+未知
+								76 cell (selectable) 不属实
+						77 heading 名义复算（79 小时）, Value: 2
+							78 text 名义复算（79 小时）
+						79 content list
+							80 container 12,041.51 W × 79 h = 951,279.29 Wh = 951.28 kWh（IT，乘 PUE 前）
+								81 list marker •
+								82 text 12,041.51 W × 79 h = 951,279.29 Wh =  951.28 kWh （IT，乘 PUE 前）
+							83 container × 1.58 = 1,503.02 kWh·PUE；印刷值为 1,507，差 −3.98 kWh（−0.26%），不匹配（已保留在 calculations.json 的nominal_residual=-3.9787、conditional_rounding_overlap=false）。
+								84 list marker •
+								85 text × 1.58 =  1,503.02 kWh·PUE ；印刷值为  1,507 ，差  −3.98 kWh（−0.26%） ， 不匹配 （已保留在 
+								86 text calculations.json
+								87 text  的
+								88 text nominal_residual=-3.9787
+								89 text 、
+								90 text conditional_rounding_overlap=false
+								91 text ）。
+							92 container 本文未给出 V100 行 79 小时之外的第二个时长（96 小时是 TPUv2x16 行，硬件不同），因此按任务要求保留“79 小时为唯一印刷时长”。
+								93 list marker •
+								94 text 本文 未给出  V100 行 79 小时之外的第二个时长（96 小时是 TPUv2x16 行，硬件不同），因此按任务要求保留“79 小时为唯一印刷时长”。
+							95 container 带标签的条件候选（非本文事实）：若功率与 PUE 精确，则 1507 kWh 隐含时长 ≈ 79.21 h；若 79 h 与 PUE 精确，则隐含整机功率 ≈ 12,073.4 W。
+								96 list marker •
+								97 text 带标签的条件候选（ 非本文事实 ）：若功率与 PUE 精确，则 1507 kWh 隐含时长 ≈  79.21 h ；若 79 h 与 PUE 精确，则隐含整机功率 ≈  12,073.4 W 。
+						98 heading 可用的引用说明, Value: 2
+							99 text 可用的引用说明
+						100 container
+							101 text 据 Strubell, Ganesh & McCallum《Energy and Policy Considerations for Modern Deep Learning Research》(AAAI-20, 2020, 打印页 13693–13696；Table 2 在打印页 13695)，BERTbase 在 V100x64（64 张 V100）配置下：整机功率 12,041.51 W、时长 79 小时、kWh·PUE = 1507 kWh、CO₂e = 719 lb。二者均为估算而非电表实测——功率为训练时采样（CPU+DRAM+64×GPU 合计），时长为据原论文墙钟时间的估算，再乘 PUE 1.58；排放按 0.477 lb/kWh 换算（= EPA 2018 美国均值 0.954 减半，用于“AWS 50% 可再生”假设，并非当前美国电网的普适实测强度）。本文 BERTbase 的 CO₂e 是  719 lb，不是 1438 lb （1438=1507×0.954，属更早 ACL-2019 一文口径）。“排放减半所以硬件耗电减半”不成立：本文只把换算因子减半，能耗 1507 kWh 未变。NAS 与 T2Tbig 功率同值 1515.43 W 仅为表值相同，论文未声明同源。TPU 行空白是“因缺乏公开功率数据而省略”，属未知而非零。复算 12,041.51 W×79 h×1.58 = 1503.0 kWh·PUE，与印刷 1507 相差 −3.98 kWh（−0.26%）；本文未给出 V100 行之外的第二个时长，候选 79.2 h / 12,073 W 均为待核推定。
+						102 container
+							103 text 按本次任务要求，我只读取了当前这篇论文（ INPUT/paper.pdf ）、本地 Skill 及其 references/scripts/tests 和本任务文本；未联网、未训练、未读旧报告。Skill 的自带边界测试 22/22 通过后，账本经 audit_energy.py  复算，首次能量不匹配与 TPU 未知项均已原样保留。
+						104 container 交付清单
+							105 container
+								106 button 核查报告 MD, Help: 来源定位、逐项核查、复算与引用说明
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/audit_report.md
+								107 button 账本输入 ledger.json JSON, Help: 录入的复算账本与来源口径
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/ledger.json
+								108 button 复算输出 calculations.json JSON, Help: audit_energy.py 输出，含首次不匹配与 unknown
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/calculations.json
+								109 button 补充核算脚本 PY, Help: 因子推导、反向解算候选、NAS/T2Tbig 同值观察
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/supplementary_checks.py
+								110 button 补充核算输出 TXT, Help: supplementary_checks.py 的运行结果
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868/output/supplementary_checks.txt

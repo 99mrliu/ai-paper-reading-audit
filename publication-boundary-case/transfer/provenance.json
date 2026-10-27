@@ -1,0 +1,61 @@
+{
+  "app": "com.bohrium.scix",
+  "installed_version": "0.10.12",
+  "visible_reasoning_mode": "标准",
+  "exact_backend_model_temperature_seed_cost": "not exposed",
+  "first_UI_elapsed": "6m27s",
+  "posthoc_UI_elapsed": "5m18s",
+  "fresh_visible_conversation_for_first": true,
+  "new_full_paper": "AAAI2020 4pages imported locally, SHA in source/source-record.json",
+  "first_inputs": "current PDF + prompt.txt + local skill1.2.0 only; old answers not explicitly supplied; backend/cache isolation unverified",
+  "frozen_checks": "design-frozen.json",
+  "not_blind": true,
+  "one_targeted_followup_article": "same-author neighboring publication; no generic transfer rate/causality claim",
+  "UI_capture": [
+    {
+      "source_snapshot_sha256": "78f7d8774849e719ba1d0ab017bfa32aa05d29019e91ebedb454a4e8d08e441f",
+      "inclusive_line_span_1based": [
+        29,
+        136
+      ],
+      "export": "first-answer-ax.txt",
+      "sha256": "b291a5ea1804a4a6f4e3979f18dc848c2f3b44ac88769402620336b42771f407"
+    },
+    {
+      "source_snapshot_sha256": "db31c36a6eee3df9e359d3fe4860db430d1f320660f91a119ca94cb9622a348e",
+      "inclusive_line_span_1based": [
+        149,
+        260
+      ],
+      "export": "repair-answer-ax.txt",
+      "sha256": "37dd640aff08291a1023e1f4975cfe35856316b6732d5f0cdfae5843564a86d0"
+    }
+  ],
+  "UI_truncation": "Long static AX text values are truncated by capture surface. These are complete selected final regions, NOT complete untruncated message text. Original complete AI-delivered report and repair_notes MD are separately retained; not asserted verbatim-identical to UI. No hidden thinking published.",
+  "artifacts_observed_UI_session": "/Users/liuhengshen/.bohrium/desktop/prod/sessions/2ab340ad-45d2-4699-a362-cc5747eeb868",
+  "artifact_byte_equality_to_observed_paths_verified": true,
+  "first_five_artifacts_after_posthoc_unchanged": true,
+  "first_five_names": [
+    "audit_report.md",
+    "ledger.json",
+    "calculations.json",
+    "supplementary_checks.py",
+    "supplementary_checks.txt"
+  ],
+  "hashes": {
+    "actual-artifacts/calculations_quantum_reported_kwh.json": "4cc1d8d28395114ec2bf73fe57e8c524aa3b0fa18eedfe738b2feed584265e0e",
+    "actual-artifacts/repair_notes.md": "8f638c2508b33823a0f8c14978b12eef28edcb00d4e6a5ccce6d4d6eb9beaea9",
+    "actual-artifacts/supplementary_checks.txt": "cda432a677d8ea79e15e6bfad839c151139a5ef2cee8cc30928bea9eab8f9ad6",
+    "actual-artifacts/calculations.json": "cc4f405fb562a472ed8a8b7bf383c46ce48b79840bf479201a10a875f2598cc4",
+    "actual-artifacts/audit_report.md": "5884a85ab6eab38879570476474038609f1d9264dadeda9aa4174ff9f4223cf8",
+    "actual-artifacts/supplementary_checks.py": "ffa13ea0b5713ec0145d6b6dce2cae52a2c31d2f4686b4046f5a60bdac002129",
+    "actual-artifacts/calculations_quantum_1h.json": "4dabd398e560ef335e931a28663e28f4c23dfbb6ddcb93ca3c093c6ceb0cb1ec",
+    "actual-artifacts/ledger_quantum_1h.json": "bdf055d59184191190cbe74ae459929943e21d5d3ae0f6f909f90e1c193e5b54",
+    "actual-artifacts/repair_checks.py": "7b14872500063451542e709a678e84365fc948e37fdb2694f01452d67ab91d06",
+    "actual-artifacts/ledger.json": "ad4a855e5242bea5b6960125ea83f3ceb9fa34f817251a2b52872a486c9110f1",
+    "actual-artifacts/ledger_quantum_reported_kwh.json": "f1dd7b7e485883da3fbb1a993a5228470c0657336b80f1b00104e712a9ee0eda",
+    "actual-artifacts/repair_checks.json": "f4fdd58d9f1f28052b20a8c95a96a12d7120dba60f39b84256318be2a1c34b83"
+  },
+  "AI_claim_no_network": "self-report in answer, not independently audited native network telemetry",
+  "trace_protocol": "actual role/content export of sent prompts and assistant-delivered artifacts/visible final AX only. Not native UI tool-call telemetry. Historical Codex trace NOT reused for this new scoped submission."
+}

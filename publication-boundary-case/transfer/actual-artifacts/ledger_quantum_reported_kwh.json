@@ -1,0 +1,16 @@
+{
+  "records": [
+    {
+      "id": "bertbase_v100_79h_CANDIDATE_reported_kwh_quantum_1kwh",
+      "source": "条件候选（非本文事实）：假设 Table 2 打印页13695 的 kWh·PUE=1507 为按 1 kWh 步长显示舍入（本文未声明此步长），quantum=1kWh 仅用于演示 conditional_rounding_overlap 的语义。其余同 ledger.json。",
+      "power": {"value": "12041.51", "unit": "W"},
+      "power_scope": "aggregate",
+      "duration": {"value": "79", "unit": "h"},
+      "measurement_scope": "it",
+      "pue": {"value": "1.58"},
+      "intensity": {"value": "0.477", "unit": "lb/kWh"},
+      "reported_energy": {"value": "1507", "unit": "kWh", "quantum": "1"},
+      "reported_carbon": {"value": "719", "unit": "lb"}
+    }
+  ]
+}

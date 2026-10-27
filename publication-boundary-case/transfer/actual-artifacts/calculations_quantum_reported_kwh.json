@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "scope": "Arithmetic for user-entered ledger; not source or scientific validation",
+  "interval_meaning": "Conditional display-rounding bounds, not measured uncertainty or confidence intervals",
+  "records": [
+    {
+      "id": "bertbase_v100_79h_CANDIDATE_reported_kwh_quantum_1kwh",
+      "source": "条件候选（非本文事实）：假设 Table 2 打印页13695 的 kWh·PUE=1507 为按 1 kWh 步长显示舍入（本文未声明此步长），quantum=1kWh 仅用于演示 conditional_rounding_overlap 的语义。其余同 ledger.json。",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "1503.0212782",
+        "conditional_interval": [
+          "1503.0212782",
+          "1503.0212782"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "325.199035243582818318",
+        "conditional_interval": [
+          "325.199035243582818318",
+          "325.199035243582818318"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "1507",
+          "conditional_interval": [
+            "1506.5",
+            "1507.5"
+          ]
+        },
+        "nominal_residual": "-3.9787218",
+        "conditional_rounding_overlap": false
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "326.13291403",
+          "conditional_interval": [
+            "326.13291403",
+            "326.13291403"
+          ]
+        },
+        "nominal_residual": "-0.933878786417181682",
+        "conditional_rounding_overlap": false
+      }
+    }
+  ],
+  "groups": {},
+  "ledger_sha256": "f1dd7b7e485883da3fbb1a993a5228470c0657336b80f1b00104e712a9ee0eda"
+}

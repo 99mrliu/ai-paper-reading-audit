@@ -1,0 +1,23 @@
+{
+  "records": [
+    {
+      "id": "bertbase_v100_79h_nominal",
+      "source": "paper.pdf 打印页13695 (PDF第3页) Table 2 'BERTbase V100x64' 行: Power=12,041.51 W, Hours=79, kWh·PUE=1507, CO2e=719 lb; 方法段在打印页13694 (PDF第2页): 公式(1) PUE=1.58, 公式(2) 排放因子 0.477 lb/kWh (=EPA 0.954 减半)。Power 列按方法=pc+pr+g·pg 整机合计(aggregate)。",
+      "power": {"value": "12041.51", "unit": "W"},
+      "power_scope": "aggregate",
+      "duration": {"value": "79", "unit": "h"},
+      "measurement_scope": "it",
+      "pue": {"value": "1.58"},
+      "intensity": {"value": "0.477", "unit": "lb/kWh"},
+      "reported_energy": {"value": "1507", "unit": "kWh"},
+      "reported_carbon": {"value": "719", "unit": "lb"}
+    },
+    {
+      "id": "bertbase_tpu_blank_is_unknown",
+      "source": "paper.pdf 打印页13695 (PDF第3页) Table 2 'BERTbase TPUv2x16' 行: Hours=96, Power/kWh·PUE/CO2e 均为 '—'; 表注 'Power and carbon footprint are omitted for TPUs due to lack of public information on power draw.' 缺失功率=未知, 不是零。",
+      "duration": {"value": "96", "unit": "h"},
+      "measurement_scope": "it",
+      "pue": {"value": "1.58"}
+    }
+  ]
+}

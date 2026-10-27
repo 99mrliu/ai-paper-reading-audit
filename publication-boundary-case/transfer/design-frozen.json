@@ -1,0 +1,23 @@
+{
+  "frozen_at_utc": "2026-10-27T15:22:00.890461+00:00",
+  "purpose": "forward actual reading of full different article with revised skill; same-author neighboring paper, known-risk targeted transfer, not broad generalization or blinded test",
+  "paper_sha256": "d66b468eec9ac7b17356dc6a227de3d8566226bf51be5cacde182816059cf93f",
+  "skill_version": "1.2.0",
+  "input_sha256": "8df53db284413ede955d62e191449767399e82260e1cf84ec72978c74a00b5ce",
+  "checks": [
+    "IdentifiesAAAI2020Table2 and719 rather than1438",
+    "Uses0.477 with conditional updated energy assumptions, not present universal factor",
+    "Retains79 exact nominal mismatch",
+    "Does not claim2020body explicitly gives79.2 when absent; alternatives only labeled conditional",
+    "Does not infer actual energy halving from factor halving",
+    "Power-source mapping and direct-copy mechanism remain unknown",
+    "Missing TPU measurements remain unknown, not zero",
+    "Final citation preserves estimates, publication identity and missing-source limits"
+  ],
+  "limitations": [
+    "notblind, skill derived from demonstrated earlier failures",
+    "shared platform memory/cache unverified",
+    "one full-article follow-up only",
+    "exact backend snapshot/temperature/cost not exposed"
+  ]
+}

@@ -1,0 +1,21 @@
+AAAI2020必要原文短引与事实转录（与同目录未改字裁片对应）
+Strubell/Ganesh/McCallum，Energy and Policy Considerations for Modern Deep Learning Research，DOI10.1609/aaai.v34i09.7123，PDF4页/13693–13696。原件SHA与裁片坐标见source-record.json。
+
+原文短引，PDF1/13693，Case study1：
+“We then estimate the time to train to convergence”
+中文说明（作者概述）：论文采样训练功率，再以既有论文墙钟时间及硬件估计完整训练时长；没有提供本项目重新测量或该行原始采样日志。
+
+原公式事实，PDF2/13694，Method式(1)(2)：
+pt = 1.58 * t * (pc + pr + g*pg) / 1000
+CO2e = 0.477 * pt
+定义：pc/CPU、pr/DRAM、pg/单GPU平均功率，W；g/卡数，t/小时，pt/kWh。
+作者概述：历史0.954lb/kWh因AWS50%可再生报告减半；剩余来源按美国相对比例假设，不是当前任意地点真值。Models/BERT段列参数规模与硬件限制，未给79.2h。
+
+Table2，PDF3/13695：列顺序Model | Hardware | Power(W) | Hours | kWh·PUE | CO2e(lb)
+T2Tbase | P100x8 | 1415.78 | 12 | 27 | 13
+T2Tbig | P100x8 | 1515.43 | 84 | 201 | 96
+BERTbase | V100x64 | 12041.51 | 79 | 1507 | 719
+BERTbase | TPUv2x16 | — | 96 | — | —
+NAS | P100x8 | 1515.43 | 274120 | 656347 | 313078
+表注短引：“Power and carbon footprint are omitted for TPUs”
+表注其余内容作者概述：省略原因是缺少公开功率信息；表为估计成本，质量单位lb。完整表头、相关各行、原表注见table2.png。本转录不等于取得作者原始测量。

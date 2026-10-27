@@ -1,0 +1,16 @@
+{
+  "products": {
+    "1507_x_0.477_exact": "718.839",
+    "1507_x_0.477_rounded_to_integer": "719",
+    "1507_x_0.477_is_exactly_719": false,
+    "1507_x_0.954_exact": "1437.678",
+    "1507_x_0.954_rounded_to_integer": "1438",
+    "1507_x_0.954_is_exactly_1438": false
+  },
+  "carbon_residual": {
+    "unit_of_nominal_residual_field": "kg (script canonical unit)",
+    "residual_kg": "-0.933878786417181682",
+    "residual_lb": "-2.0588502986",
+    "check_719lb_in_kg": "326.13291403"
+  }
+}

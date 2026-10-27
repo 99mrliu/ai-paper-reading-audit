@@ -1,0 +1,31 @@
+{
+  "scope": "author review of real new answer; do not assert complete correctness",
+  "adopted": [
+    "Separates two titles/venues/table numbers and factors",
+    "Both shown1507 and79.2conditional energy calculations round to1438/719 in respective models",
+    "Rejects overwriting ACL2019 citation with AAAI2020value; leaves2020wholepaper unverified by model"
+  ],
+  "not_adopted_or_qualified": [
+    {
+      "quote": "唯一发生的变化",
+      "qualification": "Only the studied BERT columns and conditional carbon conversion are compared, not all changes between papers."
+    },
+    {
+      "quote": "实际能耗变化：没有",
+      "qualification": "Only displayed estimated energy is unchanged; no new actual measurement, so actual hardware energy change is unestablished rather than proven absent."
+    },
+    {
+      "quote": "1507 是未舍入 1506.826 的四舍五入",
+      "qualification": "This is one compatible arithmetic path; not identified author internal calculation."
+    },
+    {
+      "quote": "不是 2019 的笔误更正",
+      "qualification": "Supplied materials do not establish erratum; not an exhaustive claim no erratum exists anywhere."
+    },
+    {
+      "quote": "在两文中仍未逐行写明",
+      "qualification": "Model did not read2020wholepaper; adopt only the narrower statement source mapping not identified from supplied material and author-checked method sections."
+    }
+  ],
+  "independent_arithmetic": "verify_versions.py + author-version-results.json; not model original code/stdout"
+}

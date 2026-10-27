@@ -1,0 +1,71 @@
+Window: "玻尔·科学空间", App: 玻尔·科学空间.
+0 standard window 玻尔·科学空间, Secondary Actions: Raise
+	1 scroll area
+		2 HTML content Description: 玻尔·科学空间, URL: tauri://localhost
+			3 container
+				4 button 调整工作台面板宽度
+				5 container PDF 路径
+					6 text acl-energy.pdf
+				7 button 退出
+				8 pop up button 选择本地打开方式
+				9 button 复制路径
+				10 pop up button 更多操作
+				11 container
+					12 splitter 调整 PDF 和右侧内容宽度, Value: 34
+					13 button 新建对话
+					14 button acl-energy · 重命名
+					15 pop up button 会话操作
+					16 button 收起对话
+					17 container 分享
+						18 pop up button (disabled) 分享
+					19 container 想从哪个问题开始？
+						20 text 想从哪个问题开始？
+						21 button 这篇论文最大的局限是什么？
+						22 button 这篇论文到底解决了什么问题？
+						23 button 哪些部分最值得仔细读？
+						24 button 如果继续研究，下一步可以做什么？
+					25 text entry area (settable) 询问一个科学问题
+						26 text 询问一个科学问题
+					27 button 添加附件或引用, Help: 正在连接工作空间，暂时无法添加附件。
+					28 pop up button 请求批准, Help: 选择授权方式
+					29 image 暂未获取上下文用量
+					30 pop up button 推理强度
+					31 toggle button 开始语音输入, Value: off
+					32 button (disabled) 发送
+					33 text 内容由 AI 生成，请仔细甄别
+				34 container Notifications alt+T
+				35 container
+					36 button 目录
+					37 text field (settable) 页码, Value: 1
+					38 text /  6
+					39 button 缩小
+					40 text 155 %
+					41 pop up button 缩放比例, Value: 155%
+					42 button 放大
+					43 toggle button 标注, Value: off
+					44 button 搜索
+					45 button 引用
+					46 pop up button 下载
+					47 container PDF 阅读操作
+						48 text 全文翻译
+						49 switch (settable, boolean) 全文翻译, Value: off
+						50 toggle button 阅读助手, Value: on
+						51 toggle button 论文速览, Value: off
+						52 toggle button 图表速览, Value: off
+					53 image
+					54 image
+					55 image
+					56 image
+					57 image
+			58 pop up button 开发工具
+			59 list (settable) 选择推理强度
+				60 text (selected) 标准 平衡速度与效果，适合多数文献检索、阅读、分析和写作任务
+	61 close button
+	62 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	63 minimize button
+64 menu bar
+	65 玻尔·科学空间
+	66 Edit
+	67 Window
+
+The focused UI element is 68 container

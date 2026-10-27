@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "scope": "Arithmetic for user-entered ledger; not source or scientific validation",
+  "interval_meaning": "Conditional display-rounding bounds, not measured uncertainty or confidence intervals",
+  "records": [
+    {
+      "id": "bert_table_nominal",
+      "source": "PDF4 Table3 BERT V100x64; aggregate IT power inferred from equation1, not per GPU",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "1503.0212782",
+        "conditional_interval": [
+          "1503.0212782",
+          "1503.0212782"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "650.398070487165636636",
+        "conditional_interval": [
+          "650.398070487165636636",
+          "650.398070487165636636"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "1507",
+          "conditional_interval": [
+            "1507",
+            "1507"
+          ]
+        },
+        "nominal_residual": "-3.9787218",
+        "conditional_rounding_overlap": false
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "652.26582806",
+          "conditional_interval": [
+            "652.26582806",
+            "652.26582806"
+          ]
+        },
+        "nominal_residual": "-1.867757572834363364",
+        "conditional_rounding_overlap": false
+      }
+    },
+    {
+      "id": "t2tbig_nominal",
+      "source": "PDF4 Table3 T2Tbig P100x8",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "201.1278696",
+        "conditional_interval": [
+          "201.1278696",
+          "201.1278696"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "87.033483960848864208",
+        "conditional_interval": [
+          "87.033483960848864208",
+          "87.033483960848864208"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "201",
+          "conditional_interval": [
+            "201",
+            "201"
+          ]
+        },
+        "nominal_residual": "0.1278696",
+        "conditional_rounding_overlap": false
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "87.08973504",
+          "conditional_interval": [
+            "87.08973504",
+            "87.08973504"
+          ]
+        },
+        "nominal_residual": "-0.056251079151135792",
+        "conditional_rounding_overlap": false
+      }
+    },
+    {
+      "id": "nas_nominal",
+      "source": "PDF4 Table3 NAS P100x8; extrapolated GPU scenario, not TPU meter",
+      "status": "ok",
+      "energy_kWh": {
+        "nominal": "656347.2811280",
+        "conditional_interval": [
+          "656347.2811280",
+          "656347.2811280"
+        ]
+      },
+      "carbon_kg": {
+        "nominal": "284019.269325570126865440",
+        "conditional_interval": [
+          "284019.269325570126865440",
+          "284019.269325570126865440"
+        ]
+      },
+      "energy_check": {
+        "reported": {
+          "nominal": "656347",
+          "conditional_interval": [
+            "656347",
+            "656347"
+          ]
+        },
+        "nominal_residual": "0.2811280",
+        "conditional_rounding_overlap": false
+      },
+      "carbon_check": {
+        "reported": {
+          "nominal": "284019.13043735",
+          "conditional_interval": [
+            "284019.13043735",
+            "284019.13043735"
+          ]
+        },
+        "nominal_residual": "0.138888220126865440",
+        "conditional_rounding_overlap": false
+      }
+    }
+  ],
+  "groups": {},
+  "ledger_sha256": "8aa06c75a9f6c20567488871ba7ff6a1a3f82bd3120ee5fda36f3667c8bb98db"
+}

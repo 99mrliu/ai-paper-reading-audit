@@ -1,0 +1,109 @@
+						188 heading 两篇的版本边界与数值（先列明，不混写）, Value: 2
+							189 text 两篇的版本边界与数值（先列明，不混写）
+						190 button 复制表格 Markdown
+						191 table
+							192 row (selectable) 项
+ACL 2019（已读全文）
+AAAI 2020（仅片段+作者侧概述，未核对全文）
+							193 row (selectable)
+								194 cell (selectable) 题名
+								195 cell (selectable) Energy and Policy Considerations for Deep Learning
+in NLP
+								196 cell (selectable) Energy and Policy Considerations for
+Modern Deep Learning Research
+							197 row (selectable)
+								198 cell (selectable) 会议/年份
+								199 cell (selectable) ACL 2019，pp.3645–3650
+								200 cell (selectable) 1 Energy and Policy Considerations for Modern Deep Learning Research，查看来源, Value: AAAI 2020，
+							201 row (selectable)
+								202 cell (selectable) 排放因子
+								203 cell (selectable) 本地文件 2，打开 PDF：acl-energy, Value: 式(2)
+CO2e = 0.954 p_t
+（p.3646，美国平均）
+								204 cell (selectable) 式(2)
+CO2e = 0.477 p_t
+（片段：PDF p.2 / 印刷 13694）
+							205 row (selectable)
+								206 cell (selectable) BERT 行
+								207 cell (selectable) 本地文件 2，打开 PDF：acl-energy, Value: Table 3
+（p.3648）：V100×64，12,041.51 W，79 h，
+1507
+kWh·PUE，
+1438
+lb
+								208 cell (selectable) Table 2
+（片段：PDF p.3 / 印刷 13695）：同 12,041.51 W、79 h、
+1507
+kWh·PUE，
+719
+lb
+							209 row (selectable)
+								210 cell (selectable) 正文时长
+								211 cell (selectable) 79.2 h（3.3 天，p.3647）
+								212 cell (selectable) 未提供，未核对
+						213 container
+							214 text 两表 BERT 行的 电量、功率、时长完全相同 ，唯一变化是排放因子：0.954 → 0.477（=精确一半）。
+						215 heading 精确计算（Fraction/Decimal）, Value: 2
+							216 text 精确计算（Fraction/Decimal）
+						217 text 显示 1507 路径与未舍入 79.2 h 路径，两种因子都算：
+						218 button 复制表格 Markdown
+						219 table
+							220 row (selectable) 因子
+输入
+CO₂e 精确值
+舍入
+							221 row (selectable)
+								222 cell (selectable) 0.954（2019）
+								223 cell (selectable) 显示 1507
+								224 cell (selectable) 0.954×1507 = 1437.678
+								225 cell (selectable) 1438
+							226 row (selectable)
+								227 cell (selectable) 0.954（2019）
+								228 cell (selectable) 未舍入 1506.826395（=12041.51×79.2×1.58/1000）
+								229 cell (selectable) 1437.512381
+								230 cell (selectable) 1438
+							231 row (selectable)
+								232 cell (selectable) 0.477（2020）
+								233 cell (selectable) 显示 1507
+								234 cell (selectable) 0.477×1507 = 718.839
+								235 cell (selectable) 719
+							236 row (selectable)
+								237 cell (selectable) 0.477（2020）
+								238 cell (selectable) 未舍入 1506.826395
+								239 cell (selectable) 718.756191
+								240 cell (selectable) 719
+						241 container
+							242 text 两条路径在各自因子下都落到同一整数，显示舍入不改变结论；关键电量 1507 / 1506.826  在两种因子下 完全相同 。
+						243 heading 四类区分, Value: 2
+							244 text 四类区分
+						245 content list
+							246 container 换算假设变化：唯一发生的变化。2020 把因子减半（0.954→0.477），作者侧概述称依据"更新的 AWS 可再生比例"，并明说"不是当地实测因子"，是 2020 自己采用的条件。
+								247 list marker 1
+								248 text 换算假设变化 ：唯一发生的变化。2020 把因子减半（0.954→0.477），作者侧概述称依据"更新的 AWS 可再生比例"，并明说"不是当地实测因子"，是 2020 自己采用的条件。
+							249 container 显示舍入：1507 是未舍入 1506.826 的四舍五入（与 79.2 h 一致）；两路径舍入后 1438 / 719 不变，无实质影响。
+								250 list marker 2
+								251 text 显示舍入 ：1507 是未舍入 1506.826 的四舍五入（与 79.2 h 一致）；两路径舍入后 1438 / 719 不变，无实质影响。
+							252 container 勘误证据：没有。片段与作者侧概述只描述"重新估算/减半"，没有任何"2019 数值算错/笔误"的陈述。把假设更新当成勘误，是片段不支持的外推。
+								253 list marker 3
+								254 text 勘误证据 ： 没有 。片段与作者侧概述只描述"重新估算/减半"，没有任何"2019 数值算错/笔误"的陈述。把假设更新当成勘误，是片段不支持的外推。
+							255 container 实际能耗变化：没有。两表电量均为 1507 kWh·PUE，Power 12,041.51 W、Hours 79 未变；减半的是排放因子，不是硬件能耗。
+								256 list marker 4
+								257 text 实际能耗变化 ： 没有 。两表电量均为 1507 kWh·PUE，Power 12,041.51 W、Hours 79 未变；减半的是排放因子，不是硬件能耗。
+						258 heading 对拟引用句的逐项裁决, Value: 2
+							259 text 对拟引用句的逐项裁决
+						260 content list
+							261 container "2020 纠正了 2019 的一个笔误" —— 不可引用。证据只支持"换算假设变化"，不支持"笔误/勘误"。
+								262 list marker •
+								263 text "2020 纠正了 2019 的一个笔误" ——  不可引用 。证据只支持"换算假设变化"，不支持"笔误/勘误"。
+							264 container "2019 的 BERT 排放应该改成 719 lb" —— 不可引用。2019 在其自身 0.954 因子下是 1438；719 是 2020 在其 0.477 因子下的值。二者是不同假设下的两个估计，只能并列，不能用 2020 覆盖 2019。
+								265 list marker •
+								266 text "2019 的 BERT 排放应该改成 719 lb" ——  不可引用 。2019 在其自身 0.954 因子下是 1438；719 是 2020 在其 0.477 因子下的值。二者是不同假设下的两个估计，只能并列，不能用 2020 覆盖 2019。
+							267 container "相同训练的实际硬件能耗降低了一半" —— 不可引用且事实错误。能耗（1507 kWh·PUE）两版一致，没有降低；减半的是排放因子，且它是假设变化，不是实测能耗变化。
+								268 list marker •
+								269 text "相同训练的实际硬件能耗降低了一半" ——  不可引用且事实错误 。能耗（1507 kWh·PUE）两版一致，没有降低；减半的是排放因子，且它是假设变化，不是实测能耗变化。
+						270 heading 替换句（带版本边界、证据支持、保留未知）, Value: 2
+							271 text 替换句（带版本边界、证据支持、保留未知）
+						272 container
+							273 text 两篇是不同版本：ACL 2019《Energy and Policy Considerations for Deep Learning in NLP》式(2) 取 0.954 lb CO₂e/kWh，Table 3 给 BERTbase（V100×64，79 h）1507 kWh·PUE、1438 lb；AAAI 2020《Energy and Policy Considerations for Modern Deep Learning Research》式(2) 把因子减半为 0.477（据更新的 AWS 可再生比例，作者侧概述，非"当地实测"因子），Table 2 同行仍为 1507 kWh·PUE、719 lb。两表电量相同、仅排放因子减半，故 1438→719 是 换算假设变化 ，不是 2019 的笔误更正，也不表示硬件能耗变化；2019 应保留其 0.954 因子下的 1438。功率如何由采样值映射到各行（尤其 V100×64）在两文中仍未逐行写明，保持未知。
+						274 container
+							275 text 2020 部分我只核对了你提供的公式、表行片段与作者侧概述， 未核对该文全文 ，因此以上对 2020 的判断以片段为准，不补全其未提供的上下文。

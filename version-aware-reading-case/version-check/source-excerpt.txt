@@ -1,0 +1,11 @@
+来源：Strubell, Ganesh, McCallum, Energy and Policy Considerations for Modern Deep Learning Research, AAAI2020, DOI10.1609/aaai.v34i09.7123。具体来源/版本/原文件哈希见source-record.json。这里仅保留本问题必要公式、表头与一行事实片段，不再分发全文；对应原文小裁片随包，未改写数字。
+
+原文公式片段，PDF第2页/印刷13694，Method式(2)：
+CO2e = 0.477 pt
+
+原表Table2片段，PDF第3页/印刷13695，依次为模型、硬件、功率W、时长h、含PUE电量kWh、CO2e lb：
+BERTbase | V100x64 | 12,041.51 | 79 | 1507 | 719
+
+作者侧阅读记录（以下是对原文的概述，非逐字引文）：Method式(2)之前解释，将先前美国平均0.954因子减半，依据更新的AWS可再生能源比例；后文仍为其余能源构成作假设。原文不是“当地实测因子”。这些是2020文章自己采用的条件，不用来改写2019原文。
+
+主包INPUT/paper.pdf是另一篇ACL2019文章，PDF第2页式(2)的系数0.954，第4页Table3的BERT同行电量1507、排放1438。标题、会议、年份、表号均不同。不能把新旧文章的数值拼成一条未经标注的引用。

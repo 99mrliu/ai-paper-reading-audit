@@ -1,0 +1,113 @@
+Window: "玻尔·科学空间", App: 玻尔·科学空间.
+0 standard window 玻尔·科学空间, Secondary Actions: Raise
+	1 scroll area
+		2 HTML content Description: 玻尔·科学空间, URL: tauri://localhost
+			3 container
+				4 button 调整工作台面板宽度
+				5 container PDF 路径
+					6 text acl-energy.pdf
+				7 button 退出
+				8 pop up button 选择本地打开方式
+				9 button 复制路径
+				10 pop up button 更多操作
+				11 container
+					12 splitter 调整 PDF 和右侧内容宽度, Value: 34
+					13 button 新建对话
+					14 button 核查Strubell能耗论文引用笔记 · 重命名
+					15 pop up button 会话操作
+					16 button 收起对话
+					17 pop up button 分享
+					18 text 请根据当前导入的Strubell等ACL2019能耗论文，帮我审查下面一段拟引用的笔记，给出原文位置、必要计算和可引用的修订结论。可以本地运行Python，不联网、不训练；原文不可读请如实说明，不用旧对话答案。
+笔记：“Table3的BERT在64张V100上训练79小时，实测设施能耗为1507kWh、1438lb。正文79.2小时就是唯一能解释这两个显示输出的真实时长；换用截断也不影响这一解释。NAS与T2Tbig的功率同为1515.43W，证明NAS的功率是从T2Tbig直接沿用的。假设我的外部PDU电表正好记录201kWh，按论文0.954因子得到191.88lb，已经是我的当地实际排放，无需确认别的边界。”
+这里的外部电表和笔记为构造的阅读问题，不是声称论文做过该项测量。请逐项决定哪些可引用、哪些需要条件、哪些仍未知。约1000字即可，必要代码/数值可另附。
+					19 button 复制
+					20 button 编辑消息
+					21 container
+						22 button (collapsed) 已处理（用时 3m 59s）, Secondary Actions: Expand
+						23 text 已核对原文全文与解析表，并用本地 Python 复算了式(1)(2)及 Table 3 的全部数字。判定如下。
+						24 text 结论速览
+						25 button 复制表格 Markdown
+						26 table
+							27 row (selectable) 笔记主张
+判定
+							28 row (selectable)
+								29 cell (selectable) BERT：V100×64、79 h、1507 kWh、1438 lb
+								30 cell (selectable) 数值可引用，措辞需改
+							31 row (selectable)
+								32 cell (selectable) 79.2 h 是唯一能解释 1507/1438 的时长
+								33 cell (selectable) 可引用（需注明表内“79”为取整）
+							34 row (selectable)
+								35 cell (selectable) NAS 功率 1515.43 W 证明抄自 T2Tbig
+								36 cell (selectable) 相等是事实，“证明抄用”为过度推断，未决
+							37 row (selectable)
+								38 cell (selectable) PDU=201 kWh ×0.954=191.88 lb=当地排放
+								39 cell (selectable) 不可引用，多处错误
+						40 container
+							41 text 1. BERT 一行（可引用数值，措辞需改）  原文 Table 3（第 4 页，proceedings 3648）
+							42 button 本地文件 1，打开 PDF：acl-energy
+							43 text ：BERTbase 硬件  V100x64 ， Power 12,041.51 W ， Hours 79 ， kWh·PUE 1507 ， CO2e 1438 。正文（§2.1，第 3 页/3647）写“79.2 hours…64 Tesla V100”。所以“64 张 V100、79 小时、1507 kWh、1438 lb”与原文一致；但两处措辞要改：①“实测设施能耗”不对——1507 是估算值（式 1 pt=1.58t(pc+pr+g·pg)/1000
+							44 button 本地文件 1，打开 PDF：acl-energy
+							45 text ，含 PUE 1.58），不是表计读数；②“设施能耗 1438 lb”把排放当能耗，1438 lb 是 CO2e。  可引用修订 ：Table 3 报 BERTbase 用 64 张 V100 训练 79 h（正文 79.2 h），估算含 PUE 的设施能耗 1507 kWh、CO2e 1438 lb。
+						46 container
+							47 text 2. 79.2 h 的唯一性（可引用）  验算： pt=1.58×79.2×12041.51/1000=1506.83≈1507 ； CO2e=0.954×1506.83=1437.51≈1438
+							48 button 本地文件 1，打开 PDF：acl-energy
+							49 text 。而  t=79  得 1503.02 / 1433.88，与显示不符；反向求解 1507 与 1438 分别对应 t=79.21、79.23 h。故在论文自身公式下，79.2 h 是唯一同时解释两个显示值的时长，表内“79”是其四舍五入（截断亦得 79）。 此条可引用 ，只需补一句“79 为取整”。
+						50 container
+							51 text 3. NAS 功率（相等是事实；“证明抄用”未决）  Table 3 中 T2Tbig 与 NAS 的 Power 列确实同为 1515.43 W 且均为 P100×8
+							52 button 本地文件 1，打开 PDF：acl-energy
+							53 text 。但“证明直接沿用”不能成立：论文式(1)的功率项  pc+pr+g·pg  只由硬件决定，同硬件同功率是公式的预期结果，不是抄录证据；且同为 P100×8 的 T2Tbase 却是 1415.78 W，说明表内功率并非纯按硬件标签取值。论文未给出逐组件功率分解，因此“是否抄自 T2Tbig”无法判定。 可引用修订 ：两者功率相等为事实；是否沿用未在论文中说明，属未决问题。
+						54 container
+							55 text 4. PDU 场景（不可引用）  四处错误：①算术—— 201×0.954=191.75 ，不是 191.88；191.88=0.954×201.13（T2Tbig 未取整的  pt=1.58×84×1515.43/1000 ）。②边界——PDU 测的是不含 PUE 的 IT 电量，而论文 201 kWh 已乘 1.58；若 PDU 真读 201 kWh，设施电量≈317.6 kWh。③因子——0.954 是美国平均电网因子（EPA），不是“当地”因子。④“无需确认别的边界”错误：须确认计量边界、PUE、时段与本地电网排放因子。  可引用修订 ：PDU 的 201 kWh 不能直接乘 0.954；应  IT电量×PUE×本地电网因子 ，且 201×0.954=191.75。
+						56 container
+							57 text 验算脚本已存为 
+							58 button 打开 /Users/liuhengshen/.bohrium/desktop/prod/sessions/e376f778-b800-43dd-bb60-4782bcc3bf75/verify_acl_energy.py
+							59 text 。
+						60 container 交付清单
+							61 button verify_acl_energy.py PY, Help: 复算 Strubell ACL2019 式(1)(2)与 Table 3 的数值
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/e376f778-b800-43dd-bb60-4782bcc3bf75/verify_acl_energy.py
+					62 button 复制
+					63 toggle button 点赞, Value: off
+					64 toggle button 点踩, Value: off
+					65 button 打开本条回复的 1 个参考来源
+					66 text 21:21
+					67 text entry area (settable) 询问一个科学问题
+						68 text 询问一个科学问题
+					69 button 添加附件或引用
+					70 pop up button 请求批准, Help: 选择授权方式
+					71 image 上下文已使用 12%
+					72 pop up button 推理强度
+					73 toggle button 开始语音输入, Value: off
+					74 button (disabled) 发送
+					75 text 内容由 AI 生成，请仔细甄别
+				76 container Notifications alt+T
+				77 container
+					78 button 目录
+					79 text field (settable) 页码, Value: 1
+					80 text /  6
+					81 button 缩小
+					82 text 155 %
+					83 pop up button 缩放比例, Value: 155%
+					84 button 放大
+					85 toggle button 标注, Value: off
+					86 button 搜索
+					87 button 引用
+					88 pop up button 下载
+					89 container PDF 阅读操作
+						90 text 全文翻译
+						91 switch (settable, boolean) 全文翻译, Value: off
+						92 toggle button 阅读助手, Value: on
+						93 toggle button 论文速览, Value: off
+						94 toggle button 图表速览, Value: off
+					95 image
+					96 image
+					97 image
+					98 image
+					99 image
+			100 pop up button 开发工具
+	101 close button
+	102 full screen button Help: this button also has an action to zoom the window, Secondary Actions: zoom the window
+	103 minimize button
+104 menu bar
+	105 玻尔·科学空间
+	106 Edit
+	107 Window

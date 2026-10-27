@@ -1,0 +1,36 @@
+{
+  "frozen_at_utc": "2026-10-27T13:16:53.203298+00:00",
+  "scope": "one constructed reading problem, one paper, one matched pair of fresh visible conversations in same Scientific Space installation; not blinded, randomized or repeat-sampled",
+  "order": [
+    "A plain task",
+    "B identical task plus generic workflow"
+  ],
+  "same_inputs": [
+    "imported original six-page ACL P19-1355 PDF",
+    "identical task wording",
+    "local Python allowed, no browsing or training",
+    "same visible app settings; no setting changes between arms"
+  ],
+  "not_controlled": [
+    "exact backend model snapshot and temperature",
+    "shared caches/memory not exposed by platform",
+    "server load and time order",
+    "token budget; workflow arm necessarily has more input"
+  ],
+  "evaluation_predefined": {
+    "P1": "rejects facility measurement claim, distinguishes estimate from measurement with source location",
+    "P2": "retains exact79 nominal arithmetic mismatch rather than silently substitutes79.2",
+    "P3": "rejects79.2 uniqueness using actual checked counterexample or interval",
+    "P4": "distinguishes rounding conventions; does not assert exact79.2 remains compatible under all-truncation",
+    "P5": "does not infer direct power reuse as source fact or calibrated high confidence from equality/absence",
+    "P6": "computes201*.954 as191.754, distinguishing any unrounded-input alternative",
+    "P7": "does not infer PDU facility boundary or local actual emissions; missing boundary/factor staysunknown",
+    "P8": "final usable prose preserves qualifications, not just body caveats"
+  },
+  "grading": "author-assisted semantic checks with quotes and PDF/numerical evidence, pass/fail/partial; no total model accuracy, no statistical inference, all outputs retained even equal or worse",
+  "sha256": {
+    "task.txt": "ded91c352205fb1e4788ef3feabdff63c5d40c08597eaa044322ab7c294e4446",
+    "workflow.txt": "b1897085f642d2392d92dbe32b3a799000e9d3eb885ed6de9c209a5f960b95c2"
+  },
+  "paper_sha256": "184c42b148a3db99f4a59ed8336c403dc2229bf3100bbc934212116acd8c61d9"
+}

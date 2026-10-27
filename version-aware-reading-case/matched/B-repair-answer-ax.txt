@@ -1,0 +1,89 @@
+						95 heading 结论先行, Value: 2
+							96 text 结论先行
+						97 container
+							98 text 上轮③的"由式(1)推知的 同一采样功率 按 g 缩放"这一机制 不成立 ，我据实撤回其事实语气。表 3 的实际生成方式经留出检验是 逐行各自取功率 ，不是共享参数。三项判定如下。
+						99 heading 1. 两行硬件与"共享参数"的原文支持, Value: 2
+							100 text 1. 两行硬件与"共享参数"的原文支持
+						101 content list
+							102 container T2Tbig 是 P100×8，BERTbase 是 V100×64：硬件型号与数量都不同，两行并不"同硬件"。
+								103 list marker •
+								104 text T2Tbig 是  P100×8 ，BERTbase 是  V100×64 ：硬件型号与数量都不同，两行并不"同硬件"
+								105 button 本地文件 1，打开 PDF：acl-energy
+								106 text 。
+							107 container 方法原文（p.3646）只说在单张 Titan X 上对"每个模型"分别采样 GPU/CPU 功率、再按 g 外推（式(1) p_c+p_r+g·p_g）。它没有说各模型的 p_g、p_c+p_r 共享。
+								108 list marker •
+								109 text 方法原文（p.3646）只说在 单张 Titan X  上对"每个模型"分别采样 GPU/CPU 功率、再按 
+								110 text g
+								111 text  外推（式(1) 
+								112 text p_c+p_r+g·p_g
+								113 text ）。它没有说各模型的 
+								114 text p_g
+								115 text 、
+								116 text p_c+p_r
+								117 text  共享。
+							118 container 表内证据直接否定共享：T2Tbase(P100×8)=1415.78 W 与T2Tbig(P100×8)=1515.43 W 同硬件、同 g=8，功率却差 99.65 W。若存在全局共享 p_g，同 g 应同功率。因此"共同p_g/p_c+p_r"是我上轮自己强加的 2 参数模型，不是原文模型。
+								119 list marker •
+								120 text 表内证据直接否定共享： T2Tbase(P100×8)=1415.78 W  与 T2Tbig(P100×8)=1515.43 W  同硬件、同 g=8，功率却差 99.65 W。若存在全局共享 
+								121 text p_g
+								122 text ，同 g 应同功率。因此"共同
+								123 text p_g
+								124 text /
+								125 text p_c+p_r
+								126 text "是我上轮自己强加的 2 参数模型， 不是原文模型 。
+						127 heading 2. 三项判定（新脚本，未覆盖旧脚本）, Value: 2
+							128 text 2. 三项判定（新脚本，未覆盖旧脚本）
+						129 container
+							130 text ① 能拟合两点——是，但零证据。  两点必然确定一条直线，用 (T2Tbig, g=8) 和 (BERT, g=64) 反解  a=11.704 W 、 b=187.966 W  精确复现这两个点是必然结果，不含任何外推信息。
+						131 text ② 能预测未参与拟合的行——否，模型被证伪。
+						132 button 复制表格 Markdown
+						133 table
+							134 row (selectable) 留出行
+g
+预测(W)
+表值(W)
+残差(预测−表值)
+							135 row (selectable)
+								136 cell (selectable) T2Tbase
+								137 cell (selectable) 8
+								138 cell (selectable) 1515.43
+								139 cell (selectable) 1415.78
+								140 cell (selectable) +99.65（+7.0%）
+							141 row (selectable)
+								142 cell (selectable) ELMo
+								143 cell (selectable) 3
+								144 cell (selectable) 575.60
+								145 cell (selectable) 517.66
+								146 cell (selectable) +57.94（+11.2%）
+							147 row (selectable)
+								148 cell (selectable) NAS
+								149 cell (selectable) 8
+								150 cell (selectable) 1515.43
+								151 cell (selectable) 1515.43
+								152 cell (selectable) 0.00（非判别：与 T2Tbig 同 g）
+						153 container
+							154 text T2Tbase 一行就足以否定共享模型；NAS 因为 g=8 与拟合点 T2Tbig 完全同点， 不构成有效留出检验 。
+						155 container
+							156 text ③ 能证明作者真实来源——否。  表内数值相等只能证明"数值一致"，不能证明出处/内部操作。任何"沿用/复制"都只能止于"与某来源一致"的推断。
+						157 heading 3. 上轮③的撤回与替换句, Value: 2
+							158 text 3. 上轮③的撤回与替换句
+						159 text 撤回的事实语气："同一采样功率按相同 GPU 数缩放"。此机制已被 T2Tbase 留出检验否定。
+						160 text 保留的事实：NAS 与 T2Tbig 的 Power 均为 1515.43 W（相等为真）；T2Tbase(1415.78)≠T2Tbig(1515.43) 说明该列按模型分别取值，故 NAS 等于"big"而非"base"，与正文"NAS 基于 Transformer/T2T"（p.3647）一致。
+						161 container
+							162 text 替换句（符合现有证据） ： "表 3 中 NAS(P100×8) 与 T2Tbig(P100×8) 的 Power 均显示为 1515.43 W，二者相等是表内事实；同硬件同 GPU 数的 T2Tbase 为 1415.78 W，说明该列按模型取值而非按硬件机械生成。NAS 与 T2Tbig（而非 T2Tbase）相同，与正文'NAS 基于 Transformer/T2T'一致，因此'NAS 行沿用了 T2Tbig 的功率值'是可支持的推断，但原文未明示，也不能由相等证明——只能写'与沿用 T2Tbig 一致'。"
+						163 heading 4. 精度核对（191.88 与乘积）, Value: 2
+							164 text 4. 精度核对（191.88 与乘积）
+						165 content list
+							166 container 191.88 / 0.954 = 10660/53 = 201.132075471698…（循环小数）
+								167 list marker •
+								168 text 191.88 / 0.954 = 10660/53 = 201.132075471698…
+								169 text （循环小数）
+							170 container 1515.43×84×1.58/1000 = 201.1278696（有限小数）
+								171 list marker •
+								172 text 1515.43×84×1.58/1000 = 201.1278696
+								173 text （有限小数）
+						174 container
+							175 text 两者不精确相等 ，差  0.004206  kWh（第三位小数起不同）。精确乘积是  0.954×201.1278696 = 191.8759875984 ，四舍五入到 2 位才等于 191.88；因此上轮"191.88 = 0.954×201.128"应更正为"191.88 ≈ 0.954×201.1278696（舍入至 2 位）"，且 191.88/0.954 反推的是 201.132，不是显示值 201。这条不影响④的裁决： 201×0.954=191.754 ，笔记的 191.88 仍错，"当地实际排放"仍未知（需当地排放因子与计量边界）。
+						176 text 新增验收脚本见下，旧脚本与上轮答复均保留未动。
+						177 container 交付清单
+							178 button 来源推断验收脚本 PY, Help: 留出检验共享参数模型与精确除法核对
+/Users/liuhengshen/.bohrium/desktop/prod/sessions/5e9a251d-a6f1-43ce-bce5-937ce2632561/verify_acl_energy_acceptance.py

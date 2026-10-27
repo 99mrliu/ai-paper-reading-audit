@@ -1,0 +1,24 @@
+{
+  "kind": "author implementation and actual replay, not new AI output",
+  "executed_at_utc": "2026-10-27T14:45:37.967362+00:00",
+  "python": "Python 3.14.7",
+  "runs": [
+    {
+      "input": "table-probe-input.json",
+      "output": "table-probe-output.json",
+      "exit_code": 0
+    },
+    {
+      "input": "same-count-input.json",
+      "output": "same-count-output.json",
+      "exit_code": 2
+    }
+  ],
+  "sha256": {
+    "table_probe.py": "19a508f97584123a21c3c85998bfa16fe4805dc6a26bc438a029573f5c094b1d",
+    "table-probe-input.json": "98da2b761c4eb71f1265d63c6107450540944c4aef09d2c8c66e2d230d8fffc0",
+    "table-probe-output.json": "16d6b6a1f72640c556be82363eb95208783c22e8cfe91009dd70f9b5cbf1ef3e",
+    "same-count-input.json": "db0355482d896d0cb2e258b3433b9bc93c2051127bee4de6f96b009dacd5e94d",
+    "same-count-output.json": "f6b93785a71efe9d3c5f3dff49eae72c456227fdeb9b2516bdbe35e0137dc4f4"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "paper": "Strubell, Ganesh, McCallum, ACL2019 P19-1355 original6page PDF, Table3 PDFp4/3648; formulas PDFp2/3646",
+  "model": "P=a+g*b",
+  "declared_assumptions": ["Common CPU/DRAM average power a across rows", "Common average per-GPU power b across P100/V100 and workloads: hypothetical, not established by paper", "Displayed power is in W, count g dimensionless; display quantum0.01W interpreted as conservative closed +/-0.005W bins"],
+  "fit_rows": [
+    {"id":"T2Tbig","hardware":"P100","gpu_count":"8","power_W":"1515.43","display_quantum_W":"0.01","source_location":"Table3 T2Tbig P100x8"},
+    {"id":"BERTbase","hardware":"V100","gpu_count":"64","power_W":"12041.51","display_quantum_W":"0.01","source_location":"Table3 BERTbase V100x64"}
+  ],
+  "validation_rows": [
+    {"id":"T2Tbase","hardware":"P100","gpu_count":"8","power_W":"1415.78","display_quantum_W":"0.01","source_location":"Table3 T2Tbase P100x8, not a fit row"},
+    {"id":"NAS","hardware":"P100","gpu_count":"8","power_W":"1515.43","display_quantum_W":"0.01","source_location":"Table3 NAS P100x8, same input coordinate as fit T2Tbig"}
+  ]
+}

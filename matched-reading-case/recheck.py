@@ -31,4 +31,9 @@ review=json.loads((m/'author-review.json').read_text())
 for arm in ['A','B']:
  assert [row['id'] for row in review[arm]]==list(cfg['evaluation_predefined'])
  for row in review[arm]:assert row['exact_quote'] in (m/(arm+'-final-ax.txt')).read_text()
-print(json.dumps({'status':'passed','recomputed_json_artifacts':9,'boundary_tests':22,'actual_AI_script_author_replays':3,'author_fraction_models':2,'frozen_criteria_quote_integrity':True,'scope':'saved arithmetic and PDF integrity, not semantic or model performance proof'}))
+tool=r/'reader-tool'
+q=subprocess.run([sys.executable,str(tool/'table_probe.py'),str(tool/'table-probe-input.json')],capture_output=True,text=True,check=True)
+assert json.loads(q.stdout)==json.loads((tool/'table-probe-output.json').read_text())
+q=subprocess.run([sys.executable,str(tool/'table_probe.py'),str(tool/'same-count-input.json')],capture_output=True,text=True)
+assert q.returncode==2 and json.loads(q.stdout)==json.loads((tool/'same-count-output.json').read_text())
+print(json.dumps({'status':'passed','recomputed_json_artifacts':9,'boundary_tests':22,'actual_AI_script_author_replays':3,'author_fraction_models':2,'frozen_criteria_quote_integrity':True,'reader_tool_real_and_invalid_case_replay':True,'scope':'saved arithmetic and PDF integrity, not semantic or model performance proof'}))

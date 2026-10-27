@@ -1,0 +1,105 @@
+{
+  "model": "P=a+g*b",
+  "status": "completed",
+  "input_source": "Strubell, Ganesh, McCallum, ACL2019 P19-1355 original6page PDF, Table3 PDFp4/3648; formulas PDFp2/3646",
+  "fit_parameters_from_display_centres": {
+    "a_W": {
+      "exact": "8193/700",
+      "decimal": "11.70428571428571428571428571428571428571"
+    },
+    "b_W_per_GPU": {
+      "exact": "32894/175",
+      "decimal": "187.9657142857142857142857142857142857143"
+    }
+  },
+  "cross_hardware_fit": true,
+  "assumptions": [
+    "Common CPU/DRAM average power a across rows",
+    "Common average per-GPU power b across P100/V100 and workloads: hypothetical, not established by paper",
+    "Displayed power is in W, count g dimensionless; display quantum0.01W interpreted as conservative closed +/-0.005W bins"
+  ],
+  "validation": [
+    {
+      "id": "T2Tbase",
+      "source_location": "Table3 T2Tbase P100x8, not a fit row",
+      "prediction_point_W": {
+        "exact": "151543/100",
+        "decimal": "1515.43"
+      },
+      "prediction_minus_display_W": {
+        "exact": "1993/20",
+        "decimal": "99.65"
+      },
+      "prediction_closed_envelope_W": [
+        {
+          "exact": "60617/40",
+          "decimal": "1515.425"
+        },
+        {
+          "exact": "303087/200",
+          "decimal": "1515.435"
+        }
+      ],
+      "validation_closed_envelope_W": [
+        {
+          "exact": "56631/40",
+          "decimal": "1415.775"
+        },
+        {
+          "exact": "283157/200",
+          "decimal": "1415.785"
+        }
+      ],
+      "disjoint_envelopes": true,
+      "minimum_envelope_gap_W": {
+        "exact": "2491/25",
+        "decimal": "99.64"
+      },
+      "input_coordinate_duplicates_fit_row": true,
+      "interpretation": "declared common-parameter model rejected by this row even under supplied display uncertainty"
+    },
+    {
+      "id": "NAS",
+      "source_location": "Table3 NAS P100x8, same input coordinate as fit T2Tbig",
+      "prediction_point_W": {
+        "exact": "151543/100",
+        "decimal": "1515.43"
+      },
+      "prediction_minus_display_W": {
+        "exact": "0",
+        "decimal": "0"
+      },
+      "prediction_closed_envelope_W": [
+        {
+          "exact": "60617/40",
+          "decimal": "1515.425"
+        },
+        {
+          "exact": "303087/200",
+          "decimal": "1515.435"
+        }
+      ],
+      "validation_closed_envelope_W": [
+        {
+          "exact": "60617/40",
+          "decimal": "1515.425"
+        },
+        {
+          "exact": "303087/200",
+          "decimal": "1515.435"
+        }
+      ],
+      "disjoint_envelopes": false,
+      "minimum_envelope_gap_W": {
+        "exact": "0",
+        "decimal": "0"
+      },
+      "input_coordinate_duplicates_fit_row": true,
+      "interpretation": "not rejected by this row; does not establish common measurement/source"
+    }
+  ],
+  "common_model_rejected_within_supplied_envelopes": true,
+  "physical_or_causal_parameter_identification": "not established by algebraic fit",
+  "measurement_source_provenance": "not identified, including when all validation rows overlap",
+  "scope": "only stated linear common-parameter model and supplied closed display envelopes; no automatic transcription, unit conversion, hardware equivalence or source validation"
+}

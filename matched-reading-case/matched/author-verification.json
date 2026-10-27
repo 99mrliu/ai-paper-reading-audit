@@ -1,0 +1,115 @@
+{
+  "scope": "author arithmetic verification; not model output, source validation, measurement or confidence interval",
+  "rounding_assumption": "nonnegative round-half-up, time/energy/carbon quantum 1; coefficients held fixed; independent direct outputs, not intermediate rounded energy",
+  "displayed_201_times_factor_lb": {
+    "exact": "95877/500",
+    "decimal": "191.754"
+  },
+  "unrounded_energy_kWh": {
+    "exact": "251409837/1250000",
+    "decimal": "201.1278696"
+  },
+  "unrounded_energy_times_factor_lb": {
+    "exact": "119922492249/625000000",
+    "decimal": "191.8759875984"
+  },
+  "energy_time_interval": {
+    "lower": {
+      "exact": "7532500000/95127929",
+      "decimal": "79.182844398935669039951453163665530866334743816403"
+    },
+    "upper": {
+      "exact": "7537500000/95127929",
+      "decimal": "79.235405198403930353618862027365275659475357652325"
+    },
+    "endpoints": "[lower,upper)"
+  },
+  "carbon_time_interval": {
+    "lower": {
+      "exact": "3593750000000/45376022133",
+      "decimal": "79.199317857049935426520169358892180439866235993490"
+    },
+    "upper": {
+      "exact": "1198750000000/15125340711",
+      "decimal": "79.254413034689622338121226868011409782780925548964"
+    },
+    "endpoints": "[lower,upper)"
+  },
+  "joint_time_interval": {
+    "lower": {
+      "exact": "3593750000000/45376022133",
+      "decimal": "79.199317857049935426520169358892180439866235993490"
+    },
+    "upper": {
+      "exact": "7537500000/95127929",
+      "decimal": "79.235405198403930353618862027365275659475357652325"
+    },
+    "endpoints": "[lower,upper)"
+  },
+  "points": {
+    "79": {
+      "energy_kWh": {
+        "exact": "7515106391/5000000",
+        "decimal": "1503.0212782"
+      },
+      "carbon_lb": {
+        "exact": "3584705748507/2500000000",
+        "decimal": "1433.8822994028"
+      },
+      "same_t_jointly_compatible": false
+    },
+    "79.2": {
+      "energy_kWh": {
+        "exact": "9417664971/6250000",
+        "decimal": "1506.82639536"
+      },
+      "carbon_lb": {
+        "exact": "4492226191167/3125000000",
+        "decimal": "1437.51238117344"
+      },
+      "same_t_jointly_compatible": true
+    },
+    "79.21": {
+      "energy_kWh": {
+        "exact": "753508325609/500000000",
+        "decimal": "1507.016651218"
+      },
+      "carbon_lb": {
+        "exact": "359423471315493/250000000000",
+        "decimal": "1437.693885261972"
+      },
+      "same_t_jointly_compatible": true
+    },
+    "79.24": {
+      "energy_kWh": {
+        "exact": "188448427349/125000000",
+        "decimal": "1507.587418792"
+      },
+      "carbon_lb": {
+        "exact": "89889899845473/62500000000",
+        "decimal": "1438.238397527568"
+      },
+      "same_t_jointly_compatible": false
+    }
+  },
+  "truncation_joint_time_interval": {
+    "lower": {
+      "exact": "3595000000000/45376022133",
+      "decimal": "79.226865445869778882320698113451795111323580771227"
+    },
+    "upper": {
+      "exact": "580000000/7317533",
+      "decimal": "79.261685598138061010452566459215148056045664570286"
+    },
+    "endpoints": "[lower,upper)"
+  },
+  "body_79_2_half_up_interval": [
+    "79.15",
+    "79.25"
+  ],
+  "semantic_checks_not_automated": [
+    "PDF transcription and original source attribution",
+    "physical meter boundary and allocation choice",
+    "internal author calculation and power provenance"
+  ]
+}

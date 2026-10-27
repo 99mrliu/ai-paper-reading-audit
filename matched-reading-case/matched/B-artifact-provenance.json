@@ -1,0 +1,10 @@
+{
+  "scope": "author replay of original B-script, not original runtime stdout",
+  "source_artifact_observed_in_UI": "/Users/liuhengshen/.bohrium/desktop/prod/sessions/5e9a251d-a6f1-43ce-bce5-937ce2632561/verify_acl_energy.py",
+  "sha256": "7602adb351e500eb38d2940855c5801e524ab5d659f988714fdd9841fea1bd83",
+  "replayed_at_utc": "2026-10-27T13:56:22.199925+00:00",
+  "command": "python3 B-verify_acl_energy.py",
+  "python": "Python 3.14.7",
+  "exit_code": 0,
+  "stdout": "B-author-replay.stdout"
+}

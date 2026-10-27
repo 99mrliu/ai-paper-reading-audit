@@ -1,0 +1,80 @@
+{
+  "scope": "conditional algebraic fit from two rows; no identification of measurement source",
+  "source": "Strubell et al ACL2019 P19-1355 PDFp4 Table3; method PDFp2",
+  "fit_rows": [
+    {
+      "model": "T2Tbig",
+      "hardware": "P100",
+      "g": 8,
+      "power_W": "1515.43"
+    },
+    {
+      "model": "BERTbase",
+      "hardware": "V100",
+      "g": 64,
+      "power_W": "12041.51"
+    }
+  ],
+  "conditional_model": "Power_W = common_CPU_DRAM_W + g * common_GPU_W",
+  "unsupported_assumptions": [
+    "common average GPU power across P100 and V100",
+    "common CPU/DRAM and workload conditions across rows"
+  ],
+  "fit_parameters": {
+    "common_GPU_W": {
+      "fraction": "32894/175",
+      "decimal": "187.965714285714285714285714285714285714285714"
+    },
+    "common_CPU_DRAM_W": {
+      "fraction": "8193/700",
+      "decimal": "11.7042857142857142857142857142857142857142857"
+    }
+  },
+  "exact_fit_residuals_W": [
+    {
+      "fraction": "0",
+      "decimal": "0"
+    },
+    {
+      "fraction": "0",
+      "decimal": "0"
+    }
+  ],
+  "not_in_fit_validation_row": {
+    "model": "T2Tbase",
+    "hardware": "P100",
+    "g": 8,
+    "power_W": "1415.78"
+  },
+  "predicted_power_W": {
+    "fraction": "151543/100",
+    "decimal": "1515.43"
+  },
+  "prediction_minus_table_W": {
+    "fraction": "1993/20",
+    "decimal": "99.65"
+  },
+  "strict_two_decimal_display_tolerance_W": "0.01",
+  "global_common_parameter_model_rejected_by_this_row": true,
+  "provenance": "not_identified; rejection of shared-parameter model does not prove direct reuse or any alternative source",
+  "rounding_identity_check": {
+    "191_88_div_factor_kWh": {
+      "fraction": "10660/53",
+      "decimal": "201.132075471698113207547169811320754716981132"
+    },
+    "unrounded_T2Tbig_kWh": {
+      "fraction": "251409837/1250000",
+      "decimal": "201.1278696"
+    },
+    "exactly_equal": false,
+    "inverse_minus_unrounded_kWh": {
+      "fraction": "278639/66250000",
+      "decimal": "0.00420587169811320754716981132075471698113207547"
+    },
+    "unrounded_carbon_lb": {
+      "fraction": "119922492249/625000000",
+      "decimal": "191.8759875984"
+    },
+    "rounded_2_decimal_display": "191.88; approximate equality only"
+  }
+}

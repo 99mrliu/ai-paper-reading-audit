@@ -1,0 +1,33 @@
+{
+  "assumptions": "Fixed power12041.51W, PUE1.58, factor0.954lb/kWh; reported energy/carbon independently rounded to nearest1; interval endpoints depend on tie rule",
+  "bert_hours_simultaneously_compatible": [
+    "79.1993178570499354265201693588921804",
+    "79.2354051984039303536188620273652757"
+  ],
+  "bert_point_calculations": {
+    "79": {
+      "energy_kWh": "1503.0212782",
+      "carbon_lb": "1433.8822994028"
+    },
+    "79.2": {
+      "energy_kWh": "1506.82639536",
+      "carbon_lb": "1437.51238117344"
+    },
+    "79.21": {
+      "energy_kWh": "1507.016651218",
+      "carbon_lb": "1437.693885261972"
+    }
+  },
+  "nominal_other": {
+    "t2tbig": {
+      "energy_kWh": "201.1278696",
+      "carbon_lb": "191.8759875984"
+    },
+    "nas": {
+      "energy_kWh": "656347.2811280",
+      "carbon_lb": "626155.3061961120"
+    }
+  },
+  "paper_factor_applied_to_201_lb": "191.754",
+  "boundary_tests": 22
+}

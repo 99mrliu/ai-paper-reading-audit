@@ -1,0 +1,5 @@
+Visible native UI labels observed after completion:
+已处理（用时1m36s）
+运行 两因子下精确计算排放与电量
+已运行 两因子下精确计算排放与电量
+These are visible UI labels, not a full native execution trace or network audit.

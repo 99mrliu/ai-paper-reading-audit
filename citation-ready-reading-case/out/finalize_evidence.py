@@ -1,0 +1,13 @@
+import json,copy
+from pathlib import Path
+raw=json.loads(Path('out/ledger-nominal.json').read_text())
+rows=[]
+for r in raw['records'][1:]:
+ r=copy.deepcopy(r);r['id']+='_conditional_integer_rounding';r['source']+='; constructed assumption reported outputs rounded to nearest1'
+ r['reported_energy']['quantum']='1';r['reported_carbon']['quantum']='1';rows.append(r)
+Path('out/ledger-rounding.json').write_text(json.dumps({'records':rows},indent=2))
+claims=[
+ {'id':'C1','proposed':'BERT只有79.2h且证明内部计算','verdict':'不支持唯一性或内部过程证明','author_fact':'PDF3/3647: 3.3 days (79.2 hours); PDF4/3648 Table3:79h,12041.51W,1507kWh,1438lb','derived':'79h nominal fails;79.2h and constructed79.21h both compatible under nearest-integer outputs; fixed other inputs allow hours about79.199318–79.235405','unknown':'unrounded inputs, rounding convention, original calculation sheet, sampling logs'},
+ {'id':'C2','proposed':'NAS和T2Tbig同值证明沿用且未独立测量','verdict':'仅能确认展示功率相同；同源与独立测量未知','author_fact':'PDF4 Table3 both1515.43W/P100x8; PDF3 NAS steps-to-time extrapolation; PDF2 max1day sampling','derived':'shared-power extrapolation plausible, not established provenance','unknown':'per-model power traces, CPU/DRAM attribution, hardware conversion, calculation code'},
+ {'id':'C3','proposed':'论文201kWh与本地201kWh同口径且乘.954得真实排放','verdict':'不支持；边界与因子均未识别，且算术近似有误','author_fact':'PDF2 Eq1 PUE1.58/Eq2 US average.954lb/kWh; PDF4 T2Tbig201kWh·PUE','user_fact':'INPUT/task.md hypothetical meter201kWh covers training time only; no physical boundary/location/attribution/grid factor','derived':'201*.954=191.754lb; conditional illustration only','unknown':'meter placement, IT/facility boundary, shared loads/idle baseline, geography/time, electricity accounting scope and intensity, embodied emissions'}]
+Path('out/claims.json').write_text(json.dumps({'scope':'Source facts, user hypotheses, derived claims and unresolved evidence kept separate; literal matching is not semantic proof','claims':claims},ensure_ascii=False,indent=2))

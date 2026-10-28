@@ -1,0 +1,17 @@
+model            t(h)      pt(kWh)     CO2e(lb)  pt_rnd co2_rnd
+T2Tbase            12      26.8432      25.6084      27      26
+T2Tbig             84     201.1279     191.8760     201     192
+ELMo              336     274.8153     262.1738     275     262
+BERTbase           79    1503.0213    1433.8823    1503    1434
+BERT 79.2        79.2    1506.8264    1437.5124    1507    1438
+NAS            274120  656347.2811  626155.3062  656347  626155
+
+Note's arithmetic check (PDU 201 kWh):
+  0.954 * 201      = 191.754  <- note writes 191.88
+  0.954 * 201.1279 = 191.8759875984  <- unrounded T2Tbig pt
+
+Unique t consistent with BERT displayed outputs (t = ...):
+  pt=1507: t = 79.2091 h
+  CO2e=1438: t = 79.2269 h
+  t=79  -> pt=1503.02, CO2e=1433.88
+  t=79.2-> pt=1506.83, CO2e=1437.51

@@ -1,0 +1,10 @@
+{
+  "baseline_commit": "14bcfaf92606ae138cecfce750c86c31e31793d2",
+  "only_original_body_modified": "README.md",
+  "new_files_sha256": {
+    "citation-brief.md": "0683a4782cf84648df6330ed1ff1941978d17e71a557fbc6d93eb7a2d06fab81",
+    "version-check/author-source-context.md": "2a3146ab30a999523ed91fc7072d2d3522f51cd709895abe0ed3a97c1abf5f27",
+    "version-check/aaai2020-factor-context.png": "24610f12bac7189392fd120ba2a38238145eb54cc06d9960ebe3968693bf97dc",
+    "CHANGELOG.md": "0a40394eb58ba452793e6487240a8a349494dbd3c622381d321d6398a206c684"
+  }
+}

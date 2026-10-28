@@ -1,0 +1,52 @@
+{
+  "source_title": "Energy and Policy Considerations for Modern Deep Learning Research",
+  "authors": [
+    "Emma Strubell",
+    "Ananya Ganesh",
+    "Andrew McCallum"
+  ],
+  "venue": "AAAI2020 34(09),13693-13696",
+  "doi": "10.1609/aaai.v34i09.7123",
+  "publisher_page": "https://ojs.aaai.org/index.php/AAAI/article/view/7123",
+  "downloaded_from": "https://ojs.aaai.org/index.php/AAAI/article/download/7123/6977",
+  "retrieved_at_utc": "2026-10-27T14:57:39.598042+00:00",
+  "original_pdf_sha256": "d66b468eec9ac7b17356dc6a227de3d8566226bf51be5cacde182816059cf93f",
+  "original_pages": 4,
+  "publication_date": "2020-04-03",
+  "reuse_scope": "No license for full redistribution assumed: include only necessary equation/table-row factual excerpts and attributed small crops; complete publisher PDF is not in submission. Copyright2020AAAI, all rights reserved shown on originalp1.",
+  "clips": [
+    {
+      "file": "aaai2020-equation2.png",
+      "PDF_page_1based": 2,
+      "printed_page": 13694,
+      "rect_points": [
+        395,
+        301,
+        575,
+        318
+      ]
+    },
+    {
+      "file": "aaai2020-table2-header.png",
+      "PDF_page_1based": 3,
+      "printed_page": 13695,
+      "rect_points": [
+        105,
+        51,
+        410,
+        65
+      ]
+    },
+    {
+      "file": "aaai2020-table2-bert.png",
+      "PDF_page_1based": 3,
+      "printed_page": 13695,
+      "rect_points": [
+        105,
+        97,
+        410,
+        112
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "source": "Strubell, Ganesh, McCallum (2019), ACL, 'Energy and Policy Considerations for Deep Learning in NLP'",
+  "constants": {
+    "PUE": "1.58",
+    "CO2e_factor_lb_per_kWh_US_grid_EPA_eGRID": "0.954",
+    "formula_kWh_PUE": "pt = 1.58 * t * (pc+pr+g*pg) / 1000",
+    "formula_CO2e_lb": "CO2e = 0.954 * pt"
+  },
+  "table3_recomputation": {
+    "T2Tbase": {
+      "hardware": "P100x8",
+      "power_W": "1415.78",
+      "hours_table": "12",
+      "kWh_PUE_exact": "26.8431888",
+      "kWh_PUE_rounded": 27,
+      "kWh_PUE_table": 27,
+      "CO2e_exact": "25.6084021152",
+      "CO2e_rounded": 26,
+      "CO2e_table": 26
+    },
+    "T2Tbig": {
+      "hardware": "P100x8",
+      "power_W": "1515.43",
+      "hours_table": "84",
+      "kWh_PUE_exact": "201.1278696",
+      "kWh_PUE_rounded": 201,
+      "kWh_PUE_table": 201,
+      "CO2e_exact": "191.8759875984",
+      "CO2e_rounded": 192,
+      "CO2e_table": 192
+    },
+    "ELMo": {
+      "hardware": "P100x3",
+      "power_W": "517.66",
+      "hours_table": "336",
+      "kWh_PUE_exact": "274.8153408",
+      "kWh_PUE_rounded": 275,
+      "kWh_PUE_table": 275,
+      "CO2e_exact": "262.1738351232",
+      "CO2e_rounded": 262,
+      "CO2e_table": 262
+    },
+    "BERTbase": {
+      "hardware": "V100x64",
+      "power_W": "12041.51",
+      "hours_table": "79",
+      "kWh_PUE_exact": "1503.0212782",
+      "kWh_PUE_rounded": 1503,
+      "kWh_PUE_table": 1507,
+      "CO2e_exact": "1433.8822994028",
+      "CO2e_rounded": 1434,
+      "CO2e_table": 1438
+    },
+    "NAS": {
+      "hardware": "P100x8",
+      "power_W": "1515.43",
+      "hours_table": "274120",
+      "kWh_PUE_exact": "656347.281128",
+      "kWh_PUE_rounded": 656347,
+      "kWh_PUE_table": 656347,
+      "CO2e_exact": "626155.306196112",
+      "CO2e_rounded": 626155,
+      "CO2e_table": 626155
+    }
+  },
+  "BERTbase_79h_vs_79.2h": {
+    "hours_table": "79",
+    "hours_text": "79.2 (=3.3 days, NVIDIA via Forster et al. 2019)",
+    "kWh_PUE_exact_h79": "1503.0212782",
+    "kWh_PUE_rounded_h79": 1503,
+    "CO2e_rounded_h79": 1434,
+    "kWh_PUE_exact_h79.2": "1506.82639536",
+    "kWh_PUE_rounded_h79.2": 1507,
+    "CO2e_rounded_h79.2": 1438,
+    "table_kWh_PUE": 1507,
+    "table_CO2e": 1438
+  },
+  "back_solve_interval_hours": {
+    "t_kWh_low": "79.182844398935669039951453163665530866334743816403",
+    "t_kWh_high": "79.235405198403930353618862027365275659475357652325",
+    "t_CO2_low": "79.199317857049935426520169358892180439866235993490",
+    "t_CO2_high": "79.254413034689622338121226868011409782780925548963",
+    "t_intersection_low": "79.199317857049935426520169358892180439866235993490",
+    "t_intersection_high": "79.235405198403930353618862027365275659475357652325",
+    "note": "反推区间仅由两列取整后的整数约束给出；79.2 落在区间内，79 不在。"
+  },
+  "factor_checks": {
+    "1438_div_1507": "0.95421366954213669542136695421366954213669542136695",
+    "half_of_CO2_factor": "0.477",
+    "CO2e_if_1507kWh_x_0.477_lb_per_kWh": "718.839",
+    "CO2e_if_hardware_power_halved_0.954_kept": "718.75619058672",
+    "kWh_if_hardware_power_halved": "753.41319768",
+    "note": "0.477 lb/kWh 是碳强度减半（更清洁电力），并非硬件功率减半；硬件减半应使 kWh 减半而 0.954 不变。"
+  },
+  "NAS_vs_T2Tbig_power_equal": true
+}

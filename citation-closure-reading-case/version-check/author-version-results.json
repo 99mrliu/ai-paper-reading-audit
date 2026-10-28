@@ -1,0 +1,67 @@
+{
+  "case": "same model row, distinct publications and conversion assumptions",
+  "rows": [
+    {
+      "paper": "ACL2019",
+      "table": "Table3",
+      "PDF_page": 4,
+      "printed_page": 3648,
+      "power_W": "12041.51",
+      "displayed_hours": "79",
+      "displayed_energy_kWh": "1507",
+      "factor_lb_per_kWh": "0.954",
+      "displayed_carbon_lb": 1438,
+      "displayed_energy_times_factor": {
+        "exact": "718839/500",
+        "decimal": "1437.678",
+        "integer_half_up": "1438"
+      },
+      "unrounded_79_2h_energy_kWh": {
+        "exact": "9417664971/6250000",
+        "decimal": "1506.82639536",
+        "integer_half_up": "1507"
+      },
+      "unrounded_energy_times_factor": {
+        "exact": "4492226191167/3125000000",
+        "decimal": "1437.51238117344",
+        "integer_half_up": "1438"
+      }
+    },
+    {
+      "paper": "AAAI2020",
+      "table": "Table2",
+      "PDF_page": 3,
+      "printed_page": 13695,
+      "power_W": "12041.51",
+      "displayed_hours": "79",
+      "displayed_energy_kWh": "1507",
+      "factor_lb_per_kWh": "0.477",
+      "displayed_carbon_lb": 719,
+      "displayed_energy_times_factor": {
+        "exact": "718839/1000",
+        "decimal": "718.839",
+        "integer_half_up": "719"
+      },
+      "unrounded_79_2h_energy_kWh": {
+        "exact": "9417664971/6250000",
+        "decimal": "1506.82639536",
+        "integer_half_up": "1507"
+      },
+      "unrounded_energy_times_factor": {
+        "exact": "4492226191167/6250000000",
+        "decimal": "718.75619058672",
+        "integer_half_up": "719"
+      }
+    }
+  ],
+  "factor_ratio_AAAI2020_over_ACL2019": {
+    "exact": "1/2",
+    "decimal": "0.5",
+    "integer_half_up": "1"
+  },
+  "energy_change_from_these_table_displays": "none: both display1507; not a new measurement",
+  "erratum_status": "not established by supplied material",
+  "actual_hardware_or_meter_energy_change": "not established",
+  "source_power_mapping": "still not identified",
+  "limitations": "AAAI2020source is a limited legal excerpt; applying one paper factor to another version without label is unsupported; not current local emission factors"
+}

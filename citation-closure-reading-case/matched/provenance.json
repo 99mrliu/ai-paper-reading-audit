@@ -1,0 +1,41 @@
+{
+  "app": "com.bohrium.scix",
+  "installed_version_inspected_after_runs": "0.10.12",
+  "OS": "macOS",
+  "visible_reasoning_mode_both": "标准",
+  "exact_backend_model": "not exposed",
+  "temperature_and_seed": "not exposed",
+  "cost": "not exposed",
+  "A_first_answer_elapsed_UI": "3m59s",
+  "B_first_answer_elapsed_UI": "4m31s",
+  "B_posthoc_diagnostic_elapsed_UI": "2m37s",
+  "A_and_B_fresh_visible_conversations": true,
+  "old_answers_not_explicitly_supplied": true,
+  "shared_platform_cache_memory_isolation": "not verified",
+  "paired_first_answers_only": true,
+  "design_frozen_before_A_send": true,
+  "design": "design-frozen.json",
+  "task_common": "task.txt",
+  "B_extra_input": "workflow.txt",
+  "B_full_input": "B-prompt.txt",
+  "B_send_interrupted_before_dispatch": "Typed input was not sent at interruption; resumed from visible populated composer and dispatched once. Time-order/backend confounding not controlled.",
+  "evidence": "Complete first final answers in original native AX snapshots, including UI labels/tables/errors. Posthoc diagnostic complete final-answer region only, not a summary. No hidden thinking retained.",
+  "B_repair_source_full_snapshot_sha256": "4df3989bdb5faa15bc1f89dd2c6295ef817a0eaadcf301e1d84e4fdbf103947d",
+  "B_repair_inclusive_line_span_1based": [
+    105,
+    193
+  ],
+  "B_repair_generated_artifact_observed_UI": "/Users/liuhengshen/.bohrium/desktop/prod/sessions/5e9a251d-a6f1-43ce-bce5-937ce2632561/verify_acl_energy_acceptance.py",
+  "B_repair_artifact_sha256": "d11f7271c2d267c1fce6f127a0aeb98f4fd83c7d3f08cdaa8ebbaa19163c8ecc",
+  "script_replay_note": "All *author-replay.stdout files are author re-executions of unmodified genuine AI-generated script artifacts. Not original native model-runtime stdout.",
+  "sha256": {
+    "A-final-ax.txt": "60d6e34f724879e44402022a9f800a96f22b69f0df8b81348bcbb1f07362713f",
+    "B-final-ax.txt": "6e570bd44a161cc7a7a8b4dae93b95250e6357e11287be92be22c2a73739b13e",
+    "A-verify_acl_energy.py": "dcef9b458831cff335211590a161e5462f87680fb971cdb317f5ee8e5f83d91e",
+    "B-verify_acl_energy.py": "7602adb351e500eb38d2940855c5801e524ab5d659f988714fdd9841fea1bd83",
+    "B-acceptance.py": "d11f7271c2d267c1fce6f127a0aeb98f4fd83c7d3f08cdaa8ebbaa19163c8ecc",
+    "B-repair-answer-ax.txt": "f0afbe499facfce9f3d9ad45eb8067a9657bd298612b383d148fff2bfbe3db9e",
+    "A-settings-ax.txt": "56d8a3a843ef9936d72dc765338d9dab9221df06313ccfa5c1d50a4c13e52b3b",
+    "B-settings-ax.txt": "1cc6597151b3d5305404e0f31c8df86ada23aec6ee320afa963fcd8901f3e0f9"
+  }
+}

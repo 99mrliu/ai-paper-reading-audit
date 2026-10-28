@@ -1,0 +1,21 @@
+{
+  "scope": "one real posthoc turn in existing B Scientific Space conversation; not independent/fresh/paired and not added to original8 criteria",
+  "answer_source_full_AX_sha256": "57c51762afa52c1c6106e9f7d880dd4eaf442a5ac82df89f40e832efbe3c34b2",
+  "complete_final_answer_line_span_1based": [
+    205,
+    313
+  ],
+  "answer_region_sha256": "1496ba59203c68cb16ded1e9ee7ac79c1e011f469a7f32de639191ec025d4a25",
+  "UI_elapsed": "1m36s",
+  "model_source_access": "2019paper current PDF and supplied2020limited fragments plus labeled author summary; no claim model read2020wholepaper",
+  "tool_evidence": "native UI displayed one completed local calculation label; tool-labels.txt is author transcription of those visible labels, not native execution/network telemetry",
+  "external_citations_in_answer": "UI displays a publisher reference; citation alone is not proof of retrieval. Full network audit unavailable; no claim independently verified offline execution of model turn.",
+  "faithfulness": "All final answer text/tables/errors preserved verbatim; processing/thinking collapsed; screenshot is one completed-answer viewport, not entire conversation",
+  "files": {
+    "prompt.txt": "a32cff05ff9b32c9de1ef193662c5ba9ae36bc8c167bdf1f3eb62e37e9031aa3",
+    "answer-ax.txt": "1496ba59203c68cb16ded1e9ee7ac79c1e011f469a7f32de639191ec025d4a25",
+    "source-excerpt.txt": "fdfcddf8dd65a1c7fc427986d5b39522db1f9495bba5ba469f83247a5645d0cf",
+    "verify_versions.py": "87ddd01d17bbe2d800235016045575b6ebe9893c9022a021bb5df2193c3dc5e6",
+    "author-version-results.json": "07ba5c7804ee3e8e73980f9564bc0e5b3aa6eb01a23df5862ca1819dd9a7d8cd"
+  }
+}

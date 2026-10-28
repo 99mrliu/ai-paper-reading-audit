@@ -1,0 +1,22 @@
+{
+  "frozen_at_utc": "2026-10-28T06:37:09.556737+00:00",
+  "paper_sha256": "184c42b148a3db99f4a59ed8336c403dc2229bf3100bbc934212116acd8c61d9",
+  "skill_sha256": "733e59cdd207f0d95a1570b5458ed8bf8b15bec0e46b0861dcf66b9c4889cf0c",
+  "task_sha256": "6ff66e248d8afb31f3d8f65ed3fd27e0b93d340ecf81d46e2235be6e908e7932",
+  "checks": [
+    "Current ACL2019 identity/Table3/page3648, no silent2020replacement",
+    "Nominal79h computation includes W/kW and one PUE, no doubleGPU count",
+    "Preserves nominal mismatch without uniquely identifying actual input",
+    "Historical factor/estimate/missingTPU and unchanged-power provenance boundaries correct",
+    "Final fact paragraph independently source-supported, no speculative internal mechanism",
+    "Actual calc outputs and final prose use exact vs rounded equality and units consistently"
+  ],
+  "limitations": [
+    "known failure targeted task, not blind",
+    "same paper as prior trials; no causal superiority claim",
+    "fresh visible conversation intended; backend/cache isolation not verified",
+    "exact model and cost not exposed"
+  ],
+  "prompt_sha256": "1d77ce64473676ba05fdf6c2b088ae31e0f5cf381fb10d7b33abdc7d8486ce53",
+  "prompt_path_clarification_frozen_before_send_utc": "2026-10-28T06:40:07.950037+00:00"
+}
